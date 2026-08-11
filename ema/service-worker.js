@@ -1,4 +1,4 @@
-const CACHE_NAME = "ema-search-v2";
+const CACHE_NAME = "ema-search-v3";
 const CORE_ASSETS = [
   "./",
   "./index.html",
