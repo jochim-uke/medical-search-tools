@@ -238,7 +238,7 @@ function showSkeletons() {
 async function load() {
   showSkeletons();
   try {
-    const response = await fetch("data/medicines.json");
+    const response = await fetch("/ema-medicines-search/data/medicines.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
     state.medicines = payload.medicines || [];
