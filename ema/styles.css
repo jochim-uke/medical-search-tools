@@ -1,0 +1,238 @@
+:root {
+  color-scheme: light;
+  --ink: #101f3f;
+  --muted: #5d6982;
+  --paper: #f4f6fb;
+  --surface: #ffffff;
+  --teal: #163d75;
+  --teal-dark: #0a2857;
+  --line: #d8deeb;
+  --accent: #ff5a9d;
+  --accent-soft: #ffe3ef;
+  --shadow: 0 16px 40px rgba(10, 40, 87, 0.1);
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; background: var(--paper); }
+
+button, input, select { font: inherit; }
+
+a { color: inherit; }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 90, 157, 0.27), transparent 23rem),
+    linear-gradient(135deg, #071a3d, #12396f);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  right: -10rem;
+  bottom: -19rem;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4rem rgba(255,255,255,.035), 0 0 0 8rem rgba(255,255,255,.025);
+}
+
+.hero__inner, .content, footer { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.hero__inner { position: relative; z-index: 1; padding: 54px 0 40px; }
+.hero__topline { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 34px; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin-bottom: 0;
+  color: #dce5f6;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.install-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 999px;
+  color: white;
+  background: rgba(255,255,255,.08);
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.install-button:hover { border-color: var(--accent); background: rgba(255,90,157,.16); }
+.install-button:focus-visible { outline: 3px solid rgba(255,90,157,.55); outline-offset: 3px; }
+.tool-home { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; padding: 9px 13px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; color: white; background: rgba(255,255,255,.08); font-size: .78rem; font-weight: 700; text-decoration: none; }
+.tool-home:hover { border-color: var(--accent); background: rgba(255,90,157,.16); }
+.tool-home:focus-visible { outline: 3px solid rgba(255,90,157,.55); outline-offset: 3px; }
+
+h1 {
+  max-width: 800px;
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: .91;
+}
+
+h1 span { color: var(--accent); }
+.intro { max-width: 680px; margin: 25px 0 34px; color: #dce5f6; font-size: 1.06rem; line-height: 1.65; }
+.search { max-width: 800px; }
+.search > label { display: block; margin-bottom: 9px; font-size: .8rem; font-weight: 700; letter-spacing: .04em; }
+.search__control { display: flex; align-items: center; min-height: 62px; padding: 0 10px 0 21px; border-radius: 10px; background: white; box-shadow: 0 12px 30px rgba(0,0,0,.16); }
+.search__icon { width: 18px; height: 18px; margin-right: 14px; border: 2px solid var(--teal); border-radius: 50%; position: relative; flex: 0 0 auto; }
+.search__icon::after { content: ""; position: absolute; width: 7px; height: 2px; right: -6px; bottom: -3px; transform: rotate(45deg); background: var(--teal); }
+.search input { min-width: 0; flex: 1; border: 0; outline: 0; color: var(--ink); font-size: 1rem; background: transparent; }
+.search input::placeholder { color: #81918e; }
+.search button { border: 0; padding: 10px 12px; color: var(--teal); background: transparent; font-size: .84rem; font-weight: 700; cursor: pointer; }
+.meta { display: flex; align-items: center; gap: 13px; margin-top: 18px; color: #d3ddf0; font-size: .82rem; }
+.meta__divider { width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+.content { padding: 34px 0 70px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 18px; }
+.toolbar p { margin: 0; font-weight: 700; }
+.toolbar label { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: .83rem; }
+.toolbar select { padding: 9px 34px 9px 11px; border: 1px solid var(--line); border-radius: 7px; color: var(--ink); background: var(--surface); }
+.results { display: grid; gap: 12px; }
+
+.medicine {
+  display: grid;
+  grid-template-columns: minmax(160px, .8fr) minmax(180px, 1fr) minmax(220px, 1.35fr) auto;
+  gap: 22px;
+  align-items: start;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 1px 0 rgba(19,44,42,.03);
+}
+
+.medicine:hover { border-color: #aebfba; box-shadow: var(--shadow); transform: translateY(-1px); transition: .18s ease; }
+.medicine h2 { margin: 0 0 5px; font-size: 1.06rem; line-height: 1.35; }
+.medicine__label { display: block; margin-bottom: 5px; color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.medicine__inn, .medicine__indication { margin: 0; color: #3f4e6d; font-size: .9rem; line-height: 1.58; }
+.medicine__details { margin-top: 9px; }
+.medicine__indication--preview { display: -webkit-box; overflow: hidden; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.medicine__indication--full { display: none; margin-top: 12px; }
+.medicine__indication--full p { margin: 0; }
+.medicine__indication--full p + p { margin-top: 1em; }
+.medicine__details[open] .medicine__indication--preview { display: none; }
+.medicine__details[open] .medicine__indication--full { display: block; }
+.medicine__details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  color: #c92f73;
+  font-size: .77rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.medicine__details summary::-webkit-details-marker { display: none; }
+.medicine__details summary::after { content: "+"; font-size: 1rem; line-height: 1; }
+.medicine__details[open] summary::after { content: "−"; }
+.summary__open { display: none; }
+.medicine__details[open] .summary__closed { display: none; }
+.medicine__details[open] .summary__open { display: inline; }
+.medicine__details summary:focus-visible { outline: 3px solid rgba(255, 90, 157, .35); outline-offset: 4px; border-radius: 3px; }
+.search-highlight {
+  padding: .05em .16em;
+  border-radius: .2em;
+  color: #4f1032;
+  background: #ffb5d3;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.tag { padding: 5px 8px; border-radius: 999px; color: #8d2051; background: var(--accent-soft); font-size: .72rem; font-weight: 600; }
+.medicine__link { display: inline-flex; align-items: center; gap: 7px; padding: 9px 12px; border: 1px solid var(--teal); border-radius: 7px; color: var(--teal); font-size: .78rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.medicine__link:hover { color: white; background: var(--teal); }
+.medicine__link::after { content: "↗"; }
+
+.pagination { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 30px; }
+.pagination button { min-width: 94px; padding: 10px 16px; border: 1px solid var(--teal); border-radius: 7px; color: var(--teal); background: transparent; font-weight: 700; cursor: pointer; }
+.pagination button:disabled { opacity: .35; cursor: default; }
+.pagination span { color: var(--muted); font-size: .85rem; }
+.empty, .error { padding: 70px 20px; border: 1px dashed #b9c5c1; border-radius: 10px; text-align: center; }
+.empty p, .error p { color: var(--muted); }
+.empty .empty__title, .error .empty__title { margin-bottom: 6px; color: var(--ink); font-family: "Newsreader", Georgia, serif; font-size: 1.6rem; }
+
+footer { display: flex; justify-content: space-between; gap: 30px; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; line-height: 1.55; }
+footer p { max-width: 760px; margin: 0; }
+footer a { color: var(--teal); font-weight: 700; white-space: nowrap; }
+
+.network-status {
+  position: fixed;
+  z-index: 10;
+  right: 18px;
+  bottom: 18px;
+  max-width: min(390px, calc(100% - 36px));
+  padding: 11px 15px;
+  border: 1px solid #ffb5d3;
+  border-radius: 8px;
+  color: #4f1032;
+  background: #fff0f6;
+  box-shadow: var(--shadow);
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.install-dialog {
+  width: min(440px, calc(100% - 32px));
+  padding: 30px;
+  border: 0;
+  border-radius: 16px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 24px 80px rgba(7,26,61,.35);
+}
+.install-dialog::backdrop { background: rgba(7,26,61,.68); backdrop-filter: blur(3px); }
+.install-dialog__close { position: absolute; top: 12px; right: 14px; border: 0; color: var(--muted); background: transparent; font-size: 1.6rem; cursor: pointer; }
+.install-dialog__icon { display: grid; width: 58px; height: 58px; place-items: center; margin-bottom: 18px; border-radius: 14px; color: white; background: linear-gradient(145deg, #0a2857, #163d75); box-shadow: inset -8px -8px 0 rgba(255,90,157,.85); font-size: .77rem; font-weight: 700; letter-spacing: .08em; }
+.install-dialog h2 { margin: 0 0 12px; font-family: "Newsreader", Georgia, serif; font-size: 2rem; }
+.install-dialog p { color: #3f4e6d; line-height: 1.6; }
+.install-dialog__note { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: .78rem; }
+
+.skeleton { height: 124px; border-radius: 10px; background: linear-gradient(100deg, #ecebe4 20%, #faf8f1 40%, #ecebe4 60%); background-size: 200% 100%; animation: shimmer 1.3s infinite; }
+@keyframes shimmer { to { background-position-x: -200%; } }
+
+@media (max-width: 850px) {
+  .medicine { grid-template-columns: 1fr 1fr; }
+  .medicine__link { justify-self: start; }
+}
+
+@media (max-width: 580px) {
+  .hero__inner, .content, footer { width: min(100% - 26px, 1120px); }
+  .hero__inner { padding-top: 34px; }
+  .hero__topline { align-items: flex-start; flex-direction: column; gap: 16px; margin-bottom: 25px; }
+  .tool-home { margin-left: 0; }
+  h1 { font-size: clamp(2.55rem, 14vw, 4rem); }
+  .intro { font-size: .95rem; }
+  .search__control { min-height: 56px; }
+  .meta { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .meta__divider { display: none; }
+  .toolbar { align-items: flex-start; flex-direction: column; }
+  .medicine { grid-template-columns: 1fr; gap: 16px; padding: 20px; }
+  footer { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
