@@ -11,7 +11,7 @@ const CORE_ASSETS = [
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png",
   "./icons/apple-touch-icon.png",
-  "./data/medicines.json",
+  "/ema-medicines-search/data/medicines.json",
 ];
 
 self.addEventListener("install", (event) => {
