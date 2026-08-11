@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PubMed-Suche für aktuelle hämatologische Fachliteratur." />
+    <meta name="theme-color" content="#071a3d" />
+    <title>PubMed Hämatologie-Suche</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .hero__topline { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:30px; }
+      .hero__topline .eyebrow { margin-bottom:0; }
+      .tool-home { display:inline-flex; align-items:center; gap:7px; padding:9px 13px; border:1px solid rgba(255,255,255,.35); border-radius:999px; color:#fff; background:rgba(255,255,255,.08); font-size:.78rem; font-weight:700; text-decoration:none; }
+      .tool-home:hover { border-color:var(--pink); background:rgba(255,90,157,.16); }
+      .selection-actions,.quick-actions { display:flex; align-items:center; gap:8px; }
+      .quick-actions button { padding:7px 9px; border:1px solid var(--line); border-radius:7px; color:var(--blue); background:#fff; font-size:.72rem; font-weight:700; }
+      .quick-actions button:hover { border-color:#ee91ba; background:#fff5f9; }
+      @media(max-width:700px) { .selection-actions { align-items:flex-end; flex-direction:column; } }
+      @media(max-width:480px) { .hero__topline { align-items:flex-start; flex-direction:column; gap:16px; margin-bottom:25px; } }
+      @media(max-width:480px) { .selection-actions { width:100%; align-items:flex-start; } .quick-actions { width:100%; } .quick-actions button { flex:1; } }
+    </style>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <div class="hero__topline">
+          <a class="eyebrow" href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noreferrer">Datenquelle: PubMed</a>
+          <a class="tool-home" href="../"><span aria-hidden="true">←</span> Alle Suchtools</a>
+        </div>
+        <h1>Hämatologische<br /><span>Literatursuche</span></h1>
+        <p class="intro">Stelle mit wenigen Klicks eine präzise PubMed-Suche nach Erkrankung, Journal, Studientyp und Zeitraum zusammen.</p>
+      </div>
+    </header>
+
+    <main class="content">
+      <form id="search-builder" class="builder">
+        <section class="filter-card" aria-labelledby="disease-title">
+          <div class="filter-card__heading">
+            <div><span class="step">01</span><h2 id="disease-title">Erkrankungen</h2></div>
+            <span id="disease-summary" class="selection-summary"></span>
+          </div>
+          <div class="selection-bar"><strong id="disease-selection">Gesamte Hämatologie</strong><button class="toggle-button" type="button" data-toggle="disease-options" aria-expanded="false">Suche eingrenzen <span>+</span></button></div>
+          <div id="disease-options" class="collapsible" hidden>
+            <div class="option-toolbar"><button type="button" data-select="diseases" data-value="all">Alle auswählen</button><button type="button" data-select="diseases" data-value="none">Keine auswählen</button></div>
+            <div id="disease-list" class="option-grid"></div>
+          </div>
+        </section>
+
+        <section class="filter-card" aria-labelledby="top-title">
+          <div class="filter-card__heading"><div><span class="step">02</span><h2 id="top-title">Top-Tier Journale</h2></div><span id="top-summary" class="selection-summary"></span></div>
+          <div class="selection-bar"><strong id="top-selection">Alle Top-Tier Journale</strong><div class="selection-actions"><div class="quick-actions" aria-label="Top-Tier Journale schnell auswählen"><button type="button" data-select="top" data-value="all">Alle auswählen</button><button type="button" data-select="top" data-value="none">Keine auswählen</button></div><button class="toggle-button" type="button" data-toggle="top-options" aria-expanded="false">Suche eingrenzen <span>+</span></button></div></div>
+          <div id="top-options" class="collapsible" hidden><div class="option-toolbar"><button type="button" data-select="top" data-value="all">Alle auswählen</button><button type="button" data-select="top" data-value="none">Keine auswählen</button></div><div id="top-list" class="option-grid"></div></div>
+        </section>
+
+        <section class="filter-card" aria-labelledby="low-title">
+          <div class="filter-card__heading"><div><span class="step">03</span><h2 id="low-title">Low-Tier Journale</h2></div><span id="low-summary" class="selection-summary"></span></div>
+          <div class="selection-bar"><strong id="low-selection">Alle Low-Tier Journale</strong><div class="selection-actions"><div class="quick-actions" aria-label="Low-Tier Journale schnell auswählen"><button type="button" data-select="low" data-value="all">Alle auswählen</button><button type="button" data-select="low" data-value="none">Keine auswählen</button></div><button class="toggle-button" type="button" data-toggle="low-options" aria-expanded="false">Suche eingrenzen <span>+</span></button></div></div>
+          <div id="low-options" class="collapsible" hidden><div class="option-toolbar"><button type="button" data-select="low" data-value="all">Alle auswählen</button><button type="button" data-select="low" data-value="none">Keine auswählen</button></div><div id="low-list" class="option-grid"></div></div>
+        </section>
+
+        <section class="filter-card" aria-labelledby="study-title">
+          <div class="filter-card__heading"><div><span class="step">04</span><h2 id="study-title">Studientyp</h2></div></div>
+          <div class="radio-grid">
+            <label><input type="radio" name="study" value="trials_no_meta" checked /><span><strong>Klinische Studien</strong><small>ohne Reviews und Metaanalysen</small></span></label>
+            <label><input type="radio" name="study" value="trials_with_meta" /><span><strong>Studien + Metaanalysen</strong><small>Reviews ausgeschlossen</small></span></label>
+            <label><input type="radio" name="study" value="reviews" /><span><strong>Reviews</strong><small>inklusive Metaanalysen</small></span></label>
+            <label><input type="radio" name="study" value="none" /><span><strong>Alle Publikationstypen</strong><small>kein zusätzlicher Filter</small></span></label>
+          </div>
+        </section>
+
+        <section class="filter-card" aria-labelledby="time-title">
+          <div class="filter-card__heading"><div><span class="step">05</span><h2 id="time-title">Zeitfenster</h2></div></div>
+          <div class="time-options">
+            <label><input type="radio" name="days" value="30" /><span>30 Tage</span></label>
+            <label><input type="radio" name="days" value="60" checked /><span>60 Tage</span></label>
+            <label><input type="radio" name="days" value="90" /><span>90 Tage</span></label>
+            <label><input type="radio" name="days" value="180" /><span>180 Tage</span></label>
+            <label><input type="radio" name="days" value="364" /><span>1 Jahr</span></label>
+          </div>
+        </section>
+
+        <section class="filter-card query-card" aria-labelledby="query-title">
+          <div class="filter-card__heading"><div><span class="step">06</span><h2 id="query-title">Query generieren</h2></div></div>
+          <button class="query-toggle" type="button" data-toggle="query-options" aria-expanded="false"><span>PubMed-Suchtext anzeigen und bearbeiten</span><span>+</span></button>
+          <div id="query-options" class="collapsible" hidden>
+            <label class="sr-only" for="query">PubMed-Suchtext</label>
+            <textarea id="query" rows="16" spellcheck="false"></textarea>
+            <div class="query-actions"><button id="regenerate" type="button">Aus Auswahl neu generieren</button><button id="copy" type="button">Query kopieren</button></div>
+            <p id="status" class="status" role="status"></p>
+          </div>
+        </section>
+
+        <section class="execute-card" aria-labelledby="execute-title">
+          <div><span class="step step--light">07</span><h2 id="execute-title">Suche ausführen</h2><p>Die Suche öffnet sich in einem neuen Tab direkt bei PubMed.</p></div>
+          <button id="open-pubmed" class="primary" type="submit">In PubMed suchen <span aria-hidden="true">↗</span></button>
+        </section>
+      </form>
+    </main>
+
+    <footer><p>Dieses unabhängige Werkzeug dient ausschließlich der Literatursuche und ersetzt keine medizinische Beratung.</p><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noreferrer">Zu PubMed</a></footer>
+  </body>
+</html>
