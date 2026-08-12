@@ -37,6 +37,7 @@ function matchesQuery(medicine, query) {
     ...(medicine.groups || []),
     ...(medicine.areas || []),
     medicine.indication,
+    medicine.holder,
   ].join(" "));
   return terms.every((term) => haystack.includes(term));
 }
@@ -237,7 +238,11 @@ function medicineCard(medicine) {
   holder.append(label("Zulassungsinhaber / Antragsteller"));
   const holderText = document.createElement("p");
   holderText.className = "medicine__meta-value";
-  holderText.textContent = medicine.holder || "Nicht angegeben";
+  appendHighlightedText(
+    holderText,
+    medicine.holder || "Nicht angegeben",
+    state.query,
+  );
   holder.append(holderText);
 
   const date = document.createElement("div");
