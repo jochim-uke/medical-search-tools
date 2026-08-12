@@ -22,8 +22,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2" />
-    <script type="module" src="app.js?v=3"></script>
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <script type="module" src="app.js?v=4"></script>
   </head>
   <body>
     <header class="hero">
@@ -32,14 +32,11 @@
           <a class="eyebrow" href="https://www.ema.europa.eu/" target="_blank" rel="noreferrer">
             Datenquelle: European Medicines Agency
           </a>
-          <a class="tool-home" href="../"><span aria-hidden="true">←</span> Alle Suchtools</a>
-          <button class="install-button" type="button" id="install-app" hidden>
-            <span aria-hidden="true">↓</span> App installieren
-          </button>
+          <a class="tool-home" href="https://jochim-uke.github.io/medical-search-tools/"><span aria-hidden="true">←</span> Alle Suchtools</a>
         </div>
         <h1>Europäisch zugelassene<br /><span>Arzneimittel</span></h1>
         <p class="intro">
-          Durchsuche Handelsnamen, Wirkstoffe, Therapiegebiete und zugelassene
+          Durchsuche Handelsnamen, Wirkstoffe, pharmakotherapeutische Gruppen und zugelassene
           Anwendungsgebiete – auf Basis der offiziellen EMA-Daten.
         </p>
 
@@ -99,17 +96,6 @@
     <div class="network-status" id="network-status" role="status" hidden>
       Offline – die zuletzt gespeicherten EMA-Daten werden verwendet.
     </div>
-
-    <dialog class="install-dialog" id="install-dialog" aria-labelledby="install-title">
-      <button class="install-dialog__close" type="button" id="close-install" aria-label="Schließen">×</button>
-      <div class="install-dialog__icon" aria-hidden="true">EMA</div>
-      <h2 id="install-title">Als App installieren</h2>
-      <div id="install-instructions"></div>
-      <p class="install-dialog__note">
-        Die App bleibt mit der EMA-Datenquelle verbunden und zeigt offline den zuletzt
-        gespeicherten Datenstand an.
-      </p>
-    </dialog>
 
     <footer>
       <p>

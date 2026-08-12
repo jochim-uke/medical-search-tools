@@ -14,10 +14,6 @@ const elements = {
   pageInfo: document.querySelector("#page-info"),
   empty: document.querySelector("#empty-state"),
   error: document.querySelector("#error-state"),
-  install: document.querySelector("#install-app"),
-  installDialog: document.querySelector("#install-dialog"),
-  installInstructions: document.querySelector("#install-instructions"),
-  closeInstall: document.querySelector("#close-install"),
   networkStatus: document.querySelector("#network-status"),
 };
 
@@ -38,6 +34,7 @@ function matchesQuery(medicine, query) {
   const haystack = searchable([
     medicine.name,
     medicine.inn,
+    ...(medicine.groups || []),
     ...(medicine.areas || []),
     medicine.indication,
   ].join(" "));
@@ -112,9 +109,51 @@ function appendHighlightedText(container, text, query) {
   }
 }
 
+function formatAuthorisationDate(value) {
+  const match = String(value ?? "").match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (!match) return value || "Nicht angegeben";
+
+  const [, day, month, year] = match;
+  const date = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day)));
+  return new Intl.DateTimeFormat("de-DE", {
+    dateStyle: "long",
+    timeZone: "UTC",
+  }).format(date);
+}
+
+function appendTags(container, values, emptyText = "Nicht angegeben") {
+  if (!values?.length) {
+    const empty = document.createElement("span");
+    empty.className = "tag tag--empty";
+    empty.textContent = emptyText;
+    container.append(empty);
+    return;
+  }
+
+  for (const value of values) {
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = value;
+    container.append(tag);
+  }
+}
+
+let cardId = 0;
+
 function medicineCard(medicine) {
   const article = document.createElement("article");
   article.className = "medicine";
+  const detailsId = `medicine-details-${cardId += 1}`;
+
+  const toggle = document.createElement("button");
+  toggle.className = "medicine__toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-controls", detailsId);
+  toggle.setAttribute("aria-label", `${medicine.name}: vollständige Indikationen und Details anzeigen`);
+
+  const header = document.createElement("div");
+  header.className = "medicine__header";
 
   const identity = document.createElement("div");
   const name = document.createElement("h2");
@@ -129,51 +168,12 @@ function medicineCard(medicine) {
   inn.textContent = medicine.inn || "Nicht angegeben";
   innWrap.append(innLabel, inn);
 
-  const details = document.createElement("div");
-  const areasLabel = label("Therapiegebiet & Indikation");
-  const tags = document.createElement("div");
-  tags.className = "tags";
-  for (const area of medicine.areas || []) {
-    const tag = document.createElement("span");
-    tag.className = "tag";
-    tag.textContent = area;
-    tags.append(tag);
-  }
-  details.append(areasLabel, tags);
-
-  if (medicine.indication) {
-    const indicationDetails = document.createElement("details");
-    indicationDetails.className = "medicine__details";
-
-    const summary = document.createElement("summary");
-    const closedLabel = document.createElement("span");
-    closedLabel.className = "summary__closed";
-    closedLabel.textContent = "Vollständige Indikation anzeigen";
-    const openLabel = document.createElement("span");
-    openLabel.className = "summary__open";
-    openLabel.textContent = "Indikation einklappen";
-    summary.append(closedLabel, openLabel);
-
-    const preview = document.createElement("p");
-    preview.className = "medicine__indication medicine__indication--preview";
-    appendHighlightedText(preview, medicine.indication, state.query);
-
-    const fullIndication = document.createElement("div");
-    fullIndication.className = "medicine__indication medicine__indication--full";
-    for (const indicationPart of splitIndications(medicine.indication)) {
-      const paragraph = document.createElement("p");
-      appendHighlightedText(paragraph, indicationPart, state.query);
-      fullIndication.append(paragraph);
-    }
-
-    indicationDetails.append(preview, summary, fullIndication);
-    details.append(indicationDetails);
-  } else {
-    const indication = document.createElement("p");
-    indication.className = "medicine__indication";
-    indication.textContent = "Keine Indikation angegeben.";
-    details.append(indication);
-  }
+  const groupWrap = document.createElement("div");
+  const groupLabel = label("Pharmakotherapeutische Gruppe");
+  const groupTags = document.createElement("div");
+  groupTags.className = "tags tags--groups";
+  appendTags(groupTags, medicine.groups);
+  groupWrap.append(groupLabel, groupTags);
 
   const link = document.createElement("a");
   link.className = "medicine__link";
@@ -183,7 +183,91 @@ function medicineCard(medicine) {
   link.textContent = "Bei der EMA";
   link.setAttribute("aria-label", `${medicine.name} bei der EMA öffnen`);
 
-  article.append(identity, innWrap, details, link);
+  header.append(identity, innWrap, groupWrap, link);
+
+  const indication = document.createElement("section");
+  indication.className = "medicine__indication-wrap";
+  indication.append(label("Indikation"));
+
+  const preview = document.createElement("div");
+  preview.className = "medicine__indication-preview";
+  const previewText = document.createElement("p");
+  previewText.className = "medicine__indication";
+  appendHighlightedText(
+    previewText,
+    medicine.indication || "Keine Indikation angegeben.",
+    state.query,
+  );
+  const expandHint = document.createElement("span");
+  expandHint.className = "medicine__expand-hint";
+  expandHint.textContent = "(...) Vollständige Indikationen anzeigen +";
+  preview.append(previewText, expandHint);
+
+  const expanded = document.createElement("div");
+  expanded.className = "medicine__expanded";
+  expanded.id = detailsId;
+  expanded.hidden = true;
+
+  const fullIndication = document.createElement("div");
+  fullIndication.className = "medicine__indication medicine__indication--full";
+  const indicationParts = splitIndications(medicine.indication);
+  if (indicationParts.length) {
+    for (const indicationPart of indicationParts) {
+      const paragraph = document.createElement("p");
+      appendHighlightedText(paragraph, indicationPart, state.query);
+      fullIndication.append(paragraph);
+    }
+  } else {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = "Keine Indikation angegeben.";
+    fullIndication.append(paragraph);
+  }
+
+  const metadata = document.createElement("div");
+  metadata.className = "medicine__metadata";
+
+  const areas = document.createElement("div");
+  areas.append(label("Therapeutische Gebiete (MeSH)"));
+  const areaTags = document.createElement("div");
+  areaTags.className = "tags tags--areas";
+  appendTags(areaTags, medicine.areas);
+  areas.append(areaTags);
+
+  const holder = document.createElement("div");
+  holder.append(label("Zulassungsinhaber / Antragsteller"));
+  const holderText = document.createElement("p");
+  holderText.className = "medicine__meta-value";
+  holderText.textContent = medicine.holder || "Nicht angegeben";
+  holder.append(holderText);
+
+  const date = document.createElement("div");
+  date.append(label("Datum der Zulassung"));
+  const dateText = document.createElement("p");
+  dateText.className = "medicine__meta-value";
+  dateText.textContent = formatAuthorisationDate(medicine.authorisationDate);
+  date.append(dateText);
+
+  metadata.append(areas, holder, date);
+
+  const collapseHint = document.createElement("span");
+  collapseHint.className = "medicine__collapse-hint";
+  collapseHint.textContent = "Indikationen einklappen −";
+
+  expanded.append(fullIndication, metadata, collapseHint);
+  indication.append(preview, expanded);
+
+  toggle.addEventListener("click", () => {
+    const isOpen = article.classList.toggle("medicine--open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute(
+      "aria-label",
+      `${medicine.name}: ${isOpen ? "Indikationen und Details einklappen" : "vollständige Indikationen und Details anzeigen"}`,
+    );
+    expanded.hidden = !isOpen;
+    preview.hidden = isOpen;
+  });
+
+  article.append(toggle, header, indication);
   return article;
 }
 
@@ -238,7 +322,7 @@ function showSkeletons() {
 async function load() {
   showSkeletons();
   try {
-    const response = await fetch("/ema-medicines-search/data/medicines.json");
+    const response = await fetch("data/medicines.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
     state.medicines = payload.medicines || [];
@@ -292,59 +376,13 @@ elements.next.addEventListener("click", () => {
   document.querySelector("#main-content").scrollIntoView({ behavior: "smooth" });
 });
 
-function isStandalone() {
-  return window.matchMedia("(display-mode: standalone)").matches
-    || window.navigator.standalone === true;
-}
-
-function isIos() {
-  return /iphone|ipad|ipod/i.test(window.navigator.userAgent)
-    || (window.navigator.platform === "MacIntel" && window.navigator.maxTouchPoints > 1);
-}
-
 function updateNetworkStatus() {
   elements.networkStatus.hidden = window.navigator.onLine;
 }
 
-let installPrompt;
-
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  installPrompt = event;
-  if (!isStandalone()) elements.install.hidden = false;
-});
-
-window.addEventListener("appinstalled", () => {
-  installPrompt = undefined;
-  elements.install.hidden = true;
-  elements.installDialog.close();
-});
-
-elements.install.addEventListener("click", async () => {
-  if (installPrompt) {
-    await installPrompt.prompt();
-    const choice = await installPrompt.userChoice;
-    if (choice.outcome === "accepted") elements.install.hidden = true;
-    installPrompt = undefined;
-    return;
-  }
-
-  elements.installInstructions.innerHTML = isIos()
-    ? "<p>Öffne diese Seite gegebenenfalls in Safari. Tippe dort auf <strong>Teilen</strong> <span aria-hidden=\"true\">□↑</span> und anschließend auf <strong>Zum Home-Bildschirm</strong>.</p>"
-    : "<p>Öffne das Browsermenü und wähle <strong>App installieren</strong> oder <strong>Zum Startbildschirm hinzufügen</strong>.</p>";
-  elements.installDialog.showModal();
-});
-
-elements.closeInstall.addEventListener("click", () => elements.installDialog.close());
-elements.installDialog.addEventListener("click", (event) => {
-  if (event.target === elements.installDialog) elements.installDialog.close();
-});
-
 window.addEventListener("online", updateNetworkStatus);
 window.addEventListener("offline", updateNetworkStatus);
 updateNetworkStatus();
-
-if (isIos() && !isStandalone()) elements.install.hidden = false;
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {

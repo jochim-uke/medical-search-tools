@@ -1,9 +1,9 @@
-const CACHE_NAME = "ema-search-v3";
+const CACHE_NAME = "ema-search-v4";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=2",
-  "./app.js?v=2",
+  "./styles.css?v=4",
+  "./app.js?v=4",
   "./manifest.webmanifest",
   "./icons/icon.svg",
   "./icons/icon-maskable.svg",
@@ -11,7 +11,7 @@ const CORE_ASSETS = [
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png",
   "./icons/apple-touch-icon.png",
-  "/ema-medicines-search/data/medicines.json",
+  "./data/medicines.json",
 ];
 
 self.addEventListener("install", (event) => {
