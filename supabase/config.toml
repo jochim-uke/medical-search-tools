@@ -1,0 +1,4 @@
+project_id = "tjjtemvclcgqmuhlnumr"
+
+[functions.dienstplan-api]
+verify_jwt = false

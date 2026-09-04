@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Passwortgeschützte Ansicht der Dienstpläne.">
+  <meta name="theme-color" content="#071a3d">
+  <title>Dienstpläne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero"><div class="wrap"><a class="back" href="../">← Alle Werkzeuge</a><p class="eyebrow">Geschützter Bereich</p><h1>Dienst<span>pläne</span></h1><p class="intro">Aktuelle und archivierte Dienstpläne direkt im Browser anzeigen.</p></div></header>
+  <main class="wrap content">
+    <section id="login" class="panel login" aria-labelledby="login-title">
+      <div class="mark" aria-hidden="true">DP</div><p class="kicker">Zugang erforderlich</p><h2 id="login-title">Dienstpläne öffnen</h2><p>Bitte gib das Passwort für die Dienstplanansicht ein.</p>
+      <form id="login-form"><label>Passwort<div class="password-row"><input id="password" type="password" autocomplete="current-password" required autofocus><button id="toggle-password" type="button">Anzeigen</button></div></label><label class="remember"><input id="remember" type="checkbox"><span>Dieses Gerät für 7 Tage merken</span></label><button class="primary" type="submit">Dienstpläne öffnen</button></form><p id="login-status" class="status" role="alert"></p>
+    </section>
+
+    <section id="workspace" hidden>
+      <div class="toolbar"><div><p class="kicker">Dienstplanarchiv</p><h2>Verfügbare Dienstpläne</h2></div><div class="actions"><button id="open-admin" type="button">PDF hochladen</button><button id="forget" type="button" hidden>Gerät vergessen</button><button id="logout" type="button">Sperren</button></div></div>
+      <div class="filters"><label><span>Dienstpläne durchsuchen</span><input id="search" type="search" placeholder="Titel, Monat oder Jahr …"></label><label><span>Sortierung</span><select id="sort"><option value="newest">Neueste zuerst</option><option value="oldest">Älteste zuerst</option><option value="title">Nach Titel</option></select></label></div>
+      <p id="list-status" class="list-status" role="status"></p><div id="plans" class="plans"></div>
+    </section>
+  </main>
+
+  <dialog id="admin-dialog"><button class="dialog-close" data-close="admin-dialog" type="button" aria-label="Schließen">×</button><p class="kicker">Administrationsbereich</p><h2>Upload freigeben</h2><form id="admin-login-form"><label>Administratorpasswort<div class="password-row"><input id="admin-password" type="password" autocomplete="off" required><button id="toggle-admin-password" type="button">Anzeigen</button></div></label><button class="primary" type="submit">Administration öffnen</button></form><p id="admin-login-status" class="status" role="alert"></p></dialog>
+
+  <dialog id="upload-dialog"><button class="dialog-close" data-close="upload-dialog" type="button" aria-label="Schließen">×</button><p class="kicker">Neuer Dienstplan</p><h2>PDF bereitstellen</h2><form id="upload-form"><label>Titel<input id="plan-title" type="text" maxlength="80" placeholder="z. B. Ärztlicher Dienstplan" required></label><label>Monat<input id="plan-month" type="month" required></label><label>PDF-Datei<input id="plan-file" type="file" accept="application/pdf,.pdf" required></label><button class="primary" type="submit">Verschlüsselt bereitstellen</button></form><p id="upload-status" class="status" role="alert"></p></dialog>
+
+  <dialog id="viewer-dialog" class="viewer"><div class="viewer-head"><h2 id="viewer-title">Dienstplan</h2><button class="dialog-close viewer-close" data-close="viewer-dialog" type="button" aria-label="Schließen">×</button></div><iframe id="pdf-viewer" title="PDF-Ansicht"></iframe></dialog>
+  <footer class="wrap"><p>Dienstpläne · Geschützter Bereich</p><a href="../">Zur Übersicht</a></footer>
+</body>
+</html>
