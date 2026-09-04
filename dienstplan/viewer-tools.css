@@ -3,6 +3,11 @@
   gap: 7px;
 }
 
+.tool-group {
+  display: flex;
+  gap: 5px;
+}
+
 .viewer-tools button {
   padding: 8px 11px;
   border: 1px solid var(--line);
@@ -13,13 +18,25 @@
   font-weight: 700;
 }
 
+.pdf-pages {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+.pdf-page canvas {
+  max-width: none;
+}
+
 @media (max-width: 680px) {
   .viewer-head {
     align-items: flex-start;
   }
 
   .viewer-tools {
+    align-items: flex-end;
     flex-direction: column;
+    gap: 4px;
   }
 
   .viewer-tools button {
