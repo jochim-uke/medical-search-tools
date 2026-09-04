@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js" defer></script>
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -31,9 +33,9 @@
 
   <dialog id="admin-dialog"><button class="dialog-close" data-close="admin-dialog" type="button" aria-label="Schließen">×</button><p class="kicker">Administrationsbereich</p><h2>Upload freigeben</h2><form id="admin-login-form"><label>Administratorpasswort<div class="password-row"><input id="admin-password" type="password" autocomplete="off" required><button id="toggle-admin-password" type="button">Anzeigen</button></div></label><button class="primary" type="submit">Administration öffnen</button></form><p id="admin-login-status" class="status" role="alert"></p></dialog>
 
-  <dialog id="upload-dialog"><button class="dialog-close" data-close="upload-dialog" type="button" aria-label="Schließen">×</button><p class="kicker">Neuer Dienstplan</p><h2>PDF bereitstellen</h2><form id="upload-form"><label>Titel<input id="plan-title" type="text" maxlength="80" placeholder="z. B. Ärztlicher Dienstplan" required></label><label>Monat<input id="plan-month" type="month" required></label><label>PDF-Datei<input id="plan-file" type="file" accept="application/pdf,.pdf" required></label><button class="primary" type="submit">Verschlüsselt bereitstellen</button></form><p id="upload-status" class="status" role="alert"></p></dialog>
+  <dialog id="upload-dialog"><button class="dialog-close" data-close="upload-dialog" type="button" aria-label="Schließen">×</button><p class="kicker">Neuer Dienstplan</p><h2>PDF bereitstellen</h2><form id="upload-form"><label>Titel<input id="plan-title" type="text" maxlength="80" placeholder="z. B. Ärztlicher Dienstplan" required></label><div class="period-fields"><label>Monat<select id="plan-month" required><option value="01">Januar</option><option value="02">Februar</option><option value="03">März</option><option value="04">April</option><option value="05">Mai</option><option value="06">Juni</option><option value="07">Juli</option><option value="08">August</option><option value="09">September</option><option value="10">Oktober</option><option value="11">November</option><option value="12">Dezember</option></select></label><label>Jahr<select id="plan-year" required></select></label></div><label>PDF-Datei<input id="plan-file" type="file" accept="application/pdf,.pdf" required></label><label class="remember"><input id="rotate-pdf" type="checkbox" checked><span>PDF vor dem Upload 90° nach rechts drehen</span></label><button class="primary" type="submit">Verschlüsselt bereitstellen</button></form><p id="upload-status" class="status" role="alert"></p></dialog>
 
-  <dialog id="viewer-dialog" class="viewer"><div class="viewer-head"><h2 id="viewer-title">Dienstplan</h2><button class="dialog-close viewer-close" data-close="viewer-dialog" type="button" aria-label="Schließen">×</button></div><iframe id="pdf-viewer" title="PDF-Ansicht"></iframe></dialog>
+  <dialog id="viewer-dialog" class="viewer"><div class="viewer-head"><div><h2 id="viewer-title">Dienstplan</h2><p id="viewer-status" role="status"></p></div><button class="dialog-close viewer-close" data-close="viewer-dialog" type="button" aria-label="Schließen">×</button></div><div id="pdf-viewer" class="pdf-pages" aria-label="Mehrseitige PDF-Ansicht"></div></dialog>
   <footer class="wrap"><p>Dienstpläne · Geschützter Bereich</p><a href="../">Zur Übersicht</a></footer>
 </body>
 </html>
