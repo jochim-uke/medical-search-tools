@@ -5,7 +5,7 @@ export const interest=entry=>3*(entry.comments?.length||0)+Math.min(entry.clicks
 export function searchText(entry){return normalize([entry.title,entry.body,entry.source_url,...entry.tags,entry.notes,...entry.comments.map(c=>c.body)].join(' '));}
 export function selectEntries(entries,filters){
   const terms=normalize(filters.query).split(/\s+/).filter(Boolean);
-  const rows=entries.filter(e=>(!filters.category||e.category===filters.category)&&(!filters.from||e.report_date>=filters.from)&&(!filters.to||e.report_date<=filters.to)&&(!filters.noted||e.notes.trim()||e.comments.length)&&(filters.priority==='all'||(filters.priority==='marked'?e.priority>0:e.priority===Number(filters.priority)))&&terms.every(t=>searchText(e).includes(t)));
+  const rows=entries.filter(e=>(!filters.category||e.category===filters.category)&&(!filters.tag||e.tags.some(tag=>normalize(tag)===normalize(filters.tag)))&&(!filters.from||e.report_date>=filters.from)&&(!filters.to||e.report_date<=filters.to)&&(!filters.noted||e.notes.trim()||e.comments.length)&&(filters.priority==='all'||(filters.priority==='marked'?e.priority>0:e.priority===Number(filters.priority)))&&terms.every(t=>searchText(e).includes(t)));
   const relevance=e=>terms.reduce((sum,t)=>sum+(normalize(e.title).includes(t)?5:0)+(normalize(e.tags.join(' ')).includes(t)?3:0)+(normalize(e.notes+' '+e.comments.map(c=>c.body).join(' ')).includes(t)?2:0),0);
   rows.sort((a,b)=>{
     if(filters.sort==='interest'){const d=b.priority-a.priority||interest(b)-interest(a);if(d)return d;}
