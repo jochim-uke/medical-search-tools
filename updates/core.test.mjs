@@ -13,6 +13,10 @@ test('tag filter is exact, normalized and combines with other filters',()=>{
  assert.deepEqual(selectEntries(rows,{...filters,tag:'axi‑cel'}).map(e=>e.id),['a']);
  assert.equal(selectEntries(rows,{...filters,tag:'CAR-T'}).length,0);
 });
+test('comment author is searchable including normalized names',()=>{
+ const rows=[{...base,id:'a',title:'Studie',comments:[{author:'Müller',body:'Relevant'}]}];
+ assert.equal(selectEntries(rows,{...filters,query:'muller'}).length,1);
+});
 test('explicit priority outranks clicks or comments; clicks are capped',()=>{
  const rows=[{...base,id:'a',title:'a',priority:1},{...base,id:'b',title:'b',clicks:10000,comments:Array(100).fill({body:'x'})},{...base,id:'c',title:'c',priority:1,clicks:20},{...base,id:'d',title:'d',priority:1,clicks:19,comments:[{body:'x'}]}];
  assert.deepEqual(selectEntries(rows,{...filters,sort:'interest'}).map(e=>e.id),['d','c','a','b']);
