@@ -10,12 +10,19 @@ async function db(path,method='GET',body,prefer='return=representation') {
   if(!response.ok) throw new APIError('Speichern oder Laden fehlgeschlagen. Bitte erneut versuchen.',502);
   const text=await response.text(); return text?JSON.parse(text):null;
 }
-async function all(table,order='id'){
-  const rows=[]; for(let offset=0;;offset+=500){const page=await db(`${table}?select=*&order=${order}&limit=500&offset=${offset}`);rows.push(...page);if(page.length<500)return rows;}
+async function all(table,columns,order='id'){
+  const rows=[]; for(let offset=0;;offset+=500){const page=await db(`${table}?select=${columns}&order=${order}&limit=500&offset=${offset}`);rows.push(...page);if(page.length<500)return rows;}
 }
 function text(value,max,required=true){if(typeof value!=='string'||value.length>max||(required&&!value.trim()))throw new APIError('Bitte Eingaben und Textlänge prüfen.');return value.trim();}
 function validURL(value){if(!value)return '';try{const url=new URL(value);if(!['https:','http:'].includes(url.protocol))throw 0;return url.href;}catch{throw new APIError('Bitte einen gültigen http(s)-Quellenlink verwenden.');}}
 const eq=value=>encodeURIComponent(value);
+async function adminSession(req){
+  const token=req.headers.get('x-archive-token')||'';
+  if(!/^[a-f0-9]{64}$/.test(token))return null;
+  const tokenHash=await hash(token);
+  const sessions=await db(`ua_sessions?token_hash=eq.${tokenHash}&expires_at=gt.${eq(new Date().toISOString())}&select=token_hash`);
+  return sessions.length?tokenHash:null;
+}
 async function action(req,body){
   if(body.action==='login'){
     const password=text(body.password,256);
@@ -34,17 +41,35 @@ async function action(req,body){
     await db('ua_sessions','POST',{token_hash:await hash(token),expires_at});
     return {token,expires_at};
   }
-  const token=req.headers.get('x-archive-token')||'';
-  if(!/^[a-f0-9]{64}$/.test(token))throw new APIError('Bitte anmelden.',401);
-  const tokenHash=await hash(token);
-  const sessions=await db(`ua_sessions?token_hash=eq.${tokenHash}&expires_at=gt.${eq(new Date().toISOString())}&select=token_hash`);
-  if(!sessions.length)throw new APIError('Die Anmeldung ist abgelaufen. Bitte erneut anmelden.',401);
-  if(body.action==='logout'){await db(`ua_sessions?token_hash=eq.${tokenHash}`,'DELETE');return {ok:true};}
+  const tokenHash=await adminSession(req);
+  const isAdmin=Boolean(tokenHash);
   if(body.action==='list'){
-    const [entries,reports,comments,links]=await Promise.all([all('ua_entries'),all('ua_reports'),all('ua_comments'),all('ua_report_entries','report_id,entry_id')]);
-    return {entries,reports,comments,links};
+    const [entries,reports,comments,links]=await Promise.all([
+      all('ua_entries','id,title,category,body,source_url,tags,report_date,notes,priority,clicks,version,created_at'),
+      all('ua_reports','id,title,report_date,body,created_at'),
+      all('ua_comments','id,entry_id,body,author,author_is_admin,created_at,version'),
+      all('ua_report_entries','report_id,entry_id','report_id,entry_id')
+    ]);
+    return {entries,reports,comments,links,is_admin:isAdmin};
   }
   if(body.action==='visit')return {clicks:await db('rpc/ua_visit','POST',{p_entry:text(body.id,200)})};
+  if(body.action==='comment-add'){
+    if(req.headers.has('x-archive-token')&&!isAdmin)throw new APIError('Die Admin-Anmeldung ist abgelaufen. Bitte erneut anmelden oder ohne Anmeldung kommentieren.',401);
+    const id=text(body.id,36);if(!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(id))throw new APIError('Ungültige Kommentar-ID.');
+    const author=isAdmin?'Admin':text(body.author,100);
+    if(/[\p{C}]/u.test(author))throw new APIError('Bitte einen Namen ohne Steuerzeichen eingeben.');
+    if(!isAdmin&&author.normalize('NFKC').toLowerCase()==='admin')throw new APIError('Der Name Admin ist für angemeldete Administratoren reserviert.');
+    const comment={id,entry_id:text(body.entry_id,200),body:text(body.body,20000),author,author_is_admin:isAdmin};
+    if(!isAdmin){
+      const ip=req.headers.get('x-forwarded-for')?.split(',')[0].trim()||'unknown';
+      const attempts=await db('rpc/ua_rate_limit','POST',{p_bucket:'comments:'+await hash(secret+ip)});
+      if(attempts>20)throw new APIError('Zu viele Kommentare in kurzer Zeit. Bitte in zehn Minuten erneut versuchen.',429);
+    }
+    await db('ua_comments?on_conflict=id','POST',comment,'resolution=ignore-duplicates,return=representation');return {ok:true};
+  }
+  // Every other operation requires the server-verified admin session.
+  if(!isAdmin)throw new APIError('Bitte als Admin anmelden. Nur der Admin darf diese Änderung vornehmen.',401);
+  if(body.action==='logout'){await db(`ua_sessions?token_hash=eq.${tokenHash}`,'DELETE');return {ok:true};}
   if(body.action==='update'){
     const id=text(body.id,200);if(!Number.isInteger(body.version)||body.version<0)throw new APIError('Ungültiger Versionsstand.');
     const patch={version:body.version+1};
@@ -54,10 +79,6 @@ async function action(req,body){
     const rows=await db(`ua_entries?id=eq.${eq(id)}&version=eq.${body.version}`,'PATCH',patch);
     if(!rows.length)throw new APIError('Der Eintrag wurde zwischenzeitlich geändert. Bitte Ansicht aktualisieren; dein Text bleibt im Eingabefeld.',409);
     return {entry:rows[0]};
-  }
-  if(body.action==='comment-add'){
-    const id=text(body.id,36);if(!/^[a-f0-9-]{36}$/i.test(id))throw new APIError('Ungültige Kommentar-ID.');
-    await db('ua_comments?on_conflict=id','POST',{id,entry_id:text(body.entry_id,200),body:text(body.body,20000)},'resolution=ignore-duplicates,return=representation');return {ok:true};
   }
   if(['comment-update','comment-delete'].includes(body.action)){
     if(!Number.isInteger(body.version)||body.version<0)throw new APIError('Ungültiger Versionsstand.');

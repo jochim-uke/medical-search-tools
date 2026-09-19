@@ -2,7 +2,7 @@ export const categories=['Publikationen','Kongressbeiträge','Zulassungsrelevant
 export const normalize=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[‐‑–—]/g,'-').toLowerCase();
 export const plain=value=>String(value||'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1').replace(/[*#]/g,'').replace(/^[-•]\s/gm,'');
 export const interest=entry=>3*(entry.comments?.length||0)+Math.min(entry.clicks||0,20);
-export function searchText(entry){return normalize([entry.title,entry.body,entry.source_url,...entry.tags,entry.notes,...entry.comments.map(c=>c.body)].join(' '));}
+export function searchText(entry){return normalize([entry.title,entry.body,entry.source_url,...entry.tags,entry.notes,...entry.comments.map(c=>`${c.author||''} ${c.body}`)].join(' '));}
 export function selectEntries(entries,filters){
   const terms=normalize(filters.query).split(/\s+/).filter(Boolean);
   const rows=entries.filter(e=>(!filters.category||e.category===filters.category)&&(!filters.tag||e.tags.some(tag=>normalize(tag)===normalize(filters.tag)))&&(!filters.from||e.report_date>=filters.from)&&(!filters.to||e.report_date<=filters.to)&&(!filters.noted||e.notes.trim()||e.comments.length)&&(filters.priority==='all'||(filters.priority==='marked'?e.priority>0:e.priority===Number(filters.priority)))&&terms.every(t=>searchText(e).includes(t)));
