@@ -1,0 +1,569 @@
+{
+  "id": "2026-W40",
+  "title": "KW 40 · Oktober 2026",
+  "sets": [
+    {
+      "title": "Set 1 · Transplantationsplattformen und CAR-T-Planung",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Precision-T",
+          "question": "Precision-T (Blood 2026) randomisierte 187 Erwachsene mit akuten Leukämien oder MDS nach myeloablativer Konditionierung und HLA-gematchter peripherer Stammzellspende. Welcher Vergleich wurde tatsächlich geprüft?",
+          "hint": "Trenne die Zusammensetzung des Transplantats von der medikamentösen GvHD-Prophylaxe.",
+          "explanation": "Randomisierte Phase-III-Studie, Blood 2026. Der primäre Endpunkt war Überleben ohne moderate/schwere chronische GvHD. Das Ergebnis gilt zunächst für diese Transplantationsplattform und Population; es ist kein direkter Vergleich mit PTCy oder haploidentischer Transplantation.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Konventionelles Transplantat plus PTCy gegen konventionelles Transplantat plus ATG",
+              "feedback": "PTCy und ATG bildeten nicht die randomisierten Vergleichsarme dieser Studie."
+            },
+            {
+              "value": "B",
+              "label": "Orca-T plus Tacrolimus gegen konventionelles Transplantat plus Tacrolimus/Methotrexat",
+              "feedback": "Die Studie verglich eine definierte Zellplattform mit angereicherten regulatorischen T-Zellen plus Tacrolimus mit dem konventionellen Transplantat unter Tacrolimus/Methotrexat."
+            },
+            {
+              "value": "C",
+              "label": "Orca-T ohne Immunsuppression gegen konventionelles Transplantat plus PTCy",
+              "feedback": "Orca-T wurde mit Tacrolimus gegeben; der Kontrollarm verwendete Tacrolimus/Methotrexat."
+            },
+            {
+              "value": "D",
+              "label": "Konventionelles Transplantat plus Tacrolimus gegen dasselbe Transplantat plus Methotrexat",
+              "feedback": "Untersucht wurde zugleich eine andere Zellplattform, nicht nur der Austausch zweier Medikamente."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Precision-T · Blood 2026 · randomisierte Phase III",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41385341/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · MRD und Konditionierung",
+          "question": "Eine fitte AML-Patientin in morphologischer Remission hat unmittelbar vor Allo-HSCT molekular nachweisbare Resterkrankung. Welche Aussage wird durch Hourigans korrelative Analyse der randomisierten BMT-CTN-0901-Studie (JCO 2020) am besten gestützt?",
+          "hint": "Unterscheide die Randomisierung der Konditionierung von der nachträglichen molekularen Subgruppenanalyse.",
+          "explanation": "JCO 2020: Sequenzierungsanalyse prätransplantärer Blutproben aus einer randomisierten MAC/RIC-Studie bei AML in morphologischer Remission. Sie unterstützt MAC bei geeigneten MRD-positiven Patienten, ersetzt aber weder Fitnessprüfung noch differenzierte Interpretation persistierender Mutationen.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "RIC sollte bevorzugt werden, weil MRD die konditionierungsbedingte Toxizität vorhersagt.",
+              "feedback": "Die Analyse untersuchte vor allem Rezidiv- und Überlebensunterschiede; MRD war hier kein validierter Marker für höhere MAC-Toxizität."
+            },
+            {
+              "value": "B",
+              "label": "Bei molekularer MRD sind MAC und RIC hinsichtlich des Rezidivrisikos gleichwertig.",
+              "feedback": "Bei nachweisbaren Mutationen waren Rezidive unter RIC häufiger; Gleichwertigkeit wurde nicht gezeigt."
+            },
+            {
+              "value": "C",
+              "label": "Der MRD-Befund beweist einen Nutzen von MAC auch bei für MAC ungeeigneten Patienten.",
+              "feedback": "Die Studienpopulation war für beide Intensitäten geeignet. Daraus folgt keine MAC-Eignung bei erheblicher Komorbidität."
+            },
+            {
+              "value": "D",
+              "label": "Bei für beide Regime geeigneten MRD-positiven Patienten sprechen die Daten für MAC.",
+              "feedback": "Bei molekularem Restkrankheitsnachweis waren die Ergebnisse unter MAC günstiger. Fitness und die Grenzen einer korrelativen Subgruppenanalyse bleiben relevant."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Hourigan et al. · JCO 2020 · MRD und Konditionierungsintensität",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7164487/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Bendamustin vor Apherese",
+          "question": "Bei einem Patienten mit R/R-LBCL steht die Leukapherese für CAR-T noch aus. Wie ist die retrospektive Analyse von Iacoboni et al. (JCO 2024; 439 Patienten) für eine geplante Bendamustin-Gabe einzuordnen?",
+          "hint": "Achte darauf, ob die T-Zellen zum Zeitpunkt der Exposition bereits gesammelt waren.",
+          "explanation": "JCO 2024: multizentrische Beobachtungsanalyse kommerzieller CAR-T bei LBCL; 80/439 Patienten waren vor Apherese Bendamustin-exponiert. Confounding bleibt möglich. Eine separate retrospektive Bridginganalyse nach Apherese darf nicht mit diesem Expositionsfenster vermischt werden.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Sie begründet Zurückhaltung vor Apherese; ein pauschales Verbot nach Apherese folgt daraus nicht.",
+              "feedback": "Die ungünstige Assoziation betraf die Exposition vor Apherese. Nach Apherese untersuchte Kohorten beantworten eine andere Frage."
+            },
+            {
+              "value": "B",
+              "label": "Sie belegt dieselbe Risikosteigerung vor und nach Apherese, unabhängig vom Zeitpunkt.",
+              "feedback": "Vor und nach Apherese sind biologisch und methodisch verschiedene Situationen; die Studie belegt keine identische Wirkung."
+            },
+            {
+              "value": "C",
+              "label": "Sie beweist, dass jede frühere Bendamustin-Exposition eine CAR-T-Therapie ausschließt.",
+              "feedback": "Eine ungünstige Assoziation ist keine absolute Kontraindikation und verlangt eine individuelle Therapieplanung."
+            },
+            {
+              "value": "D",
+              "label": "Sie zeigt einen randomisierten Vorteil einer Bendamustin-freien Bridgingtherapie nach Apherese.",
+              "feedback": "Die Studie war retrospektiv und untersuchte vorherige Exposition, keinen randomisierten Bridgingvergleich."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Iacoboni et al. · JCO 2024 · Bendamustin vor Apherese",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/37874957/"
+            },
+            {
+              "title": "Iacoboni et al. · HemaSphere 2024 · Bendamustin-Bridging nach Apherese",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38948924/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · TRANSFORM und Bridging",
+          "question": "Ein Tumorboard vergleicht Zweitlinien-CAR-T-Studien bei primär refraktärem oder innerhalb von zwölf Monaten rezidiviertem LBCL. Welche Bridging-Regel galt im Liso-cel-Arm von TRANSFORM (Primäranalyse, Blood 2023)?",
+          "hint": "Die Protokolle der verschiedenen Zweitlinien-CAR-T-Studien sind nicht austauschbar.",
+          "explanation": "Randomisierte Phase-III-Studie bei transplantationsgeeignetem frühem R/R-LBCL. Bridgingregeln und Behandlungszeiten unterscheiden sich zwischen Studien. Sie müssen bei indirekten Vergleichen berücksichtigt werden; daraus entsteht jedoch kein randomisierter Produktvergleich.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ausschließlich Glukokortikoide waren als Bridging erlaubt.",
+              "feedback": "Diese Einschränkung beschreibt nicht die TRANSFORM-Regel; eine platinbasierte Chemotherapie war möglich."
+            },
+            {
+              "value": "B",
+              "label": "Mehrere Salvagezyklen bis zum Nachweis einer kompletten Remission waren erforderlich.",
+              "feedback": "Mehrere Zyklen bis zur kompletten Remission waren keine Voraussetzung für Liso-cel."
+            },
+            {
+              "value": "C",
+              "label": "Ein Zyklus einer protokollgemäßen platinbasierten Salvagetherapie war erlaubt.",
+              "feedback": "TRANSFORM erlaubte einen Zyklus der im Protokoll vorgesehenen Standard-Salvagetherapie als Bridging."
+            },
+            {
+              "value": "D",
+              "label": "Jegliche systemische Behandlung zwischen Apherese und Lymphodepletion war untersagt.",
+              "feedback": "Ein systemisches Bridging war erlaubt; ein generelles Verbot wäre eine falsche Protokollübertragung."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Abramson et al. · Blood 2023 · TRANSFORM-Primäranalyse",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10646768/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Antibiotika und Mikrobiom",
+          "question": "Vor CD19-CAR-T entwickelt ein LBCL-Patient eine schwere bakterielle Infektion. Mikrobiom-Kohorten (Nature Medicine 2022/2023) verknüpften bestimmte Breitspektrumantibiotika mit schlechteren CAR-T-Ergebnissen. Welche Konsequenz ist am besten begründet?",
+          "hint": "Frage dich, wodurch sowohl die Antibiotikawahl als auch die Prognose beeinflusst werden können.",
+          "explanation": "Beobachtungsdaten bei CD19-CAR-T: bestimmte vorausgehende Antibiotikaexpositionen waren mit ungünstigen Ergebnissen assoziiert. Confounding by indication und Unterschiede in Tumorlast/Entzündung begrenzen kausale Schlussfolgerungen. Die Arbeiten ersetzen keine klinisch angemessene Infektionsbehandlung.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die Assoziation rechtfertigt ein generelles Vermeiden von Meropenem auch bei gesicherter Indikation.",
+              "feedback": "Eine indizierte wirksame Infektionstherapie darf aus dieser Beobachtungsassoziation nicht abgeleitet unterlassen werden."
+            },
+            {
+              "value": "B",
+              "label": "Die Infektion wird adäquat behandelt; unnötige Exposition wird vermieden, ein kausaler Regimenvergleich fehlt.",
+              "feedback": "Indikationsgerechte Therapie und Stewardship sind vereinbar. Tumorlast, Entzündung und Infektionsschwere können die Assoziation mit erklären."
+            },
+            {
+              "value": "C",
+              "label": "Die Kohorten beweisen einen Überlebensvorteil von Cefepim gegenüber allen anderen Betalaktamen.",
+              "feedback": "Die Kohorten randomisierten keine Antibiotikaregime und belegen diesen pauschalen Vergleich nicht."
+            },
+            {
+              "value": "D",
+              "label": "Das beobachtete Signal erlaubt, bei schwerer Infektion bis zur Mikrobiomanalyse mit Antibiotika zu warten.",
+              "feedback": "Die Studien validieren keine Strategie, notwendige Antibiotika zugunsten einer Mikrobiomanalyse zu verzögern."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Smith et al. · Nature Medicine 2022 · Mikrobiom und CD19-CAR-T",
+              "url": "https://www.nature.com/articles/s41591-022-01702-9"
+            },
+            {
+              "title": "Stein-Thoeringer et al. · Nature Medicine 2023 · multizentrische Mikrobiomkohorte",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36914893/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 2 · Graft-Risiken, Bispezifika und neue Indikationen",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Donorspezifische HLA-Antikörper",
+          "question": "Vor haploidentischer Allo-HSCT werden beim Empfänger Antikörper gegen ein HLA-Antigen des vorgesehenen Spenders nachgewiesen. Welches Risiko steht nach dem EBMT Handbook 2024 im Vordergrund?",
+          "hint": "Beachte die Richtung der Immunreaktion: Empfänger gegen Spender.",
+          "explanation": "EBMT Handbook, 8. Auflage 2024, Kapitel Graft Failure: DSA sind insbesondere bei HLA-disparaten Transplantationen relevant. Der Befund allein liefert weder eine universelle MFI-Grenze noch ein für alle Patienten identisches Desensibilisierungsschema.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ein isoliert erhöhtes Risiko einer chronischen GvHD durch donorreaktive T-Zellen",
+              "feedback": "GvHD beruht wesentlich auf Spender-gegen-Empfänger-Reaktivität; hier geht es um Empfängerantikörper gegen den Spender."
+            },
+            {
+              "value": "B",
+              "label": "Ein unmittelbares leukämiespezifisches Rezidivrisiko durch Verlust des Zielantigens",
+              "feedback": "Donorspezifische Antikörper sind kein Marker für leukämisches Antigen-Escape."
+            },
+            {
+              "value": "C",
+              "label": "Ein erhöhtes Risiko für Graft Failure durch spendergerichtete Alloreaktivität",
+              "feedback": "Donorspezifische anti-HLA-Antikörper sind mit Graft Failure assoziiert; die Spenderwahl und Antikörperbewertung werden dadurch relevant."
+            },
+            {
+              "value": "D",
+              "label": "Ein ABO-vermitteltes Risiko einer verzögerten erythroiden Rekonstitution",
+              "feedback": "HLA-Antikörper sind von ABO-Isoagglutininen zu unterscheiden; die beschriebene Konstellation ist keine ABO-Diagnose."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Graft Failure",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608339/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · Spätes SOS/VOD",
+          "question": "An Tag +35 nach Allo-HSCT treten schmerzhafte Hepatomegalie, neue Aszitesbildung und Gewichtszunahme auf. Ein Kollege schließt SOS/VOD wegen des späten Beginns aus. Welche Antwort entspricht dem EBMT Handbook 2024?",
+          "hint": "Unterscheide eine zeitliche Untergruppe von einem Ausschlusskriterium.",
+          "explanation": "EBMT Handbook 2024, Hepatic Complications, einschließlich der 2023 weiterentwickelten EBMT-Kriterien: spätes Auftreten bleibt möglich. Die Fallvignette prüft den Zeitpunkt, nicht eine bereits gesicherte Diagnose oder individuelle Therapieindikation.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Auch nach Tag +21 ist SOS/VOD möglich; die aktuelle Konstellation erfordert gezielte weitere Abklärung.",
+              "feedback": "Late-onset-SOS/VOD ist anerkannt. Verlauf, Labor und gegebenenfalls bildgebende/hämodynamische Befunde sowie Alternativen müssen bewertet werden."
+            },
+            {
+              "value": "B",
+              "label": "Ein Erstbeginn nach Tag +21 schließt SOS/VOD bei Erwachsenen definitionsgemäß aus.",
+              "feedback": "Tag +21 trennt klassische von später Manifestation; er schließt die spätere Form nicht aus."
+            },
+            {
+              "value": "C",
+              "label": "Nach Tag +21 beweist diese Symptomkombination SOS/VOD ohne weitere Differenzialdiagnostik.",
+              "feedback": "Die Symptome sind verdächtig, aber nicht spezifisch genug, um Differenzialdiagnosen und diagnostische Kriterien zu ersetzen."
+            },
+            {
+              "value": "D",
+              "label": "Nach Tag +21 ist SOS/VOD nur bei bereits vor Tag +21 bestehendem Ikterus möglich.",
+              "feedback": "Ein früher Ikterus ist keine Voraussetzung dafür, eine spätere SOS/VOD-Manifestation zu erwägen."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Hepatic Complications",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608328/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · Mosunetuzumab und Therapiedauer",
+          "question": "Eine Patientin mit follikulärem Lymphom nach mindestens zwei Vortherapien erreicht unter Mosunetuzumab eine komplette Remission. Welche Therapiedauer entsprach der einarmigen pivotalen Phase-II-Studie (Lancet Oncology 2022)?",
+          "hint": "Das Protokoll unterschied die maximale Dauer nach dem erreichten Ansprechen.",
+          "explanation": "Budde et al., Lancet Oncology 2022: einarmige Phase-II-Kohorte mit 90 Patienten und mindestens zwei vorherigen Therapielinien. Die Studie beschreibt dieses Schema; sie randomisiert nicht acht gegen 17 Zyklen und belegt daher keine vergleichende Überlegenheit einer Dauer.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Fortführung bei jedem Ansprechen bis Progress oder nicht tolerabler Toxizität",
+              "feedback": "Die Studie verwendete eine begrenzte, ansprechabhängige Behandlungsdauer statt kontinuierlicher Therapie bis Progress."
+            },
+            {
+              "value": "B",
+              "label": "Beendigung nach vier Zyklen bei kompletter Remission",
+              "feedback": "Vier Zyklen waren nicht die vorgesehene Gesamtdauer bei kompletter Remission."
+            },
+            {
+              "value": "C",
+              "label": "Einheitlich 17 Zyklen unabhängig von kompletter oder partieller Remission",
+              "feedback": "17 Zyklen waren die mögliche Verlängerung bei PR/SD, nicht die obligatorische Dauer bei kompletter Remission."
+            },
+            {
+              "value": "D",
+              "label": "Beendigung nach acht Zyklen bei kompletter Remission; bei PR/SD bis zu 17 Zyklen",
+              "feedback": "Das Protokoll sah acht Zyklen bei kompletter Remission und bis zu 17 bei partieller Remission oder stabiler Erkrankung vor."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Budde et al. · Lancet Oncology 2022 · Mosunetuzumab bei R/R-FL",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35803286/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Marginalzonenlymphom 2026",
+          "question": "Die TRANSCEND-FL-MZL-Analyse (Lancet, 7. März 2026) berichtet Ergebnisse von Liso-cel bei R/R-Marginalzonenlymphom nach mindestens zwei systemischen Vortherapien. Welche Schlussfolgerung erlaubt ihr Design?",
+          "hint": "Prüfe, ob es innerhalb dieser Kohorte einen randomisierten Vergleichsarm gab.",
+          "explanation": "Publizierte Originalarbeit 2026, globale multizentrische, einarmige Phase-II-Kohorte. Die Evidenz betrifft Patienten nach mindestens zwei systemischen Therapielinien. Weder ein kausaler Vergleich mit BTK-Inhibitoren noch eine Erstlinienempfehlung folgt daraus.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Liso-cel ist gegenüber Zanubrutinib hinsichtlich Gesamtüberleben überlegen.",
+              "feedback": "Ein direkter randomisierter Vergleich mit Zanubrutinib war nicht Bestandteil dieser Analyse."
+            },
+            {
+              "value": "B",
+              "label": "Die Kohorte beschreibt Aktivität und Sicherheit; Überlegenheit gegenüber BTK-Inhibition ist nicht bewiesen.",
+              "feedback": "Die globale Phase-II-Studie war einarmig. Sie liefert behandlungsspezifische Ergebnisse, aber keinen kontrollierten Überlegenheitsnachweis."
+            },
+            {
+              "value": "C",
+              "label": "Liso-cel und BTK-Inhibition sind bezüglich Langzeittoxizität als gleichwertig belegt.",
+              "feedback": "Gleichwertigkeit erfordert ein passendes Vergleichsdesign und kann aus dieser Kohorte nicht abgeleitet werden."
+            },
+            {
+              "value": "D",
+              "label": "Die Ergebnisse belegen den bevorzugten Einsatz von Liso-cel in der Erstlinie.",
+              "feedback": "Untersucht wurde mehrfach vorbehandeltes R/R-MZL; die Ergebnisse begründen keine Erstlinienübertragung."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Palomba et al. · Lancet 2026 · TRANSCEND FL, MZL-Kohorte",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41692020/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · HHV-6-Enzephalitis",
+          "question": "Nach Allo-HSCT wird eine HHV-6-Enzephalitis antiviral behandelt. An Tag 10 bessert sich die Neurologie, die HHV-6-DNA bleibt im Liquor nachweisbar. Welche Aussage entspricht den ECIL-Empfehlungen 2017 (publiziert 2019)?",
+          "hint": "Klinische Besserung und virologische Kontrolle sind unterschiedliche Abbruchkriterien.",
+          "explanation": "ECIL-Leitlinie für hämatologische Erkrankungen/HSCT, Konsens 2017, Haematologica 2019. Die Dauerempfehlung beruht auf begrenzter Evidenz und Expertenkonsens (CIII), nicht auf einem randomisierten Vergleich verschiedener Therapiedauern.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die klinische Besserung allein erlaubt das Absetzen nach zehn Tagen.",
+              "feedback": "Eine frühe klinische Besserung ersetzt die empfohlene Mindestdauer und virologische Verlaufskontrolle nicht."
+            },
+            {
+              "value": "B",
+              "label": "Eine feste Dauer von 14 Tagen genügt unabhängig von der virologischen Entwicklung.",
+              "feedback": "Die Empfehlung ist nicht auf 14 Tage ohne Beachtung der DNA-Verläufe begrenzt."
+            },
+            {
+              "value": "C",
+              "label": "Mindestens drei Wochen und bis zur DNA-Clearance im Blut, möglichst auch im Liquor, werden empfohlen.",
+              "feedback": "ECIL empfiehlt mindestens drei Wochen sowie Clearance im Blut und, wenn möglich, im Liquor; die Evidenzstufe für diese Dauer ist CIII."
+            },
+            {
+              "value": "D",
+              "label": "Eine im RCT belegte sechsmonatige Erhaltungstherapie ist nach jeder Enzephalitis erforderlich.",
+              "feedback": "Eine solche randomisiert gesicherte allgemeine Erhaltungsstrategie wird durch die Leitlinie nicht belegt."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Ward et al. · Haematologica 2019 · ECIL-HHV-6-Leitlinie",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6821622/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 3 · Prävention, Endpunkte und konkurrierende Risiken",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Verlängerte CMV-Prophylaxe",
+          "question": "Ein CMV-seropositiver Allo-HSCT-Empfänger hat etwa 100 Tage Letermovir erhalten, bisher keine klinisch signifikante CMV-Infektion und weiterhin hohes Risiko. Welche Aussage stützt die randomisierte Phase-III-Studie von Russo et al. (Lancet Haematology 2024)?",
+          "hint": "Achte auf die ausgewählte Risikopopulation und den zeitlichen Horizont des primären Vergleichs.",
+          "explanation": "Multizentrisch, randomisiert, doppelblind, placebokontrolliert; Publikation Februar 2024. Nach initialer Prophylaxe wurde bis Tag 200 verlängert. Der dokumentierte Vorteil betrifft klinisch signifikante CMV-Infektionen bis Woche 28, nicht einen zeitlich unbegrenzten Schutz.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Verlängerung bis Tag 200 senkte klinisch signifikante CMV-Infektionen bis Woche 28 gegenüber Placebo.",
+              "feedback": "In dieser ausgewählten Hochrisikopopulation traten bis Woche 28 klinisch signifikante CMV-Infektionen bei 3% versus 19% auf."
+            },
+            {
+              "value": "B",
+              "label": "Verlängerung bis Tag 200 verbesserte nachweislich das Gesamtüberleben aller Allo-HSCT-Empfänger.",
+              "feedback": "Die genannte Studie begründet keinen pauschalen Gesamtüberlebensvorteil für sämtliche Allo-HSCT-Empfänger."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie prüfte Letermovir als Therapie einer an Tag 100 bereits bestehenden CMV-Endorganerkrankung.",
+              "feedback": "Untersucht wurde verlängerte Prophylaxe, nicht die Behandlung einer bestehenden CMV-Endorganerkrankung."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie belegt eine Prophylaxe bis Tag 200 unabhängig von Serostatus und individuellem Risiko.",
+              "feedback": "CMV-seropositive Patienten mit weiterbestehendem Risiko wurden untersucht; eine universelle Übertragung überschreitet die Population."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Russo et al. · Lancet Haematology 2024 · Letermovir bis Tag 200",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38142695/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · REACH3-Endpunkt",
+          "question": "REACH3 (NEJM 2021) verglich Ruxolitinib mit Best Available Therapy bei Patienten ab zwölf Jahren mit moderater/schwerer steroidrefraktärer oder -abhängiger chronischer GvHD. Wofür stehen die häufig zitierten 49,7% versus 25,6%?",
+          "hint": "Unterscheide den fixen Erhebungszeitpunkt von einem Best-response-Endpunkt.",
+          "explanation": "Randomisierte Phase-III-Studie, NEJM 2021. Ruxolitinib verbesserte den definierten primären Ansprechendpunkt gegenüber BAT. Die Zahlen dürfen nicht als Heilungsrate, steroidfreie Remission oder OS-Vorteil ausgegeben werden.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Komplette Remission zu irgendeinem Zeitpunkt während des Follow-ups",
+              "feedback": "Die Zahlen bezeichnen weder ausschließlich komplette Remissionen noch das beste Ansprechen über die gesamte Beobachtung."
+            },
+            {
+              "value": "B",
+              "label": "Gesamtüberleben zwölf Monate nach Randomisierung",
+              "feedback": "Es handelt sich um Ansprechraten, nicht um Überlebenswahrscheinlichkeiten."
+            },
+            {
+              "value": "C",
+              "label": "Gesamtansprechen, also CR oder PR, in Woche 24",
+              "feedback": "Der primäre Endpunkt war das Gesamtansprechen in Woche 24, einschließlich kompletter und partieller Remissionen."
+            },
+            {
+              "value": "D",
+              "label": "Anteil ohne jegliche systemische Immunsuppression in Woche 24",
+              "feedback": "Ein Ansprechen ist nicht gleichbedeutend mit dem Absetzen sämtlicher systemischer Immunsuppression."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Zeiser et al. · NEJM 2021 · REACH3",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34260836/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Negative Studie BELINDA",
+          "question": "BELINDA (NEJM 2022) verglich Tisagenlecleucel mit Standard-Salvage/ASCT bei aggressivem B-Zell-Lymphom mit primärer Refraktärität oder frühem Rezidiv. Das mediane EFS betrug in beiden Armen drei Monate (HR 1,07; 95%-KI 0,82–1,40). Welche Interpretation ist am besten begründet?",
+          "hint": "Ein negativer Überlegenheitstest ist weder ein Äquivalenztest noch eine Analyse der Ursache des Ergebnisses.",
+          "explanation": "Randomisierte Phase-III-Studie, NEJM 2022. Der EFS-Überlegenheitsnachweis gelang nicht. Indirekte Vergleiche mit positiven Zweitlinienstudien müssen Population, Endpunktdefinition, Bridging und Zeitabläufe berücksichtigen.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Damit ist die Äquivalenz aller CAR-T-Produkte mit Salvage/ASCT bewiesen.",
+              "feedback": "BELINDA war kein Äquivalenzvergleich sämtlicher CAR-T-Produkte; ein nicht signifikanter Unterschied beweist keine Gleichwertigkeit."
+            },
+            {
+              "value": "B",
+              "label": "Die mediane Zeit bis zur Infusion von 52 Tagen ist als alleinige Ursache des Ergebnisses bewiesen.",
+              "feedback": "Die Behandlungszeit ist eine mögliche Erklärung, wurde aber nicht als isolierter kausaler Faktor randomisiert."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie widerlegt einen Zweitliniennutzen jeder CD19-CAR-T-Therapie.",
+              "feedback": "Eine produktspezifische Strategie kann nicht sämtliche anderen CAR-T-Studien und Behandlungsabläufe widerlegen."
+            },
+            {
+              "value": "D",
+              "label": "Für die geprüfte Tisa-cel-Strategie wurde kein EFS-Vorteil gezeigt; Produkt- und Protokollunterschiede bleiben relevant.",
+              "feedback": "Der Schluss bleibt an die getestete Strategie gebunden. Hypothesen zu Logistik und Bridging erklären das Ergebnis nicht automatisch kausal."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Bishop et al. · NEJM 2022 · BELINDA",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34904798/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · Glofitamab-Vorbehandlung",
+          "question": "Im pivotalen Phase-II-Programm zu Glofitamab bei R/R-DLBCL nach mindestens zwei Vortherapien (NEJM 2022) wurde Obinutuzumab sieben Tage vor der ersten Glofitamab-Dosis gegeben. Welches Konzept trifft zu?",
+          "hint": "Vorbehandlung und stufenweise Dosissteigerung adressieren ein frühes immunologisches Risiko.",
+          "explanation": "Einarmige Phase-II-Studie, NEJM 2022, bei mehrfach vorbehandeltem R/R-DLBCL. Das Protokoll verwendete beide Maßnahmen. Ohne randomisierten Vergleich lässt sich der isolierte Beitrag der Obinutuzumab-Vorbehandlung zur Risikoreduktion nicht quantifizieren.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Obinutuzumab ersetzte die Step-up-Dosierung durch eine sofortige volle Glofitamab-Dosis.",
+              "feedback": "Die Vorbehandlung ersetzte die Step-up-Dosierung nicht."
+            },
+            {
+              "value": "B",
+              "label": "Obinutuzumab diente der CRS-Risikominderung; zusätzlich wurde Glofitamab stufenweise dosiert.",
+              "feedback": "Das Studienkonzept kombinierte Obinutuzumab-Vorbehandlung mit Step-up-Dosierung zur Minderung des CRS-Risikos."
+            },
+            {
+              "value": "C",
+              "label": "Obinutuzumab wurde erst bei einem unter Glofitamab aufgetretenen CRS eingesetzt.",
+              "feedback": "Die Gabe erfolgte vor der ersten Glofitamab-Dosis und war keine erst reaktive CRS-Behandlung."
+            },
+            {
+              "value": "D",
+              "label": "Obinutuzumab war eine randomisierte Erhaltungstherapie nach Ende der Glofitamab-Zyklen.",
+              "feedback": "Die Vorbehandlung war keine randomisierte Erhaltungsphase."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Dickinson et al. · NEJM 2022 · Glofitamab bei R/R-DLBCL",
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2206913"
+            }
+          ]
+        },
+        {
+          "topic": "Evidenz · Konkurrierende Risiken",
+          "question": "Eine Allo-HSCT-Kohorte soll die tatsächlich beobachtbare Wahrscheinlichkeit eines Rezidivs bis zwei Jahre beschreiben. Ein relevanter Anteil stirbt vorher ohne Rezidiv. Welcher Ansatz passt nach dem EBMT Handbook 2024?",
+          "hint": "Ein Tod ohne Rezidiv verändert die Möglichkeit, das interessierende Ereignis später noch zu erleben.",
+          "explanation": "EBMT Handbook 2024, Statistical Methods: kumulative Inzidenz für absolute Ereigniswahrscheinlichkeiten bei konkurrierenden Risiken. Das bedeutet nicht, dass ein ursachenspezifisches Cox-Modell unzulässig ist; dieses beantwortet eine Hazard-Frage statt unmittelbar die absolute Risikofrage.",
+          "reviewed_at": "2026-10-01",
+          "options": [
+            {
+              "value": "A",
+              "label": "Kumulative Rezidivinzidenz mit Tod ohne Rezidiv als konkurrierendem Ereignis",
+              "feedback": "Die kumulative Inzidenz berücksichtigt, dass ein Tod ohne Rezidiv ein späteres Rezidiv ausschließt."
+            },
+            {
+              "value": "B",
+              "label": "1 minus Kaplan–Meier, wobei alle Todesfälle ohne Rezidiv wie Follow-up-Verluste zensiert werden",
+              "feedback": "Für diese absolute Wahrscheinlichkeit überschätzt 1 minus Kaplan–Meier bei konkurrierenden Todesfällen das Rezidivrisiko."
+            },
+            {
+              "value": "C",
+              "label": "Rezidivanteil ausschließlich unter den nach zwei Jahren noch lebenden Patienten",
+              "feedback": "Die Beschränkung auf Überlebende selektiert die Population und beantwortet eine andere Frage."
+            },
+            {
+              "value": "D",
+              "label": "Kaplan–Meier-Schätzung des Gesamtüberlebens als Schätzer der Rezidivwahrscheinlichkeit",
+              "feedback": "Gesamtüberleben erfasst Tod unabhängig vom Rezidivstatus und schätzt keine Rezidivwahrscheinlichkeit."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Statistical Methods in HCT and Cellular Therapies",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608271/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
