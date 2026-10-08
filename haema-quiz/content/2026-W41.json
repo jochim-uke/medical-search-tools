@@ -1,0 +1,573 @@
+{
+  "id": "2026-W41",
+  "title": "KW 41 · Oktober 2026",
+  "sets": [
+    {
+      "title": "Set 1 · Spenderbiologie, Endothel und moderne Lymphomtherapie",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · HLA-DPB1",
+          "question": "Für eine 10/10-HLA-gematchte unverwandte Spende besteht ein HLA-DPB1-Mismatch. Was bedeutet „permissiv“ im T-cell-epitope-Modell (TCE) nach dem EBMT Handbook 2024?",
+          "hint": "Das Modell bewertet die funktionelle Alloreaktivität des Mismatches, nicht dessen bloße Existenz.",
+          "explanation": "EBMT Handbook 2024: Auch bei 10/10-Matching kann HLA-DPB1 differieren. Das TCE-Modell soll tolerierbare von risikoreicheren Kombinationen unterscheiden. Es ist ein Auswahlkriterium unter mehreren; Spenderalter, weitere HLA-Merkmale, DSA und klinische Dringlichkeit bleiben relevant.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Spender und Empfänger tragen identische DPB1-Allele, aber unterschiedliche DPA1-Allele.",
+              "feedback": "Ein allelischer DPB1-Match wäre definitionsgemäß kein DPB1-Mismatch; DPA1 ist nicht der Gegenstand des TCE-Begriffs."
+            },
+            {
+              "value": "B",
+              "label": "Die nicht identischen DPB1-Allele gehören zu TCE-Gruppen, deren Kombination als tolerierbarer eingestuft wird.",
+              "feedback": "Das TCE-Modell unterteilt DPB1-Mismatches funktionell in permissive und nichtpermissive Kombinationen. Nichtpermissive Mismatches sind mit ungünstigeren Ergebnissen assoziiert."
+            },
+            {
+              "value": "C",
+              "label": "Der Empfänger hat keine HLA-Antikörper gegen irgendeinen getesteten Spender.",
+              "feedback": "Das Fehlen donorspezifischer Antikörper ist wichtig, definiert aber keine TCE-Permissivität."
+            },
+            {
+              "value": "D",
+              "label": "Der Mismatch liegt ausschließlich in Host-versus-Graft-Richtung vor und kann daher keine GvHD auslösen.",
+              "feedback": "Die Richtung kann klinisch relevant sein, ersetzt jedoch nicht die TCE-Klassifikation und schließt GvHD nicht kategorisch aus."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Histocompatibility",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608307/"
+            },
+            {
+              "title": "EBMT Handbook 2024 · Donor Selection",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608270/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · TA-TMA",
+          "question": "Welche Konstellation erfüllt nach der internationalen Harmonisierung von EBMT/ASTCT/CIBMTR/APBMT (2023) die klinischen Diagnosekriterien einer TA-TMA?",
+          "hint": "Gesucht sind Anzahl, Zeitfenster und Wiederholung der Merkmale.",
+          "explanation": "Der Konsensus 2023 harmonisierte zuvor heterogene Definitionen. Zu den sieben Merkmalen gehören Anämie, Thrombozytopenie, LDH-Erhöhung, Schistozyten, Hypertonie, erhöhtes sC5b-9 und Proteinurie. Die Kriterien sind ein diagnostischer Rahmen; Differenzialdiagnosen und Hochrisikomerkmale müssen separat bewertet werden.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Drei von sieben Merkmalen an einem einzelnen Messtag, sofern Schistozyten vorliegen",
+              "feedback": "Schistozyten sind eines der sieben Merkmale, machen aber drei Einzelbefunde nicht ausreichend."
+            },
+            {
+              "value": "B",
+              "label": "Alle sieben Merkmale gleichzeitig; eine Nierenbiopsie ist zusätzlich obligat",
+              "feedback": "Eine Gewebebiopsie kann TA-TMA sichern, ist für die klinische Kriterienerfüllung jedoch nicht obligat; alle sieben Merkmale sind nicht erforderlich."
+            },
+            {
+              "value": "C",
+              "label": "Mindestens vier von sieben Merkmalen an zwei Zeitpunkten innerhalb von 14 Tagen",
+              "feedback": "Die Harmonisierung verlangt mindestens vier von sieben definierten Merkmalen, die an zwei Zeitpunkten innerhalb von 14 Tagen vorliegen."
+            },
+            {
+              "value": "D",
+              "label": "Erhöhtes LDH und Hypertonie über vier Wochen, unabhängig von Blutbild und Proteinurie",
+              "feedback": "Zwei unspezifische Merkmale allein erfüllen die harmonisierten Kriterien nicht."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Schoettler et al. · Transplantation and Cellular Therapy 2023 · TA-TMA-Harmonisierung",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10119629/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · SUNMO",
+          "question": "SUNMO randomisierte 208 für eine autologe Transplantation ungeeignete Patienten mit R/R-LBCL im Verhältnis 2:1. Welche Aussage beschreibt die 2025 publizierte Phase-III-Studie korrekt?",
+          "hint": "Ordne Experimentalarm, Kontrollarm und die beiden primären Endpunkte gemeinsam zu.",
+          "explanation": "JCO 2025: offene, randomisierte Phase III bei transplantationsungeeignetem R/R-LBCL. Mosun-Pola verbesserte ORR und PFS gegenüber R-GemOx. Die Ergebnisse sind nicht automatisch auf transplantationsgeeignete Patienten, CAR-T-Vergleiche oder einen bewiesenen OS-Vorteil übertragbar.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Mosunetuzumab/Polatuzumab wurde gegen R-GemOx geprüft; ORR und PFS waren duale primäre Endpunkte.",
+              "feedback": "SUNMO verglich die chemotherapiefreie Kombination Mosunetuzumab/Polatuzumab mit R-GemOx; zentral beurteilte ORR und PFS waren duale primäre Endpunkte."
+            },
+            {
+              "value": "B",
+              "label": "Glofitamab/GemOx wurde gegen Polatuzumab/Bendamustin/Rituximab geprüft; primärer Endpunkt war OS.",
+              "feedback": "Diese Kombination und der OS-Primärendpunkt gehören nicht zum SUNMO-Design."
+            },
+            {
+              "value": "C",
+              "label": "Mosunetuzumab-Monotherapie wurde gegen CAR-T geprüft; primärer Endpunkt war CR in Woche 12.",
+              "feedback": "Weder CAR-T noch Mosunetuzumab-Monotherapie bildeten die randomisierten Arme."
+            },
+            {
+              "value": "D",
+              "label": "Epcoritamab/Lenalidomid wurde gegen R-GemOx geprüft; primärer Endpunkt war EFS ab Leukapherese.",
+              "feedback": "Epcoritamab/Lenalidomid und ein leukapheresebasierter EFS-Endpunkt wurden nicht geprüft."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Budde et al. · JCO 2025 · SUNMO",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41037766/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Mantelzelllymphom",
+          "question": "TRANSCEND NHL 001 berichtete 2024 Liso-cel bei R/R-MCL nach BTK-Inhibitor und weiteren Vortherapien: 104 Patienten wurden leukapheriert, 88 mit konformem Liso-cel behandelt. Wie sollten ORR 83,1% im Efficacy Set und 70,2% im leukapherierten Set eingeordnet werden?",
+          "hint": "Der Nenner entscheidet, ob Ereignisse zwischen Apherese und Infusion sichtbar bleiben.",
+          "explanation": "Einarmige Phase-I-Kohorte, JCO 2024. Die Studie zeigt relevante Aktivität bei stark vorbehandeltem MCL, einschließlich Hochrisikomerkmalen, aber keinen randomisierten Vergleich mit Brexu-cel oder Pirtobrutinib. Unterschiedliche Analysesets müssen bei indirekten Vergleichen ausdrücklich benannt werden.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die 83,1% sind die konservativere Schätzung des gesamten Behandlungswegs.",
+              "feedback": "Die infusionsbasierte Analyse schließt Patienten aus, die nach Leukapherese nicht mit konformem Produkt behandelt wurden, und ist daher nicht die konservativere Strategieanalyse."
+            },
+            {
+              "value": "B",
+              "label": "Die Differenz beweist eine pharmakologische Wirkung der Wartezeit auf Liso-cel.",
+              "feedback": "Aus zwei Nennern lässt sich keine kausale Wirkung der Wartezeit ableiten."
+            },
+            {
+              "value": "C",
+              "label": "Nur das Efficacy Set ist klinisch relevant, weil nicht Infundierte grundsätzlich nicht zur Strategie gehören.",
+              "feedback": "Für die Machbarkeit einer CAR-T-Strategie sind Ereignisse vor Infusion klinisch relevant und dürfen nicht grundsätzlich ausgeblendet werden."
+            },
+            {
+              "value": "D",
+              "label": "Die leukapheresebasierte Rate bildet den Behandlungsweg vollständiger ab; die infusionsbasierte Rate selektiert bis zur Behandlung gelangte Patienten.",
+              "feedback": "Die Differenz illustriert den Estimand: 104 Patienten begannen den Weg mit Leukapherese, während die höhere Rate ein ausgewähltes behandeltes Kollektiv beschreibt."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Wang et al. · JCO 2024 · TRANSCEND-MCL",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11741176/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Immunglobuline nach CAR-T",
+          "question": "Ein klinisch stabiler Patient hat nach CD19-CAR-T eine Hypogammaglobulinämie, aber keine rezidivierenden oder schweren Infektionen. Welche Aussage entspricht den ASTCT Best Practice Considerations 2024 am ehesten?",
+          "hint": "Trenne eine plausible biologische Rationale von randomisiert belegter Routineprävention.",
+          "explanation": "ASTCT 2024: Die Datenlage ist heterogen; randomisierte Evidenz für empirische IVIG-Substitution nach CAR-T fehlt. Daher ist weder eine universelle Routinegabe noch ein universelles Verbot begründet. Institutionelle Schwellenwerte und klinische Infektbelastung müssen berücksichtigt werden.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Eine monatliche IVIG-Gabe ist für alle Patienten ab Tag 0 durch randomisierte Studien verpflichtend belegt.",
+              "feedback": "Für eine generelle empirische IVIG-Substitution nach CAR-T fehlen randomisierte Wirksamkeitsdaten."
+            },
+            {
+              "value": "B",
+              "label": "Randomisierte Evidenz für eine empirische IVIG-Routine fehlt; IgG, Infektionsanamnese und individuelles Risiko sollen die Entscheidung leiten.",
+              "feedback": "Die Empfehlung betont die Evidenzlücke und ein risikoadaptiertes Vorgehen, besonders bei niedrigen IgG-Werten zusammen mit rezidivierenden oder schweren Infektionen."
+            },
+            {
+              "value": "C",
+              "label": "IVIG ist nach CAR-T grundsätzlich kontraindiziert, weil es die CAR-T-Persistenz hemmt.",
+              "feedback": "Eine generelle Kontraindikation wegen gehemmter CAR-T-Persistenz wird nicht beschrieben."
+            },
+            {
+              "value": "D",
+              "label": "Ein niedriger IgG-Wert allein beweist eine aktive bakterielle Infektion und erfordert Antibiotika.",
+              "feedback": "Hypogammaglobulinämie ist ein Risikofaktor, aber kein Beweis einer aktuellen bakteriellen Infektion."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "ASTCT · Infection Prevention and Management After CAR-T · 2024",
+              "url": "https://www.astctjournal.org/article/S2666-6367%2824%2900549-9/fulltext"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 2 · Graft-Quelle, GvHD und neue zelluläre Evidenz",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Aplastische Anämie",
+          "question": "Welche Stammzellquelle wird nach dem EBMT Handbook 2024 bei schwerer aplastischer Anämie für eine Allo-HSCT im Regelfall bevorzugt?",
+          "hint": "Bei nichtmalignen Erkrankungen fehlt ein gewünschter Graft-versus-Leukämie-Effekt.",
+          "explanation": "EBMT Handbook 2024 und ASTCT-Leitlinie 2024 bevorzugen Knochenmark bei SAA. Die Empfehlung ist krankheitsspezifisch und darf nicht pauschal auf maligne Erkrankungen übertragen werden, bei denen schnellere Rekonstitution oder Graft-versus-Tumor-Effekte anders gewichtet werden.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Mobilisiertes peripheres Blut, weil mehr T-Zellen die Abstoßung sicher verhindern",
+              "feedback": "Mehr T-Zellen können das GvHD-Risiko erhöhen; ein antileukämischer Nutzen wird bei SAA nicht benötigt."
+            },
+            {
+              "value": "B",
+              "label": "Nabelschnurblut unabhängig von Zellzahl und HLA-Matching",
+              "feedback": "Nabelschnurblut ist keine unabhängig von Zellzahl und HLA passende Standardquelle."
+            },
+            {
+              "value": "C",
+              "label": "Peripheres Blut und Knochenmark gelten wegen identischer chronischer GvHD-Raten als austauschbar",
+              "feedback": "Die chronische GvHD-Belastung ist ein wesentlicher Grund, die Quellen nicht als generell austauschbar anzusehen."
+            },
+            {
+              "value": "D",
+              "label": "Knochenmark, insbesondere wegen des günstigeren GvHD-Profils",
+              "feedback": "Knochenmark ist bei nichtmalignen Erkrankungen, besonders SAA, die bevorzugte Quelle; individuelle Transplantationskonstellationen bleiben zu berücksichtigen."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Selection of Stem Cell Source",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608319/"
+            },
+            {
+              "title": "ASTCT Guideline 2024 · Allogeneic HCT for Severe Aplastic Anemia",
+              "url": "https://www.astctjournal.org/article/S2666-6367%2824%2900682-1/fulltext"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · Haut-aGvHD",
+          "question": "Nach Allo-HSCT besteht ein makulopapulöses Erythem auf 30% der Körperoberfläche, ohne Blasenbildung, Leber- oder GI-Beteiligung. Welches Hautstadium ergibt sich nach der im EBMT Handbook 2024 dargestellten MAGIC-Klassifikation?",
+          "hint": "Die Grenze zwischen zwei frühen Hautstadien liegt bei einem Viertel der Körperoberfläche.",
+          "explanation": "EBMT Handbook 2024: Die Organstufe der Haut wird anhand der tatsächlich aktiv erythematösen Fläche bestimmt. Hautstadium und Gesamtgrad der aGvHD sind nicht identisch; für den Gesamtgrad müssen auch Leber und GI-Trakt einbezogen werden.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Hautstadium 2",
+              "feedback": "Ein aktives Erythem auf 25–50% der Körperoberfläche entspricht Hautstadium 2."
+            },
+            {
+              "value": "B",
+              "label": "Hautstadium 1",
+              "feedback": "Hautstadium 1 ist auf weniger als 25% der Körperoberfläche begrenzt."
+            },
+            {
+              "value": "C",
+              "label": "Hautstadium 3",
+              "feedback": "Hautstadium 3 setzt mehr als 50% Körperoberfläche voraus."
+            },
+            {
+              "value": "D",
+              "label": "Hautstadium 4",
+              "feedback": "Hautstadium 4 ist durch generalisiertes Erythroderma mit bullöser Ablösung gekennzeichnet."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Acute Graft-Versus-Host Disease",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608233/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · EPCORE NHL-2",
+          "question": "EPCORE NHL-2 wurde im August 2026 als Fixed-duration Epcoritamab plus R-CHOP bei neu diagnostiziertem CD20-positivem LBCL und IPI 3–5 publiziert. Welche Schlussfolgerung ist durch das Design der berichteten Kohorte gedeckt?",
+          "hint": "Prüfe, ob die 47 Patienten innerhalb dieser Analyse gegen R-CHOP randomisiert wurden.",
+          "explanation": "Blood, online 11. August 2026: 47 Patienten erhielten ein fest begrenztes Epcoritamab/R-CHOP-Schema. Hohe Ansprechraten in einer selektierten einarmigen Kohorte sind hypothesengenerierend; randomisierte Phase-III-Daten sind für einen Zusatznutzen erforderlich.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die Kombination verlängert gegenüber R-CHOP bewiesenermaßen das Gesamtüberleben.",
+              "feedback": "Ohne randomisierten Kontrollarm lässt sich ein OS-Vorteil gegenüber R-CHOP nicht kausal belegen."
+            },
+            {
+              "value": "B",
+              "label": "Die Kombination ist R-CHOP hinsichtlich schwerer Toxizität als nicht unterlegen bewiesen.",
+              "feedback": "Die Studie war kein formal angelegter Nichtunterlegenheitsvergleich der Toxizität."
+            },
+            {
+              "value": "C",
+              "label": "Die Phase-Ib/II-Kohorte zeigt Machbarkeit und anhaltende Remissionen; einen komparativen Zusatznutzen beweist sie nicht.",
+              "feedback": "Die einarmige Phase-Ib/II-Kohorte erlaubt Aussagen zu Aktivität, Dauerhaftigkeit und Sicherheit, aber keinen kausalen Vergleich mit R-CHOP allein."
+            },
+            {
+              "value": "D",
+              "label": "Die Daten belegen Epcoritamab plus R-CHOP als Standard bei jedem IPI von 0 bis 5.",
+              "feedback": "Untersucht wurden Hochrisikopatienten mit IPI 3–5; eine Übertragung auf alle Risikogruppen ist nicht belegt."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Falchi et al. · Blood 2026 · EPCORE NHL-2",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42622258/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Primäres ZNS-Lymphom",
+          "question": "Frigault et al. behandelten in einer prospektiven Phase-I/II-Studie 12 stark vorbehandelte Patienten mit R/R-PCNSL mit Tisagenlecleucel. Welche Aussage entspricht der 2022 publizierten Originalarbeit?",
+          "hint": "Die kleine Studie war primär auf frühe Sicherheit und Machbarkeit ausgerichtet.",
+          "explanation": "Blood 2022: prospektive, einarmige Phase I/II mit kurzer Nachbeobachtung und nur 12 behandelten Patienten. Die Studie widerlegte die Annahme, ZNS-Lokalisation führe zwangsläufig zu nicht beherrschbarer Neurotoxizität, belegt aber weder Gleichwertigkeit zur systemischen LBCL-Population noch einen Vergleichsvorteil gegenüber ASCT.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Bei allen Patienten trat hochgradiges ICANS auf, weshalb die Studie abgebrochen wurde.",
+              "feedback": "Hochgradige Neurotoxizität trat nicht bei allen auf; nur ein Patient hatte Grad-3-ICANS."
+            },
+            {
+              "value": "B",
+              "label": "Sechs Patienten erreichten CR; ein Patient hatte Grad-3-ICANS, behandlungsbedingte Todesfälle traten nicht auf.",
+              "feedback": "Von 12 Behandelten erreichten 6 eine CR, bei einem trat Grad-3-ICANS auf; es gab keinen behandlungsbedingten Tod."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie bewies im randomisierten Vergleich eine Überlegenheit gegenüber Thiotepa-ASCT.",
+              "feedback": "Es gab keinen randomisierten Thiotepa-ASCT-Kontrollarm."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie schloss Patienten mit isolierter ZNS-Erkrankung aus.",
+              "feedback": "Gerade Patienten mit primärem ZNS-Lymphom wurden untersucht."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Frigault et al. · Blood 2022 · Tisa-cel bei PCNSL",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35167655/"
+            }
+          ]
+        },
+        {
+          "topic": "Evidenz · ASCT versus CAR-T bei SCNSL",
+          "question": "Eine internationale Blood-Kohorte 2026 fand nach Propensity-Score-Matching bei rezidiviertem sekundärem ZNS-Lymphom längeres PFS und OS nach Thiotepa-ASCT als nach CAR-T. Welche Interpretation ist methodisch am besten?",
+          "hint": "Matching kann nur gemessene Ausgangsunterschiede ausgleichen.",
+          "explanation": "Blood 2026: 1.139 Patienten mit de novo oder rezidiviertem SCNSL; der ASCT/CAR-T-Vergleich war retrospektiv und nach Propensity Score gematcht. Entscheidende, möglicherweise unvollständig messbare Unterschiede sind Remissionsstatus, Chemosensitivität, Fitness, Vorbehandlungen und Behandlungsära.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Damit ist Thiotepa-ASCT für jeden Patienten kausal überlegen, auch bei chemorefraktärer Erkrankung.",
+              "feedback": "ASCT setzt typischerweise Eignung und Krankheitskontrolle voraus; die Aussage gilt nicht automatisch für chemorefraktäre oder nicht transplantable Patienten."
+            },
+            {
+              "value": "B",
+              "label": "Propensity-Score-Matching macht die retrospektive Analyse vollständig einer Randomisierung gleichwertig.",
+              "feedback": "Matching reduziert gemessene Unterschiede, beseitigt aber weder unbekannte Confounder noch sämtliche Selektionsmechanismen."
+            },
+            {
+              "value": "C",
+              "label": "Das Ergebnis beweist, dass CAR-T bei ZNS-Beteiligung biologisch unwirksam ist.",
+              "feedback": "Die Analyse zeigte keinen biologischen Unwirksamkeitsnachweis; CAR-T bleibt für andere klinische Konstellationen relevant."
+            },
+            {
+              "value": "D",
+              "label": "Die Assoziation stützt ASCT bei geeigneten, chemosensitiven Patienten; Residualkonfounding und Auswahl bis zur ASCT begrenzen den Kausalvergleich.",
+              "feedback": "Die große Kohorte unterstützt Thiotepa-ASCT bei geeigneten Patienten, erlaubt aber wegen retrospektiver Auswahl keinen universellen kausalen Überlegenheitsanspruch."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Alderuccio et al. · Blood 2026 · Treatment-related outcomes in SCNSL",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41490516/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 3 · Späte GvHD, Hodgkin und Studiendesign",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Pulmonale cGvHD",
+          "question": "Ein Patient mit neu diagnostiziertem Bronchiolitis-obliterans-Syndrom nach Allo-HSCT soll FAM erhalten. Welche Evidenzaussage entspricht dem EBMT Handbook 2024?",
+          "hint": "Die verbreitete klinische Anwendung sagt noch nichts über die Art des Wirksamkeitsnachweises.",
+          "explanation": "EBMT Handbook 2024 und ERS/EBMT-Leitlinie 2024: Pulmonale cGvHD/BOS erfordert strukturierte Lungenfunktionsdiagnostik, Ausschluss konkurrierender Ursachen und meist multimodales Management. Die FAM-Evidenz ist deutlich schwächer als die Häufigkeit ihrer klinischen Nutzung vermuten lässt.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "FAM wurde in einer offenen einarmigen Studie untersucht; eine randomisierte Überlegenheit ist damit nicht belegt.",
+              "feedback": "Das EBMT Handbook beschreibt für FAM eine offene einarmige Studie; Nutzen und Risiken müssen im Kontext der insgesamt begrenzten Evidenz bewertet werden."
+            },
+            {
+              "value": "B",
+              "label": "FAM ist durch mehrere placebokontrollierte Phase-III-Studien als alleinige kurative Therapie gesichert.",
+              "feedback": "Eine solche Phase-III-Evidenz und ein kurativer Alleinanspruch bestehen nicht."
+            },
+            {
+              "value": "C",
+              "label": "FAM darf erst nach histologischer Sicherung aus einer Lungenbiopsie eingesetzt werden.",
+              "feedback": "Für die BOS-Diagnose ist nach aktueller NIH-Systematik keine obligate Lungenbiopsie erforderlich."
+            },
+            {
+              "value": "D",
+              "label": "Azithromycin ist als universelle Primärprophylaxe von BOS nach Allo-HSCT randomisiert etabliert.",
+              "feedback": "Therapie eines manifesten BOS und universelle Primärprophylaxe sind unterschiedliche Fragen; Letzteres ist nicht so etabliert."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Noninfectious Pulmonary Complications",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608330/"
+            },
+            {
+              "title": "ERS/EBMT Guideline 2024 · Pulmonary cGvHD",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38485149/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · Late-onset aGvHD",
+          "question": "An Tag +130 nach Allo-HSCT entsteht erstmals ein typisches makulopapulöses Exanthem mit wässriger Diarrhö, ohne diagnostische oder distinctive Zeichen einer chronischen GvHD. Welche Bezeichnung passt nach dem EBMT Handbook 2024?",
+          "hint": "Der Tag nach Transplantation allein definiert den Phänotyp nicht mehr.",
+          "explanation": "Die historische starre Tag-100-Grenze ist verlassen. EBMT/NIH klassifizieren nach klinischem Phänotyp und Verlauf: persistent, recurrent oder late-onset aGvHD können nach Tag +100 auftreten; cGvHD erfordert entsprechende diagnostische oder distinctive Manifestationen.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Klassische akute GvHD, weil jede Haut-GI-Kombination so bezeichnet wird",
+              "feedback": "Klassische aGvHD bezeichnet den akuten Phänotyp vor Tag +100; bei erstmaligem Auftreten danach wird late onset ergänzt."
+            },
+            {
+              "value": "B",
+              "label": "Chronische GvHD, allein weil der Beginn nach Tag +100 liegt",
+              "feedback": "Der Zeitpunkt nach Tag +100 reicht ohne chronische Manifestationen nicht für die Diagnose cGvHD."
+            },
+            {
+              "value": "C",
+              "label": "Late-onset akute GvHD",
+              "feedback": "Ein erstmaliger akuter Phänotyp nach Tag +100 ohne cGvHD-Zeichen wird als late-onset aGvHD bezeichnet."
+            },
+            {
+              "value": "D",
+              "label": "Overlap-Syndrom, auch ohne chronische Manifestationen",
+              "feedback": "Ein Overlap-Syndrom erfordert gleichzeitig Manifestationen akuter und chronischer GvHD."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Acute Graft-Versus-Host Disease",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608233/"
+            }
+          ]
+        },
+        {
+          "topic": "Lymphom · SWOG S1826",
+          "question": "SWOG S1826 randomisierte 994 Jugendliche und Erwachsene mit neu diagnostiziertem klassischem Hodgkin-Lymphom Stadium III/IV zu Nivolumab-AVD oder Brentuximab-Vedotin-AVD. Welche Interpretation der NEJM-Publikation 2024 ist korrekt?",
+          "hint": "Achte auf den geprüften Vergleich, die Population und den Endpunkt.",
+          "explanation": "Randomisierte Phase III, NEJM 17. Oktober 2024, Patienten ab 12 Jahren mit Stadium III/IV. N-AVD war BV-AVD beim PFS überlegen. Die Ergebnisse dürfen nicht als direkter ABVD-Vergleich, als gesicherter OS-Vorteil oder als automatische Evidenz für frühe Stadien ausgegeben werden.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die Studie bewies einen Gesamtüberlebensvorteil von N-AVD in allen Hodgkin-Stadien.",
+              "feedback": "Der publizierte Vorteil betraf PFS in Stadium III/IV; ein OS-Vorteil für alle Stadien wurde nicht bewiesen."
+            },
+            {
+              "value": "B",
+              "label": "Die Studie verglich N-AVD mit ABVD und zeigte Nichtunterlegenheit.",
+              "feedback": "Der Kontrollarm war BV-AVD, und das Design prüfte Überlegenheit."
+            },
+            {
+              "value": "C",
+              "label": "Das 2-Jahres-PFS von 92% versus 83% ist eine absolute Risikoreduktion von 45%.",
+              "feedback": "Die 45% stammen nicht aus der absoluten Differenz von 9 Prozentpunkten, sondern die HR betrug 0,45."
+            },
+            {
+              "value": "D",
+              "label": "N-AVD verbesserte das PFS gegenüber BV-AVD bei Stadium III/IV; die HR 0,45 ist eine relative Hazard-Angabe.",
+              "feedback": "Bei median 2,1 Jahren Follow-up lag das 2-Jahres-PFS bei 92% versus 83%; die HR 0,45 beschreibt die relative Ereignishazard über die Beobachtungszeit."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Herrera et al. · NEJM 2024 · SWOG S1826",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39413375/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · ZNS-Lymphom und Remissionsstatus",
+          "question": "Eine EBMT/GoCART-Analyse publizierte 2025 Ergebnisse von 100 Patienten mit primärem oder sekundärem ZNS-Lymphom nach CD19-CAR-T; 40% hatten zuvor eine Auto-HSCT. Welche Schlussfolgerung ist aus diesem Registerdesign am ehesten zulässig?",
+          "hint": "Beobachtete Gruppenunterschiede sind prognostisch nützlich, aber nicht automatisch therapeutisch kausal.",
+          "explanation": "EBMT/GoCART, HemaSphere 2025: retrospektive Registeranalyse von zwischen 2018 und 2023 behandelten, stark vorbehandelten Patienten. Solche Daten verbessern die externe Validität gegenüber kleinen Studien, bleiben aber für Produkt- oder Sequenzvergleiche anfällig für Confounding.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die Analyse beweist randomisiert, dass eine vorangehende Auto-HSCT die CAR-T-Wirkung verstärkt.",
+              "feedback": "Eine vorangehende Auto-HSCT war keine randomisierte Intervention; entsprechende Unterschiede können stark konfundiert sein."
+            },
+            {
+              "value": "B",
+              "label": "Sie beschreibt Real-World-Aktivität und Toxizität bei ZNS-Beteiligung; kausale Sequenzvergleiche bleiben offen.",
+              "feedback": "Das multizentrische Register erweitert die Evidenz für Machbarkeit, Wirksamkeit und Sicherheit bei ZNS-Lymphom, kann aber optimale Sequenz und Produktwahl nicht kausal festlegen."
+            },
+            {
+              "value": "C",
+              "label": "Sie zeigt, dass ZNS-Beteiligung eine absolute Kontraindikation für CD19-CAR-T ist.",
+              "feedback": "Die berichtete Behandlung von 100 Patienten widerspricht einer absoluten Kontraindikation; Risiken müssen dennoch individuell bewertet werden."
+            },
+            {
+              "value": "D",
+              "label": "Sie belegt die Überlegenheit eines bestimmten kommerziellen CAR-T-Produkts gegenüber allen anderen.",
+              "feedback": "Für einen belastbaren Produktvergleich fehlen Randomisierung und ausreichende Kontrolle der Produktselektion."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Ayuk et al. · HemaSphere 2025 · CAR-T bei PCNSL/SCNSL",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40400509/"
+            }
+          ]
+        },
+        {
+          "topic": "Evidenz · Landmark-Analyse",
+          "question": "Die Blood-Kohorte 2026 zum sekundären ZNS-Lymphom verwendete für Prognosefaktoren eine 6-Monats-Landmark-Analyse. Welches Problem soll dieses Vorgehen vor allem begrenzen?",
+          "hint": "Ein Patient muss den Landmark-Zeitpunkt ereignisfrei erreichen, um nach einem bis dahin definierten Status gruppiert zu werden.",
+          "explanation": "Eine Landmark-Analyse kann zeitabhängigen Bias reduzieren, indem nur zu einem festen Zeitpunkt noch beobachtbare Patienten ab dort verglichen werden. Der Preis ist eine konditionale Aussage für Landmark-Überlebende, der Ausschluss früher Ereignisse und mögliche verbleibende Confounding-Struktur; sie simuliert keine Randomisierung.",
+          "reviewed_at": "2026-10-08",
+          "options": [
+            {
+              "value": "A",
+              "label": "Guarantee-time- beziehungsweise Immortal-time-Bias bei zeitabhängigen Expositionen",
+              "feedback": "Die Landmark-Analyse startet den Vergleich zu einem vorab definierten Zeitpunkt und reduziert dadurch Garantiezeit-Bias bei bis dahin eingetretenen Expositionen oder Responses."
+            },
+            {
+              "value": "B",
+              "label": "Fehlklassifikation eines HLA-DPB1-Mismatches",
+              "feedback": "Die HLA-Typisierung wird durch eine Landmark-Analyse nicht korrigiert."
+            },
+            {
+              "value": "C",
+              "label": "Messfehler bei zentraler PET-Auswertung",
+              "feedback": "Eine Landmark-Analyse ersetzt keine zentrale Bildgebungsbeurteilung und behebt deren Messfehler nicht."
+            },
+            {
+              "value": "D",
+              "label": "Inflation des Alpha-Fehlers durch vier Antwortoptionen",
+              "feedback": "Sie ist keine Methode zur Korrektur multipler Hypothesentests."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Alderuccio et al. · Blood 2026 · SCNSL-Kohorte",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41490516/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
