@@ -1,0 +1,565 @@
+{
+  "id": "2026-W42",
+  "title": "KW 42 · Oktober 2026",
+  "sets": [
+    {
+      "title": "Set 1 · Graft-Funktion und neue Therapieoptionen",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Graft-Funktion",
+          "question": "Nach Allo-HSCT bestehen anhaltende Transfusions- und G-CSF-Abhängigkeit bei vollständigem Spenderchimärismus. Rezidiv, myelotoxische Medikamente und Infektionen sind ausgeschlossen. Welche Einordnung passt nach dem EBMT Handbook 2024 am besten?",
+          "hint": "Trenne die Herkunft der Hämatopoese von ihrer quantitativen Leistungsfähigkeit.",
+          "correct": "B",
+          "options": [
+            {
+              "value": "A",
+              "label": "Immunologische Transplantatabstoßung.",
+              "feedback": "Eine Abstoßung ist durch diese Konstellation nicht belegt; der Spenderchimärismus ist erhalten."
+            },
+            {
+              "value": "B",
+              "label": "Poor Graft Function.",
+              "feedback": "Persistierende Supportabhängigkeit ohne andere Erklärung bei erhaltenem Spenderchimärismus passt hierzu."
+            },
+            {
+              "value": "C",
+              "label": "Molekulares Leukämierezidiv.",
+              "feedback": "Ein molekulares Rezidiv benötigt einen krankheitsspezifischen Nachweis."
+            },
+            {
+              "value": "D",
+              "label": "Autologe hämatopoetische Rekonstitution.",
+              "feedback": "Vollständiger Spenderchimärismus spricht gegen eine autologe Rekonstitution."
+            }
+          ],
+          "explanation": "Das Handbook beschreibt Poor Graft Function als Supportabhängigkeit ohne andere Erklärung; ein ausreichender Spenderchimärismus wird vorausgesetzt. Dies ist eine klinische Definition, keine allein aus dem Blutbild ableitbare Therapieindikation.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Graft Failure",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608339/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Allo-HSCT · Chronische GvHD",
+          "question": "AGAVE-201 (NEJM 2024) untersuchte Axatilimab bei rezidivierender/refraktärer chronischer GvHD. Welcher Befund ist korrekt?",
+          "hint": "Prüfe, was randomisiert wurde und ob höhere Dosen mehr Ansprechen erzeugten.",
+          "correct": "D",
+          "options": [
+            {
+              "value": "A",
+              "label": "3 mg/kg alle vier Wochen ergaben die höchste ORR.",
+              "feedback": "Die ORR lag in dieser Gruppe bei 50%, nicht am höchsten."
+            },
+            {
+              "value": "B",
+              "label": "Die Kontrollgruppe erhielt Best Available Therapy.",
+              "feedback": "Randomisiert wurden drei Axatilimab-Dosierungen, nicht Axatilimab gegen BAT."
+            },
+            {
+              "value": "C",
+              "label": "Der primäre Endpunkt war komplette Remission nach einem Jahr.",
+              "feedback": "Erfasst wurden komplette oder partielle Antworten in den ersten sechs Zyklen."
+            },
+            {
+              "value": "D",
+              "label": "0,3 mg/kg alle zwei Wochen ergaben 74% ORR in den ersten sechs Zyklen.",
+              "feedback": "Die niedrigste Dosisgruppe erreichte 74% ORR; höhere Dosen zeigten keine monotone Wirksamkeitssteigerung."
+            }
+          ],
+          "explanation": "Die randomisierte Phase-II-Studie umfasste 241 Patienten. ORR: 74%, 67% und 50% für die drei Dosierungen. Daraus folgt kein direkter Überlegenheitsnachweis gegenüber Ruxolitinib oder anderen Wirkstoffen.",
+          "sources": [
+            {
+              "title": "Wolff et al. · NEJM 19.09.2024 · AGAVE-201",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39292927/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Lymphom · Bispezifika",
+          "question": "EPCORE FL-1 (Lancet, Januar 2026) randomisierte 488 Patienten mit R/R-FL nach mindestens einer Chemoimmuntherapie. Welche Aussage beschreibt den untersuchten Nutzen am besten?",
+          "hint": "Ordne den Zusatzwirkstoff seinem tatsächlichen Kontrollarm zu.",
+          "correct": "A",
+          "options": [
+            {
+              "value": "A",
+              "label": "Epcoritamab plus R² verlängerte das PFS gegenüber R².",
+              "feedback": "Geprüft wurde die Ergänzung von Rituximab/Lenalidomid um Epcoritamab."
+            },
+            {
+              "value": "B",
+              "label": "Epcoritamab allein verlängerte das PFS gegenüber R².",
+              "feedback": "Der experimentelle Arm enthielt zusätzlich Rituximab und Lenalidomid."
+            },
+            {
+              "value": "C",
+              "label": "Epcoritamab plus R² verlängerte das PFS gegenüber CAR-T.",
+              "feedback": "CAR-T war kein randomisierter Vergleichsarm."
+            },
+            {
+              "value": "D",
+              "label": "Epcoritamab plus R² verlängerte das PFS gegenüber Bendamustin-Rituximab.",
+              "feedback": "Der Kontrollarm war Rituximab/Lenalidomid, nicht Bendamustin-Rituximab."
+            }
+          ],
+          "explanation": "Die offene Phase-III-Studie zeigte eine PFS-HR von 0,21 (95%-KI 0,14–0,31). Der Vergleich belegt keinen Vorrang gegenüber CAR-T und beantwortet nicht jede Sequenzierungsfrage. Onlinepublikation: 07.12.2025; Heftpublikation: 10.01.2026.",
+          "sources": [
+            {
+              "title": "Falchi et al. · Lancet 2026 · EPCORE FL-1",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41371238/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "CAR-T · Patientenselektion",
+          "question": "Ein 74-jähriger Patient mit R/R-LBCL nach einer Erstlinie gilt wegen Komorbiditäten als nicht für Hochdosistherapie/ASCT vorgesehen. Was trägt PILOT (Lancet Oncology 2022) zur CAR-T-Abklärung bei?",
+          "hint": "Unterscheide Eignung für Hochdosistherapie von Eignung für Zelltherapie.",
+          "correct": "C",
+          "options": [
+            {
+              "value": "A",
+              "label": "ASCT-Untauglichkeit war ein Ausschlusskriterium für PILOT.",
+              "feedback": "Gerade Patienten ohne vorgesehene HSCT bildeten die Zielpopulation."
+            },
+            {
+              "value": "B",
+              "label": "PILOT bewies randomisiert die Überlegenheit gegenüber Pola-BR.",
+              "feedback": "PILOT war eine offene einarmige Phase-II-Studie ohne diesen Kontrollarm."
+            },
+            {
+              "value": "C",
+              "label": "PILOT stützt eine separate Liso-cel-Eignungsprüfung trotz fehlender ASCT-Option.",
+              "feedback": "Die unterschiedliche Belastung der Verfahren rechtfertigt eine eigenständige Prüfung; nicht jeder ASCT-ungeeignete Patient ist CAR-T-geeignet."
+            },
+            {
+              "value": "D",
+              "label": "PILOT untersuchte ausschließlich fitte Patienten unter 65 Jahren.",
+              "feedback": "Das mediane Alter der Behandelten lag bei 74 Jahren."
+            }
+          ],
+          "explanation": "PILOT behandelte 61 Patienten mit Liso-cel in Zweitlinie; die Patienten mussten definierte Kriterien für eine nicht vorgesehene HSCT erfüllen. Die selektierte einarmige Kohorte liefert keinen randomisierten Wirksamkeitsvergleich.",
+          "sources": [
+            {
+              "title": "Sehgal et al. · Lancet Oncology 2022 · PILOT",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35839786/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Supportivtherapie · CMV",
+          "question": "SOLSTICE (CID 2022) randomisierte HCT- und Organtransplantierte mit refraktärer CMV-Infektion, mit oder ohne Resistenz, zu Maribavir oder Investigator-assigned Therapy. Welchen Endpunkt beschreiben 55,7% versus 23,9%?",
+          "hint": "Beachte Messzeitpunkt und Unterschied zwischen Virusclearance und dauerhafter Kontrolle.",
+          "correct": "B",
+          "options": [
+            {
+              "value": "A",
+              "label": "CMV-freies Überleben ein Jahr nach Therapie.",
+              "feedback": "Der primäre Endpunkt war keine einjährige Überlebensgröße."
+            },
+            {
+              "value": "B",
+              "label": "Bestätigte CMV-Virämie-Clearance in Woche 8.",
+              "feedback": "Diese Werte gehören zur bestätigten Clearance am Ende der achtwöchigen Therapie."
+            },
+            {
+              "value": "C",
+              "label": "Dauerhafte Virusclearance bis Woche 20 bei allen Randomisierten.",
+              "feedback": "Die über die Therapie hinaus anhaltende Kontrolle war ein separater, deutlich seltener erreichter Endpunkt."
+            },
+            {
+              "value": "D",
+              "label": "Verhinderung einer ersten CMV-Reaktivierung.",
+              "feedback": "Die Studie behandelte refraktäre Infektionen und war keine Primärprophylaxestudie."
+            }
+          ],
+          "explanation": "Die offene Phase-III-Studie randomisierte 2:1 zu Maribavir oder konventionellen antiviralen Optionen. Der Clearance-Vorteil in Woche 8 ist nicht mit dauerhafter Eradikation oder einem bewiesenen Mortalitätsvorteil gleichzusetzen.",
+          "sources": [
+            {
+              "title": "Avery et al. · Clinical Infectious Diseases 2022 · SOLSTICE",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34864943/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "title": "Set 2 · Monitoring, DLI und innovative Lymphomtherapie",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Chimärismus",
+          "question": "Bei AML nach Allo-HSCT zeigt die Vollblut-STR-PCR vollständigen Spenderchimärismus. Darf deshalb eine krankheitsspezifische molekulare MRD-Messung entfallen? Maßstab: EBMT Handbook 2024.",
+          "hint": "Vergleiche die Nachweisgrenzen und die biologische Zielgröße beider Verfahren.",
+          "correct": "C",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ja, STR-PCR erkennt AML-Restzellen sensitiver als molekulare Marker.",
+              "feedback": "Die Nachweisgrenze kleiner Populationen liegt bei klassischer STR-PCR etwa bei 1%."
+            },
+            {
+              "value": "B",
+              "label": "Ja, sofern gleichzeitig eine normale Leukozytenzahl vorliegt.",
+              "feedback": "Ein normales Blutbild schließt molekulare Resterkrankung nicht aus."
+            },
+            {
+              "value": "C",
+              "label": "Nein, Vollblut-STR-PCR ersetzt krankheitsspezifische MRD nicht.",
+              "feedback": "Zellherkunft und krankheitsspezifische Resterkrankung sind unterschiedliche Messgrößen."
+            },
+            {
+              "value": "D",
+              "label": "Nein, weil STR-PCR grundsätzlich nur Spender-T-Zellen misst.",
+              "feedback": "Vollblut enthält verschiedene Zelllinien; eine T-Zell-Selektion wäre ein eigener Arbeitsschritt."
+            }
+          ],
+          "explanation": "Das Handbook bewertet die klassische Vollblut-STR-PCR wegen begrenzter Sensitivität nicht als geeigneten MRD-Ersatz. Das gilt nicht pauschal für jede neuere Chimärismustechnik oder jede sortierte Subpopulation.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Documentation of Engraftment and Chimerism",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608246/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Allo-HSCT · DLI-Sicherheit",
+          "question": "Ein AML-Patient in MRD-negativer Remission soll prophylaktische DLI erhalten, hat aber aktive gastrointestinale GvHD unter systemischer Immunsuppression. Welche Haltung passt zum konventionellen DLI-Konzept des EBMT Handbook 2024?",
+          "hint": "Rezidivrisiko ist nur eine Seite der Nutzen-Risiko-Abwägung.",
+          "correct": "A",
+          "options": [
+            {
+              "value": "A",
+              "label": "DLI zunächst zurückstellen; aktive GvHD und Immunsuppression sprechen dagegen.",
+              "feedback": "Konventionelle prophylaktische DLI setzt üblicherweise fehlende GvHD und beendete Immunsuppression voraus."
+            },
+            {
+              "value": "B",
+              "label": "DLI sofort geben; MRD-Negativität beseitigt das GvHD-Risiko.",
+              "feedback": "MRD-Negativität schützt gesundes Empfängergewebe nicht vor Alloreaktivität."
+            },
+            {
+              "value": "C",
+              "label": "DLI-Dosis erhöhen, um die Immunsuppression funktionell zu überwinden.",
+              "feedback": "Eine Dosiseskalation ist kein sicherer Ersatz für passende klinische Voraussetzungen."
+            },
+            {
+              "value": "D",
+              "label": "DLI wiederholen, bis eine zusätzliche Haut-GvHD entsteht.",
+              "feedback": "GvHD gezielt als Endpunkt zu provozieren wird nicht empfohlen."
+            }
+          ],
+          "explanation": "Das Handbook beschreibt den üblichen Beginn ab etwa Tag +90/+100 bei beendeter Immunsuppression und ungefähr einem Monat GvHD-Freiheit. Plattform und Protokoll beeinflussen Details; dies ist keine universelle Dosieranweisung.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · DLI 2.0",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608250/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Lymphom · Evidenz 2026",
+          "question": "Für welche Population untersuchte EPCORE DLBCL-3 (Lancet Haematology, Juli 2026) Epcoritamab mit oder ohne Lenalidomid in der Erstlinie?",
+          "hint": "Achte auf die konkrete Anthrazyklin-Eignung, nicht allein auf die Diagnose.",
+          "correct": "D",
+          "options": [
+            {
+              "value": "A",
+              "label": "Junge Hochrisikopatienten als Ersatz für Konsolidierungs-ASCT.",
+              "feedback": "Diese Erstlinienpopulation wurde nicht anhand einer geplanten ASCT ausgewählt."
+            },
+            {
+              "value": "B",
+              "label": "Patienten nach Versagen einer CD19-CAR-T-Therapie.",
+              "feedback": "Vorbehandelte CAR-T-Versager waren nicht die Erstlinien-Zielpopulation."
+            },
+            {
+              "value": "C",
+              "label": "Alle Erwachsenen unabhängig von Alter und Komorbiditäten.",
+              "feedback": "Alter und relevante Komorbiditäten begrenzten die Übertragbarkeit."
+            },
+            {
+              "value": "D",
+              "label": "Ältere, für anthrazyklinbasierte Chemoimmuntherapie ungeeignete Patienten.",
+              "feedback": "Eingeschlossen wurden Patienten ab 80 Jahren oder ab 75 Jahren mit klinisch relevanten Komorbiditäten."
+            }
+          ],
+          "explanation": "Die offene, zweistufige Phase-II-Studie schloss neu diagnostizierte CD20-positive LBCL, Stadium II–IV und ECOG 0–2 ein. Sie ist kein randomisierter Beleg für den Ersatz von R-CHOP bei fitten jüngeren Patienten.",
+          "sources": [
+            {
+              "title": "Vitolo et al. · Lancet Haematology 2026 · EPCORE DLBCL-3",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42285113/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "CAR-T · Allogene Produkte",
+          "question": "Welche Besonderheit hatte die Lymphodepletion vor Cema-cel/ALLO-501 in ALPHA2/ALPHA (JCO 2025) bei CD19-CAR-T-naivem R/R-LBCL?",
+          "hint": "Die Fremdzellplattform benötigt eine Strategie gegen die Empfängerimmunität.",
+          "correct": "B",
+          "options": [
+            {
+              "value": "A",
+              "label": "Fludarabin/Cyclophosphamid plus Anti-CD20 als einziges Antikörper-Add-on.",
+              "feedback": "Das untersuchte Add-on richtete sich gegen CD52, nicht CD20."
+            },
+            {
+              "value": "B",
+              "label": "Fludarabin/Cyclophosphamid plus den Anti-CD52-Antikörper ALLO-647.",
+              "feedback": "ALLO-647 ergänzte Flu/Cy vor den gesunden Spendern entstammenden, HLA-ungematchten Zellen."
+            },
+            {
+              "value": "C",
+              "label": "Bendamustin plus prophylaktische DLI eines HLA-gematchten Spenders.",
+              "feedback": "Weder diese Konditionierung noch ein solcher DLI-Ansatz beschreibt die Studie."
+            },
+            {
+              "value": "D",
+              "label": "Myeloablatives Busulfan mit anschließendem Stammzellrescue.",
+              "feedback": "Die Plattform war keine myeloablative Stammzelltransplantation."
+            }
+          ],
+          "explanation": "Die Phase-I-Erfahrung untersuchte allogene CD19-CAR-T-Zellen nach Flu/Cy und eskalierenden ALLO-647-Dosen. Sie zeigt frühe Machbarkeit und Aktivität, aber keine bewiesene Überlegenheit gegenüber autologen Produkten.",
+          "sources": [
+            {
+              "title": "Locke et al. · JCO 2025 · ALPHA2/ALPHA",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39946666/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Supportivtherapie · Eisenüberladung",
+          "question": "Ein mehrfach transfundierter Allo-HSCT-Langzeitüberlebender hat erhöhtes Ferritin bei gleichzeitiger Entzündung. Welche Untersuchung eignet sich nach EBMT Handbook 2024 am besten zur nichtinvasiven Quantifizierung der hepatischen Eisenlast?",
+          "hint": "Gesucht ist eine Organmessung, nicht ein weiterer unspezifischer Serumparameter.",
+          "correct": "A",
+          "options": [
+            {
+              "value": "A",
+              "label": "Kalibrierte MRT-basierte Bestimmung der Lebereisenkonzentration.",
+              "feedback": "MRT-basierte Verfahren erlauben eine nichtinvasive Abschätzung der Lebereisenkonzentration."
+            },
+            {
+              "value": "B",
+              "label": "Ein einzelner erneuter Ferritinwert ohne Entzündungskontext.",
+              "feedback": "Ferritin wird unter anderem durch Entzündung beeinflusst."
+            },
+            {
+              "value": "C",
+              "label": "Transferrinsättigung als direkte Messung des Lebereisens.",
+              "feedback": "Transferrinsättigung liefert andere Informationen und misst die hepatische Eisenmenge nicht direkt."
+            },
+            {
+              "value": "D",
+              "label": "Konventionelle Lebersonografie zur quantitativen Eisenbestimmung.",
+              "feedback": "Sonografie quantifiziert die Eisenkonzentration nicht verlässlich."
+            }
+          ],
+          "explanation": "Das Handbook nennt MRT als aktuellen Standard zur nichtinvasiven Organquantifizierung. Ferritin ist für Verläufe nützlich, aber unspezifisch. Aus einem einzelnen Wert folgt weder automatisch eine Chelatindikation noch deren konkrete Wahl.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Iron Overload, Tabelle 46.1",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608313/table/ch46.Tab1/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      ]
+    },
+    {
+      "title": "Set 3 · Komplikationen und Langzeitrisiken",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · SOS/VOD",
+          "question": "Bei schwerer SOS/VOD nach HSCT bessert sich der Verlauf unter Defibrotid nach zehn Behandlungstagen; Blutung oder andere Gründe für einen Therapieabbruch bestehen nicht. Welche Dauer entspricht der Fachinformation?",
+          "hint": "Besserung ist nicht gleich vollständige Resolution; beachte zusätzlich die Mindestdauer.",
+          "correct": "C",
+          "options": [
+            {
+              "value": "A",
+              "label": "Absetzen nach erstmaliger Bilirubinnormalisierung, unabhängig vom Behandlungstag.",
+              "feedback": "Ein einzelner normalisierter Parameter ersetzt weder Mindestdauer noch klinische Gesamtbeurteilung."
+            },
+            {
+              "value": "B",
+              "label": "Grundsätzlich genau 14 Tage, unabhängig von verbleibender Organdysfunktion.",
+              "feedback": "14 Tage entsprechen nicht der empfohlenen Mindestdauer."
+            },
+            {
+              "value": "C",
+              "label": "Mindestens 21 Tage und bis zur Resolution der Zeichen und Symptome.",
+              "feedback": "Mindestdauer und klinische Resolution sind gemeinsam zu berücksichtigen."
+            },
+            {
+              "value": "D",
+              "label": "Grundsätzlich genau 21 Tage, auch bei fortbestehender schwerer SOS/VOD.",
+              "feedback": "Bei fortbestehender Erkrankung ist Tag 21 kein automatischer Endpunkt."
+            }
+          ],
+          "explanation": "Die am 15.10.2026 geprüfte Fachinformation nennt mindestens 21 Tage und Fortsetzung bis zur Resolution. Dies ist eine Dosierungsvorgabe, kein randomisierter Vergleich unterschiedlicher Therapiedauern; relevante Blutungen erfordern eine gesonderte Sicherheitsentscheidung.",
+          "sources": [
+            {
+              "title": "Defitelio · Summary of Product Characteristics · Abschnitt 4.2",
+              "url": "https://www.medicines.org.uk/emc/product/4999/smpc"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Allo-HSCT · Antimykotisches TDM",
+          "question": "Bei einem Allo-HSCT-Patienten wird Posaconazol zur Prophylaxe eingesetzt. Welche Zuordnung der Plasmazielwerte gibt das EBMT Handbook 2024 für Prophylaxe versus Behandlung einer invasiven Pilzerkrankung an?",
+          "hint": "Die notwendige Exposition ist für Prophylaxe und Behandlung nicht identisch.",
+          "correct": "D",
+          "options": [
+            {
+              "value": "A",
+              "label": "Prophylaxe >1 mg/L; Behandlung >0,7 mg/L.",
+              "feedback": "Die im Handbook genannten Mindestziele sind umgekehrt zugeordnet."
+            },
+            {
+              "value": "B",
+              "label": "Für beide Indikationen >0,1 mg/L.",
+              "feedback": "Diese Konzentration liegt deutlich unter beiden genannten Zielen."
+            },
+            {
+              "value": "C",
+              "label": "Prophylaxe >5 mg/L; Behandlung >10 mg/L.",
+              "feedback": "Diese hohen Werte sind nicht die angegebenen Mindestziele."
+            },
+            {
+              "value": "D",
+              "label": "Prophylaxe >0,7 mg/L; Behandlung >1 mg/L.",
+              "feedback": "Das Handbook unterscheidet >0,7 mg/L prophylaktisch und >1 mg/L therapeutisch."
+            }
+          ],
+          "explanation": "Das Kapitel empfiehlt TDM und nennt diese Zielwerte. Spiegel sind zusammen mit Probenzeitpunkt, Formulierung, Resorption, Interaktionen, Erregerempfindlichkeit und klinischem Verlauf zu interpretieren; ein Zielspiegel garantiert keinen Therapieerfolg.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Invasive Fungal Diseases",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608256/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "CAR-T · Hyperinflammation",
+          "question": "Nach CD19-CAR-T bei LBCL klingt das CRS ab. Danach steigen Ferritin und Transaminasen stark an, Fibrinogen fällt, Zytopenien verschlechtern sich. Welches Syndrom ist nach ASTCT-Konzept gezielt abzuklären, parallel zu Infektionen und anderen Ursachen?",
+          "hint": "Die zeitliche Beziehung zur abklingenden ersten Entzündungsphase ist zentral.",
+          "correct": "A",
+          "options": [
+            {
+              "value": "A",
+              "label": "IEC-assoziiertes HLH-ähnliches Syndrom (IEC-HS).",
+              "feedback": "Diese verzögerte hyperinflammatorische Konstellation passt zu IEC-HS; Differenzialdiagnosen müssen ausgeschlossen werden."
+            },
+            {
+              "value": "B",
+              "label": "Isoliertes ICANS ohne weitere Organmanifestation.",
+              "feedback": "Isoliertes ICANS erklärt das beschriebene hämatologisch-hepatische Muster nicht."
+            },
+            {
+              "value": "C",
+              "label": "Unkomplizierte B-Zell-Aplasie als alleinige Erklärung.",
+              "feedback": "B-Zell-Aplasie allein erklärt Koagulopathie und schwere Hyperinflammation nicht."
+            },
+            {
+              "value": "D",
+              "label": "Ein Rezidiv, das durch Ferritin allein gesichert ist.",
+              "feedback": "Ferritin ist unspezifisch und beweist kein Lymphomrezidiv."
+            }
+          ],
+          "explanation": "Der ASTCT-Konsensus 2023 grenzt IEC-HS von bloßen HLH-artigen Merkmalen eines schweren CRS ab; das zeitliche Muster wird 2026 bestätigt. Es handelt sich um konsensbasierte Erkennungskriterien, nicht um einen spezifischen Einzeltest.",
+          "sources": [
+            {
+              "title": "Hines et al. · Transplantation and Cellular Therapy 2023 · IEC-HS",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10330221/"
+            },
+            {
+              "title": "ASTCT Consensus Grading for Toxicities after Immune Effector Cell Therapy · 2026",
+              "url": "https://www.astctjournal.org/article/S2666-6367%2826%2900363-5/fulltext"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "CAR-T · Langzeitnachsorge",
+          "question": "Welche Konsequenz stützt die 2025 publizierte Fünfjahresanalyse von ZUMA-5 nach Axi-cel bei vorbehandelten indolenten B-Zell-Lymphomen?",
+          "hint": "Betrachte auch Todesursachen jenseits von Lymphomprogression.",
+          "correct": "C",
+          "options": [
+            {
+              "value": "A",
+              "label": "Nach anhaltender Remission kann infektiologische Nachsorge grundsätzlich enden.",
+              "feedback": "Langfristige Remission beseitigt immunologische und infektiöse Risiken nicht."
+            },
+            {
+              "value": "B",
+              "label": "Späte Todesfälle wurden ausschließlich durch Lymphomprogression erklärt.",
+              "feedback": "Es wurden auch Nichtrezidivtodesfälle dokumentiert."
+            },
+            {
+              "value": "C",
+              "label": "Infektionen und Zweitneoplasien bleiben trotz langfristiger Lymphomkontrolle relevant.",
+              "feedback": "Die Analyse dokumentierte unter anderem infektiöse und zweitneoplasieassoziierte Nichtrezidivtodesfälle."
+            },
+            {
+              "value": "D",
+              "label": "Die Nachbeobachtung belegt eine geringere Nichtrezidivmortalität als unter Bispezifika.",
+              "feedback": "Ohne randomisierten Bispezifika-Arm ist dieser Vergleich nicht belegt."
+            }
+          ],
+          "explanation": "Nach median 64,6 Monaten dokumentierte die einarmige ZUMA-5-Analyse 23 Nichtrezidivtodesfälle, darunter 11 infektionsbedingt und sechs durch Zweitmalignome. Ereignisse nach Therapie sind nicht automatisch in jedem Einzelfall kausal durch CAR-T verursacht.",
+          "sources": [
+            {
+              "title": "Neelapu et al. · JCO 2025 · Five-Year Follow-Up of ZUMA-5",
+              "url": "https://doi.org/10.1200/JCO-25-00668"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        },
+        {
+          "topic": "Supportivtherapie · Transfusionssicherheit",
+          "question": "Für einen Allo-HSCT-Empfänger werden Erythrozytenkonzentrate angefordert. Welche Aussage zur Prävention transfusionsassoziierter GvHD entspricht dem EBMT Handbook 2024?",
+          "hint": "Leukozytenreduktion und Verhinderung der T-Zell-Proliferation sind verschiedene Ziele.",
+          "correct": "B",
+          "options": [
+            {
+              "value": "A",
+              "label": "Leukozytenreduktion ersetzt zuverlässig die Bestrahlung.",
+              "feedback": "Restliche funktionsfähige Lymphozyten können trotz Leukozytenreduktion verbleiben."
+            },
+            {
+              "value": "B",
+              "label": "Leukozytenreduzierte EK benötigen zusätzlich die vorgeschriebene Bestrahlung.",
+              "feedback": "Das Handbook fordert für zelluläre Blutprodukte im HCT-Kontext Bestrahlung zur ta-GvHD-Prävention."
+            },
+            {
+              "value": "C",
+              "label": "Ein negativer CMV-Serostatus des Blutspenders ersetzt die Bestrahlung.",
+              "feedback": "CMV-Sicherheit und ta-GvHD-Prävention betreffen unterschiedliche Risiken."
+            },
+            {
+              "value": "D",
+              "label": "ABO-identische EK benötigen keine GvHD-Prävention.",
+              "feedback": "ABO-Kompatibilität verhindert keine T-Zell-vermittelte ta-GvHD."
+            }
+          ],
+          "explanation": "Bestrahlung und Leukozytenreduktion sind komplementäre Sicherheitsmaßnahmen. Die Frage betrifft EK; spezielle Regelungen etwa zu pathogeninaktivierten Thrombozyten und die individuelle Dauer der Anforderungen sind gesondert zu prüfen.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Transfusion Support",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608283/"
+            }
+          ],
+          "reviewed_at": "2026-10-15"
+        }
+      ]
+    }
+  ]
+}
