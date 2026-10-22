@@ -1,0 +1,565 @@
+{
+  "id": "2026-W43",
+  "title": "KW 43 · Oktober 2026",
+  "sets": [
+    {
+      "title": "Set 1 · Transfusionsbiologie und moderne Erstlinienstrategien",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · ABO-Inkompatibilität",
+          "question": "Bei einer Major-ABO-inkompatiblen Allo-HSCT bleibt die Neutrophilen- und Thrombozytenerholung regelrecht, aber die Erythropoese verzögert sich ausgeprägt. Welche spezifische Komplikation ist nach dem EBMT Handbook 2024 besonders zu bedenken?",
+          "hint": "Welche Empfängerantikörper können die erythroide Spenderhämatopoese selektiv treffen?",
+          "explanation": "Major- oder bidirektionale ABO-Inkompatibilität kann PRCA, verzögertes Erythrozytenengraftment und erhöhten EK-Bedarf verursachen. ABO-Mismatch allein beweist jedoch weder PRCA noch eine bestimmte Therapie; andere Ursachen der Anämie müssen ausgeschlossen werden.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Passenger-Lymphocyte-Syndrom mit akuter Hämolyse",
+              "feedback": "Das Passenger-Lymphocyte-Syndrom ist typischerweise eine Komplikation der Minor-Inkompatibilität."
+            },
+            {
+              "value": "B",
+              "label": "Pure Red Cell Aplasia durch persistierende Isoagglutinine",
+              "feedback": "Persistierende Empfänger-Isoagglutinine können die erythroide Spenderrekonstitution hemmen und PRCA verursachen."
+            },
+            {
+              "value": "C",
+              "label": "Transplantatabstoßung mit Verlust aller drei Zellreihen",
+              "feedback": "Eine isoliert verzögerte Erythropoese bei sonstigem Engraftment ist keine pancytopenische Abstoßung."
+            },
+            {
+              "value": "D",
+              "label": "TA-TMA mit obligater Fragmentozytose",
+              "feedback": "TA-TMA ist eine andere Endothelkomplikation und wird nicht durch das ABO-Muster definiert."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Transfusion Support",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608283/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · Chronische GvHD",
+          "question": "Ein Patient hat chronische GvHD mit mildem oralem Befall, aber einem NIH-Lungenscore von 2. Wie lautet der globale Schweregrad nach der im EBMT Handbook 2024 dargestellten NIH-Systematik?",
+          "hint": "Die Lunge ist bei der globalen Einstufung eine besondere Ausnahme.",
+          "explanation": "Nach NIH-Systematik führt Lungenscore 2 oder 3 zur global schweren cGvHD; Lungenscore 1 ergibt mindestens moderat. Der Schweregrad ist prognostisch und therapeutisch relevant, ersetzt aber nicht die differenzialdiagnostische Abklärung der Lungenfunktionsstörung.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Mild, weil nur zwei Organe betroffen sind",
+              "feedback": "Ein Lungenbefall verhindert bereits bei Score 1 eine globale Einstufung als mild."
+            },
+            {
+              "value": "B",
+              "label": "Moderat, weil kein Organ Score 3 erreicht",
+              "feedback": "Lungenscore 2 wird global nicht nur als moderat gewertet."
+            },
+            {
+              "value": "C",
+              "label": "Nicht klassifizierbar ohne Lungenbiopsie",
+              "feedback": "Die NIH-Einstufung verlangt für diese Konstellation keine Lungenbiopsie."
+            },
+            {
+              "value": "D",
+              "label": "Schwer wegen des Lungenscores 2",
+              "feedback": "Ein moderater oder schwerer Lungenbefall führt zur globalen Kategorie schwer."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Chronic Graft-Versus-Host Disease",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608236/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · ALYCANTE 2026",
+          "question": "Die ALYCANTE-Finalanalyse 2026 untersuchte Axi-cel in der Zweitlinie bei 62 Patienten mit Hochrisiko-R/R-LBCL, die für HDCT/ASCT ungeeignet, aber CAR-T-geeignet waren. Welche Aussage trifft zu?",
+          "hint": "Achte auf Follow-up, Endpunkte und das Fehlen eines Kontrollarms.",
+          "explanation": "ALYCANTE war eine prospektive, offene Phase-II-Studie an 18 Zentren. Die Finalanalyse stützt dauerhafte Aktivität in einer selektierten CAR-T-geeigneten, ASCT-ungeeigneten Population; sie beweist keine Überlegenheit gegenüber anderen Zweitlinienoptionen.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Bei 37,4 Monaten Follow-up betrugen medianes PFS 18,0 und mediane Ansprechdauer 26,0 Monate.",
+              "feedback": "Die Finalanalyse berichtet diese dauerhaften Ergebnisse; das mediane OS war nicht erreicht."
+            },
+            {
+              "value": "B",
+              "label": "Axi-cel verlängerte randomisiert das OS gegenüber Pola-BR.",
+              "feedback": "ALYCANTE war prospektiv, offen und einarmig, nicht gegen Pola-BR randomisiert."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie schloss Patienten über 70 Jahre grundsätzlich aus.",
+              "feedback": "Die Studie zielte ausdrücklich auf eine weniger fitte, auch ältere Population."
+            },
+            {
+              "value": "D",
+              "label": "ASCT-Untauglichkeit wurde mit genereller CAR-T-Untauglichkeit gleichgesetzt.",
+              "feedback": "Die Eignung für Axi-cel wurde trotz fehlender HDCT/ASCT-Eignung gesondert geprüft."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Houot et al. · HemaSphere 2026 · ALYCANTE-Finalanalyse",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42774885/"
+            }
+          ]
+        },
+        {
+          "topic": "Lymphom · TRIANGLE 2026",
+          "question": "TRIANGLE berichtete 2026 nach median 54,9 Monaten den Vergleich ASCT plus Ibrutinib versus Ibrutinib-haltige Erstlinie ohne ASCT bei zuvor unbehandeltem MCL im Alter 18–65 Jahre. Was zeigte dieser direkte Vergleich?",
+          "hint": "Vergleiche die beiden Ibrutinib-Arme, nicht nur jeden Arm mit dem historischen Standardarm.",
+          "explanation": "Im randomisierten offenen Phase-III-Design war A+I gegenüber I beim 4-Jahres-FFS nicht überlegen (HR 0,86; einseitiges p=0,21). Das ist kein formaler Äquivalenznachweis und lässt sich nicht ungeprüft auf ältere oder nicht fitte Patienten übertragen.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "ASCT plus Ibrutinib halbierte die Mortalität gegenüber dem Ibrutinib-Arm ohne ASCT.",
+              "feedback": "Ein solcher Mortalitätsvorteil wurde im direkten Vergleich nicht gezeigt."
+            },
+            {
+              "value": "B",
+              "label": "Der Arm ohne ASCT war formal als nicht unterlegen geplant und bewiesen.",
+              "feedback": "Das publizierte Dreiarmdesign war eine Überlegenheitsstudie; aus einem negativen Überlegenheitstest folgt nicht automatisch Nichtunterlegenheit."
+            },
+            {
+              "value": "C",
+              "label": "ASCT plus Ibrutinib war beim 4-Jahres-FFS nicht überlegen: 82% versus 81%.",
+              "feedback": "Die sehr ähnlichen FFS-Schätzungen ergaben keinen Überlegenheitsnachweis für die zusätzliche ASCT."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie untersuchte ausschließlich Patienten über 65 Jahre.",
+              "feedback": "Eingeschlossen wurden jüngere, grundsätzlich transplantationsgeeignete Erwachsene bis 65 Jahre."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Dreyling et al. · Lancet 2026 · TRIANGLE, 4,5 Jahre",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42134356/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Ernährung",
+          "question": "Welche Aussage zur sogenannten neutropenischen oder niedrig-mikrobiellen Diät entspricht dem EBMT Handbook 2024 am besten?",
+          "hint": "Trenne allgemeine Lebensmittelsicherheit von pauschalen Verboten frischer Lebensmittel.",
+          "explanation": "Das Handbook berichtet keinen Infektionsvorteil der klassischen Low-microbial-Diet. Diese Aussage bedeutet nicht, dass alle Lebensmittel gleich sicher sind: Hygiene, sachgerechte Lagerung und das Vermeiden hochriskanter roher Produkte bleiben erforderlich.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Der Verzicht auf frisches Obst und Gemüse senkt Infektionen nachweislich deutlich.",
+              "feedback": "Die ausgewertete Evidenz zeigte keinen Rückgang der Infektionsinzidenz durch dieses pauschale Konzept."
+            },
+            {
+              "value": "B",
+              "label": "Eine pauschale niedrig-mikrobielle Diät senkte Infektionen nicht; sichere Lebensmittelhygiene bleibt wichtig.",
+              "feedback": "Das Handbook priorisiert sichere Handhabung und Lebensmittelhygiene statt eines unbelegten generellen Frischkostverbots."
+            },
+            {
+              "value": "C",
+              "label": "Die Diät ersetzt Händehygiene und infektiologische Schutzmaßnahmen.",
+              "feedback": "Ernährungsvorgaben ersetzen zentrale Infektionsschutzmaßnahmen nicht."
+            },
+            {
+              "value": "D",
+              "label": "Rohes Fleisch ist bei korrekter Kühlung während schwerer Immunsuppression unbedenklich.",
+              "feedback": "Lebensmittelsicherheit umfasst gerade das Meiden risikoreicher roher tierischer Produkte."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Infection Control and Isolation Procedures",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608237/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 2 · Organstaging, Spenderwahl und ambulante Zelltherapie",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Akute GI-GvHD",
+          "question": "Ein Patient nach Allo-HSCT hat nur 400 ml Diarrhö pro Tag, aber starke abdominelle Schmerzen mit Ileus. Welches Lower-GI-Stadium ergibt sich nach der Harris/MAGIC-Systematik im EBMT Handbook 2024?",
+          "hint": "Bei der schwersten Kategorie kann die Symptomqualität wichtiger sein als das Stuhlvolumen.",
+          "explanation": "Die klinischen Schwerezeichen Ileus, starke Schmerzen oder grob blutiger Stuhl bestimmen Lower-GI-Stadium 4 unabhängig von der gemessenen Diarrhömenge. Infektion, Medikamente und andere Ursachen müssen parallel ausgeschlossen werden.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Stadium 0 wegen des geringen Volumens",
+              "feedback": "Schwere Schmerzen und Ileus schließen Stadium 0 aus."
+            },
+            {
+              "value": "B",
+              "label": "Stadium 1 aufgrund jeder Diarrhö unter 500 ml",
+              "feedback": "Die Volumengrenze allein darf die schweren klinischen Zeichen nicht überstimmen."
+            },
+            {
+              "value": "C",
+              "label": "Stadium 2 wegen des Ileus",
+              "feedback": "Ein Ileus gehört nicht lediglich zum mittleren GI-Stadium."
+            },
+            {
+              "value": "D",
+              "label": "Stadium 4 unabhängig vom Stuhlvolumen",
+              "feedback": "Schwere abdominelle Schmerzen mit oder ohne Ileus oder makroskopisch blutiger Stuhl definieren Stadium 4 unabhängig vom Volumen."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Acute Graft-Versus-Host Disease",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608233/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · CMV und Spenderwahl",
+          "question": "Für einen CMV-seronegativen Empfänger stehen zwei ansonsten gleich geeignete HLA-gematchte unverwandte Spender zur Verfügung, einer CMV-IgG-negativ und einer positiv. Welche Präferenz beschreibt das EBMT Handbook 2024?",
+          "hint": "Gesucht ist ein sekundäres Auswahlkriterium bei sonst vergleichbaren Spendern.",
+          "explanation": "Das Donor-Selection-Kapitel beschreibt die besten Ergebnisse für D−/R− und empfiehlt Serostatusmatching als nachgeordnetes Kriterium. HLA-Passung, Spenderalter, Verfügbarkeit und Dringlichkeit können wichtiger sein; der Einfluss moderner CMV-Prophylaxe ist noch nicht abschließend definiert.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Den CMV-seronegativen Spender bevorzugen.",
+              "feedback": "Für einen seronegativen Empfänger wird bei sonstiger Vergleichbarkeit die seronegative Konstellation bevorzugt."
+            },
+            {
+              "value": "B",
+              "label": "Den CMV-seropositiven Spender bevorzugen, um Gedächtnis-T-Zellen zu übertragen.",
+              "feedback": "Eine solche Präferenz gilt nicht für den CMV-seronegativen Empfänger."
+            },
+            {
+              "value": "C",
+              "label": "CMV-Serologie grundsätzlich nie in die Spenderwahl einbeziehen.",
+              "feedback": "Die Relevanz kann durch moderne Prophylaxe abnehmen, ist aber nicht grundsätzlich null."
+            },
+            {
+              "value": "D",
+              "label": "Beide Spender allein wegen der CMV-Konstellation ausschließen.",
+              "feedback": "Eine CMV-Serostatusdiskordanz ist keine automatische Ausschlusskonstellation."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Donor Selection",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608270/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Ambulante Durchführung",
+          "question": "ZUMA-24 untersuchte Axi-cel ambulant bei 30 Patienten mit R/R-LBCL nach mindestens einer Vortherapie. Welche Einordnung der Primäranalyse ist korrekt?",
+          "hint": "Ambulante Infusion ist nicht gleichbedeutend mit einem vollständig ambulanten Verlauf.",
+          "explanation": "ZUMA-24 zeigte die Machbarkeit einer ambulanten Axi-cel-Infusion in selektierten Zentren, zugleich wurden 93% hospitalisiert und 13% intensivmedizinisch aufgenommen. Die kleine einarmige Studie definiert keine allgemeine ambulante Standardversorgung.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Kein Patient musste nach der Infusion stationär aufgenommen werden.",
+              "feedback": "Fast alle Patienten benötigten nach der ambulanten Infusion eine stationäre Aufnahme."
+            },
+            {
+              "value": "B",
+              "label": "Die Studie bewies geringere Neurotoxizität als ZUMA-7.",
+              "feedback": "Die offene einarmige Phase-II-Studie war kein randomisierter Toxizitätsvergleich mit ZUMA-7."
+            },
+            {
+              "value": "C",
+              "label": "93% wurden später hospitalisiert; ambulante Gabe verlangt enges Monitoring und klare Aufnahmewege.",
+              "feedback": "93% wurden aufgenommen, median nach vier Tagen; damit beschreibt ambulant vor allem den Startort, nicht Hospitalisationsfreiheit."
+            },
+            {
+              "value": "D",
+              "label": "Das ambulante Konzept kam ohne Betreuungsperson und tägliche Kontrollen aus.",
+              "feedback": "Das Protokoll setzte tägliche Kontrollen und eine belastbare ambulante Infrastruktur voraus."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "ZUMA-24 · Outpatient axi-cel · 2025",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40948517/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · Nach CAR-T",
+          "question": "Die prospektive LYSA-Phase-II-Studie 2025 untersuchte Glofitamab bei R/R-DLBCL nach CD19-CAR-T-Versagen. Welche Aussage trifft die publizierten Ergebnisse?",
+          "hint": "Unterscheide bestes metabolisches Ansprechen von medianem PFS.",
+          "explanation": "Die offene Phase-II-Studie stützt klinische Aktivität von Glofitamab nach CAR-T-Versagen, aber die Diskrepanz zwischen bestem Ansprechen und kurzem medianem PFS ist wichtig. Ohne randomisierten Kontrollarm bleibt der relative Stellenwert gegenüber anderen Salvage-Strategien offen.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Das mediane PFS betrug 14,7 Monate und entsprach dem medianen OS.",
+              "feedback": "14,7 Monate war das mediane OS, während das mediane PFS deutlich kürzer war."
+            },
+            {
+              "value": "B",
+              "label": "Die beste metabolische ORR betrug 76,1%, die CR-Rate 45,7%; medianes PFS war 3,8 Monate.",
+              "feedback": "Hohe beste Ansprechraten koexistierten mit einem medianen PFS von 3,8 Monaten; Responses waren also nicht bei allen dauerhaft."
+            },
+            {
+              "value": "C",
+              "label": "Glofitamab war gegen erneute CAR-T randomisiert und überlegen.",
+              "feedback": "Es gab keinen randomisierten Re-CAR-T-Kontrollarm."
+            },
+            {
+              "value": "D",
+              "label": "Hochgradiges CRS trat bei mehr als einem Drittel auf.",
+              "feedback": "Grad-3-oder-höheres CRS und Neurotoxizität wurden in dieser Studie nicht beobachtet."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Cartron et al. · Nature Cancer 2025 · Glofitamab nach CAR-T",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40181090/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Impfungen",
+          "question": "Ein Allo-HSCT-Empfänger ist 18 Monate nach Transplantation weiterhin unter systemischer Immunsuppression wegen GvHD. Er fragt nach einer MMR-Lebendimpfung. Welche Antwort entspricht dem EBMT Handbook 2024?",
+          "hint": "Für Lebendimpfstoffe müssen Zeitabstand und Immunkompetenz gleichzeitig erfüllt sein.",
+          "explanation": "Das Handbook empfiehlt MMR-V nicht vor 24 Monaten und nur bei immunkompetenten Patienten ohne GvHD, seit mindestens drei Monaten ohne Immunsuppression und mit ausreichendem Abstand zu IVIG. Lokale Empfehlungen und individuelle Immunrekonstitution sind zusätzlich zu prüfen.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Jetzt impfen, weil zwölf Monate bereits überschritten sind.",
+              "feedback": "Der Mindestabstand für MMR-V nach HCT beträgt 24 Monate, nicht zwölf."
+            },
+            {
+              "value": "B",
+              "label": "Jetzt impfen, sofern die Masern-IgG negativ sind.",
+              "feedback": "Seronegativität allein macht die Lebendimpfung unter Immunsuppression nicht sicher."
+            },
+            {
+              "value": "C",
+              "label": "Nur die Immunsuppression für 48 Stunden pausieren und dann impfen.",
+              "feedback": "Ein kurzfristiges Pausieren stellt keine ausreichende Immunrekonstitution her."
+            },
+            {
+              "value": "D",
+              "label": "Nicht jetzt; Lebendimpfung frühestens nach 24 Monaten und nur bei Immunkompetenz ohne GvHD/Immunsuppression.",
+              "feedback": "Zeitabstand, fehlende GvHD und mindestens drei Monate ohne Immunsuppression gehören zu den Voraussetzungen."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Vaccinations",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608259/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 3 · Konditionierung, BKPyV und belastbare Vergleichsaussagen",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Konditionierungsintensität",
+          "question": "Welche Eigenschaft definiert ein myeloablatives Konditionierungsregime nach dem EBMT Handbook 2024 am besten?",
+          "hint": "Entscheidend ist, ob die endogene Blutbildung ohne Transplantat zeitgerecht zurückkehren könnte.",
+          "explanation": "MAC verursacht definitionsgemäß eine profunde und verlängerte Zytopenie, die ohne Stammzellgraft nicht zeitgerecht ausheilt. RIC ist eine Zwischenkategorie; konkrete Regime sollten zusätzlich mit validierten Intensitätsscores bewertet werden.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Profunde, prolongierte Zytopenie über etwa 21 Tage mit notwendigem Stammzellgraft zur Erholung.",
+              "feedback": "Diese funktionelle Myeloablation mit notwendigem Graft kennzeichnet MAC."
+            },
+            {
+              "value": "B",
+              "label": "Ausschließlich die Verwendung von Busulfan, unabhängig von Dosis und Kombination.",
+              "feedback": "Die Intensität hängt von Dosis und Gesamtkombination ab, nicht vom Wirkstoffnamen allein."
+            },
+            {
+              "value": "C",
+              "label": "Jedes Regime mit Fludarabin, sobald eine Ganzkörperbestrahlung fehlt.",
+              "feedback": "Fludarabin kommt in Regimen verschiedener Intensität vor."
+            },
+            {
+              "value": "D",
+              "label": "Eine geringere extrahämatologische Toxizität als bei allen RIC-Regimen.",
+              "feedback": "Reduzierte Toxizität ist weder garantiert noch das definierende MAC-Merkmal."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Conditioning",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608297/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · BKPyV-Hämorrhagische Zystitis",
+          "question": "Welche Kombination erfüllt nach EBMT/ECIL die diagnostische Trias einer BKPyV-assoziierten hämorrhagischen Zystitis nach Allo-HSCT?",
+          "hint": "Viraler Nachweis allein reicht nicht; klinische Zystitis und Blutung gehören dazu.",
+          "explanation": "Die Diagnose kombiniert Makrohämaturie, Dysurie/Frequenz/Unterbauchschmerz und BKPyV-Virurie über 10⁷ Kopien/ml. Cidofovir wird häufig verwendet, doch ECIL sah keine ausreichenden Daten für eine routinemäßige Anwendung; supportive Maßnahmen bleiben zentral.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Mikrohämaturie, asymptomatische Virurie und negativer Ultraschall",
+              "feedback": "Die Definition verlangt Makrohämaturie und typische Symptome."
+            },
+            {
+              "value": "B",
+              "label": "Dysurie und BKPyV-DNA im Blut ohne Hämaturie",
+              "feedback": "Eine Virämie kann prognostisch relevant sein, ersetzt aber die klinische Trias nicht."
+            },
+            {
+              "value": "C",
+              "label": "Makrohämaturie, Zystitissymptome und hohe BKPyV-Virurie über 10⁷ Kopien/ml",
+              "feedback": "Makrohämaturie über Grad 2, Zystitissymptome und hohe Virurie bilden die diagnostische Trias."
+            },
+            {
+              "value": "D",
+              "label": "Jede BKPyV-Virurie zusammen mit Neutropenie",
+              "feedback": "Asymptomatische Virurie ist häufig und allein nicht diagnostisch."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Haemorrhagic Cystitis and Renal Dysfunction",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608279/"
+            },
+            {
+              "title": "ECIL-Guideline · BKPyV-HC",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29190347/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Follikuläres Lymphom",
+          "question": "Das 2026 publizierte Drei-Jahres-Update von TRANSCEND FL berichtet Liso-cel bei R/R-FL ab der dritten Linie nach median 41,5 Monaten Follow-up. Welche Schlussfolgerung ist durch das Design gedeckt?",
+          "hint": "Langzeit-Follow-up verbessert die Aussage zur Dauerhaftigkeit, erzeugt aber keinen Vergleichsarm.",
+          "explanation": "Das Update beschreibt langfristige Ergebnisse einer globalen einarmigen Phase-II-Kohorte mit 3L+ FL. Es ist für Dauerhaftigkeit und Spätsicherheit wertvoll; direkte Produkt- oder Klassenvergleiche erfordern randomisierte oder zumindest belastbar kontrollierte Daten.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Liso-cel ist randomisiert wirksamer als Mosunetuzumab.",
+              "feedback": "TRANSCEND FL enthielt keinen randomisierten Mosunetuzumab-Arm."
+            },
+            {
+              "value": "B",
+              "label": "Die einarmige Phase-II-Kohorte stützt dauerhafte Aktivität und Langzeitsicherheit, aber keine komparative Überlegenheit.",
+              "feedback": "Das längere Follow-up stärkt Aussagen zu Dauer und späten Ereignissen innerhalb der behandelten Kohorte."
+            },
+            {
+              "value": "C",
+              "label": "Die Daten beweisen, dass CAR-T bereits in der Erstlinie Standard sein sollte.",
+              "feedback": "Untersucht wurde eine vorbehandelte Population ab dritter Linie, nicht die Erstlinie."
+            },
+            {
+              "value": "D",
+              "label": "Das Update schließt Selektions- und Survivorship-Effekte vollständig aus.",
+              "feedback": "Längeres Follow-up beseitigt die Grenzen einer einarmigen selektierten Studie nicht."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "TRANSCEND FL · Blood 2026 · Drei-Jahres-Update",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42462111/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · Real-World-Evidenz",
+          "question": "Eine britische Analyse 2026 erfasste 332 LBCL-Patienten unter Glofitamab oder Epcoritamab an 34 Zentren; 78% wären für die Zulassungsstudien ungeeignet gewesen. Die CR-Rate lag insgesamt bei 24%, bei studiengeeigneten Patienten bei 43%. Welche Interpretation passt?",
+          "hint": "Die unterschiedliche Prognose der Teilpopulationen beeinflusst rohe Ansprechraten.",
+          "explanation": "Die retrospektive UK-Kohorte umfasste viele primär refraktäre, ECOG-eingeschränkte und post-CAR-T behandelte Patienten. Rohe Raten dürfen deshalb weder als Produktvergleich noch als Beweis einer gegenüber Zulassungsstudien verminderten Arzneiwirkung gelesen werden.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die niedrigere Gesamtrate kann wesentlich durch die Hochrisiko- und trial-ineligible-Population erklärt sein; sie beweist keine geringere intrinsische Wirksamkeit im Vergleich zu den Zulassungsstudien.",
+              "feedback": "Die Kohorte zeigt einen erheblichen Case-mix-Effekt und höhere externe Validität, erlaubt aber keinen unverzerrten Cross-Trial-Wirksamkeitsvergleich."
+            },
+            {
+              "value": "B",
+              "label": "Die Daten beweisen, dass Epcoritamab Glofitamab kausal unterlegen ist.",
+              "feedback": "Produktwahl und Patientencharakteristika waren nicht randomisiert."
+            },
+            {
+              "value": "C",
+              "label": "Trial-ineligible Patienten sollten grundsätzlich keine Bispezifika erhalten.",
+              "feedback": "Die Analyse dokumentiert gerade die reale Behandlung vieler nicht studiengeeigneter Patienten."
+            },
+            {
+              "value": "D",
+              "label": "Retrospektive Multizenterdaten sind methodisch einer Randomisierung gleichwertig.",
+              "feedback": "Multizentrizität vergrößert die Datenbasis, beseitigt Confounding jedoch nicht."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Wilson et al. · Haematologica 2026 · UK Real-World-Kohorte",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42131938/"
+            }
+          ]
+        },
+        {
+          "topic": "Evidenz · Externe Kontrollarme",
+          "question": "Die LYSA-BiCAR-Phase-II-Studie berichtete 2026 nach CAR-T-Versagen einen Überlebensvorteil für Glofitamab gegenüber einem präspezifizierten externen Kontrollarm und einen RMST-Gewinn von fünf Monaten über zwei Jahre. Welche Aussage ist methodisch korrekt?",
+          "hint": "Präspezifikation verbessert Transparenz, ersetzt aber die Randomisierung nicht.",
+          "explanation": "Ein präspezifizierter externer Kontrollarm ist informativer als ein rein einarmiges Ergebnis, bleibt aber beobachtend. Der RMST-Gewinn beschreibt die Fläche zwischen den Überlebenskurven bis zwei Jahre; er ist weder ein Medianunterschied noch ein garantierter individueller Nutzen.",
+          "reviewed_at": "2026-10-22",
+          "options": [
+            {
+              "value": "A",
+              "label": "Der externe Kontrollarm beweist denselben kausalen Effekt wie ein zeitgleich randomisierter Arm.",
+              "feedback": "Auch ein präspezifizierter externer Vergleich kann unbekannte oder unvollständig gemessene Unterschiede nicht ausgleichen."
+            },
+            {
+              "value": "B",
+              "label": "RMST von fünf Monaten bedeutet, dass jeder Patient exakt fünf Monate länger lebt.",
+              "feedback": "RMST ist die Differenz der mittleren ereignisfreien oder Überlebenszeit bis zum festgelegten Horizont, kein individueller Zeitgewinn."
+            },
+            {
+              "value": "C",
+              "label": "Die Analyse stärkt den Vergleich gegenüber einer unkontrollierten Studie, bleibt aber für Residualkonfounding und zeitliche Unterschiede anfällig.",
+              "feedback": "Der externe Kontrollarm erhöht die interpretative Stärke, erreicht aber nicht die interne Validität einer Randomisierung."
+            },
+            {
+              "value": "D",
+              "label": "Ein signifikanter RMST-Unterschied beweist automatisch einen proportionalen Hazardverlauf.",
+              "feedback": "RMST wird gerade häufig eingesetzt, wenn proportionale Hazards fraglich sind, und setzt sie nicht automatisch voraus."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "LYSA BiCAR · Finalanalyse 2026 · Externer Kontrollarm",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42393723/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
