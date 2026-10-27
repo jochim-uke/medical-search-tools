@@ -1,3 +1,4 @@
+import {sourceOptions,zoteroSaveUrl} from './zotero.mjs';
 import {categories,normalize,plain,selectEntries,splitReport,makeDraft} from './core.mjs';
 const API='https://tjjtemvclcgqmuhlnumr.supabase.co/functions/v1/update-archive-api';
 const KEY='sb_publishable_ZYbal6vsT-gcmAHu-eugKw_h7Fif-1x';
@@ -13,6 +14,36 @@ async function api(action,body={}){
 function message(node,text,ok=false){node.textContent=text;node.classList.toggle('saved',ok);}
 async function busy(button,work,status=$('#status')){button.disabled=true;try{await work();}catch(error){message(status,error.message);}finally{button.disabled=false;}}
 function button(label,handler,className='secondary'){const b=el('button',className,label);b.type='button';b.addEventListener('click',()=>handler(b));return b;}
+function zoteroButton(entry){
+  const b=button('Zu Zotero hinzufügen',()=>openZotero(entry),'secondary zotero-button');
+  b.disabled=!sourceOptions(entry).length;
+  b.title=b.disabled?'Für diese Meldung fehlt ein Quellenlink.':'Originalquelle auswählen und in Zotero speichern';
+  return b;
+}
+function openZotero(entry){
+  const sources=sourceOptions(entry);if(!sources.length)return;
+  const dialog=el('dialog','zotero-dialog');dialog.setAttribute('aria-labelledby','zotero-title');
+  const heading=el('h2','','Zu Zotero hinzufügen');heading.id='zotero-title';
+  const close=button('Schließen',()=>dialog.close(),'secondary');
+  const label=el('label','','Quelle auswählen'),select=el('select');
+  sources.forEach(source=>select.add(new Option(source.label+' · '+new URL(source.url).hostname,source.url)));
+  label.append(select);const sourceLink=link('Originalquelle öffnen ↗',select.value);
+  select.onchange=()=>sourceLink.href=select.value;
+  const status=el('p');status.setAttribute('role','status');
+  // Use a button: recent Connectors intercept zotero.org/save anchors and would save the archive page.
+  const save=button('In Zotero speichern ↗',()=>{
+    window.open(zoteroSaveUrl(select.value),'_blank','noopener,noreferrer');
+    message(status,'Zotero wurde zum Speichern geöffnet. Falls nötig dort anmelden. Erst Zotero bestätigt, ob die Quelle gespeichert wurde.');
+  });
+  const actions=el('div','detail-tools');actions.append(save);
+  if(navigator.share)actions.append(button('Teilen …',async()=>{
+    try{await navigator.share({url:select.value});message(status,'Teilen-Menü geschlossen. Ob die Quelle gespeichert wurde, zeigt Zotero.');}
+    catch(error){if(error.name!=='AbortError')message(status,'Teilen ist hier nicht verfügbar. Bitte „In Zotero speichern“ verwenden.');}
+  }));
+  dialog.append(heading,el('p','',entry.title),label,sourceLink,
+    el('p','hint','Speichert die ausgewählte Originalquelle. Am iPhone: „Teilen …“ und Zotero auswählen. Für PDFs und vollständige Metadaten kannst du auch die Originalquelle mit dem Zotero Connector speichern.'),actions,status,close);
+  dialog.addEventListener('close',()=>dialog.remove(),{once:true});document.body.append(dialog);dialog.showModal();
+}
 function formatDate(date){return new Intl.DateTimeFormat('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date(date));}
 function link(label,url){const a=el('a','',label);try{const parsed=new URL(url);if(!['http:','https:'].includes(parsed.protocol))return el('span','',label);a.href=parsed.href;a.target='_blank';a.rel='noopener noreferrer';}catch{return el('span','',label);}return a;}
 function rich(value){const container=el('div','rich-text');const re=/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|\*\*([^*]+)\*\*/g;let start=0;for(const match of value.matchAll(re)){container.append(document.createTextNode(value.slice(start,match.index)));container.append(match[3]?el('strong','',match[3]):link(match[1],match[2]));start=match.index+match[0].length;}container.append(document.createTextNode(value.slice(start)));return container;}
@@ -48,7 +79,7 @@ function render(){
     const tags=el('div','tags');entry.tags.forEach(t=>tags.append(el('span','tag',t)));main.append(tags);
     const terms=normalize(f.query).split(/\s+/).filter(Boolean),noteHit=[entry.notes,...entry.comments.map(c=>`${c.author||''}: ${c.body}`)].find(t=>terms.length&&terms.some(q=>normalize(t).includes(q)));
     if(noteHit)main.append(el('p','search-match','Notiz / Kommentar: '+noteHit.slice(0,300)));
-    const bottom=el('div','entry-bottom');bottom.append(button('Lesen & kommentieren →',()=>openEntry(entry.id),'text-button'),el('span','',`${entry.comments.length} Kommentare`),el('span','',`${entry.clicks} Aufruftage`));if(entry.notes.trim())bottom.append(el('span','','Notiz vorhanden'));main.append(bottom);
+    const bottom=el('div','entry-bottom');bottom.append(button('Lesen & kommentieren →',()=>openEntry(entry.id),'text-button'),zoteroButton(entry),el('span','',`${entry.comments.length} Kommentare`),el('span','',`${entry.clicks} Aufruftage`));if(entry.notes.trim())bottom.append(el('span','','Notiz vorhanden'));main.append(bottom);
     const side=el('div');side.append(el('p','priority-caption','Admin-Priorität'),priorityControl(entry));card.append(main,side);$('#results').append(card);
   }
 }
@@ -59,7 +90,7 @@ async function openEntry(id){
 function drawDetail(){
   const entry=data.entries.find(e=>e.id===activeId);if(!entry)return;const root=$('#detail-content');root.replaceChildren();const status=el('p');status.id='detail-status';status.setAttribute('role','status');
   const meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',`Bericht vom ${formatDate(entry.report_date)}`));root.append(meta,el('h2','detail-title',entry.title));
-  const tools=el('div','detail-tools');tools.append(priorityControl(entry,status));if(entry.source_url)tools.append(link('Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
+  const tools=el('div','detail-tools');tools.append(priorityControl(entry,status),zoteroButton(entry));if(entry.source_url)tools.append(link('Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
   const reportSection=el('section','detail-section');reportSection.append(el('h3','','In diesen Wochenberichten'));for(const rel of data.links.filter(l=>l.entry_id===entry.id)){const report=data.reports.find(r=>r.id===rel.report_id);if(report){const details=el('details','report-item');details.append(el('summary','',`${formatDate(report.report_date)} · ${report.title}`),rich(report.body));reportSection.append(details);}}root.append(reportSection);
   if(isAdmin){const notes=el('section','detail-section'),label=el('label','','Admin-Notiz'),textarea=el('textarea');textarea.rows=5;textarea.maxLength=40000;textarea.value=entry.notes;textarea.placeholder='Was möchte ich zu dieser Meldung festhalten?';label.append(textarea);textarea.oninput=()=>notesDirty=textarea.value!==entry.notes;
     notes.append(label,el('p','hint','Diese Notiz ist öffentlich sichtbar.'),button('Notiz speichern',b=>busy(b,async()=>{const result=await api('update',{id:entry.id,version:entry.version,notes:textarea.value});Object.assign(entry,result.entry);notesDirty=false;render();message(status,'Notiz gespeichert.',true);},status)));root.append(notes);

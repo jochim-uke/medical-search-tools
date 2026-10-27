@@ -23,3 +23,9 @@ Priorität (0–3) hat bei der Interessensortierung Vorrang. Innerhalb einer Stu
 Schema: `supabase/update-archive-schema.sql`, angewandte Migration `create_update_archive`. Erweiterung: `supabase/update-archive-public.sql` (`open_update_archive_with_authors`). Function: `supabase/functions/update-archive-api/index.js`. Bestehende Dienstplan-Daten und -Funktionen werden nicht verändert. Der Service Worker speichert nur gleich-originige öffentliche Dateien, keine externen APIs oder privaten Inhalte.
 
 Tests: `node --test updates/core.test.mjs supabase/functions/update-archive-api/auth.test.mjs`. Keine Produktionspasswörter oder Daten in Testdateien. Passwortwechsel: neuen Salt/Hash in `ua_settings` setzen und Archiv-Sitzungen löschen.
+
+## Zotero
+
+„Zu Zotero hinzufügen“ ist in Karten und Detailansicht verfügbar. Die Quellenauswahl enthält den Originalquellenlink und HTTP(S)-Links aus dem Meldungstext. Ohne Quelle bleibt der Button deaktiviert. Der ausgewählte Link wird URL-kodiert an `https://www.zotero.org/save?q=…` übergeben; die Anmeldung und Speicherung erfolgen bei Zotero. Kein API-Key und keine lokale Desktop-Verbindung erforderlich. Notizen, Kommentare und der Meldungstext werden nicht übertragen. Der Browser öffnet die Save-Seite über einen Button, damit der Connector nicht einen Save-Anker abfängt und versehentlich die Archivseite speichert.
+
+Auf Geräten mit Web Share API steht zusätzlich „Teilen …“ für die Zotero-App zur Verfügung. Die App behauptet keinen erfolgreichen Import: Den bestätigt nur Zotero. PDFs und vollständige Metadaten hängen von der Quelle ab; dafür empfiehlt sich der Connector auf der Originalseite. Quellen ohne bibliografische Metadaten können als Webseite gespeichert werden.

@@ -17,3 +17,5 @@
 .admin-badge{font-size:.68rem;border-radius:4px;padding:3px 6px;color:#fff;background:#173b65}
 .comment+form input{margin-bottom:12px}
 @media(max-width:720px){.filters .date-range{grid-column:1/-1;width:100%;column-gap:10px}.detail-section input,.detail-section textarea,.login input{font-size:16px}}
+
+.zotero-dialog{width:min(560px,calc(100% - 2rem))}.zotero-dialog select{width:100%;min-width:0}.zotero-dialog>a{display:inline-block;margin-top:1rem;overflow-wrap:anywhere}.zotero-button{white-space:normal}.zotero-dialog .detail-tools{flex-wrap:wrap}
