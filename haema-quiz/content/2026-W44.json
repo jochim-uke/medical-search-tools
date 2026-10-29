@@ -1,0 +1,573 @@
+{
+  "id": "2026-W44",
+  "title": "KW 44 · Oktober 2026",
+  "sets": [
+    {
+      "title": "Set 1 · Neue GvHD-Prophylaxe, Graftversagen und Langzeit-CAR-T",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Ruxolitinib-Prophylaxe 2026",
+          "question": "Eine chinesische multizentrische Phase-III-Studie randomisierte 215 Patienten vor erster myeloablativer haploidentischer HSCT. Welche Aussage beschreibt den geprüften Ruxolitinib-Ansatz korrekt?",
+          "hint": "Achte darauf, welcher Baustein innerhalb der ATG-basierten Prophylaxe ersetzt wurde und auf welchen Endpunkt sich der Vorteil bezog.",
+          "explanation": "In der offenen randomisierten Phase-III-Studie ersetzte niedrig dosiertes Ruxolitinib MMF innerhalb einer ATG/CNI/Kurz-MTX-Prophylaxe. In der modifizierten ITT-Population lag die kumulative Inzidenz von Grad-II–IV-aGvHD bis Tag 100 bei 6,8% versus 36,9%. Die Daten stammen ausschließlich aus fünf chinesischen Zentren, einer myeloablativen Haplo-Plattform und belegen weder einen OS-Vorteil noch eine Übertragbarkeit auf PTCy oder gematchte Spenden.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ruxolitinib ersetzte MMF innerhalb von ATG/CNI/Kurz-MTX und senkte Grad-II–IV-aGvHD bis Tag 100 von 36,9% auf 6,8%.",
+              "feedback": "Dies entspricht Intervention, Plattform und primärem Endpunkt der modifizierten ITT-Analyse."
+            },
+            {
+              "value": "B",
+              "label": "Ruxolitinib ersetzte PTCy und verbesserte das Gesamtüberleben signifikant.",
+              "feedback": "PTCy gehörte nicht zur untersuchten Plattform; ein signifikanter OS-Vorteil war nicht der gezeigte Befund."
+            },
+            {
+              "value": "C",
+              "label": "Ruxolitinib wurde erst bei steroidrefraktärer aGvHD begonnen.",
+              "feedback": "Die Studie untersuchte Primärprophylaxe ab Tag 1 und keine Salvagetherapie einer manifesten aGvHD."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie schloss ausschließlich RIC-Transplantationen mit gematchten Fremdspendern ein.",
+              "feedback": "Untersucht wurden erste myeloablative haploidentische Transplantationen."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Wu et al. · Lancet Haematology 2026 · Ruxolitinib zur GvHD-Prophylaxe",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42532067/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · Primäres Graftversagen",
+          "question": "Ein Patient hat nach peripherer allogener Stammzelltransplantation an Tag +30 weiterhin eine ANC unter 0,5 × 10⁹/l und eine begleitende Panzytopenie; ein initiales Neutrophilenengraftment trat nie ein. Welche Einordnung entspricht der harmonisierten EBMT-Terminologie?",
+          "hint": "Entscheidend sind das Ausbleiben des ersten Engraftments, die Zellquelle und der Zeitpunkt.",
+          "explanation": "Für PBSC definiert das EBMT Handbook primäres Graftversagen als fehlendes Erreichen einer ANC von mindestens 0,5 × 10⁹/l bis Tag +30 bei begleitender Panzytopenie. Chimärismus und Ursachenanalyse bleiben für Mechanismus und Therapie wichtig; die Definition allein unterscheidet nicht sicher immunologische Abstoßung, unzureichende Zelldosis, Infektion oder Toxizität.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Poor Graft Function bei gesichert vollständigem Spenderchimärismus",
+              "feedback": "Poor Graft Function setzt grundsätzlich ein stattgehabtes Engraftment beziehungsweise eine andere Konstellation als das primäre Ausbleiben voraus."
+            },
+            {
+              "value": "B",
+              "label": "Sekundäres Graftversagen nach dokumentiertem initialem Engraftment",
+              "feedback": "Sekundäres Graftversagen verlangt einen späteren Verlust einer zuvor erreichten hämatopoetischen Erholung."
+            },
+            {
+              "value": "C",
+              "label": "Primäres Graftversagen nach PBSC-Transplantation",
+              "feedback": "ANC unter 0,5 × 10⁹/l bis Tag +30 mit Panzytopenie und ohne initiales Engraftment erfüllt diese Definition."
+            },
+            {
+              "value": "D",
+              "label": "Normale verzögerte Rekonstitution unabhängig von Zellquelle und Verlauf",
+              "feedback": "Die Konstellation überschreitet die definierte Zeitgrenze für PBSC und ist nicht als regelrechte Erholung einzuordnen."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Graft Failure",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608339/"
+            },
+            {
+              "title": "EBMT/ASTCT/CIBMTR/APBMT · harmonisierte Definitionen 2024",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11161398/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · ZUMA-12",
+          "question": "Das 2025 publizierte Drei-Jahres-Update von ZUMA-12 untersuchte Axi-cel als Erstlinientherapie bei ausgewähltem Hochrisiko-LBCL. Welche Schlussfolgerung ist durch das Design gedeckt?",
+          "hint": "Langes Follow-up verbessert die Aussage zur Dauerhaftigkeit, erzeugt aber keinen Standardtherapie-Kontrollarm.",
+          "explanation": "ZUMA-12 war eine kleine einarmige Phase-II-Studie. Unter 37 response-evaluable Patienten betrug die CR-Rate 86%; nach median 47 Monaten lag das geschätzte 36-Monats-PFS bei 75,1%. Das stützt dauerhafte Aktivität in der selektierten Hochrisikopopulation, beweist aber keine Überlegenheit einer CAR-T-Erstlinie gegenüber moderner Immunchemotherapie.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Axi-cel verlängerte randomisiert das OS gegenüber Pola-R-CHP.",
+              "feedback": "ZUMA-12 hatte keinen randomisierten Pola-R-CHP-Kontrollarm."
+            },
+            {
+              "value": "B",
+              "label": "Die Studie belegt Axi-cel als Standard für jedes neu diagnostizierte LBCL.",
+              "feedback": "Die kleine selektierte Hochrisikokohorte erlaubt keine Übertragung auf alle neu diagnostizierten LBCL."
+            },
+            {
+              "value": "C",
+              "label": "Ein 36-Monats-PFS von 75,1% beweist eine Heilungsrate von 75,1%.",
+              "feedback": "Eine PFS-Schätzung zu einem Zeitpunkt ist keine endgültige Heilungsrate."
+            },
+            {
+              "value": "D",
+              "label": "Die einarmige Phase-II-Kohorte zeigt dauerhafte Aktivität, aber keine komparative Überlegenheit der CAR-T-Erstlinie.",
+              "feedback": "Diese Aussage verbindet die berichtete Dauerhaftigkeit mit der zentralen Grenze des fehlenden Kontrollarms."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "Chavez et al. · Blood 2025 · ZUMA-12, Drei-Jahres-Update",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39938019/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Zehnjahres-Follow-up",
+          "question": "Die 2026 publizierte UPenn-Langzeitkohorte umfasste 38 Patienten mit R/R-B-Zell-Lymphom nach CTL019/Tisagenlecleucel. Warum lag beim LBCL das 10-Jahres-lymphomfreie Überleben bei 32%, das 10-Jahres-PFS aber nur bei 17%?",
+          "hint": "Die beiden Endpunkte behandeln Todesfälle ohne Lymphomrezidiv unterschiedlich.",
+          "explanation": "Lymphomfreies Überleben war als Zeit bis Rezidiv oder lymphombedingtem Tod definiert; PFS zählte dagegen Todesfälle jeder Ursache als Ereignis. Nichtrezidivbedingte Mortalität kann daher das PFS absenken, ohne die lymphoma-free-survival-Schätzung im gleichen Maß zu reduzieren. Die sehr kleine frühe Phase-II-Kohorte zeigt mögliche Dekadenremissionen, ist aber keine präzise Prognose für heutige breitere CAR-T-Populationen.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Das PFS schloss nur Patienten mit persistierendem CAR-Transgen ein.",
+              "feedback": "Die Differenz beruht auf der Endpunktdefinition und nicht auf einer solchen Biomarkerselektion."
+            },
+            {
+              "value": "B",
+              "label": "Das PFS wertete jeden Tod als Ereignis, während lymphomfreies Überleben auf Rezidiv oder lymphombedingten Tod fokussierte.",
+              "feedback": "Nichtrezidivbedingte Todesfälle erklären, warum das PFS niedriger als das lymphomfreie Überleben ausfallen kann."
+            },
+            {
+              "value": "C",
+              "label": "Lymphomfreies Überleben wurde erst ab Jahr fünf statt ab Infusion berechnet.",
+              "feedback": "Beide Zeitmaße begannen mit der Tisagenlecleucel-Infusion."
+            },
+            {
+              "value": "D",
+              "label": "Die 32% stammten aus einer randomisierten Vergleichsgruppe ohne CAR-T.",
+              "feedback": "Es handelte sich um die behandelte frühe CTL019-Kohorte ohne solchen Kontrollarm."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Ruella et al. · NEJM 2026 · Ten-Year Outcomes after CAR T-Cell Therapy",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42341302/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Pneumocystis-Prophylaxe",
+          "question": "Ein Allo-HSCT-Empfänger ist acht Monate nach Transplantation weiterhin wegen cGvHD systemisch immunsupprimiert. Wann sollte die Pneumocystis-jirovecii-Prophylaxe nach EBMT Handbook 2024 beendet werden?",
+          "hint": "Der Mindestzeitraum reicht nur aus, wenn die fortbestehenden Risikofaktoren ebenfalls entfallen sind.",
+          "explanation": "Cotrimoxazol ist Mittel der Wahl und soll nach Engraftment mindestens sechs Monate sowie während der gesamten fortbestehenden Immunsuppression gegeben werden. Ein fixes Absetzen an Monat sechs oder zwölf ohne Beurteilung der Immunrekonstitution und GvHD-Therapie ist nicht gerechtfertigt; Alternativen sind bei Unverträglichkeit individuell zu wählen.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Noch nicht; mindestens sechs Monate und darüber hinaus solange relevante Immunsuppression besteht.",
+              "feedback": "Die laufende systemische cGvHD-Therapie verlängert den Risikozustand über den Mindestzeitraum hinaus."
+            },
+            {
+              "value": "B",
+              "label": "Zwingend an Tag +100 unabhängig von GvHD und Immunsuppression.",
+              "feedback": "Tag +100 ist keine allgemeine Absetzgrenze für die PCP-Prophylaxe."
+            },
+            {
+              "value": "C",
+              "label": "Sofort nach stabilem Neutrophilenengraftment.",
+              "feedback": "Engraftment markiert eher den Beginn beziehungsweise die Fortführung der Prophylaxe, nicht ihr automatisches Ende."
+            },
+            {
+              "value": "D",
+              "label": "Erst nach einer routinemäßig negativen Pneumocystis-PCR im Blut.",
+              "feedback": "Eine Blut-PCR ist kein etablierter Freigabetest zum Absetzen der Primärprophylaxe."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Invasive Fungal Diseases",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608256/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 2 · Graftauswahl, neue Zellplattformen und Infektionssupport",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Cord-Blood-Zelldosis",
+          "question": "Für eine unverwandte Nabelschnurblut-Einheit wird eine kryokonservierte TNC-Dosis von 3,1 × 10⁷/kg bei akzeptabler HLA-Passung angegeben. Welche Aussage entspricht den Auswahlkriterien des EBMT Handbook 2024?",
+          "hint": "Bei Cord Blood wird die Eignung nicht allein über die HLA-Passung beurteilt; die Zelldosis ist gewichtsbezogen.",
+          "explanation": "Das EBMT Handbook nennt für geeignete unverwandte Cord-Blood-Einheiten eine TNC-Dosis von etwa mindestens 2,5–3 × 10⁷/kg, bei neueren Empfehlungen häufig mindestens 3 × 10⁷/kg, zusammen mit begrenzter HLA-Disparität. Die Zelldosis ist ein Mindestkriterium, garantiert aber kein Engraftment und ersetzt weder Qualitätsprüfung noch die Bewertung von CD34-Zahl und HLA-Matching.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die Einheit ist ungeeignet, weil Cord Blood mindestens 10 × 10⁷ TNC/kg enthalten muss.",
+              "feedback": "Diese Schwelle liegt deutlich über der im Handbook genannten Mindest- beziehungsweise Zielgröße."
+            },
+            {
+              "value": "B",
+              "label": "Die TNC-Dosis erfüllt die übliche Mindestgröße; HLA-Passung und weitere Qualitätsparameter bleiben zusätzlich entscheidend.",
+              "feedback": "3,1 × 10⁷/kg liegt im empfohlenen Bereich, ist aber nur ein Teil der Auswahlentscheidung."
+            },
+            {
+              "value": "C",
+              "label": "Die TNC-Dosis ist irrelevant, sobald höchstens zwei HLA-Mismatches vorliegen.",
+              "feedback": "Zelldosis und HLA-Konstellation sind beide für Auswahl und Engraftment relevant."
+            },
+            {
+              "value": "D",
+              "label": "Cord-Blood-Einheiten werden ausschließlich anhand der CD3-Zellzahl ausgewählt.",
+              "feedback": "TNC, CD34-Zelldosis, HLA-Passung und Qualitätsparameter sind maßgeblich; CD3 allein ist kein Auswahlstandard."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Donor Selection",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608270/"
+            },
+            {
+              "title": "EBMT Handbook 2024 · Cord Blood Unit Procurement and Management",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608262/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · Spendergeschlecht",
+          "question": "Für einen männlichen Empfänger stehen nach HLA-Passung, Alter, Verfügbarkeit und DSA-Risiko zwei ansonsten vergleichbare Spender zur Verfügung: ein Mann und eine mehrfach schwangere Frau. Welche Präferenz beschreibt das EBMT Handbook 2024 als nachgeordnetes Auswahlkriterium?",
+          "hint": "Frühere Schwangerschaften können die Alloimmunisierung einer Spenderin beeinflussen.",
+          "explanation": "Bei ansonsten vergleichbaren Spendern wird ein männlicher Spender besonders für einen männlichen Empfänger bevorzugt; Parität einer Spenderin ist als GvHD-Risikofaktor zu berücksichtigen. Dieses Kriterium ist nachgeordnet und darf wichtigere Faktoren wie HLA-Passung, junges Spenderalter, DSA, Dringlichkeit oder Verfügbarkeit nicht überstimmen.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die paröse Spenderin bevorzugen, weil frühere Schwangerschaften GvHD sicher verhindern.",
+              "feedback": "Parität ist eher mit zusätzlicher Alloimmunisierung und erhöhtem GvHD-Risiko verbunden."
+            },
+            {
+              "value": "B",
+              "label": "Das Spendergeschlecht ignorieren, weil es nach HLA-Matching nie prognostisch relevant ist.",
+              "feedback": "Das Handbook führt Geschlecht und weibliche Parität als sekundäre Auswahlmerkmale auf."
+            },
+            {
+              "value": "C",
+              "label": "Beide Spender allein wegen der Geschlechtskonstellation ausschließen.",
+              "feedback": "Geschlecht ist kein absolutes Ausschlusskriterium."
+            },
+            {
+              "value": "D",
+              "label": "Bei sonstiger Vergleichbarkeit den männlichen Spender bevorzugen.",
+              "feedback": "Dies entspricht der beschriebenen sekundären Präferenz, besonders bei einem männlichen Empfänger."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Donor Selection",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608270/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · EPCORE NHL-1",
+          "question": "Im 2026 publizierten Drei-Jahres-Update von EPCORE NHL-1 bei stark vorbehandeltem R/R-LBCL betrug das mediane PFS insgesamt 4,2 Monate, bei Patienten mit kompletter Remission 37,3 Monate. Welche Interpretation ist korrekt?",
+          "hint": "Die CR-Gruppe wird durch ein Ereignis nach Therapiebeginn definiert und ist kein randomisierter Ausgangsarm.",
+          "explanation": "EPCORE NHL-1 war eine einarmige Studie; 39% hatten vorher CAR-T erhalten und 75% waren gegenüber mindestens zwei aufeinanderfolgenden Linien refraktär. Die lange PFS-Dauer bei kompletten Respondern zeigt die Dauerhaftigkeit tiefer Remissionen, darf aber nicht als kausaler Vorteil einer bei Baseline definierten Strategiegruppe gelesen werden.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die CR-Untergruppe war vor Therapiebeginn randomisiert und beweist einen prädiktiven Biomarker.",
+              "feedback": "Der CR-Status entstand erst nach Behandlungsbeginn und war keine randomisierte Ausgangsgruppe."
+            },
+            {
+              "value": "B",
+              "label": "Das mediane PFS von 37,3 Monaten gilt für alle eingeschlossenen Patienten.",
+              "feedback": "Für die Gesamtkohorte wurde ein medianes PFS von 4,2 Monaten berichtet."
+            },
+            {
+              "value": "C",
+              "label": "Komplette Remissionen konnten lange anhalten; der bedingte Subgruppenwert erlaubt aber keinen kausalen Vergleich mit Nicht-CR-Patienten.",
+              "feedback": "Diese Einordnung berücksichtigt sowohl die klinische Dauerhaftigkeit als auch die post-baseline Selektion der CR-Gruppe."
+            },
+            {
+              "value": "D",
+              "label": "Die Zahlen beweisen Epcoritamab als überlegen gegenüber Glofitamab.",
+              "feedback": "EPCORE NHL-1 enthielt keinen randomisierten Glofitamab-Kontrollarm."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "Karimi et al. · Annals of Hematology 2026 · EPCORE NHL-1, Drei-Jahres-Update",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41634395/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · Anbal-cel 2026",
+          "question": "CRC01-01 berichtete 2026 Anbal-cel, eine CD19-CAR-T-Therapie mit PD-1- und TIGIT-Knockdown, bei R/R-LBCL. Welche Aussage trifft die Phase-I/II-Daten am besten?",
+          "hint": "Eine hohe CR-Rate und ein kurzer Median können gleichzeitig auftreten; achte außerdem auf das einarmige Design.",
+          "explanation": "In Phase II wurden 79 Patienten behandelt und 73 auf Wirksamkeit ausgewertet. Die CR-Rate betrug 67,1%, das mediane PFS aber 6,04 Monate; schwere Infektionen traten bei 25,3% auf, darunter drei Grad-5-Infektionen. Die Studie belegt Aktivität und beschreibt Risiken, erlaubt ohne randomisierten kommerziellen CAR-T-Kontrollarm aber keinen Wirksamkeitsvorrang der Dual-Knockdown-Plattform.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Die CR-Rate lag bei 67,1%, das mediane PFS bei 6,04 Monaten; ein Vorteil gegenüber zugelassenen CAR-T-Produkten ist nicht bewiesen.",
+              "feedback": "Diese Zahlen und die Grenze des einarmigen Phase-I/II-Designs entsprechen der Publikation."
+            },
+            {
+              "value": "B",
+              "label": "Die Studie zeigte randomisiert weniger schwere Infektionen als unter Axi-cel.",
+              "feedback": "Ein randomisierter Axi-cel-Kontrollarm fehlte; schwere Infektionen waren klinisch relevant."
+            },
+            {
+              "value": "C",
+              "label": "PD-1/TIGIT-Knockdown verhinderte sämtliche Rezidive nach kompletter Remission.",
+              "feedback": "Die begrenzte PFS-Dauer zeigt, dass Resistenz und Rezidive weiterhin auftraten."
+            },
+            {
+              "value": "D",
+              "label": "Neurologische Ereignisse und CRS traten bei keinem Patienten auf.",
+              "feedback": "CRS und neurologische Ereignisse wurden beobachtet, einschließlich höhergradiger Ereignisse."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Kim et al. · Blood 2026 · Anbal-cel, CRC01-01",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42284198/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Toxoplasma",
+          "question": "Ein vor Allo-HSCT Toxoplasma-IgG-positiver Patient erhält Cotrimoxazol-Prophylaxe. Welche zusätzliche Strategie empfehlen die ECIL-9-Leitlinie 2024 und das EBMT Handbook für diese Hochrisikokonstellation?",
+          "hint": "Prophylaxe kann versagen; eine nachweisbare Infektion geht der Organerkrankung häufig voraus.",
+          "explanation": "Für prätransplant seropositive Allo-HSCT-Empfänger wird wöchentliches quantitatives PCR-Screening im Blut als präemptive Strategie zusätzlich zur Prophylaxe empfohlen. Prophylaxe soll mindestens sechs Monate und länger bei Immunsuppression oder schwerer CD4-Lymphopenie fortgeführt werden. Eine negative Blut-PCR schließt bei klinischem Verdacht eine Organerkrankung nicht sicher aus.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Nur bei neurologischen Symptomen einmalig Toxoplasma-IgM bestimmen.",
+              "feedback": "Serologie ist nach HSCT für eine frühe Reaktivierungsdiagnostik unzureichend; Monitoring soll vor Organmanifestation ansetzen."
+            },
+            {
+              "value": "B",
+              "label": "Wöchentlich quantitative Toxoplasma-PCR im Blut zusätzlich zur Prophylaxe.",
+              "feedback": "Dies entspricht der präemptiven Strategie für seropositive Allo-HSCT-Empfänger."
+            },
+            {
+              "value": "C",
+              "label": "Cotrimoxazol absetzen, sobald eine PCR negativ ist.",
+              "feedback": "Eine einzelne negative PCR ist keine Absetzregel und schließt Organerkrankung bei Verdacht nicht sicher aus."
+            },
+            {
+              "value": "D",
+              "label": "Universelles wöchentliches PCR-Screening auch nach autologer HSCT und bei seronegativen Patienten.",
+              "feedback": "Die präemptive Routine richtet sich vor allem an prätransplant seropositive Allo-HSCT-Empfänger."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Aerts et al. · Lancet Infectious Diseases 2024 · ECIL-9 Toxoplasma-Guideline",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38134949/"
+            },
+            {
+              "title": "EBMT Handbook 2024 · Other Life-Threatening Infections",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608263/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Set 3 · NIH-Diagnostik, Komorbidität und moderne Immuntherapie",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · cGvHD-Diagnostik",
+          "question": "Ein Patient entwickelt nach Allo-HSCT lediglich eine lichenoide Hautveränderung, die nach NIH-Kriterien als „distinctive“, aber nicht als allein diagnostisch gilt. Was ist für die formale cGvHD-Diagnose erforderlich?",
+          "hint": "NIH unterscheidet diagnostische Manifestationen von verdächtigen, aber bestätigungsbedürftigen Befunden.",
+          "explanation": "Eine diagnostische Manifestation kann die cGvHD-Diagnose tragen. Bei ausschließlich distinctive Befunden ist eine Bestätigung durch Biopsie, Labor, Bildgebung oder geeignete fachärztliche Untersuchung im selben oder einem anderen Organ nötig. Infektionen, Arzneimittelreaktionen und andere Differenzialdiagnosen müssen ausgeschlossen werden.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Der Zeitpunkt nach Tag +100 reicht als alleinige Bestätigung.",
+              "feedback": "Der Kalendertag allein definiert keine chronische GvHD."
+            },
+            {
+              "value": "B",
+              "label": "Jede Hautveränderung nach Allo-HSCT gilt ohne weitere Prüfung als cGvHD.",
+              "feedback": "Klinische Überdiagnosen sind möglich; Befundkategorie und Differenzialdiagnosen müssen berücksichtigt werden."
+            },
+            {
+              "value": "C",
+              "label": "Es ist zwingend immer eine Leberbiopsie erforderlich.",
+              "feedback": "Die Bestätigung kann organbezogen durch verschiedene geeignete Tests erfolgen und verlangt keine routinemäßige Leberbiopsie."
+            },
+            {
+              "value": "D",
+              "label": "Der distinctive Befund muss durch Biopsie oder einen anderen geeigneten objektiven Test bestätigt werden.",
+              "feedback": "Eine solche Bestätigung ist erforderlich, wenn keine eigenständig diagnostische Manifestation vorliegt."
+            }
+          ],
+          "correct": "D",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Chronic Graft-Versus-Host Disease",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608236/"
+            }
+          ]
+        },
+        {
+          "topic": "Allo-HSCT · HCT-CI",
+          "question": "Ein Allo-HSCT-Kandidat hat prätransplant eine DLCO von 60% des Solls, ohne Heim-Sauerstoff. Wie wird diese pulmonale Komorbidität im HCT-CI nach der im EBMT Handbook 2024 dargestellten Definition gewichtet?",
+          "hint": "Die Grenze zwischen moderater und schwerer pulmonaler Komorbidität liegt bei 65% des Solls.",
+          "explanation": "Eine DLCO und/oder FEV1 von höchstens 65% des Solls erfüllt im HCT-CI die schwere pulmonale Komorbidität und trägt drei Punkte bei; 66–80% entspricht der moderaten Kategorie. Der HCT-CI unterstützt die Risikoeinschätzung, ist aber keine isolierte Kontraindikation und ersetzt weder klinische Ursachenklärung noch die Gesamtbewertung von Erkrankungsrisiko und Transplantationsplattform.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Keine pulmonale Komorbidität, weil keine Sauerstoffpflicht besteht.",
+              "feedback": "Eine schwere Kategorie kann bereits durch DLCO oder FEV1 höchstens 65% erfüllt sein."
+            },
+            {
+              "value": "B",
+              "label": "Moderate pulmonale Komorbidität mit einem Punkt.",
+              "feedback": "60% liegt unterhalb der Grenze für die moderate Kategorie."
+            },
+            {
+              "value": "C",
+              "label": "Schwere pulmonale Komorbidität mit drei Punkten.",
+              "feedback": "DLCO 60% erfüllt die HCT-CI-Schwelle von höchstens 65% für die schwere pulmonale Kategorie."
+            },
+            {
+              "value": "D",
+              "label": "Automatischer Ausschluss von jeder Allo-HSCT unabhängig vom Kontext.",
+              "feedback": "Der HCT-CI quantifiziert Risiko, formuliert aber aus einem Einzelwert keine absolute universelle Kontraindikation."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Evaluation and Counseling of Candidates",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608275/"
+            }
+          ]
+        },
+        {
+          "topic": "Bispezifika · Subkutanes Mosunetuzumab",
+          "question": "Die 2026 publizierte Phase-II-Analyse verglich bei R/R-FL nach mindestens zwei Vortherapien subkutanes Mosunetuzumab mit einer IV-Kohorte derselben Studie. Was wurde formal gezeigt?",
+          "hint": "Pharmakokinetische Nichtunterlegenheit und klinische Überlegenheit sind unterschiedliche Hypothesen.",
+          "explanation": "Bei 94 SC-behandelten Patienten wurden die ko-primären PK-Endpunkte für nichtunterlegene Exposition gegenüber der IV-Kohorte erreicht. ORR 76,6%, CR 61,7% und numerisch weniger CRS sind klinisch informativ; die IV-Kohorte war jedoch kein zeitgleich randomisierter Wirksamkeitsarm. Daraus folgt kein formaler Überlegenheitsnachweis der SC-Formulierung für PFS, CRS oder Gesamtwirksamkeit.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "SC-Mosunetuzumab war randomisiert im Gesamtüberleben der IV-Gabe überlegen.",
+              "feedback": "Die Analyse war kein randomisierter OS-Überlegenheitsvergleich."
+            },
+            {
+              "value": "B",
+              "label": "Die PK-Exposition war nicht unterlegen; Wirksamkeit und CRS waren deskriptiv günstig, aber klinische Überlegenheit wurde nicht randomisiert bewiesen.",
+              "feedback": "Dies trennt den formal geprüften PK-Endpunkt von den deskriptiven klinischen Vergleichen."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie bewies Nichtunterlegenheit gegenüber CAR-T bei POD24.",
+              "feedback": "Ein CAR-T-Kontrollarm war nicht Bestandteil der Studie."
+            },
+            {
+              "value": "D",
+              "label": "Die SC-Formulierung wurde ausschließlich als Dauertherapie bis Progress gegeben.",
+              "feedback": "Mosunetuzumab wurde als zeitlich begrenzte Therapie untersucht."
+            }
+          ],
+          "correct": "B",
+          "sources": [
+            {
+              "title": "Bartlett et al. · American Journal of Hematology 2026 · subkutanes Mosunetuzumab",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41862428/"
+            }
+          ]
+        },
+        {
+          "topic": "CAR-T · ZUMA-2 Langzeitdaten",
+          "question": "ZUMA-2 berichtete 2026 das Fünfjahres-Follow-up von Brexu-cel bei R/R-MCL. Welche Aussage beschreibt die pivotal behandelte Kohorte korrekt?",
+          "hint": "Trenne die große pivotal behandelte Kohorte von den sehr kleinen explorativen Axi-cel- und Dosisgruppen.",
+          "explanation": "In der pivotalen Kohorte wurden 68 Patienten analysiert; nach median 67,8 Monaten betrugen mediane DOR 36,5 Monate und medianes OS 46,5 Monate. Bei Respondern waren nach fünf Jahren sowohl rezidivbezogene als auch nichtrezidivbezogene Todesfälle relevant. Die kleinen Axi-cel- und Niedrigdosisgruppen erlauben wegen Größe und unausgewogener Ausgangslage keinen belastbaren Produkt- oder Dosisvergleich.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Bei 68 Patienten lag das mediane Follow-up bei 67,8 Monaten; mediane DOR 36,5 und medianes OS 46,5 Monate.",
+              "feedback": "Diese Werte beschreiben die pivotal behandelte ZUMA-2-Kohorte im Fünfjahres-Update."
+            },
+            {
+              "value": "B",
+              "label": "Die zehn Axi-cel-Patienten bewiesen eine Überlegenheit gegenüber Brexu-cel.",
+              "feedback": "Die Axi-cel-Gruppe war zu klein und nicht für einen belastbaren Vergleich gematcht."
+            },
+            {
+              "value": "C",
+              "label": "Nach kompletter Remission traten keinerlei Nichtrezidivtodesfälle auf.",
+              "feedback": "Auch nichtrezidivbezogene Mortalität blieb im Langzeitverlauf relevant."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie randomisierte Brexu-cel gegen Ibrutinib und zeigte einen OS-Vorteil.",
+              "feedback": "ZUMA-2 war kein randomisierter Brexu-cel-versus-Ibrutinib-Vergleich."
+            }
+          ],
+          "correct": "A",
+          "sources": [
+            {
+              "title": "Wang et al. · 2026 · ZUMA-2, Fünfjahres-Follow-up",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42036693/"
+            }
+          ]
+        },
+        {
+          "topic": "Supportivtherapie · Antimykotische Prophylaxe",
+          "question": "Ein Allo-HSCT-Patient erhält wegen schwerer GvHD hoch dosierte systemische Immunsuppression. Das Zentrum erwägt Fluconazol als alleinige antimykotische Prophylaxe. Welche Einordnung entspricht dem EBMT Handbook 2024?",
+          "hint": "Das relevante zusätzliche Risiko betrifft Schimmelpilze, die durch Fluconazol nicht erfasst werden.",
+          "explanation": "Bei Hochrisiko-GvHD besteht ein deutlich erhöhtes Risiko invasiver Schimmelpilzinfektionen. Das EBMT Handbook verweist auf die starke ECIL-Empfehlung gegen Fluconazol als alleinige Prophylaxe in dieser Situation; erforderlich ist eine schimmelpilzaktive Strategie unter Beachtung von Interaktionen, Organfunktion, lokaler Epidemiologie und therapeutischem Drug Monitoring.",
+          "reviewed_at": "2026-10-29",
+          "options": [
+            {
+              "value": "A",
+              "label": "Fluconazol ist wegen sicherer Aspergillus-Wirksamkeit Mittel der Wahl.",
+              "feedback": "Fluconazol besitzt keine ausreichende Aktivität gegen Aspergillus und andere relevante Schimmelpilze."
+            },
+            {
+              "value": "B",
+              "label": "Antimykotische Prophylaxe ist bei GvHD unabhängig von der Immunsuppression kontraindiziert.",
+              "feedback": "Gerade schwere GvHD unter intensiver Immunsuppression erhöht das Risiko invasiver Pilzinfektionen."
+            },
+            {
+              "value": "C",
+              "label": "Fluconazol allein wird bei Hochrisiko-GvHD nicht empfohlen; eine schimmelpilzaktive Prophylaxestrategie ist erforderlich.",
+              "feedback": "Dies entspricht dem erhöhten Schimmelpilzrisiko und der im Handbook wiedergegebenen ECIL-Empfehlung."
+            },
+            {
+              "value": "D",
+              "label": "Ein negatives Galactomannan zu Therapiebeginn ersetzt jede weitere Prophylaxe.",
+              "feedback": "Ein einzelner negativer Biomarker schließt zukünftige Infektionen nicht aus und ersetzt keine risikoadaptierte Prophylaxe."
+            }
+          ],
+          "correct": "C",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Invasive Fungal Diseases",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608256/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
