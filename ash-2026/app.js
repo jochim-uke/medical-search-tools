@@ -43,11 +43,21 @@ function render() {
       tag.title = field === 'methods' ? 'Methode / Medikamentenklasse' : 'Erkrankung';
       tags.append(tag);
     }
-    const source = node('a','Quelle öffnen ↗');
+    const isAsh = /^https:\/\/onlineprogram\.hematology\.org\/paper-details\.aspx\?pid=\d+$/.test(entry.source);
+    const source = node('a',isAsh ? 'Originalabstract bei ASH ↗' : 'Quelle öffnen ↗');
     source.href = entry.source;
     source.target = '_blank';
     source.rel = 'noopener noreferrer';
     card.append(node('small','Abstract #'+entry.number),node('h2',entry.title),tags,node('p',entry.summary),source);
+    if (entry.supplementary_source) {
+      const additional = node('a','Ergänzende Quelle ↗');
+      additional.href = entry.supplementary_source;
+      additional.target = '_blank';
+      additional.rel = 'noopener noreferrer';
+      const paragraph = node('p','');
+      paragraph.append(additional);
+      card.append(paragraph);
+    }
     return card;
   }));
 }
