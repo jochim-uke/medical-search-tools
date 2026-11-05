@@ -1,0 +1,247 @@
+{
+  "id": "2026-W45",
+  "title": "KW 45 · November 2026",
+  "sets": [
+    {
+      "title": "MRD, akute GvHD und Langzeit-CAR-T",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · FLT3-ITD-Erhaltung",
+          "question": "MORPHO/BMT CTN 1506 randomisierte 356 Erwachsene mit FLT3-ITD-AML in erster Remission nach Allo-HCT zu Gilteritinib oder Placebo für 24 Monate. Welche Interpretation der JCO-Publikation 2024 ist korrekt?",
+          "options": [
+            {"value":"A","label":"Gilteritinib verbesserte den primären RFS-Endpunkt in der Gesamtpopulation eindeutig signifikant.","feedback":"Der RFS-Unterschied in der Gesamtpopulation verfehlte mit p=0,0518 knapp die vorgegebene Signifikanz."},
+            {"value":"B","label":"Der primäre RFS-Vergleich war nicht signifikant; eine präspezifizierte MRD-positive Subgruppe zeigte einen RFS-Vorteil.","feedback":"Insgesamt lag die HR bei 0,679; bei peri-HCT MRD-positiven Patienten bei 0,515. Der Subgruppenbefund ersetzt den negativen Primärvergleich nicht."},
+            {"value":"C","label":"Nur MRD-negative Patienten profitierten, während MRD-positive keinen Effekt zeigten.","feedback":"Die beobachtete Richtung war umgekehrt: Der Nutzen konzentrierte sich auf peri-HCT MRD-positive Patienten."},
+            {"value":"D","label":"Die Studie verglich Gilteritinib mit Sorafenib und bewies dessen Überlegenheit.","feedback":"Der Kontrollarm erhielt Placebo, nicht Sorafenib."}
+          ],
+          "correct": "B",
+          "hint": "Trenne den primären ITT-Endpunkt von der präspezifizierten MRD-Interaktion.",
+          "explanation": "Die randomisierte Phase-III-Studie verfehlte in der Gesamtpopulation knapp den primären RFS-Endpunkt. Der präspezifizierte MRD-positive Anteil zeigte einen deutlichen RFS-Vorteil; das stützt eine MRD-adaptierte Anwendung, beweist aber keinen generellen Nutzen für alle FLT3-ITD-Patienten.",
+          "sources": [{"title":"Levis et al. · JCO 2024 · MORPHO","url":"https://pubmed.ncbi.nlm.nih.gov/38471061/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Allo-HSCT · Steroidrefraktäre aGvHD",
+          "question": "REACH2 randomisierte 309 Patienten ab 12 Jahren mit steroidrefraktärer akuter GvHD nach Allo-HSCT zu Ruxolitinib oder Investigator-choice-Therapie. Welcher Befund beschreibt den primären Endpunkt?",
+          "options": [
+            {"value":"A","label":"Ein signifikantes Gesamtüberleben nach 28 Tagen zugunsten von Ruxolitinib.","feedback":"Der primäre Endpunkt war Ansprechen an Tag 28, nicht Gesamtüberleben."},
+            {"value":"B","label":"Eine komplette Remission bei 62% versus 39%.","feedback":"Die Zahlen bezeichnen komplette oder partielle Antworten zusammen, nicht ausschließlich komplette Remissionen."},
+            {"value":"C","label":"Ein dauerhaftes Ansprechen an Tag 56 von 62% versus 39%.","feedback":"62% versus 39% war die ORR an Tag 28; das dauerhafte Ansprechen an Tag 56 lag bei 40% versus 22%."},
+            {"value":"D","label":"Eine ORR an Tag 28 von 62% versus 39% zugunsten von Ruxolitinib.","feedback":"Dies war der positive primäre Endpunkt. Das offene Design, Crossover und mehr Thrombozytopenien begrenzen weitergehende Schlussfolgerungen."}
+          ],
+          "correct": "D",
+          "hint": "Achte auf Zeitpunkt und Zusammensetzung des primären Response-Endpunkts.",
+          "explanation": "Die offene Phase-III-Studie zeigte eine höhere Tag-28-ORR und häufiger dauerhaftes Ansprechen an Tag 56. Ein signifikanter OS-Vorteil wurde in der Hauptanalyse nicht gezeigt; Thrombozytopenien waren häufiger.",
+          "sources": [{"title":"Zeiser et al. · NEJM 2020 · REACH2","url":"https://pubmed.ncbi.nlm.nih.gov/32320566/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Lymphom · ECHO",
+          "question": "ECHO randomisierte 598 zuvor unbehandelte Patienten ab 65 Jahren mit Mantelzelllymphom zu Acalabrutinib oder Placebo, jeweils plus Bendamustin-Rituximab und anschließender Rituximab-Erhaltung. Welche Aussage entspricht der JCO-Publikation 2025?",
+          "options": [
+            {"value":"A","label":"Acalabrutinib verlängerte das PFS; ein signifikanter OS-Vorteil war nicht gezeigt.","feedback":"Medianes PFS: 66,4 versus 49,6 Monate, HR 0,73; der OS-Vergleich war mit HR 0,86 nicht signifikant."},
+            {"value":"B","label":"Acalabrutinib verlängerte das OS, aber nicht das PFS.","feedback":"Der signifikante Vorteil betraf PFS, nicht OS."},
+            {"value":"C","label":"Die Studie verglich eine chemotherapiefreie Acalabrutinib-Kombination mit BR.","feedback":"Beide Arme erhielten BR; nur Acalabrutinib versus Placebo unterschied sich."},
+            {"value":"D","label":"Die Ergebnisse gelten unmittelbar für fitte Patienten unter 65 Jahren.","feedback":"Eingeschlossen wurden Patienten ab 65 Jahren; die Übertragbarkeit auf Jüngere ist nicht durch diese Studie belegt."}
+          ],
+          "correct": "A",
+          "hint": "Prüfe, welcher Zeit-zu-Ereignis-Endpunkt signifikant war und welche Therapie beide Arme erhielten.",
+          "explanation": "Die doppelblinde Phase-III-Studie zeigte einen PFS-Vorteil durch die Addition von Acalabrutinib zu BR; OS war bei erlaubtem Crossover und dem publizierten Follow-up nicht signifikant verschieden. Es war keine chemotherapiefreie Studie.",
+          "sources": [{"title":"Wang et al. · JCO 2025 · ECHO","url":"https://pubmed.ncbi.nlm.nih.gov/40311141/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "CAR-T · ZUMA-1 Langzeitdaten",
+          "question": "ZUMA-1 berichtete 2023 das Fünfjahres-Follow-up von 101 mit Axi-cel behandelten Patienten mit refraktärem LBCL. Welche Aussage ist durch diese Analyse gedeckt?",
+          "options": [
+            {"value":"A","label":"Jede Langzeitremission erforderte eine fortbestehende B-Zell-Aplasie.","feedback":"Bei allen auswertbaren Patienten waren nach drei Jahren B-Zellen nachweisbar; langlebige Remissionen erforderten keine anhaltende B-Zell-Aplasie."},
+            {"value":"B","label":"Das Fünfjahres-OS von 42,6% beweist Überlegenheit gegenüber Liso-cel.","feedback":"ZUMA-1 war einarmig und enthielt keinen randomisierten Produktvergleich."},
+            {"value":"C","label":"Ein Teil der Patienten blieb langfristig in Remission; aus dem einarmigen Design folgt kein Produktvergleich.","feedback":"31% hatten zum Datenschnitt anhaltende Antworten, das geschätzte Fünfjahres-OS lag bei 42,6%; kausale Vergleiche mit anderen Produkten sind nicht möglich."},
+            {"value":"D","label":"Nach dem zweijährigen Datenschnitt traten zwingend neue Axi-cel-bedingte Todesfälle auf.","feedback":"Im zusätzlichen Follow-up wurden keine neuen schwerwiegenden Nebenwirkungen oder Axi-cel-bedingten Todesfälle berichtet."}
+          ],
+          "correct": "C",
+          "hint": "Langzeitkontrolle und fortbestehende B-Zell-Aplasie sind nicht dasselbe.",
+          "explanation": "Die einarmige Phase-II-Kohorte zeigt langfristige Krankheitskontrolle bei einer Untergruppe. Wiederkehrende polyklonale B-Zellen schlossen dauerhafte Remissionen nicht aus; ein Vergleich mit anderen CAR-T-Produkten ist nicht möglich.",
+          "sources": [{"title":"Neelapu et al. · Blood 2023 · ZUMA-1, 5 Jahre","url":"https://pubmed.ncbi.nlm.nih.gov/36821768/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Supportivtherapie · EBV nach Allo-HSCT",
+          "question": "Bei einem Hochrisikopatienten steigt nach Allo-HSCT die EBV-DNAämie. Welche Aussage zum Schwellenwert für eine präemptive Therapie entspricht dem EBMT Handbook 2024?",
+          "options": [
+            {"value":"A","label":"Ein international verbindlicher Schwellenwert von 1.000 Kopien/ml diagnostiziert EBV-PTLD.","feedback":"Weder ein einheitlicher Schwellenwert noch die Viruslast allein diagnostizieren eine PTLD."},
+            {"value":"B","label":"Es gibt keinen universellen Schwellenwert; Zentren sollen assay- und risikoadaptierte eigene Grenzwerte verwenden.","feedback":"Messmatrix, Assay, Dynamik und klinisches Risiko unterscheiden sich; die EBV-DNAämie allein beweist keine Organerkrankung."},
+            {"value":"C","label":"Präemptives Rituximab ist erst nach histologischer PTLD-Sicherung zulässig.","feedback":"Präemptive Therapie richtet sich gerade an Hochrisikosituationen vor gesicherter PTLD; manifeste PTLD erfordert eine gesonderte Diagnostik."},
+            {"value":"D","label":"Eine negative EBV-PCR schließt eine lokalisierte EBV-PTLD sicher aus.","feedback":"Eine Blut-PCR kann eine lokalisierte Erkrankung nicht mit absoluter Sicherheit ausschließen."}
+          ],
+          "correct": "B",
+          "hint": "Vergleiche Viruslastmessung mit einer standardisierten Medikamentenkonzentration.",
+          "explanation": "Das Handbook betont, dass kein einzelner EBV-DNA-Wert eine PTLD diagnostiziert oder universell die Präemption auslöst. Zentren müssen Assay, Probenmaterial, Kinetik und klinisches Risiko in eigene Schwellenwerte einbeziehen.",
+          "sources": [{"title":"EBMT Handbook 2024 · Posttransplant Lymphoproliferative Syndromes","url":"https://www.ncbi.nlm.nih.gov/books/NBK608296/"}],
+          "reviewed_at": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "title": "Chronische GvHD, PTCy und moderne Antikörper",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Belumosudil",
+          "question": "ROCKstar randomisierte 132 Patienten mit chronischer GvHD nach zwei bis fünf Vortherapien zwischen Belumosudil 200 mg einmal oder zweimal täglich. Welche Interpretation ist korrekt?",
+          "options": [
+            {"value":"A","label":"Die Studie bewies Belumosudil gegenüber Ruxolitinib als überlegen.","feedback":"Ruxolitinib war kein Kontrollarm; einige Patienten waren lediglich zuvor damit behandelt worden."},
+            {"value":"B","label":"Die Randomisierung gegen Placebo zeigte einen OS-Vorteil.","feedback":"Randomisiert wurden zwei Belumosudil-Dosierungen; ein Placeboarm fehlte."},
+            {"value":"C","label":"Beide Dosierungen erzielten hohe ORR; ein Vergleich mit Best Available Therapy war nicht Bestandteil des Designs.","feedback":"Die ORR lag bei 74% beziehungsweise 77%. Ohne externen Therapiearm ist keine relative Überlegenheit gegenüber anderen Wirkstoffen belegt."},
+            {"value":"D","label":"Nur Patienten ohne vorheriges Ruxolitinib durften eingeschlossen werden.","feedback":"38 Patienten hatten zuvor Ruxolitinib erhalten; auch in dieser Subgruppe wurden Antworten beobachtet."}
+          ],
+          "correct": "C",
+          "hint": "Die Bezeichnung randomisiert sagt noch nicht, dass ein aktiver Kontrollarm vorhanden war.",
+          "explanation": "Die multizentrische Phase-II-Studie verglich zwei Dosen und zeigte hohe Best-ORR nach mehreren Vortherapien. Sie belegt Aktivität, aber keinen kausalen Vorteil gegenüber Ruxolitinib oder BAT.",
+          "sources": [{"title":"Cutler et al. · Blood 2021 · ROCKstar","url":"https://pubmed.ncbi.nlm.nih.gov/34265047/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Allo-HSCT · PTCy-Grundlage",
+          "question": "Welche Sequenz entspricht der klassischen Baltimore-Plattform zur GvHD-Prophylaxe nach T-Zell-repleter haploidentischer HSCT im EBMT Handbook 2024?",
+          "options": [
+            {"value":"A","label":"Cyclophosphamid 50 mg/kg an Tag +3 und +4, danach CNI/MMF ab Tag +5.","feedback":"Dies ist die klassische Sequenz; andere zentrums- oder protokollspezifische Varianten existieren."},
+            {"value":"B","label":"Cyclophosphamid an Tag −3 und −2, danach DLI an Tag +5.","feedback":"PTCy wird nach der Stammzellinfusion gegeben; eine routinemäßige DLI gehört nicht zur klassischen Plattform."},
+            {"value":"C","label":"Cyclophosphamid nur an Tag +14, danach ATG ab Tag +21.","feedback":"Diese Zeitpunkte entsprechen nicht der klassischen Baltimore-Plattform."},
+            {"value":"D","label":"CNI/MMF ab Tag −7 und Cyclophosphamid erst nach Engraftment.","feedback":"Die klassische Plattform beginnt CNI/MMF nach den PTCy-Dosen und nicht erst nach Engraftment."}
+          ],
+          "correct": "A",
+          "hint": "Die alloreaktiven T-Zellen sollen sich zunächst aktivieren, bevor Cyclophosphamid gegeben wird.",
+          "explanation": "Klassisch werden 50 mg/kg Cyclophosphamid an den Tagen +3 und +4 verabreicht; CNI und MMF folgen ab Tag +5. Das Handbook beschreibt auch alternative Schemata, die nicht einfach austauschbar sind.",
+          "sources": [{"title":"EBMT Handbook 2024 · GvHD Prophylaxis","url":"https://www.ncbi.nlm.nih.gov/books/NBK608285/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Lymphom · inMIND",
+          "question": "inMIND randomisierte 548 Erwachsene mit R/R-follikulärem Lymphom nach mindestens einer systemischen Vortherapie zu Tafasitamab oder Placebo, jeweils plus Lenalidomid/Rituximab. Welche Aussage beschreibt die Lancet-Publikation 2026 korrekt?",
+          "options": [
+            {"value":"A","label":"Tafasitamab-Monotherapie war CAR-T im PFS überlegen.","feedback":"Tafasitamab wurde mit R² kombiniert; CAR-T war kein Vergleichsarm."},
+            {"value":"B","label":"Der primäre Endpunkt war OS und wurde bereits reif erreicht.","feedback":"Primärer Endpunkt war PFS; aus der Analyse folgt kein reifer universeller OS-Beleg."},
+            {"value":"C","label":"Die Studie schloss alle Patienten mit nur einer Vortherapie aus.","feedback":"Mindestens eine systemische Vortherapie war erforderlich."},
+            {"value":"D","label":"Die Addition von Tafasitamab verbesserte das PFS gegenüber R² allein.","feedback":"Medianes PFS betrug 22,4 versus 13,9 Monate, HR 0,43. Ein Vergleich mit CAR-T oder Bispezifika fehlt."}
+          ],
+          "correct": "D",
+          "hint": "Ordne den experimentellen Zusatzwirkstoff dem identischen Backbone beider Arme zu.",
+          "explanation": "Die doppelblinde Phase-III-Studie belegt einen PFS-Vorteil durch Tafasitamab zusätzlich zu R². Sie beantwortet weder die optimale Sequenz mit CAR-T/Bispezifika noch einen direkten Vergleich mit diesen Optionen.",
+          "sources": [{"title":"Sehn et al. · Lancet 2026 · inMIND","url":"https://pubmed.ncbi.nlm.nih.gov/41360064/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Bispezifika · Glofitamab",
+          "question": "In der pivotalen Phase-II-Kohorte bei R/R-DLBCL nach mindestens zwei Vortherapien wurde Glofitamab nach Obinutuzumab-Vorbehandlung gegeben. Welche Aussage zur Therapiedauer ist korrekt?",
+          "options": [
+            {"value":"A","label":"Glofitamab wurde unbegrenzt bis zur Progression gegeben.","feedback":"Das Studienkonzept sah eine feste Höchstdauer vor."},
+            {"value":"B","label":"Glofitamab wurde für maximal zwölf Zyklen als Fixed-duration-Therapie gegeben.","feedback":"Dies unterscheidet das Schema von bis zur Progression fortgesetzten Ansätzen; die Studie war einarmig."},
+            {"value":"C","label":"Nach jeder kompletten Remission war eine obligate Allo-HSCT vorgesehen.","feedback":"Eine obligate Allo-HSCT war kein Bestandteil des Glofitamab-Regimes."},
+            {"value":"D","label":"Die Behandlung endete nach der ersten vollen Dosis unabhängig vom Ansprechen.","feedback":"Nach Step-up-Dosierung folgte eine mehrzyklische Behandlung."}
+          ],
+          "correct": "B",
+          "hint": "Einige CD20×CD3-Programme unterscheiden sich gerade durch eine feste versus offene Therapiedauer.",
+          "explanation": "Die pivotal untersuchte Monotherapie war auf zwölf Zyklen begrenzt. Die einarmige Phase-I/II-Struktur belegt Aktivität und Machbarkeit einer Fixed-duration-Strategie, aber keinen Vorteil gegenüber kontinuierlich gegebenen Bispezifika.",
+          "sources": [{"title":"Dickinson et al. · NEJM 2022 · Glofitamab","url":"https://pubmed.ncbi.nlm.nih.gov/36507690/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Supportivtherapie · HBV nach CAR-T",
+          "question": "Ein HBsAg-positiver Patient soll eine CD19-CAR-T-Therapie erhalten. Welche antivirale Strategie entspricht den ASTCT Best Practice Considerations 2024?",
+          "options": [
+            {"value":"A","label":"Nur monatliche HBsAg-Kontrollen ohne antivirale Prophylaxe.","feedback":"Die tiefe und prolongierte Immunsuppression rechtfertigt bei aktiver/chronischer HBV-Konstellation eine wirksame Prophylaxe."},
+            {"value":"B","label":"Acyclovir ab Infusion für vier Wochen.","feedback":"Acyclovir ist keine verlässliche HBV-Prophylaxe."},
+            {"value":"C","label":"Entecavir ab Lymphodepletion und mindestens zwölf Monate nach CAR-T, ergänzt durch fachgerechtes Monitoring.","feedback":"Dies entspricht der ASTCT-Tabelle; Dauer und weiteres Vorgehen müssen bei persistierender B-Zell-Aplasie oder HBV-Risiko individualisiert werden."},
+            {"value":"D","label":"Antivirale Therapie erst nach nachgewiesener Hepatitis beginnen.","feedback":"Abwarten bis zur klinischen Reaktivierung setzt den Patienten einem vermeidbaren Risiko aus."}
+          ],
+          "correct": "C",
+          "hint": "Die relevante Immunsuppression beginnt vor der Zellinfusion und kann lange fortbestehen.",
+          "explanation": "ASTCT empfiehlt Entecavir ab Lymphodepletion bis mindestens zwölf Monate nach CAR-T. Bei HBV sind Serologie, DNA, Leberwerte und die Dauer der Immundysfunktion zusätzlich zu berücksichtigen.",
+          "sources": [{"title":"ASTCT Best Practice Considerations · Infektionsprävention nach CAR-T, 2024","url":"https://www.astctjournal.org/article/S2666-6367%2824%2900549-9/fulltext"}],
+          "reviewed_at": "2026-11-05"
+        }
+      ]
+    },
+    {
+      "title": "Abatacept, Engraftment und neue Phase-III-Daten",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Abatacept",
+          "question": "ABA2 untersuchte Abatacept zusätzlich zu CNI/Methotrexat bei unverwandter Allo-HSCT. Welche Aussage zum Studiendesign ist korrekt?",
+          "options": [
+            {"value":"A","label":"Sowohl 8/8- als auch 7/8-Kohorte waren gegen Placebo randomisiert.","feedback":"Nur die 8/8-Kohorte war placebokontrolliert randomisiert."},
+            {"value":"B","label":"Beide Kohorten wurden ausschließlich mit historischen Einarmdaten ohne Randomisierung bewertet.","feedback":"Die 8/8-Kohorte war doppelblind randomisiert; nur die 7/8-Kohorte nutzte einen nicht randomisierten Registervergleich."},
+            {"value":"C","label":"Die 8/8-Kohorte war placebokontrolliert randomisiert; die 7/8-Kohorte wurde einarmig gegen CIBMTR-Kontrollen verglichen.","feedback":"Damit ist die Evidenzstärke für den 7/8-Befund geringer als für einen randomisierten Vergleich."},
+            {"value":"D","label":"Abatacept wurde gegen PTCy bei haploidentischer HSCT geprüft.","feedback":"ABA2 untersuchte gematchte beziehungsweise ein-Allel-mismatched unverwandte Spender mit CNI/MTX-Backbone."}
+          ],
+          "correct": "C",
+          "hint": "Die Studie bestand aus zwei HLA-Strata mit unterschiedlicher Kontrollmethodik.",
+          "explanation": "ABA2 kombinierte einen randomisierten, doppelblinden 8/8-Vergleich mit einer einarmigen 7/8-Kohorte und externen CIBMTR-Kontrollen. Der starke 7/8-Befund bleibt deshalb anfälliger für Residualkonfounding.",
+          "sources": [{"title":"Watkins et al. · JCO 2021 · ABA2","url":"https://pubmed.ncbi.nlm.nih.gov/33449816/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Allo-HSCT · Engraftment",
+          "question": "Welche Definition der Thrombozytenerholung verwendet das EBMT Handbook 2024?",
+          "options": [
+            {"value":"A","label":"Thrombozyten ≥20 × 10⁹/l für sieben aufeinanderfolgende Tage ohne Transfusion.","feedback":"Dies ist die Handbook-Definition; der erste dieser Tage markiert die Erholung."},
+            {"value":"B","label":"Ein einmaliger Wert ≥10 × 10⁹/l unmittelbar nach Transfusion.","feedback":"Ein posttransfusioneller Einzelwert belegt keine autonome Erholung."},
+            {"value":"C","label":"Thrombozyten ≥50 × 10⁹/l an drei Tagen, Transfusionen sind erlaubt.","feedback":"Diese Schwelle und die erlaubte Transfusion entsprechen nicht der genannten Definition."},
+            {"value":"D","label":"Thrombozyten ≥100 × 10⁹/l zusammen mit ANC ≥1,0 × 10⁹/l.","feedback":"Die Definition ist nicht an eine Normalisierung oder diese ANC-Schwelle gekoppelt."}
+          ],
+          "correct": "A",
+          "hint": "Gesucht werden Schwelle, Dauer und Transfusionsunabhängigkeit.",
+          "explanation": "Thrombozytenerholung ist als ≥20 × 10⁹/l ohne Thrombozytentransfusion über sieben konsekutive Tage definiert. Diese Definition ist von der Neutrophilenerholung getrennt.",
+          "sources": [{"title":"EBMT Handbook 2024 · Graft Failure","url":"https://www.ncbi.nlm.nih.gov/books/NBK608339/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Lymphom · HD21",
+          "question": "HD21 randomisierte 1.500 Erwachsene bis 60 Jahre mit neu diagnostiziertem fortgeschrittenem klassischem Hodgkin-Lymphom zu PET2-gesteuertem BrECADD oder eBEACOPP. Welche Aussage trifft die Lancet-Publikation 2024?",
+          "options": [
+            {"value":"A","label":"BrECADD war weniger toxisch, verfehlte aber die PFS-Nichtunterlegenheit.","feedback":"Die Nichtunterlegenheit wurde erreicht; anschließend zeigte sich sogar ein PFS-Vorteil."},
+            {"value":"B","label":"BrECADD verbesserte das OS signifikant um 20 Prozentpunkte.","feedback":"Das Vierjahres-OS war in beiden Armen sehr hoch und unterschied sich nicht in dieser Größenordnung."},
+            {"value":"C","label":"Die Studie verglich BrECADD mit Nivolumab-AVD.","feedback":"Der Kontrollarm war eBEACOPP, nicht Nivolumab-AVD."},
+            {"value":"D","label":"BrECADD reduzierte behandlungsbedingte Morbidität und war beim PFS nicht unterlegen; nach hierarchischer Prüfung zeigte sich ein PFS-Vorteil.","feedback":"Die Vierjahres-PFS-Schätzungen lagen bei 94,3% versus 90,9%; die Population war auf Erwachsene bis 60 Jahre mit fortgeschrittener Erkrankung begrenzt."}
+          ],
+          "correct": "D",
+          "hint": "Das hierarchische Design prüfte zuerst Verträglichkeit und Nichtunterlegenheit, danach Überlegenheit.",
+          "explanation": "Die offene Phase-III-Studie zeigte weniger behandlungsbedingte Morbidität und etablierte zunächst PFS-Nichtunterlegenheit; der vorgeplante Überlegenheitstest fiel danach ebenfalls positiv aus. Eine Übertragung auf ältere Patienten oder frühe Stadien ist nicht direkt belegt.",
+          "sources": [{"title":"Borchmann et al. · Lancet 2024 · HD21","url":"https://pubmed.ncbi.nlm.nih.gov/38971175/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Bispezifika · MajesTEC-3",
+          "question": "MajesTEC-3 randomisierte 587 Patienten mit R/R-multiplem Myelom nach ein bis drei Vortherapien zu Teclistamab/Daratumumab oder DPd/DVd. Welche Interpretation der NEJM-Publikation 2026 ist korrekt?",
+          "options": [
+            {"value":"A","label":"Die Kombination war nur in einer einarmigen Zulassungskohorte untersucht.","feedback":"MajesTEC-3 war eine randomisierte offene Phase-III-Studie."},
+            {"value":"B","label":"Teclistamab/Daratumumab verbesserte PFS deutlich; schwere Infektionen blieben klinisch relevant.","feedback":"Die PFS-HR lag bei 0,17; Grad-3/4-Infektionen traten bei 54,1% versus 43,4% auf."},
+            {"value":"C","label":"Kontrollarm war eine BCMA-CAR-T-Therapie.","feedback":"Der Kontrollarm war Daratumumab/Dexamethason plus Pomalidomid oder Bortezomib."},
+            {"value":"D","label":"Die Studie beweist eine geringere Infektionsmortalität als unter jeder CAR-T-Therapie.","feedback":"Ein CAR-T-Vergleich fehlte; solche produktübergreifenden Aussagen sind nicht zulässig."}
+          ],
+          "correct": "B",
+          "hint": "Ein sehr großer Wirksamkeitseffekt hebt die Bedeutung der Sicherheitsdaten nicht auf.",
+          "explanation": "Die Phase-III-Studie zeigte einen ausgeprägten PFS-Vorteil und höhere tiefe Remissionsraten. Gleichzeitig waren schwere Infektionen häufig; ein Vergleich mit BCMA-CAR-T oder anderen T-Zell-Redirectoren war nicht Teil des Designs.",
+          "sources": [{"title":"Costa et al. · NEJM 2026 · MajesTEC-3","url":"https://pubmed.ncbi.nlm.nih.gov/41363801/"}],
+          "reviewed_at": "2026-11-05"
+        },
+        {
+          "topic": "Evidenz · Duale Bispezifika",
+          "question": "RedirecTT-1 berichtete 2025 Talquetamab plus Teclistamab bei 94 stark vorbehandelten Patienten mit R/R-multiplem Myelom; 44 erhielten das empfohlene Phase-II-Regime. Welche Schlussfolgerung ist methodisch am besten?",
+          "options": [
+            {"value":"A","label":"Hohe Response-Raten stützen Aktivität; ohne randomisierten Kontrollarm sind Zusatznutzen der Kombination und Überlegenheit nicht bewiesen.","feedback":"Die Phase-Ib/II-Studie zeigte Aktivität und relevante Infektionstoxizität, kann aber weder Synergie noch Überlegenheit kausal quantifizieren."},
+            {"value":"B","label":"Die 80% ORR beweisen, dass die Kombination jeder Monotherapie überlegen ist.","feedback":"Ein direkter randomisierter Monotherapievergleich fehlte."},
+            {"value":"C","label":"Grad-3/4-Infektionen waren ausgeschlossen, weil zwei Zielantigene adressiert wurden.","feedback":"Schwere Infektionen waren mit 64% über alle Dosisstufen häufig."},
+            {"value":"D","label":"Die Studie war eine Phase-III-Nichtunterlegenheitsstudie gegen BCMA-CAR-T.","feedback":"Es handelte sich um eine frühe einarmige Phase-Ib/II-Studie ohne CAR-T-Kontrollarm."}
+          ],
+          "correct": "A",
+          "hint": "Trenne beobachtete Aktivität von dem kausalen Beitrag jedes Kombinationspartners.",
+          "explanation": "RedirecTT-1 liefert ein starkes Aktivitätssignal, auch bei extramedullärer Erkrankung, und ein wichtiges Infektionssignal. Ohne Kontrollarm lässt sich weder die Synergie der zwei Antikörper noch eine Überlegenheit gegenüber Einzelwirkstoffen oder CAR-T beweisen.",
+          "sources": [{"title":"Cohen et al. · NEJM 2025 · RedirecTT-1","url":"https://pubmed.ncbi.nlm.nih.gov/39778168/"}],
+          "reviewed_at": "2026-11-05"
+        }
+      ]
+    }
+  ]
+}
+
