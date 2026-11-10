@@ -5,6 +5,9 @@ const sessionKey = 'update-archive-token';
 const session = () => sessionStorage.getItem(sessionKey) || localStorage.getItem(sessionKey) || '';
 const fields = ['diseases','methods'];
 let entries = [];
+let editorMode = 'add';
+const savingPriorities = new Set();
+const priorityOf = entry => entry.priority || 0;
 const norm = text => String(text).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[‐‑–—]/g,'-');
 function node(tag, text, cls) {
   const element = document.createElement(tag);
@@ -32,11 +35,13 @@ function render() {
   const words = norm($('search').value).trim().split(/\s+/).filter(Boolean);
   const matches = entries.filter(entry => {
     const haystack = norm(['#'+entry.number, entry.title, entry.summary,...entry.methods,...entry.diseases].join(' '));
-    return fields.every(field => !$(field).value || entry[field].includes($(field).value)) && words.every(word => haystack.includes(word));
-  });
+    const priority = $('priority').value;
+    return fields.every(field => !$(field).value || entry[field].includes($(field).value)) && words.every(word => haystack.includes(word)) && (priority === '' || (priority === 'any' ? priorityOf(entry) > 0 : priorityOf(entry) === Number(priority)));
+  }).sort((a,b) => ($('sort').value === 'priority' ? priorityOf(b)-priorityOf(a) : 0) || a.number-b.number);
   $('status').textContent = matches.length ? matches.length+' von '+entries.length+' Beiträgen' : 'Keine passenden Beiträge.';
   $('results').replaceChildren(...matches.map(entry => {
     const card = node('article','','ash-card');
+    card.dataset.priority = priorityOf(entry);
     const tags = node('div','','tags');
     for (const field of fields) for (const value of entry[field]) {
       const tag = node('span',value,'tag');
@@ -48,7 +53,9 @@ function render() {
     source.href = entry.source;
     source.target = '_blank';
     source.rel = 'noopener noreferrer';
-    card.append(node('small','Abstract #'+entry.number),node('h2',entry.title),tags,node('p',entry.summary),source);
+    const heading = node('div','','ash-card-heading');
+    heading.append(node('small','Abstract #'+entry.number),priorityControl(entry));
+    card.append(heading,node('h2',entry.title),tags,node('p',entry.summary),source);
     if (entry.supplementary_source) {
       const additional = node('a','Ergänzende Quelle ↗');
       additional.href = entry.supplementary_source;
@@ -60,6 +67,57 @@ function render() {
     }
     return card;
   }));
+}
+function priorityControl(entry) {
+  const group = node('div','','ash-priority');
+  group.append(node('span','Priorität','priority-caption'));
+  if (!session()) {
+    group.append(node('span',priorityOf(entry) ? '+'.repeat(priorityOf(entry)) : 'Ohne','priority-readonly'));
+    return group;
+  }
+  const controls = node('div','','priority-control');
+  controls.setAttribute('role','group');
+  controls.setAttribute('aria-label','Priorität für Abstract #'+entry.number);
+  controls.setAttribute('aria-busy',String(savingPriorities.has(entry.number)));
+  for (let priority=0; priority<=3; priority++) {
+    const label = priority ? '+'.repeat(priority) : '–';
+    const button = node('button',label);
+    button.type = 'button';
+    button.dataset.priorityButton = entry.number+':'+priority;
+    button.setAttribute('aria-label',priority ? 'Priorität '+label : 'Keine Priorität');
+    button.setAttribute('aria-pressed',String(priorityOf(entry) === priority));
+    button.title = priority ? 'Priorität '+label : 'Priorität entfernen';
+    button.disabled = savingPriorities.has(entry.number);
+    button.onclick = () => savePriority(entry,priority,controls);
+    controls.append(button);
+  }
+  group.append(controls);
+  return group;
+}
+async function savePriority(entry,priority,controls) {
+  if (savingPriorities.has(entry.number) || priorityOf(entry) === priority) return;
+  savingPriorities.add(entry.number);
+  controls.setAttribute('aria-busy','true');
+  controls.querySelectorAll('button').forEach(button => button.disabled = true);
+  $('priority-feedback').textContent = 'Priorität wird gespeichert …';
+  try {
+    const saved = await request('/rest/v1/rpc/ash2026_set_priority',{method:'POST',body:JSON.stringify({session_token:session(),abstract_number:entry.number,new_priority:priority,expected_version:entry.priority_version || 0})});
+    entries = entries.map(item => item.number === entry.number ? {...item,...saved} : item);
+    $('priority-feedback').textContent = 'Abstract #'+entry.number+': '+(priority ? 'Priorität '+ '+'.repeat(priority)+' gespeichert.' : 'Priorität entfernt.');
+  } catch(error) {
+    if (error.code === '42501') forget();
+    if (error.code === '40001') await refresh();
+    $('priority-feedback').textContent = error.code === '40001' ? 'Die Priorität wurde auf einem anderen Gerät geändert. Die Ansicht wurde aktualisiert; bitte erneut auswählen.' : 'Priorität nicht gespeichert: '+error.message;
+  } finally {
+    savingPriorities.delete(entry.number);
+    const active = document.activeElement;
+    const restoreFocus = controls.contains(active) || active === document.body;
+    render();
+    if (restoreFocus) {
+      const target = document.querySelector('[data-priority-button="'+entry.number+':'+priority+'"]') || $('priority');
+      target.focus({preventScroll:true});
+    }
+  }
 }
 async function refresh() {
   try {
@@ -86,9 +144,11 @@ async function refresh() {
   }
 }
 function account() {
-  $('form').hidden = !session();
+  $('form').hidden = !session() || editorMode !== 'add';
   $('login').hidden = Boolean(session());
   $('logout').hidden = !session();
+  $('manage').hidden = Boolean(session());
+  render();
 }
 function forget() {
   sessionStorage.removeItem(sessionKey);
@@ -104,10 +164,20 @@ function listInput(value,field) {
 }
 $('search').oninput = render;
 fields.forEach(field => $(field).onchange = render);
-$('reset').onclick = () => { ['search',...fields].forEach(field => $(field).value = ''); render(); };
+$('priority').onchange = render;
+$('sort').onchange = render;
+$('reset').onclick = () => { ['search',...fields,'priority'].forEach(field => $(field).value = ''); $('sort').value = 'number'; render(); };
 $('retry').onclick = refresh;
 $('close').onclick = () => $('editor').close();
-$('add').onclick = () => { account(); $('feedback').textContent = ''; $('editor').showModal(); };
+function openEditor(mode) {
+  editorMode = mode;
+  $('editor-title').textContent = mode === 'add' ? 'Beitrag hinzufügen' : 'Prioritäten bearbeiten';
+  account();
+  $('feedback').textContent = '';
+  $('editor').showModal();
+}
+$('add').onclick = () => openEditor('add');
+$('manage').onclick = () => openEditor('priority');
 $('login').onsubmit = async event => {
   event.preventDefault();
   const button = event.submitter;
@@ -119,6 +189,10 @@ $('login').onsubmit = async event => {
     password.value = '';
     account();
     $('feedback').textContent = '';
+    if (editorMode === 'priority') {
+      $('editor').close();
+      $('priority-feedback').textContent = 'Angemeldet. Priorität direkt am Beitrag auswählen.';
+    }
   } catch(error) { $('feedback').textContent = error.message; }
   finally {button.disabled = false;}
 };
@@ -140,7 +214,7 @@ $('form').onsubmit = async event => {
     await request('/rest/v1/rpc/ash2026_add',{method:'POST',body:JSON.stringify({session_token:session(),entry})});
     $('form').reset();
     $('editor').close();
-    [...fields,'search'].forEach(field => $(field).value = '');
+    [...fields,'search','priority'].forEach(field => $(field).value = '');
     await refresh();
   } catch(error) {
     if (error.code === '42501') forget();
