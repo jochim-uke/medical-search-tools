@@ -1,0 +1,278 @@
+{
+  "id": "2026-W46",
+  "title": "KW 46 · November 2026",
+  "sets": [
+    {
+      "title": "Allo-Basics und neue CAR-T-Daten",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Akute GvHD",
+          "question": "Ein Patient entwickelt nach Allo-HSCT eine klinisch relevante akute GvHD Grad II–IV ohne Beschränkung auf eine milde obere GI-Beteiligung. Welche systemische Initialtherapie entspricht dem EBMT Handbook 2024?",
+          "options": [
+            {"value": "A", "label": "Methylprednisolon 2 mg/kg/Tag für gewöhnlich 7–14 Tage, danach schrittweise Reduktion.", "feedback": "Dies ist die übliche systemische Erstlinientherapie; Organbefall und Verlauf bestimmen die weitere Anpassung."},
+            {"value": "B", "label": "Ausschließlich Budesonid oder Beclometason unabhängig vom Organbefall.", "feedback": "Topische Steroide können bei ausgewählten milden Verläufen genügen, nicht generell bei Grad II–IV."},
+            {"value": "C", "label": "Ruxolitinib primär statt Steroid bei jedem Patienten.", "feedback": "Ruxolitinib ist für steroidrefraktäre aGvHD etabliert, nicht als allgemeiner Ersatz der Erstlinie."},
+            {"value": "D", "label": "Methylprednisolon 4 mg/kg/Tag, weil niedrigere Dosen langfristig unterlegen sind.", "feedback": "Höhere Dosen verbesserten das Langzeitansprechen nicht, erhöhten aber infektiöse Komplikationen."}
+          ],
+          "correct": "A",
+          "hint": "Trenne die Standarddosis bei relevantem systemischem Organbefall von Ausnahmen mit mildem oberen GI- oder rein kutanem Befall.",
+          "explanation": "Das EBMT Handbook 2024 nennt für fortgeschrittene aGvHD üblicherweise Methylprednisolon 2 mg/kg/Tag für 7–14 Tage mit anschließendem Taper. Bei Grad I oder milder oberer GI-GvHD können lokale beziehungsweise niedrigere Dosen erwogen werden. Die Empfehlung ist ein Behandlungsstandard und ersetzt keine organ- und infektionsadaptierte Einzelfallentscheidung.",
+          "sources": [
+            {"title": "EBMT Handbook 2024 · Acute Graft-Versus-Host Disease", "url": "https://www.ncbi.nlm.nih.gov/books/NBK608233/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Allo-HSCT · FLT3-Erhaltung",
+          "question": "SORMAIN randomisierte 83 Erwachsene mit FLT3-ITD-positiver AML in hämatologischer Remission nach Allo-HSCT doppelblind zu Sorafenib oder Placebo für bis zu 24 Monate. Welcher Befund wurde 2020 publiziert?",
+          "options": [
+            {"value": "A", "label": "Kein Unterschied im rezidivfreien Überleben; lediglich mehr Hauttoxizität unter Sorafenib.", "feedback": "Das rezidivfreie Überleben war unter Sorafenib deutlich besser."},
+            {"value": "B", "label": "Weniger Rezidiv oder Tod unter Sorafenib; HR 0,39, bei kleiner Phase-II-Population.", "feedback": "Dies trifft Hauptergebnis und wesentliche Evidenzgrenze."},
+            {"value": "C", "label": "Ein Phase-III-Beweis für eine Überlegenheit von Sorafenib gegenüber Gilteritinib.", "feedback": "SORMAIN war Phase II und enthielt keinen Gilteritinib-Arm."},
+            {"value": "D", "label": "Ein Nutzen ausschließlich bei prätransplantär MRD-positiven Patienten.", "feedback": "Die MRD-Auswertungen waren explorativ und erlauben keine solche Ausschließlichkeit."}
+          ],
+          "correct": "B",
+          "hint": "Achte auf Phase, Fallzahl, Vergleichsarm und den primären Endpunkt.",
+          "explanation": "Die randomisierte, placebokontrollierte Phase-II-Studie SORMAIN berichtete bei 41,8 Monaten medianem Follow-up eine HR von 0,39 für Rezidiv oder Tod; die 24-Monats-RFS-Schätzungen lagen bei 85,0% versus 53,3%. Die kleine Fallzahl und das Phase-II-Design begrenzen Präzision und Subgruppeninterpretation; ein Vergleich mit anderen FLT3-Inhibitoren erfolgte nicht.",
+          "sources": [
+            {"title": "Burchert et al. · JCO 2020 · SORMAIN", "url": "https://pubmed.ncbi.nlm.nih.gov/32673171/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "CAR-T · DALY 2-EU",
+          "question": "DALY 2-EU randomisierte 160 transplantationsungeeignete Erwachsene mit R/R-LBCL in Zweitlinie zu frischem CD20/CD19-Tandem-CAR-T (zamto-cel) oder R-GemOx. Welche Aussage trifft die Lancet-Oncology-Publikation vom November 2026?",
+          "options": [
+            {"value": "A", "label": "Die Studie war einarmig und verglich die Ansprechrate nur mit historischen Kontrollen.", "feedback": "DALY 2-EU war eine offene randomisierte Phase-II-Studie."},
+            {"value": "B", "label": "Das mediane EFS unterschied sich nicht, während nur die CR-Rate besser war.", "feedback": "Auch der primäre EFS-Endpunkt war deutlich zugunsten von zamto-cel."},
+            {"value": "C", "label": "Zamto-cel verlängerte das mediane EFS auf 6,21 versus 2,53 Monate; HR 0,39.", "feedback": "Dies entspricht dem unabhängigen Review des primären Endpunkts."},
+            {"value": "D", "label": "Ein reifer OS-Vorteil bewies die Überlegenheit gegenüber allen heutigen Zweitlinienoptionen.", "feedback": "Kurzes Follow-up, Crossover und der R-GemOx-Kontrollarm begrenzen OS- und Sequenzaussagen."}
+          ],
+          "correct": "C",
+          "hint": "Suche den primären Endpunkt und beachte, was Crossover und Kontrollarm für weitergehende Schlüsse bedeuten.",
+          "explanation": "Die offene randomisierte Phase-II-Studie an 45 europäischen Zentren schloss eine ältere Population ein (Median 74 Jahre). Nach median 17 Monaten betrug das EFS 6,21 versus 2,53 Monate, HR 0,39. Die kleine Fallzahl, das kurze Follow-up, erlaubtes Crossover und R-GemOx als Vergleich begrenzen Aussagen zu OS, Langzeitheilung und relativer Wirksamkeit gegenüber anderen modernen Optionen.",
+          "sources": [
+            {"title": "Borchmann et al. · Lancet Oncology 2026 · DALY 2-EU", "url": "https://pubmed.ncbi.nlm.nih.gov/42933440/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Bispezifika · Glofitamab/Pola",
+          "question": "Eine 2025 publizierte Phase-Ib/II-Studie untersuchte Glofitamab plus Polatuzumab Vedotin bei 129 Patienten mit R/R-LBCL nach median zwei Vortherapien; 21,7% hatten bereits CAR-T erhalten. Welche Interpretation ist korrekt?",
+          "options": [
+            {"value": "A", "label": "Die Kombination war randomisiert einer CD19-CAR-T-Therapie überlegen.", "feedback": "Ein randomisierter CAR-T-Vergleich fehlte."},
+            {"value": "B", "label": "Die Studie schloss Patienten nach CAR-T grundsätzlich aus.", "feedback": "28 Patienten hatten bereits CAR-T erhalten."},
+            {"value": "C", "label": "Eine ORR von 78,3% beweist den kausalen Zusatznutzen jedes Kombinationspartners.", "feedback": "Ohne Kontrollarm lassen sich Beitrag und Synergie der Einzelwirkstoffe nicht kausal trennen."},
+            {"value": "D", "label": "ORR 78,3% und CR 59,7% zeigen Aktivität; Überlegenheit ist wegen des einarmigen Designs nicht belegt.", "feedback": "Dies verbindet das beobachtete Signal mit der zentralen Designgrenze."}
+          ],
+          "correct": "D",
+          "hint": "Hohe Ansprechraten beantworten nicht automatisch die Frage nach dem relativen Zusatznutzen.",
+          "explanation": "Die multizentrische Phase-Ib/II-Studie berichtete ORR 78,3%, CR 59,7% und medianes PFS 12,3 Monate, bei relevanter Toxizität einschließlich eines Grad-5-CRS. Sie zeigt Aktivität auch nach CAR-T, kann aber ohne randomisierten Kontrollarm weder Synergie noch Überlegenheit gegenüber CAR-T, Monotherapie oder anderen Bispezifika belegen.",
+          "sources": [
+            {"title": "Hutchings et al. · JCO 2025 · Glofitamab plus Polatuzumab", "url": "https://pubmed.ncbi.nlm.nih.gov/41115257/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Supportivtherapie · HSV/VZV nach CAR-T",
+          "question": "Welche HSV/VZV-Prophylaxe empfehlen die ASTCT Best Practice Considerations 2024 für Erwachsene rund um eine CAR-T-Therapie?",
+          "options": [
+            {"value": "A", "label": "Acyclovir oder Valacyclovir ab Lymphodepletion bis mindestens sechs Monate nach CAR-T.", "feedback": "Dies entspricht der ASTCT-Empfehlung; individuelle Verlängerung kann erforderlich sein."},
+            {"value": "B", "label": "Keine Prophylaxe, sofern vor Infusion keine aktive Herpesläsion besteht.", "feedback": "Latente HSV/VZV-Infektionen können unter prolongierter Immunsuppression reaktivieren."},
+            {"value": "C", "label": "Acyclovir erst ab Tag +30 und routinemäßig nur für vier Wochen.", "feedback": "Beginn und Dauer wären zu spät beziehungsweise zu kurz."},
+            {"value": "D", "label": "Prophylaxe nur bei seronegativen Patienten, um eine Primärinfektion zu verhindern.", "feedback": "Das klinisch relevante Ziel umfasst insbesondere Reaktivierungen bei seropositiven Patienten."}
+          ],
+          "correct": "A",
+          "hint": "Die Immunsuppression beginnt mit der Lymphodepletion und kann Monate anhalten.",
+          "explanation": "ASTCT empfiehlt 2024 Acyclovir oder Valacyclovir ab Lymphodepletion bis mindestens sechs Monate nach CAR-T. Die Grundlage sind überwiegend Extrapolation und Expertenkonsens, da prospektive Prophylaxestudien fehlen; Dauer und Dosis müssen an Immunsuppression, Nierenfunktion und Reaktivierungen angepasst werden.",
+          "sources": [
+            {"title": "ASTCT Best Practice Considerations 2024 · Infection Prevention after CAR-T", "url": "https://www.astctjournal.org/article/S2666-6367%2824%2900549-9/fulltext"}
+          ],
+          "reviewed_at": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "title": "Transplantationsprophylaxe und Phase-III-Updates",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · SOS/VOD-Prophylaxe",
+          "question": "Welche pharmakologische SOS/VOD-Prophylaxe empfiehlt das EBMT Handbook 2024 für erwachsene Allo-HSCT-Empfänger?",
+          "options": [
+            {"value": "A", "label": "Defibrotid routinemäßig für alle Patienten ab Tag −7 bis Tag +100.", "feedback": "Eine randomisierte Phase-III-Prophylaxestudie zeigte keinen Vorteil; eine universelle Gabe wird nicht empfohlen."},
+            {"value": "B", "label": "Ursodeoxycholsäure vom Beginn der Konditionierung bis Tag +90.", "feedback": "Dies ist die empfohlene Standardprophylaxe für Erwachsene."},
+            {"value": "C", "label": "Therapeutische Heparinisierung bis zum Neutrophilenengraftment.", "feedback": "Eine therapeutische Antikoagulation ist keine Standardprophylaxe und erhöht Blutungsrisiken."},
+            {"value": "D", "label": "Keine Pharmakoprophylaxe; nur tägliche Gewichtskontrolle.", "feedback": "Monitoring ist wichtig, ersetzt aber die empfohlene Ursodeoxycholsäure nicht."}
+          ],
+          "correct": "B",
+          "hint": "Unterscheide allgemeine Prophylaxe von der frühzeitigen Therapie einer bestätigten moderaten oder schweren Erkrankung.",
+          "explanation": "Das EBMT Handbook 2024 empfiehlt bei Erwachsenen Ursodeoxycholsäure vom Beginn der Konditionierung bis Tag +90. Defibrotid bleibt die zentrale Therapie bei moderatem oder schwerem SOS/VOD; eine prospektive randomisierte Phase-III-Studie zur Prophylaxe bei Hochrisikopatienten verbesserte den primären Endpunkt jedoch nicht.",
+          "sources": [
+            {"title": "EBMT Handbook 2024 · Hepatic Complications", "url": "https://www.ncbi.nlm.nih.gov/books/NBK608328/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Allo-HSCT · ATG bei unverwandtem Spender",
+          "question": "Eine offene randomisierte Phase-III-Studie schloss 203 Patienten von 16–70 Jahren mit hämatologischer Neoplasie vor unverwandter Allo-HSCT ein und verglich Kaninchen-ATG plus Standardprophylaxe mit Standardprophylaxe allein. Welches Nutzen-Risiko-Signal zeigte die 12-Monats-Analyse?",
+          "options": [
+            {"value": "A", "label": "Kein klinischer Nutzen, aber weniger EBV-Reaktivierungen unter ATG.", "feedback": "Die Richtung beider Aussagen ist falsch."},
+            {"value": "B", "label": "Ein reiner OS-Vorteil ohne Einfluss auf Immunsuppressionsfreiheit oder EBV.", "feedback": "Der primäre Endpunkt war Immunsuppressionsfreiheit; EBV-Reaktivierungen nahmen zu."},
+            {"value": "C", "label": "Mehr Immunsuppressionsfreiheit, aber deutlich mehr EBV-Reaktivierungen unter ATG.", "feedback": "37% versus 16% waren nach zwölf Monaten ohne systemische Immunsuppression; EBV-Reaktivierungen traten bei 20 versus 2 Patienten auf."},
+            {"value": "D", "label": "ATG war PTCy in einer verblindeten Nichtunterlegenheitsstudie gleichwertig.", "feedback": "PTCy war kein Vergleichsarm; die Studie war offen und placebofrei."}
+          ],
+          "correct": "C",
+          "hint": "Der primäre patientenrelevante Nutzen und die virusassoziierte T-Zell-Depletionsfolge zeigen in verschiedene Richtungen.",
+          "explanation": "Die multizentrische offene Phase-III-Studie berichtete nach zwölf Monaten Immunsuppressionsfreiheit bei 37% versus 16%, zugleich aber EBV-Reaktivierungen bei 20 versus 2 Patienten. Die Ergebnisse betreffen das konkret verwendete ATG-Schema und unverwandte Spender; sie sind kein direkter Vergleich mit PTCy oder anderen ATG-Präparaten und -Dosen.",
+          "sources": [
+            {"title": "Walker et al. · Lancet Oncology 2016 · ATG-Phase-III-Studie", "url": "https://pubmed.ncbi.nlm.nih.gov/26723083/"},
+            {"title": "Walker et al. · Lancet Haematology 2020 · 24-Monats-Finalanalyse", "url": "https://pubmed.ncbi.nlm.nih.gov/31958417/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Lymphom · frontMIND",
+          "question": "frontMIND randomisierte 899 zuvor unbehandelte Erwachsene von 18–80 Jahren mit DLBCL/HGBL und hohem oder hoch-intermediärem Risiko doppelblind zu Tafasitamab/Lenalidomid plus R-CHOP oder R-CHOP. Welche Aussage beschreibt die Lancet-Publikation 2026 korrekt?",
+          "options": [
+            {"value": "A", "label": "Der primäre Endpunkt war OS und zeigte bereits einen signifikanten Vorteil.", "feedback": "Primärer Endpunkt war PFS; das OS war unreif und nicht signifikant."},
+            {"value": "B", "label": "Die komplette Remissionsrate war der alleinige Grund für die positive Studie.", "feedback": "Die CR-Raten waren praktisch identisch; der PFS-Endpunkt trug das positive Ergebnis."},
+            {"value": "C", "label": "Schwere und tödliche behandlungsbedingte Ereignisse waren unter der Kombination seltener.", "feedback": "Grad ≥3 und tödliche behandlungsbedingte Ereignisse waren unter der Kombination numerisch häufiger."},
+            {"value": "D", "label": "Das PFS verbesserte sich mit HR 0,75; OS ist unreif, und die höhere Toxizität bleibt relevant.", "feedback": "Dies fasst Wirksamkeit und Sicherheitsgrenze angemessen zusammen."}
+          ],
+          "correct": "D",
+          "hint": "Beurteile primären Endpunkt, Reife des OS und Sicherheitsprofil getrennt.",
+          "explanation": "Die globale doppelblinde Phase-III-Studie zeigte nach median 35,2 Monaten ein besseres PFS (HR 0,75; 2-Jahres-PFS 71,1% versus 62,9%). Das OS war nicht signifikant (HR 0,85), während Grad-≥3-Ereignisse bei 87% versus 76% und tödliche behandlungsbedingte Ereignisse bei 6% versus 4% auftraten. Ein reifer OS-Nutzen ist daher nicht belegt.",
+          "sources": [
+            {"title": "frontMIND Investigators · Lancet 2026 · Tafasitamab/Lenalidomid plus R-CHOP", "url": "https://doi.org/10.1016/S0140-6736(26)00866-4"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Bispezifika · Odronextamab",
+          "question": "ELM-2 untersuchte Odronextamab bei 128 Patienten mit R/R-follikulärem Lymphom nach mindestens zwei systemischen Therapielinien. Welche Aussage passt zur 2024 publizierten Phase-II-Analyse?",
+          "options": [
+            {"value": "A", "label": "ORR 80,0%, CR 73,4% und medianes PFS 20,7 Monate; das einarmige Design begrenzt Vergleiche.", "feedback": "Dies trifft Wirksamkeitssignal und zentrale Evidenzgrenze."},
+            {"value": "B", "label": "Odronextamab war in Phase III randomisiert R² überlegen.", "feedback": "ELM-2 war eine einarmige Phase-II-Studie ohne R²-Kontrollarm."},
+            {"value": "C", "label": "CRS trat nach optimierter Step-up-Dosierung nicht auf.", "feedback": "CRS war häufig, überwiegend niedriggradig; Grad ≥3 lag bei 1,7%."},
+            {"value": "D", "label": "Die Behandlung war zwingend auf zwölf Zyklen begrenzt.", "feedback": "Odronextamab wurde protokollgemäß bis Progression oder einem anderen Abbruchgrund fortgeführt."}
+          ],
+          "correct": "A",
+          "hint": "Prüfe sowohl die Tiefe der Remissionen als auch das Fehlen eines zeitgleichen Kontrollarms.",
+          "explanation": "Die multizentrische Phase-II-Studie ELM-2 berichtete bei stark vorbehandeltem FL ORR 80,0%, CR 73,4% und medianes PFS 20,7 Monate. Grad-≥3-CRS war mit optimierter Step-up-Dosierung selten. Ohne randomisierten Vergleich lässt sich jedoch kein relativer Vorteil gegenüber CAR-T, anderen Bispezifika oder Standardkombinationen quantifizieren.",
+          "sources": [
+            {"title": "Kim et al. · Annals of Oncology 2024 · ELM-2", "url": "https://pubmed.ncbi.nlm.nih.gov/39147364/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Evidenz · TRIANGLE-Rituximab-Erhaltung",
+          "question": "Eine 2026 publizierte Sekundäranalyse von TRIANGLE verglich bei Respondern in den Ibrutinib-Armen Rituximab-Erhaltung mit keiner Erhaltung. Die Zuteilung folgte nationaler beziehungsweise Zentrumspraxis und wurde per IPTW adjustiert. Welche Interpretation ist methodisch korrekt?",
+          "options": [
+            {"value": "A", "label": "IPTW macht die Erhaltungsanalyse vollständig randomisiert.", "feedback": "IPTW kann gemessene, nicht aber unbekannte oder ungemessene Confounder ausgleichen."},
+            {"value": "B", "label": "Die PFS-Assoziation ist relevant, aber Residualkonfounding und mehr schwere Infektionen begrenzen kausale Schlüsse.", "feedback": "Dies berücksichtigt Design, Nutzen- und Risikosignal."},
+            {"value": "C", "label": "Die Analyse beweist einen OS-Vorteil bei unveränderter Infektionsrate.", "feedback": "Es gab nur OS-Trends; Grad-3–5-Infektionen waren unter Erhaltung häufiger."},
+            {"value": "D", "label": "Nur Patienten des konventionellen ASCT-Arms wurden ausgewertet.", "feedback": "Die Analyse betraf die Ibrutinib-Arme mit und ohne ASCT."}
+          ],
+          "correct": "B",
+          "hint": "Frage, wer die Erhaltung tatsächlich randomisiert hat und welche Confounder eine Gewichtung nicht erfassen kann.",
+          "explanation": "Die 2026 publizierte Sekundäranalyse zeigte in den Ibrutinib-Armen höhere 4-Jahres-PFS-Schätzungen mit Rituximab-Erhaltung, aber auch mehr Grad-3–5-Infektionen. Da die Erhaltung nicht randomisiert, sondern nach Praxis vergeben wurde, bleibt trotz IPTW Residualkonfounding; zudem wurden nur Responder eingeschlossen. Die Analyse stützt eine Assoziation, keinen gleich starken Kausalbeweis wie ein randomisierter Erhaltungsvergleich.",
+          "sources": [
+            {"title": "Ladetto et al. · JCO 2026 · Rituximab-Erhaltung in TRIANGLE", "url": "https://pubmed.ncbi.nlm.nih.gov/42447409/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        }
+      ]
+    },
+    {
+      "title": "Stammzellquelle, Langzeitdaten und Supportivtherapie",
+      "questions": [
+        {
+          "topic": "Allo-HSCT · Knochenmark versus PBSC",
+          "question": "Welche Abwägung zwischen Knochenmark und peripheren Blutstammzellen beschreibt das EBMT Handbook 2024 für Allo-HSCT am zutreffendsten?",
+          "options": [
+            {"value": "A", "label": "Knochenmark führt stets zu schnellerer hämatologischer Rekonstitution und mehr chronischer GvHD.", "feedback": "Beide Richtungen sind vertauscht."},
+            {"value": "B", "label": "PBSC senken chronische GvHD, verzögern aber das Engraftment.", "feedback": "PBSC führen typischerweise zu schnellerer Rekonstitution, aber mehr chronischer GvHD."},
+            {"value": "C", "label": "Knochenmark senkt chronische GvHD, geht aber mit langsamerer hämatologischer und immunologischer Rekonstitution einher.", "feedback": "Dies ist der zentrale Trade-off der Stammzellquellen."},
+            {"value": "D", "label": "Die Stammzellquelle beeinflusst weder GvHD noch Rekonstitution.", "feedback": "Beide Endpunkte werden durch die Stammzellquelle relevant beeinflusst."}
+          ],
+          "correct": "C",
+          "hint": "Eine Quelle bietet raschere Rekonstitution, die andere weniger chronische Alloreaktivität.",
+          "explanation": "Das EBMT Handbook 2024 beschreibt Knochenmark mit weniger chronischer GvHD, aber langsamerer hämatologischer und immunologischer Erholung als PBSC. Bei malignen Erkrankungen müssen zusätzlich Rezidivrisiko, Erkrankung, Prophylaxe und Spenderkonstellation berücksichtigt werden; die Aussage ist keine universelle Vorrangregel für jede Allo-HSCT.",
+          "sources": [
+            {"title": "EBMT Handbook 2024 · Bone Marrow Harvesting for HCT", "url": "https://www.ncbi.nlm.nih.gov/books/NBK608245/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Allo-HSCT · Chronische GvHD",
+          "question": "Ein Patient hat neu diagnostizierte moderate chronische GvHD mit relevantem Organbefall. Welche systemische Erstlinie nennt das EBMT Handbook 2024?",
+          "options": [
+            {"value": "A", "label": "Belumosudil allein als obligate Erstlinie.", "feedback": "Belumosudil ist nicht der allgemeine Erstlinienstandard für neu diagnostizierte moderate cGvHD."},
+            {"value": "B", "label": "Ruxolitinib allein unabhängig von vorheriger Steroidtherapie.", "feedback": "Ruxolitinib ist besonders bei steroidrefraktärer oder -abhängiger cGvHD etabliert."},
+            {"value": "C", "label": "Nur topische Therapie, auch bei relevanter Organfunktionsstörung.", "feedback": "Topische Therapie kann bei milder Erkrankung genügen, nicht generell bei moderater oder schwerer cGvHD."},
+            {"value": "D", "label": "Prednison oder Methylprednisolon etwa 1 mg/kg/Tag, gegebenenfalls mit CNI.", "feedback": "Dies entspricht der empfohlenen systemischen Erstlinie; niedrigere Dosen können individuell sinnvoll sein."}
+          ],
+          "correct": "D",
+          "hint": "Unterscheide die Erstlinie von zugelassenen Optionen nach Steroidversagen.",
+          "explanation": "Für moderate oder schwere cGvHD empfiehlt das EBMT Handbook 2024 Prednison beziehungsweise Methylprednisolon initial etwa 1 mg/kg/Tag; ein CNI kann insbesondere bei schwerer Erkrankung ergänzt werden. Organmanifestation, Infektionsrisiko und Komorbiditäten bestimmen Dosis und steroid-sparende Strategie; die Evidenz für viele Kombinationen ist schwächer.",
+          "sources": [
+            {"title": "EBMT Handbook 2024 · Chronic Graft-Versus-Host Disease", "url": "https://www.ncbi.nlm.nih.gov/books/NBK608236/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Lymphom · POLARIX-Langzeitdaten",
+          "question": "Die 2025 publizierte 5-Jahres-Analyse von POLARIX umfasste 879 zuvor unbehandelte Patienten mit intermediärem oder hohem Risiko und verglich Pola-R-CHP mit R-CHOP. Welche Aussage ist korrekt?",
+          "options": [
+            {"value": "A", "label": "Der PFS-Vorteil blieb bestehen (HR 0,77); der OS-Unterschied war nicht signifikant (HR 0,85).", "feedback": "Dies trennt den bestätigten PFS-Befund von der noch nicht signifikanten OS-Analyse."},
+            {"value": "B", "label": "Das 5-Jahres-PFS war identisch, aber das OS signifikant besser.", "feedback": "Die PFS-Kurven blieben zugunsten von Pola-R-CHP getrennt; das OS war nicht signifikant."},
+            {"value": "C", "label": "Pola-R-CHP ersetzte Doxorubicin durch Polatuzumab.", "feedback": "Ersetzt wurde Vincristin; Doxorubicin blieb Bestandteil des Regimes."},
+            {"value": "D", "label": "Die Studie beweist einen Vorteil speziell für zentral bestätigtes Double-Hit-Lymphom.", "feedback": "Explorative Subgruppen sind für eine solche definitive Aussage nicht ausreichend."}
+          ],
+          "correct": "A",
+          "hint": "Betrachte PFS und OS getrennt und vermeide Überinterpretation kleiner Subgruppen.",
+          "explanation": "Nach median 64,1 Monaten zeigte die randomisierte Phase-III-Studie ein anhaltendes PFS-Signal (HR 0,77; 5-Jahres-PFS 64,9% versus 59,1%). Das OS war mit HR 0,85 und 95%-KI 0,63–1,15 nicht signifikant. Explorative biologische Subgruppen dürfen nicht als eigenständiger randomisierter Beweis gelesen werden.",
+          "sources": [
+            {"title": "Morschhauser et al. · JCO 2025 · POLARIX 5 Jahre", "url": "https://pubmed.ncbi.nlm.nih.gov/40991874/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "CAR-T · ELARA",
+          "question": "Die 2024 publizierte ELARA-Langzeitanalyse berichtete 97 infundierte Erwachsene mit R/R-follikulärem Lymphom Grad 1–3A nach mindestens zwei Therapielinien und median 29 Monaten Follow-up. Welche Einordnung ist korrekt?",
+          "options": [
+            {"value": "A", "label": "Tisagenlecleucel war randomisiert Odronextamab im OS überlegen.", "feedback": "ELARA war einarmig und enthielt keinen Odronextamab-Vergleich."},
+            {"value": "B", "label": "ORR 86,2%, CR 68,1% und 24-Monats-PFS 57,4% zeigen Daueraktivität; ein relativer Vorteil ist nicht bewiesen.", "feedback": "Dies verbindet Langzeitaktivität mit der Grenze des einarmigen Designs."},
+            {"value": "C", "label": "Alle leukapherierten Patienten erreichten eine komplette Remission.", "feedback": "Die berichtete CR-Rate lag bei 68,1% der infundierten Population."},
+            {"value": "D", "label": "Bridging-Therapie war ausgeschlossen, sodass nur unmittelbar infundierbare Patienten eingeschlossen wurden.", "feedback": "Bridging war erlaubt."}
+          ],
+          "correct": "B",
+          "hint": "Hohe Langzeitansprechraten und vergleichende Wirksamkeit sind unterschiedliche Aussagen.",
+          "explanation": "ELARA war eine internationale einarmige Phase-II-Studie bei stark vorbehandeltem FL. Nach median 29 Monaten lagen ORR bei 86,2%, CR bei 68,1% und das geschätzte 24-Monats-PFS bei 57,4%. Die Daten stützen Dauerhaftigkeit und Sicherheit, beweisen aber ohne zeitgleichen Kontrollarm keine Überlegenheit gegenüber Bispezifika oder anderen Sequenzen.",
+          "sources": [
+            {"title": "Dreyling et al. · Blood 2024 · ELARA-Update", "url": "https://pubmed.ncbi.nlm.nih.gov/38194692/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        },
+        {
+          "topic": "Supportivtherapie · G-CSF nach CAR-T",
+          "question": "Welche Aussage zur G-CSF-Gabe nach CD19-CAR-T entspricht dem EBMT/EHA CAR-T Handbook?",
+          "options": [
+            {"value": "A", "label": "G-CSF ist im ersten Jahr absolut kontraindiziert, weil es CAR-T-Zellen inaktiviert.", "feedback": "Eine solche Kontraindikation oder Inaktivierung ist nicht belegt."},
+            {"value": "B", "label": "G-CSF darf nur nach Knochenmarkbiopsie und dokumentiertem MDS gegeben werden.", "feedback": "Bei Neutropenie ist keine obligate MDS-Diagnose Voraussetzung."},
+            {"value": "C", "label": "Ab etwa Tag +5 kann G-CSF bei Neutropenie eingesetzt werden; die Evidenz ist überwiegend beobachtend.", "feedback": "Das Handbook bewertet dieses Vorgehen als sicher, weist aber auf die begrenzte Evidenz hin."},
+            {"value": "D", "label": "Eine routinemäßige Gabe an Tag 0 ist durch eine Phase-III-Studie als CRS-präventiv bewiesen.", "feedback": "Ein solcher randomisierter Beleg und eine CRS-präventive Wirkung fehlen."}
+          ],
+          "correct": "C",
+          "hint": "Die historische Sorge vor verstärkter Neuro- oder Zytokintoxizität muss gegen die Qualität der vorhandenen Daten abgewogen werden.",
+          "explanation": "Das EBMT/EHA CAR-T Handbook hält G-CSF ab Tag +5 bei neutropenischen Patienten für einsetzbar, ohne beobachteten Anstieg schwerer CRS/ICANS oder Verlust der Antilymphomaktivität. Die Evidenzstufe ist III-B und beruht nicht auf einer Phase-III-Randomisierung; Zeitpunkt und Indikation bleiben risikoadaptiert.",
+          "sources": [
+            {"title": "EBMT/EHA CAR-T Cell Handbook 2022 · Myelotoxicity and Infections", "url": "https://www.ncbi.nlm.nih.gov/books/NBK584187/"},
+            {"title": "Rejeski et al. · Blood 2023 · EHA/EBMT ICAHT Consensus", "url": "https://ashpublications.org/blood/article/142/10/865/496185/"}
+          ],
+          "reviewed_at": "2026-11-12"
+        }
+      ]
+    }
+  ]
+}
