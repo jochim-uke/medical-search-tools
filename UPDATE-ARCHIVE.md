@@ -38,3 +38,19 @@ Im eigenständigen Archiv `ash-2026/` kann der Admin jeden Beitrag direkt auf `+
 Schemaergänzung: `supabase/ash2026-priority.sql`, angewandte Migration `add_ash2026_priorities`. `priority` (0–3, Standard 0) und `priority_version` ergänzen `ash2026_abstracts`. Der RPC `ash2026_set_priority` nutzt wie `ash2026_add` einen SECURITY-INVOKER-Wrapper und eine Funktion im nicht exponierten Schema `ash2026_private`. Diese prüft den Hash und Ablauf der bestehenden Admin-Sitzung, die erlaubten Werte und die erwartete Version. Direkte Schreibrechte für Gäste bleiben gesperrt. Neue/importierte Abstracts benötigen keine Priorität; bestehende Bewertungen werden durch reine Inhaltsaktualisierungen nicht überschrieben.
 
 Die Oberfläche bestätigt Änderungen erst nach erfolgreicher Serverantwort. Bei einem Versionskonflikt lädt sie den aktuellen Stand und fordert eine erneute Auswahl; bei abgelaufener Anmeldung wird die Bearbeitung beendet. Datenbankprüfung mit Transaktions-Rollback: anonyme und abgelaufene Tokens abgewiesen, direkte Gast-Schreibzugriffe gesperrt, alle vier Stufen gespeichert, veraltete Versionen und ungültige Werte abgewiesen.
+
+## ASH-2026-Sammlung „Moderne CAR T konstrukte“
+
+Die manuelle Sammlung wird zusätzlich zu den Erkrankungen und Methoden eines Abstracts gepflegt. Öffentlich zeigt ein Badge die Mitgliedschaft an. Im bestehenden Filter „Kategorie / Methode“ steht unter „Manuelle Sammlungen“ die Auswahl „Moderne CAR T konstrukte“ bereit; sie lässt sich mit Erkrankung, Freitextsuche und Priorität kombinieren. „Zurücksetzen“ stellt die Gesamtansicht wieder her.
+
+Nach der Anmeldung über „Zuordnung & Prioritäten“ lässt sich die Sammlung mit dem Ein/Aus-Schalter direkt an jeder Karte ändern. Beim Anlegen eines Beitrags ist dieselbe Zuordnung als Checkbox verfügbar. Der Schalter speichert die Mitgliedschaft für alle Geräte, während die Auswahl im Kategorie-Filter nur die eigene Ansicht einschränkt.
+
+Schema: `supabase/ash2026-collections.sql`, angewandte Migration `20261118053542_ash2026_manual_car_t_collection`. `collections` enthält den erlaubten Slug `moderne-car-t-konstrukte`; `collections_version` verhindert unbemerktes Überschreiben gleichzeitiger Zuordnungsänderungen. Der RPC `ash2026_set_collection` verwendet wie die Prioritäten die vorhandene serverseitig geprüfte Archiv-Admin-Sitzung, einen SECURITY-INVOKER-Wrapper und eine private SECURITY-DEFINER-Funktion mit festem Suchpfad. Direkte Gast-Schreibrechte bleiben gesperrt. Prioritäten und ihre Versionsnummer sind unabhängig von der Sammlung.
+
+Der initiale Import vom 18.11.2026 ist unter `ash-2026/content/moderne-car-t-konstrukte-2026-11-18.json` versioniert. Er umfasst 13 neue Abstracts mit individuell zugeordneten ASH-Direktlinks und kurzen deutschen Einordnungen. Zusätzlich wurden die bereits vorhandenen Beiträge #706, #1027, #1028, #1032 und #1922 der Sammlung zugeordnet, ohne deren Texte oder Prioritäten zu ändern. Supabase bleibt die maßgebliche Quelle für spätere manuelle Änderungen; die JSON-Datei ist ein Import-Snapshot und wird vom Browser nicht als zweite Datenquelle geladen.
+
+Noch offene Linkzuordnungen wurden nicht importiert: #1051 (QI-019A), #1056 (TmCD19-IL18), #4169 (LB2501) und #4181 (19-28z/IL18). Für #118 und #1029 wurden die bisher offenen Zuordnungen anhand der offiziellen Einzelabstractseiten bestätigt. Alle importierten Quellen nutzen `paper-details.aspx?pid=…`; Sessionlinks werden nicht als Abstractquellen verwendet. Ein Teil der Inhalte wurde über den offiziellen ASH-Suchindex verifiziert, da die Einzelseiten beim Live-Abruf zeitweise leere Abstractfelder liefern.
+
+Prüfung: `supabase/ash2026-collections.test.sql` testet innerhalb einer zurückgerollten Transaktion das Ein-/Ausschalten, Versionskonflikte, unerlaubte Slugs und das Anlegen mit Sammlungszuordnung. Fehlende/ungültige Sitzungen sowie direkte Gast-Schreibzugriffe wurden separat geprüft. Es verbleiben keine Testbeiträge oder Testsitzungen.
+
+

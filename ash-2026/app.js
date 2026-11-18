@@ -4,9 +4,14 @@ const $ = id => document.getElementById(id);
 const sessionKey = 'update-archive-token';
 const session = () => sessionStorage.getItem(sessionKey) || localStorage.getItem(sessionKey) || '';
 const fields = ['diseases','methods'];
+const collectionSlug = 'moderne-car-t-konstrukte';
+const collectionTitle = 'Moderne CAR T konstrukte';
+const collectionFilter = 'collection:'+collectionSlug;
+const inCollection = entry => (entry.collections || []).includes(collectionSlug);
 let entries = [];
 let editorMode = 'add';
 const savingPriorities = new Set();
+const savingCollections = new Set();
 const priorityOf = entry => entry.priority || 0;
 const norm = text => String(text).normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[‐‑–—]/g,'-');
 function node(tag, text, cls) {
@@ -34,9 +39,11 @@ function vocabulary(field) {
 function render() {
   const words = norm($('search').value).trim().split(/\s+/).filter(Boolean);
   const matches = entries.filter(entry => {
-    const haystack = norm(['#'+entry.number, entry.title, entry.summary,...entry.methods,...entry.diseases].join(' '));
+    const haystack = norm(['#'+entry.number, entry.title, entry.summary,...entry.methods,...entry.diseases,inCollection(entry) ? collectionTitle : ''].join(' '));
     const priority = $('priority').value;
-    return fields.every(field => !$(field).value || entry[field].includes($(field).value)) && words.every(word => haystack.includes(word)) && (priority === '' || (priority === 'any' ? priorityOf(entry) > 0 : priorityOf(entry) === Number(priority)));
+    const method = $('methods').value;
+    const matchesMethod = !method || (method === collectionFilter ? inCollection(entry) : entry.methods.includes(method));
+    return (!$('diseases').value || entry.diseases.includes($('diseases').value)) && matchesMethod && words.every(word => haystack.includes(word)) && (priority === '' || (priority === 'any' ? priorityOf(entry) > 0 : priorityOf(entry) === Number(priority)));
   }).sort((a,b) => ($('sort').value === 'priority' ? priorityOf(b)-priorityOf(a) : 0) || a.number-b.number);
   $('status').textContent = matches.length ? matches.length+' von '+entries.length+' Beiträgen' : 'Keine passenden Beiträge.';
   $('results').replaceChildren(...matches.map(entry => {
@@ -46,6 +53,11 @@ function render() {
     for (const field of fields) for (const value of entry[field]) {
       const tag = node('span',value,'tag');
       tag.title = field === 'methods' ? 'Methode / Medikamentenklasse' : 'Erkrankung';
+      tags.append(tag);
+    }
+    if (inCollection(entry)) {
+      const tag = node('span',collectionTitle,'tag collection-tag');
+      tag.title = 'Manuelle Sammlung';
       tags.append(tag);
     }
     const isAsh = /^https:\/\/onlineprogram\.hematology\.org\/paper-details\.aspx\?pid=\d+$/.test(entry.source);
@@ -65,8 +77,54 @@ function render() {
       paragraph.append(additional);
       card.append(paragraph);
     }
+    if (session()) card.append(collectionControl(entry));
     return card;
   }));
+}
+function collectionControl(entry) {
+  const wrapper = node('div','','ash-collection');
+  const button = node('button','','collection-switch');
+  button.type = 'button';
+  button.dataset.collectionButton = entry.number;
+  button.setAttribute('role','switch');
+  button.setAttribute('aria-label',collectionTitle+' für Abstract #'+entry.number);
+  button.setAttribute('aria-checked',String(inCollection(entry)));
+  button.setAttribute('aria-busy',String(savingCollections.has(entry.number)));
+  button.disabled = savingCollections.has(entry.number);
+  const track = node('span','','switch-track');
+  track.setAttribute('aria-hidden','true');
+  const state = node('span',inCollection(entry) ? 'Ein' : 'Aus','switch-state');
+  state.setAttribute('aria-hidden','true');
+  button.append(node('span',collectionTitle,'switch-label'),track,state);
+  button.onclick = () => saveCollection(entry,button);
+  wrapper.append(button);
+  return wrapper;
+}
+async function saveCollection(entry,button) {
+  if (savingCollections.has(entry.number)) return;
+  const included = !inCollection(entry);
+  savingCollections.add(entry.number);
+  button.disabled = true;
+  button.setAttribute('aria-busy','true');
+  $('collection-feedback').textContent = 'Sammlungszuordnung wird gespeichert …';
+  try {
+    const saved = await request('/rest/v1/rpc/ash2026_set_collection',{method:'POST',body:JSON.stringify({session_token:session(),abstract_number:entry.number,collection_slug:collectionSlug,included,expected_version:entry.collections_version || 0})});
+    entries = entries.map(item => item.number === entry.number ? {...item,...saved} : item);
+    $('collection-feedback').textContent = 'Abstract #'+entry.number+': '+(included ? 'zur Sammlung „'+collectionTitle+'“ hinzugefügt.' : 'aus der Sammlung „'+collectionTitle+'“ entfernt.');
+  } catch(error) {
+    if (error.code === '42501') forget();
+    if (error.code === '40001') await refresh();
+    $('collection-feedback').textContent = error.code === '40001' ? 'Die Zuordnung wurde auf einem anderen Gerät geändert. Die Ansicht wurde aktualisiert; bitte erneut auswählen.' : 'Zuordnung nicht gespeichert: '+error.message;
+  } finally {
+    savingCollections.delete(entry.number);
+    const active = document.activeElement;
+    const restoreFocus = active === button || active === document.body;
+    render();
+    if (restoreFocus) {
+      const target = document.querySelector('[data-collection-button="'+entry.number+'"]') || $('methods');
+      target.focus({preventScroll:true});
+    }
+  }
 }
 function priorityControl(entry) {
   const group = node('div','','ash-priority');
@@ -131,9 +189,19 @@ async function refresh() {
     for (const field of fields) {
       const select = $(field), previous = select.value;
       const values = vocabulary(field);
-      select.length = 1;
-      values.forEach(value => select.add(new Option(value,value)));
-      select.value = values.includes(previous) ? previous : '';
+      select.replaceChildren(new Option(field === 'methods' ? 'Alle Methoden und Sammlungen' : 'Alle Erkrankungen',''));
+      if (field === 'methods') {
+        const collections = node('optgroup','');
+        collections.label = 'Manuelle Sammlungen';
+        collections.append(new Option(collectionTitle,collectionFilter));
+        const methods = node('optgroup','');
+        methods.label = 'Methoden / Medikamentenklassen';
+        methods.append(...values.map(value => new Option(value,value)));
+        select.append(collections,methods);
+      } else {
+        values.forEach(value => select.add(new Option(value,value)));
+      }
+      select.value = values.includes(previous) || (field === 'methods' && previous === collectionFilter) ? previous : '';
       $(field === 'methods' ? 'method-options' : 'disease-options').replaceChildren(...values.map(value => new Option(value,value)));
     }
     $('retry').hidden = true;
@@ -171,7 +239,7 @@ $('retry').onclick = refresh;
 $('close').onclick = () => $('editor').close();
 function openEditor(mode) {
   editorMode = mode;
-  $('editor-title').textContent = mode === 'add' ? 'Beitrag hinzufügen' : 'Prioritäten bearbeiten';
+  $('editor-title').textContent = mode === 'add' ? 'Beitrag hinzufügen' : 'Zuordnung & Prioritäten bearbeiten';
   account();
   $('feedback').textContent = '';
   $('editor').showModal();
@@ -191,7 +259,7 @@ $('login').onsubmit = async event => {
     $('feedback').textContent = '';
     if (editorMode === 'priority') {
       $('editor').close();
-      $('priority-feedback').textContent = 'Angemeldet. Priorität direkt am Beitrag auswählen.';
+      $('priority-feedback').textContent = 'Angemeldet. Prioritäten und Sammlungszuordnung direkt am Beitrag bearbeiten.';
     }
   } catch(error) { $('feedback').textContent = error.message; }
   finally {button.disabled = false;}
@@ -211,6 +279,8 @@ $('form').onsubmit = async event => {
       if (!entry[field].length || entry[field].length > 20) throw new Error('Bitte je Kategorie 1 bis 20 Begriffe eingeben.');
     }
     entry.number = Number(entry.number);
+    entry.collections = $('form').elements.collection.checked ? [collectionSlug] : [];
+    delete entry.collection;
     await request('/rest/v1/rpc/ash2026_add',{method:'POST',body:JSON.stringify({session_token:session(),entry})});
     $('form').reset();
     $('editor').close();
@@ -223,3 +293,4 @@ $('form').onsubmit = async event => {
 };
 account();
 refresh();
+

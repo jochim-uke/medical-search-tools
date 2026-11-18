@@ -1,0 +1,245 @@
+[
+  {
+    "number": 118,
+    "title": "CB-011 · Allogene BCMA-CAR-T mit Immunevasion",
+    "diseases": [
+      "Multiples Myelom"
+    ],
+    "methods": [
+      "CAR-T",
+      "Allogene CAR-T",
+      "Gen-Editing"
+    ],
+    "summary": "ASH-2026-Kongressabstract zur Phase-I-Studie CaMMouflage. Gesunde Spender-T-Zellen werden durch CRISPR-Cas12a verändert: BCMA-CAR, TRAC- und B2M-Knockout sowie B2M–HLA-E-Fusion zur Verringerung von GvHD und T-/NK-Zell-vermittelter Abstoßung. Insgesamt 48 Behandelte; in der kleinen BCMA-naiven Gruppe mit empfohlener Expansionsdosis (n=12) ORR 92% und ≥CR 83%. Die Expansion hing deutlich von der Lymphodepletion ab; relevante Infektionen, Zytopenien, ein Grad-4-Guillain-Barré-Syndrom und ein therapieassoziiertes tödliches ICAHT-Ereignis begrenzen die Sicherheitsinterpretation.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=684191",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 704,
+    "title": "In-vivo-CD19-CAR-T · First-in-Human bei B-NHL",
+    "diseases": [
+      "B-NHL"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Lentiviraler Vektor",
+      "Expansionskinetik"
+    ],
+    "summary": "ASH-2026-Kongressabstract mit ersten klinischen Daten zur direkten Erzeugung von CD19-CAR-T-Zellen durch intravenöse Gabe eines lentiviralen Vektors bei r/r B-NHL. Die Plattform soll Apherese, patientenbezogene Ex-vivo-Herstellung und Lymphodepletion ersetzen. Beschrieben werden dosisabhängige Expansion mit Peak zwischen Tag 14 und 17 sowie CAR-Nachweis in Blut, Tumor und Knochenmark. Frühes klinisches Machbarkeitssignal; eine belastbare Aussage zu langfristiger Wirksamkeit und Integrationssicherheit ist daraus noch nicht möglich.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=691686",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 705,
+    "title": "IASO208 · In-vivo-CD20-CAR-T ohne Lymphodepletion",
+    "diseases": [
+      "B-NHL",
+      "DLBCL",
+      "FL",
+      "MCL"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Lentiviraler Vektor",
+      "Expansionskinetik"
+    ],
+    "summary": "ASH-2026-Kongressabstract: First-in-Human-Dosiseskalation mit einem T-Zell-gerichteten lentiviralen Vektor zur In-vivo-Erzeugung von CD20-CAR-T-Zellen, ohne Apherese oder Lymphodepletion. Neun Patienten behandelt, acht für Ansprechen auswertbar: sieben Ansprechen, davon drei CR; medianes Follow-up nur 62 Tage. Kein ICANS oder CRS Grad ≥3, aber häufige Infusionsreaktionen und Zytopenien; medianer Expansionspeak nach 15,5 Tagen. Technisch relevantes Machbarkeitssignal mit noch unreifer Ansprechdauer.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=691689",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 707,
+    "title": "UB-VV400 · In-vivo-CD22-CAR-T mit Rapamycin-Steuerung",
+    "diseases": [
+      "LBCL",
+      "FL"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Lentiviraler Vektor",
+      "Pharmakologische Steuerung"
+    ],
+    "summary": "ASH-2026-Kongressabstract zur Phase I: Ein lentiviraler Vektor erzeugt CD22-CAR-T-Zellen ohne Apherese und Lymphodepletion. Ein Rapamycin-aktivierter Zytokinrezeptor soll Überleben und Expansion der transduzierten Zellen gezielt fördern. Elf Patienten behandelt, neun ansprechensauswertbar: zwei CR und zwei PR; alle drei Auswertbaren auf der höchsten untersuchten Dosis plus Rapamycin sprachen an. Kleine Dosisgruppen und kurze Nachbeobachtung; relevant sind unter anderem eine dosislimitierende Grad-4-Infusionsreaktion und schwere Thrombozytopenie.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=692104",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 708,
+    "title": "SynKIR-310 · Mehrkettiger KIR-basierter CD19-CAR",
+    "diseases": [
+      "B-NHL",
+      "LBCL",
+      "FL",
+      "MZL"
+    ],
+    "methods": [
+      "CAR-T",
+      "KIR-CAR",
+      "Neues CAR-Design"
+    ],
+    "summary": "ASH-2026-Kongressabstract aus CELESTIAL-301, einer Phase-I-Dosiseskalation. Der autologe CD19-CAR verbindet KIR2DS2 mit einem separaten DAP12-Signalprotein und trennt damit Antigenbindung und Aktivierung. Sechs Patienten behandelt, fünf ansprechensauswertbar: vier Ansprechen, davon drei CR; in den ersten beiden Dosisstufen kein CRS oder ICANS. Das frühe Sicherheitssignal ist bei dieser kleinen Patientenzahl noch kein Nachweis einer geringeren Toxizität gegenüber etablierten Produkten.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=692111",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 1029,
+    "title": "Vispa-cel · Allogene CD19-CAR-T mit PD-1-Knockout",
+    "diseases": [
+      "B-NHL",
+      "LBCL",
+      "MCL",
+      "FL"
+    ],
+    "methods": [
+      "CAR-T",
+      "Allogene CAR-T",
+      "Gen-Editing"
+    ],
+    "summary": "ASH-2026-Kongressabstract zur Phase-I-Studie ANTLER. Vispa-cel/CB-010 kombiniert einen CD19-CAR mit TRAC- und PD-1-Knockout; junge Spender und partielles HLA-Matching sollen die Ergebnisse verbessern. Insgesamt 85 Behandelte: 68 Ansprechen, davon 47 CR. Der Beitrag fokussiert 22 Patienten, die nach mindestens zwölf Monaten progressionsfrei waren; 21 hatten eine CR, einzelne Remissionen bestanden über mehrere Jahre. Diese selektierte Langzeit-Respondergruppe erlaubt keine Schätzung der Erfolgswahrscheinlichkeit aller Behandelten; bemerkenswert ist, dass CAR-T-Zellen bei diesen 22 Patienten ab Tag 28 nicht mehr nachweisbar waren.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=691169",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2340,
+    "title": "IMV104 · Duales CD19/CD20-In-vivo-CAR-T-Design",
+    "diseases": [
+      "B-Zell-Neoplasien"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Dual-Target-CAR-T",
+      "Präklinisch"
+    ],
+    "summary": "ASH-2026-Kongressabstract mit präklinischen Daten. IMV104 kombiniert einen T-Zell-gerichteten lentiviralen Vektor mit einem strukturell optimierten CD19/CD20-CAR, um Herstellungshürden und Antigenverlust zu adressieren. In Zellkultur und humanisierten Mausmodellen werden Aktivität gegen unterschiedliche Antigenprofile, wiederholte Tumorzellabtötung und CAR-T-Expansion beschrieben. Der Beitrag belegt keine klinische Wirksamkeit oder Sicherheit beim Menschen.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=690584",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2341,
+    "title": "CD52-Epitop-Editing · Universelle CAR-T für Alemtuzumab-Konditionierung",
+    "diseases": [
+      "B-ALL",
+      "B-Zell-Neoplasien"
+    ],
+    "methods": [
+      "CAR-T",
+      "Allogene CAR-T",
+      "Gen-Editing",
+      "Präklinisch"
+    ],
+    "summary": "ASH-2026-Kongressabstract mit präklinischer Untersuchung eines CD52-Epitop-Editings als Alternative zum vollständigen CD52-Knockout. Base- oder Prime-Editing verändert die Alemtuzumab-Bindungsstelle bei erhaltener CD52-Oberflächenexpression. Beschrieben werden Alemtuzumab-Resistenz, geringere Makrophagenaufnahme als nach Knockout und erhaltene Anti-CD19-CAR-T-Aktivität im Leukämiemodell. Relevant für allogene Plattformen; ein klinischer Vorteil ist noch nicht gezeigt.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=690591",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2350,
+    "title": "KSV01 · In-vivo-CD19-CAR-T bei r/r DLBCL",
+    "diseases": [
+      "DLBCL"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Lentiviraler Vektor",
+      "Expansionskinetik"
+    ],
+    "summary": "ASH-2026-Kongressabstract: First-in-Human-Phase I mit einem optimierten lentiviralen Vektor zur direkten Erzeugung von CD19-CAR-T-Zellen ohne Apherese, Lymphodepletion oder prophylaktische Kortikosteroide. Fünf Patienten behandelt, vier ansprechensauswertbar: zwei CR ab Woche 6, fortbestehend bis Monat 6, und zwei PR, fortbestehend bis Monat 3. Kein CRS, ICANS oder DLT; relevant waren schwere Zytopenien und GGT-Erhöhungen Grad ≥3 bei drei Patienten. Bei einem Patienten bestand eine PR trotz nicht nachweisbarem CAR-Transgen im peripheren Blut. Sehr frühes klinisches Signal mit kleinem Nenner und begrenzter Nachbeobachtung.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=694015",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2352,
+    "title": "uVivo · CD7-Nanobody-Targeting für In-vivo-CAR-T",
+    "diseases": [
+      "Multiples Myelom",
+      "B-NHL"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Lentiviraler Vektor",
+      "Präklinisch"
+    ],
+    "summary": "ASH-2026-Kongressabstract zur uVivo-Plattform: Ein verändertes Cocal-G-Hüllprotein reduziert den natürlichen breiten Tropismus des lentiviralen Vektors; ein CD7-Nanobody lenkt ihn gezielt zu T-Zellen. Der Beitrag beschreibt Produktion, Transduktion und präklinische Antitumoraktivität, unter anderem mit einem BCMA-CAR im Myelommodell. Ein erster behandelter Mensch wird erwähnt, klinische Ergebnisdaten werden jedoch nicht berichtet. Daher als technische/präklinische Entwicklung einzuordnen.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=694019",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2356,
+    "title": "RetroT · RNA-basierte gezielte CAR-Integration",
+    "diseases": [
+      "B-Zell-Neoplasien"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Gen-Editing",
+      "Lipidnanopartikel",
+      "Präklinisch"
+    ],
+    "summary": "ASH-2026-Kongressabstract mit präklinischen Daten zu einer vollständig RNA-basierten Plattform für dauerhafte genomische CAR-Integration. Ein LINE-1-abgeleitetes System kombiniert reverse Transkription mit CRISPR-gesteuertem DNA-Nicking und integriert einen CD19-CAR gezielt in den TRA-Locus. CD8-gerichtete Lipidnanopartikel ermöglichten in humanisierten Mäusen die In-vivo-Erzeugung von CAR-T-Zellen mit anschließender B-Zell-Depletion. Technisch relevant als nichtviraler Integrationsansatz; klinische Wirksamkeit und langfristige Genomsicherheit bleiben offen.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=694029",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2358,
+    "title": "inLV001 · Modulare Vektorplattform für In-vivo-CAR-T",
+    "diseases": [
+      "B-Zell-Neoplasien"
+    ],
+    "methods": [
+      "CAR-T",
+      "In-vivo-CAR-T",
+      "Lentiviraler Vektor",
+      "Präklinisch"
+    ],
+    "summary": "ASH-2026-Kongressabstract zur präklinischen inLV001-Plattform. Fünf Module adressieren T-Zell-Spezifität, verringerte LDLR-vermittelte Fehltransduktion, Schutz vor Phagozytose, unerwünschte CAR-Präsentation bei der Vektorherstellung und Immunerkennung. Im Mausmodell werden verbesserte Expansion und Persistenz gegenüber einem Vergleichsvektor beschrieben. Der innovative Schwerpunkt liegt in der Vektorarchitektur; Humanwirksamkeit und klinische Sicherheit sind nicht belegt.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=694033",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  },
+  {
+    "number": 2360,
+    "title": "IL-10-armierte CD19-CAR-T · Expansion und Immunaktivierung",
+    "diseases": [
+      "DLBCL"
+    ],
+    "methods": [
+      "CAR-T",
+      "Armored CAR-T",
+      "Expansionskinetik"
+    ],
+    "summary": "ASH-2026-Kongressabstract: explorativer Vergleich von 13 Patienten mit IL-10-exprimierenden und 26 mit konventionellen CD19-CAR-T-Zellen nach Flu/Cy. Die IL-10-Gruppe zeigte einen höheren Spitzenanteil zirkulierender CAR-T-Zellen; die Differenz der absoluten Peak-Zellzahlen war statistisch nicht gesichert. In einer kleinen Teilkohorte unterschieden sich IL-10- und IFN-γ-Verläufe, bei vergleichbarer CRS-Schwere. Interessant für funktionelles Armoring und Expansion; keine randomisierte Wirksamkeitsprüfung.",
+    "source": "https://onlineprogram.hematology.org/paper-details.aspx?pid=694037",
+    "collections": [
+      "moderne-car-t-konstrukte"
+    ]
+  }
+]
