@@ -1,0 +1,569 @@
+{
+  "id": "2026-W47",
+  "title": "KW 47 · November 2026",
+  "sets": [
+    {
+      "title": "Konditionierung & neue Lymphomdaten",
+      "questions": [
+        {
+          "topic": "Allo-Tx · Konditionierung",
+          "question": "Welche Aussage trifft die randomisierte Phase-III-Studie MC-FludT zu Treosulfan/Fludarabin gegenüber reduziert dosiertem Busulfan/Fludarabin am besten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Treosulfan/Fludarabin war beim ereignisfreien Überleben nicht unterlegen und in der Analyse überlegen.",
+              "feedback": "Das 2-Jahres-EFS betrug 64,0 % versus 50,4 %; die Studie erreichte Nichtunterlegenheit und die präspezifizierte Überlegenheitsanalyse."
+            },
+            {
+              "value": "B",
+              "label": "Treosulfan senkte ausschließlich die Rezidivrate, ohne Einfluss auf das EFS.",
+              "feedback": "Der primäre Endpunkt war das EFS; der Vorteil lässt sich nicht auf eine reine Rezidivreduktion verkürzen."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie verglich Treosulfan mit myeloablativem Busulfan/Cyclophosphamid bei jungen AML-Patienten.",
+              "feedback": "Verglichen wurde ein spezifisches Busulfan/Fludarabin-Regime bei älteren oder komorbiden AML/MDS-Patienten."
+            },
+            {
+              "value": "D",
+              "label": "Sie beweist die Überlegenheit von Treosulfan gegenüber jeder myeloablativen Konditionierung.",
+              "feedback": "Die externe Validität ist auf Population und konkreten Vergleichsarm begrenzt."
+            }
+          ],
+          "correct": "A",
+          "hint": "Achte auf Population, Vergleichsregime und primären Endpunkt.",
+          "explanation": "Die offene, randomisierte Phase-III-Studie an 31 Zentren schloss Erwachsene bis 70 Jahre mit AML in Remission oder MDS ein, die mindestens 50 Jahre alt waren oder einen HCT-CI >2 hatten. In der 2019 publizierten konfirmatorischen Analyse lag das 2-Jahres-EFS bei 64,0 % unter Treosulfan/Fludarabin und 50,4 % unter reduziert dosiertem Busulfan/Fludarabin (HR 0,65); Nichtunterlegenheit und die präspezifizierte Überlegenheitsanalyse wurden erreicht. Das Ergebnis gilt nicht automatisch gegenüber allen myeloablativen Regimen oder bei jungen, fitten Populationen.",
+          "sources": [
+            {
+              "title": "Beelen et al. · Lancet Haematology 2020 · MC-FludT",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/31606445/"
+            },
+            {
+              "title": "Beelen et al. · Lancet Haematology 2022 · finale Analyse",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35468331/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Allo-Tx · Graft Failure",
+          "question": "Nach zunächst regelrechter Neutrophilen- und Thrombozytenerholung fallen die Zellreihen wieder ab; Transfusionen und G-CSF werden erneut nötig. Wie lautet die passendste EBMT-Kategorie?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Primäres Graft Failure.",
+              "feedback": "Primäres Graft Failure bezeichnet das Ausbleiben der initialen hämatopoetischen Erholung."
+            },
+            {
+              "value": "B",
+              "label": "Sekundäres Graft Failure.",
+              "feedback": "Der erneute Funktionsverlust nach zuvor erreichter Erholung entspricht sekundärem Graft Failure."
+            },
+            {
+              "value": "C",
+              "label": "Poor Graft Function per Definition bei vollständigem Empfängerchimärismus.",
+              "feedback": "Poor Graft Function verlangt eine andere Abgrenzung; vollständiger Empfängerchimärismus passt zudem nicht zur Definition."
+            },
+            {
+              "value": "D",
+              "label": "Isolierte verzögerte Thrombozytenerholung.",
+              "feedback": "Beschrieben ist ein erneuter multilineärer Funktionsverlust nach initialer Erholung."
+            }
+          ],
+          "correct": "B",
+          "hint": "Entscheidend ist, ob eine initiale hämatopoetische Erholung bereits erreicht war.",
+          "explanation": "Das EBMT Handbook 2024 definiert sekundäres Graft Failure als erneuten Rückgang der hämatopoetischen Funktion mit Bedarf an Transfusionen oder Wachstumsfaktoren nach zuvor standardgerecht erreichter Neutrophilen- und Thrombozytenerholung. Chimerismus, Rezidiv, Medikamente und Infektionen müssen zur Ursachenklärung geprüft werden. Die Definition benennt das Syndrom, aber nicht dessen Ursache.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Graft Failure",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608339/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Lymphom · POLARGO",
+          "question": "Welche Aussage beschreibt den 2026 publizierten POLARGO-Befund bei für eine Transplantation ungeeigneten Patienten mit rezidiviertem/refraktärem DLBCL korrekt?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Pola-R-GemOx war einer CD19-CAR-T-Therapie randomisiert überlegen.",
+              "feedback": "Ein CAR-T-Arm war nicht Bestandteil der Studie."
+            },
+            {
+              "value": "B",
+              "label": "R-GemOx verlängerte das OS gegenüber Pola-R-GemOx.",
+              "feedback": "Die Richtung des OS-Effekts war umgekehrt."
+            },
+            {
+              "value": "C",
+              "label": "Pola-R-GemOx verbesserte das OS gegenüber R-GemOx, verursachte aber mehr Neuropathie und mehr tödliche Ereignisse.",
+              "feedback": "Das fasst Wirksamkeits- und Sicherheitssignal der randomisierten Studie zusammen."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie belegt Polatuzumab-Monotherapie als neuen Standard.",
+              "feedback": "Untersucht wurde die Kombination Pola-R-GemOx, nicht eine Monotherapie."
+            }
+          ],
+          "correct": "C",
+          "hint": "Prüfe zugleich den Kontrollarm und die Sicherheitsdaten.",
+          "explanation": "POLARGO war eine offene randomisierte Phase-III-Studie mit 255 für Transplantation ungeeigneten Erwachsenen mit R/R DLBCL. Nach median 24,6 Monaten betrug das mediane OS 19,5 versus 12,5 Monate (HR 0,60; 95-%-KI 0,43–0,83) zugunsten von Pola-R-GemOx. Periphere Neuropathie trat bei 57 % versus 29 % und tödliche unerwünschte Ereignisse bei 12 % versus 4 % auf, vielfach infektionsbedingt. Ohne CAR-T- oder Bispezifikum-Arm beantwortet die Studie weder deren direkten Vergleich noch die optimale Sequenz.",
+          "sources": [
+            {
+              "title": "Sehn et al. · Journal of Clinical Oncology 2026 · POLARGO",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42407012/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Lymphom · ENRICH",
+          "question": "Welche Schlussfolgerung ist aus ENRICH bei älteren, unbehandelten Patienten mit Mantelzelllymphom am belastbarsten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ibrutinib/Rituximab war Bendamustin/Rituximab eindeutig überlegen.",
+              "feedback": "Gegen den BR-Anteil des heterogenen Kontrollarms zeigte sich kein klarer PFS-Vorteil."
+            },
+            {
+              "value": "B",
+              "label": "Ibrutinib/Rituximab verlängerte das OS gegenüber beiden Chemotherapie-Regimen.",
+              "feedback": "Ein gesicherter OS-Vorteil gegenüber beiden Regimen ist damit nicht belegt."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie prüfte ausschließlich Patienten unter 65 Jahren vor autologer Transplantation.",
+              "feedback": "Die Population war älter; das mediane Alter lag bei 74 Jahren."
+            },
+            {
+              "value": "D",
+              "label": "Ibrutinib/Rituximab verbesserte im Gesamtkollektiv das PFS; die Aussage gegenüber BR allein bleibt unsicher.",
+              "feedback": "Das ist die angemessene Interpretation des heterogenen, vorab gewählten Kontrollarms."
+            }
+          ],
+          "correct": "D",
+          "hint": "Der Kontrollarm bestand aus zwei vorab gewählten Regimen.",
+          "explanation": "ENRICH war eine offene randomisierte Phase-II/III-Überlegenheitsstudie mit 397 zuvor unbehandelten MCL-Patienten, medianes Alter 74 Jahre. Ibrutinib/Rituximab verbesserte im Gesamtkollektiv das PFS gegenüber dem vorab gewählten Kontrollregime R-CHOP oder BR (HR 0,69; p=0,0034). Deskriptiv war der Effekt gegenüber R-CHOP deutlich (HR 0,37), gegenüber BR jedoch nicht (HR 0,91). Wegen des heterogenen Kontrollarms und nicht primär hierfür gepowerter Untergruppen ist eine gesicherte Überlegenheit gegenüber BR allein nicht ableitbar.",
+          "sources": [
+            {
+              "title": "Rule et al. · Lancet 2025 · ENRICH",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41052510/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "CAR-T · CMV-Monitoring",
+          "question": "Welche Strategie entspricht den ASTCT-Best-Practice-Empfehlungen zur CMV-Überwachung nach CAR-T?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Keine routinemäßige PCR für alle; bei Hochrisikopatienten kann eine wöchentliche Überwachung in Woche 2–6 erwogen werden.",
+              "feedback": "Die Empfehlung setzt auf risikoadaptierte statt universelle Überwachung."
+            },
+            {
+              "value": "B",
+              "label": "Lebenslange wöchentliche CMV-PCR für jeden CAR-T-Empfänger.",
+              "feedback": "Eine universelle lebenslange Überwachung wird nicht empfohlen."
+            },
+            {
+              "value": "C",
+              "label": "CMV-PCR erst bei histologisch bewiesener Organerkrankung.",
+              "feedback": "Bei Hochrisiko kann präemptive Überwachung vor Organerkrankung sinnvoll sein."
+            },
+            {
+              "value": "D",
+              "label": "Letermovir-Prophylaxe ist für alle CAR-T-Empfänger zwingender Standard.",
+              "feedback": "Eine universelle Letermovir-Prophylaxe nach CAR-T ist nicht als Standard etabliert."
+            }
+          ],
+          "correct": "A",
+          "hint": "Unterscheide universelles Screening von risikoadaptierter Surveillance.",
+          "explanation": "Die ASTCT-Best-Practice-Publikation von 2024 empfiehlt keine routinemäßige CMV-, EBV- oder HHV-6-PCR-Überwachung für alle CAR-T-Empfänger. Bei Hochrisikokonstellationen, etwa vorausgegangener CMV-Reaktivierung oder längerer Steroidtherapie, kann eine wöchentliche CMV-PCR in Woche 2–6 erwogen werden. Schwellenwerte und Nutzen sind mangels randomisierter CAR-T-Daten nicht standardisiert; dies ist daher eine Konsensempfehlung und kein Wirksamkeitsnachweis.",
+          "sources": [
+            {
+              "title": "ASTCT · Transplantation and Cellular Therapy 2024 · Infektionsprävention nach CAR-T",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12826105/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "title": "Transplantationsplattform & CAR-T-Realität",
+      "questions": [
+        {
+          "topic": "Allo-Tx · GvHD-Prophylaxe",
+          "question": "Was zeigte BMT CTN 1301 zu zwei CNI-freien Strategien nach myeloablativer HLA-gematchter Allo-HCT?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Beide Strategien verdoppelten das 2-Jahres-GRFS signifikant gegenüber Tacrolimus/Methotrexat.",
+              "feedback": "Keine der beiden Strategien verbesserte den primären CRFS-Endpunkt signifikant."
+            },
+            {
+              "value": "B",
+              "label": "Weder CD34-Selektion noch PTCy-Monotherapie verbesserte den primären CRFS-Endpunkt signifikant.",
+              "feedback": "Das trifft die randomisierte Hauptanalyse."
+            },
+            {
+              "value": "C",
+              "label": "PTCy-Monotherapie war toxizitätsfrei und wurde neuer universeller Standard.",
+              "feedback": "PTCy war nicht toxizitätsfrei; zudem erlaubt das Design keine universelle Aussage."
+            },
+            {
+              "value": "D",
+              "label": "Die Studie prüfte PTCy/Tacrolimus/MMF nach peripheren Stammzellen.",
+              "feedback": "Der PTCy-Arm verwendete Knochenmark und PTCy ohne zusätzlichen CNI."
+            }
+          ],
+          "correct": "B",
+          "hint": "Achte auf Graftquelle, Begleitimmunsuppression und primären Endpunkt.",
+          "explanation": "BMT CTN 1301 war eine randomisierte Phase-III-Studie bei akuten Leukämien oder MDS nach myeloablativer, HLA-gematchter HCT. CD34-selektierte periphere Stammzellen und Knochenmark mit PTCy-Monotherapie wurden mit Knochenmark plus Tacrolimus/Methotrexat verglichen. Das 2-Jahres-CRFS lag bei 50,6 %, 48,1 % und 41,0 %; keiner der experimentellen Arme war signifikant überlegen. Wegen unterschiedlicher Graftquellen und fehlender Tacrolimus/MMF-Kombination ist dies kein direkter Test moderner PTCy/Tacrolimus/MMF-PBSC-Plattformen.",
+          "sources": [
+            {
+              "title": "Luznik et al. · Journal of Clinical Oncology 2022 · BMT CTN 1301",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34855460/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Allo-Tx · Engraftment-Syndrom",
+          "question": "Welche Konstellation erfüllt für sich allein die Spitzer-Kriterien eines Engraftment-Syndroms im passenden Zeitfenster?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Fieber plus 2 % Gewichtszunahme ohne weitere Befunde.",
+              "feedback": "Das sind nicht drei Hauptkriterien; die Gewichtszunahme erreicht zudem nicht das Spitzer-Minorkriterium."
+            },
+            {
+              "value": "B",
+              "label": "Isolierte Diarrhö am Tag +20.",
+              "feedback": "Diarrhö ist kein Spitzer-Hauptkriterium und die Konstellation ist unzureichend."
+            },
+            {
+              "value": "C",
+              "label": "Nichtinfektiöses Fieber, Exanthem über >25 % der Körperoberfläche und nichtkardiogenes Lungenödem.",
+              "feedback": "Diese drei Hauptkriterien erfüllen die Spitzer-Definition im passenden Engraftment-Zeitfenster."
+            },
+            {
+              "value": "D",
+              "label": "Fieber, positive Blutkultur und kardiales Lungenödem.",
+              "feedback": "Infektion und kardiale Ursache sprechen gegen die geforderten nichtinfektiösen beziehungsweise nichtkardiogenen Kriterien."
+            }
+          ],
+          "correct": "C",
+          "hint": "Zähle die Hauptkriterien und prüfe jeweils die Ausschlussursachen.",
+          "explanation": "Nach dem EBMT Handbook gelten bei Spitzer drei Hauptkriterien oder zwei Haupt- plus mindestens ein Nebenkriterium innerhalb von 96 Stunden vor oder nach Engraftment. Nichtinfektiöses Fieber, Exanthem über >25 % der Körperoberfläche und nichtkardiogenes Lungenödem sind die drei Hauptkriterien. Die Kriterien wurden vor allem im Transplantationskontext entwickelt; Differenzialdiagnosen wie Infektion, Flüssigkeitsüberladung und frühe GvHD bleiben klinisch entscheidend.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Engraftment Syndrome",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608292/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "CAR-T · PMBCL in Zweitlinie",
+          "question": "Wie ist die 2026 publizierte multizentrische Analyse von Zweitlinien-CAR-T versus platinbasierter Salvage mit geplanter ASCT bei PMBCL zu bewerten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Sie beweist randomisiert die Überlegenheit von ASCT im Gesamtüberleben.",
+              "feedback": "Die Studie war retrospektiv und zeigte keinen gesicherten OS-Unterschied."
+            },
+            {
+              "value": "B",
+              "label": "Sie zeigt gleichwertige CR-Raten beider Strategien.",
+              "feedback": "Die beobachteten CR-Raten unterschieden sich deutlich."
+            },
+            {
+              "value": "C",
+              "label": "Sie erlaubt wegen perfekter Adjustierung eine kausale Therapiewahl.",
+              "feedback": "Restkonfounding, Epochenunterschiede und der kleine CAR-T-Arm verhindern diese Schlussfolgerung."
+            },
+            {
+              "value": "D",
+              "label": "Sie beobachtete längeres PFS unter der ASCT-Strategie, beweist aber wegen Retrospektivität und kleiner CAR-T-Gruppe keine Kausalität.",
+              "feedback": "Das ist die angemessene Interpretation der Daten."
+            }
+          ],
+          "correct": "D",
+          "hint": "Trenne den beobachteten Effekt von der kausalen Aussage des Designs.",
+          "explanation": "Die 2026 publizierte retrospektive Analyse aus 14 US-Zentren umfasste 252 PMBCL-Patienten aus den Jahren 2001–2025; 157 erhielten eine platinbasierte Strategie mit geplanter HDT/ASCT, 26 CAR-T in Zweitlinie. ORR, CR und PFS waren in der ASCT-Gruppe höher; das mediane PFS war nicht erreicht versus 3,5 Monate (HR 0,28), ein signifikanter OS-Unterschied fehlte. Zeitliche, biologische und selektionsbedingte Unterschiede sowie der kleine CAR-T-Arm schließen einen kausalen Rangvergleich aus.",
+          "sources": [
+            {
+              "title": "Multizentrische PMBCL-Analyse · Blood Advances 2026",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42623675/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Lymphom · Bispezifika in der Erstlinie",
+          "question": "Was ist die sachgerechte Einordnung von subkutanem Mosunetuzumab plus Polatuzumab bei unbehandelten gebrechlichen oder ungeeigneten DLBCL-Patienten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ein klinisch relevantes Phase-I/II-Signal, aber noch kein randomisierter Ersatz für R-miniCHOP.",
+              "feedback": "Die einarmige Studie ist vielversprechend, erlaubt aber keinen Vergleich mit R-miniCHOP."
+            },
+            {
+              "value": "B",
+              "label": "Randomisierter Nachweis eines OS-Vorteils gegenüber R-miniCHOP.",
+              "feedback": "Es gab keinen randomisierten Kontrollarm."
+            },
+            {
+              "value": "C",
+              "label": "Beleg, dass Infektionen in dieser Population kein relevantes Risiko sind.",
+              "feedback": "Infektionsbedingte Mortalität, besonders während COVID-19, war relevant."
+            },
+            {
+              "value": "D",
+              "label": "Studie ausschließlich bei fitten Patienten unter 60 Jahren.",
+              "feedback": "Das mediane Alter betrug 81 Jahre; untersucht wurden unfitte oder gebrechliche Patienten."
+            }
+          ],
+          "correct": "A",
+          "hint": "Welcher Vergleichsarm fehlte, und wie wurde die Fitness erfasst?",
+          "explanation": "Die 2026 publizierte internationale offene Phase-I/II-Studie behandelte 101 zuvor unbehandelte DLBCL-Patienten, medianes Alter 81 Jahre, die nach vereinfachtem geriatrischem Assessment unfit oder frail waren. Die EOT-CR-Rate betrug 56,4 %, das 2-Jahres-PFS 52,2 % und das 2-Jahres-OS 62,4 %; CRS trat bei 30,6 % überwiegend Grad 1 auf. Die einarmige Selektion und infektionsbedingte Todesfälle begrenzen die Aussage; ein Ersatz für R-miniCHOP ist ohne randomisierten Vergleich nicht bewiesen.",
+          "sources": [
+            {
+              "title": "Olszewski et al. · Blood 2026 · Mosunetuzumab plus Polatuzumab",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42832423/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "CAR-T · Hämatotoxizität",
+          "question": "Welche Aussage beschreibt die EHA/EBMT-Konsensusgraduierung der IEC-assoziierten Hämatotoxizität korrekt?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Frühe und späte ICAHT werden ausschließlich anhand des Ferritins graduiert.",
+              "feedback": "Ferritin ist kein alleiniger Graduierungsparameter."
+            },
+            {
+              "value": "B",
+              "label": "Frühe ICAHT bis Tag 30 berücksichtigt Tiefe und Dauer der Neutropenie; späte ICAHT nach Tag 30 vor allem deren Tiefe.",
+              "feedback": "Das ist das Grundprinzip der Konsensusgraduierung."
+            },
+            {
+              "value": "C",
+              "label": "Eine ANC von 400/µl über 16 Tage entspricht zwingend Grad 1.",
+              "feedback": "Eine so tiefe und lang anhaltende frühe Neutropenie ist höhergradig."
+            },
+            {
+              "value": "D",
+              "label": "Thrombozytopenie allein definiert den ICAHT-Grad.",
+              "feedback": "Die Graduierung ist primär neutropeniebasiert."
+            }
+          ],
+          "correct": "B",
+          "hint": "Zeitpunkt und Dauer der Neutropenie werden nicht in beiden Phasen gleich gewichtet.",
+          "explanation": "Der EHA/EBMT-Konsensus von 2023 teilt ICAHT in eine frühe Phase bis Tag 30 und eine späte Phase danach. Frühe ICAHT wird anhand von ANC-Tiefe und Dauer graduiert; späte ICAHT anhand einer bestätigten, nicht nur vorübergehenden ANC-Tiefe. Das System standardisiert Beschreibung und Management, ist aber kein prospektiv validierter Prädiktor für jede Zelltherapieplattform.",
+          "sources": [
+            {
+              "title": "Rejeski et al. · Blood 2023 · EHA/EBMT ICAHT-Konsensus",
+              "url": "https://ashpublications.org/blood/article/142/10/865/496185/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "title": "Spenderbiologie, Zelltherapie & Supportivmedizin",
+      "questions": [
+        {
+          "topic": "Allo-Tx · Donor-derived malignancy",
+          "question": "Ein myeloisches Neoplasma nach Allo-HCT zeigt vollständigen Spenderchimärismus in den Blasten und dieselbe Treibermutation wie eine präexistente klonale Hämatopoese des Spenders. Welche Aussage passt am besten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Es handelt sich definitionsgemäß um ein klassisches Empfängerrezidiv.",
+              "feedback": "Der Spenderursprung der Blasten spricht gegen ein klassisches Empfängerrezidiv."
+            },
+            {
+              "value": "B",
+              "label": "Der Befund beweist, dass jede klonale Hämatopoese des Spenders zur Leukämie führt.",
+              "feedback": "Nur ein kleiner Teil solcher Klone transformiert; eine deterministische Aussage ist falsch."
+            },
+            {
+              "value": "C",
+              "label": "Der Befund stützt eine donor-derived malignancy; ein genereller Ausschluss aller Spender mit klonaler Hämatopoese ist dennoch nicht evidenzbasiert.",
+              "feedback": "Das verbindet korrekte Diagnose mit der begrenzten Screening-Evidenz."
+            },
+            {
+              "value": "D",
+              "label": "Spenderchimärismus ist zur Ursprungszuordnung bedeutungslos.",
+              "feedback": "Gerade die Zuordnung der Blasten zum Spender ist diagnostisch zentral."
+            }
+          ],
+          "correct": "C",
+          "hint": "Trenne die Ursprungszuordnung des Neoplasmas von einer allgemeinen Spender-Screeningregel.",
+          "explanation": "Das EBMT Handbook 2024 beschreibt donor-derived malignancies als seltene Neoplasien aus transplantierten Spenderzellen; übertragene klonale Hämatopoese kann ein Mechanismus sein. Spenderchimärismus der Blasten plus geteilte Mutation stützt den Spenderursprung. Die absolute Transformationswahrscheinlichkeit ist jedoch niedrig und populationsabhängig; deshalb folgt daraus kein pauschaler evidenzbasierter Ausschluss jedes Spenders mit klonaler Hämatopoese.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Secondary Neoplasia and Donor-derived Malignancies",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608303/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Allo-Tx · Thrombozytentransfusion",
+          "question": "Ein klinisch stabiler Allo-HCT-Empfänger hat Fieber und eine Thrombozytenzahl von 18 × 10⁹/l, ohne aktive Blutung. Welche Strategie entspricht dem EBMT-Handbook?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Keine Transfusion bis <5 × 10⁹/l.",
+              "feedback": "Dieser Schwellenwert ist zu niedrig."
+            },
+            {
+              "value": "B",
+              "label": "Transfusion nur bei sichtbarer Blutung.",
+              "feedback": "Fieber beziehungsweise Infektion erhöht den prophylaktischen Schwellenwert."
+            },
+            {
+              "value": "C",
+              "label": "Immer erst bei <10 × 10⁹/l, unabhängig von Fieber.",
+              "feedback": "Bei Fieber oder Infektion wird typischerweise ein höherer Schwellenwert verwendet."
+            },
+            {
+              "value": "D",
+              "label": "Prophylaktische Thrombozytentransfusion ist bei 18 × 10⁹/l und Fieber angemessen.",
+              "feedback": "Bei Fieber beziehungsweise Infektion gilt typischerweise ein Schwellenwert von 20 × 10⁹/l oder höher."
+            }
+          ],
+          "correct": "D",
+          "hint": "Der prophylaktische Schwellenwert hängt vom Blutungsrisiko ab.",
+          "explanation": "Das EBMT Handbook 2024 empfiehlt bei nicht blutenden, afebrilen HCT-Patienten prophylaktisch meist ≤10 × 10⁹/l. Bei Fieber, Infektion oder anderen Blutungsrisiken wird üblicherweise bei ≤20 × 10⁹/l transfundiert; bei aktiver Blutung oder Eingriffen können höhere Ziele nötig sein. Diese Schwellen sind Leitwerte und müssen an klinische Risiken und lokale Standards angepasst werden.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Transfusion Support",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608283/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "Lymphom · Glofitamab bei MCL",
+          "question": "Welche Aussage trifft die Phase-I/II-Daten zu Glofitamab beim rezidivierten/refraktären Mantelzelllymphom?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Nach Obinutuzumab-Vorbehandlung wurde Glofitamab zeitlich begrenzt über maximal 12 Zyklen gegeben; die CR-Rate lag bei 78,3 %.",
+              "feedback": "Regime und Ergebnis entsprechen der einarmigen MCL-Kohorte."
+            },
+            {
+              "value": "B",
+              "label": "Glofitamab wurde bis zur Progression ohne Step-up-Dosierung gegeben.",
+              "feedback": "Die Gabe war auf 12 Zyklen begrenzt und verwendete Step-up-Dosierung."
+            },
+            {
+              "value": "C",
+              "label": "Die Studie randomisierte gegen einen BTK-Inhibitor.",
+              "feedback": "Es gab keinen randomisierten Kontrollarm."
+            },
+            {
+              "value": "D",
+              "label": "Vorbehandlung mit einem BTK-Inhibitor schloss die Teilnahme aus.",
+              "feedback": "31 Patienten waren bereits mit einem BTK-Inhibitor behandelt."
+            }
+          ],
+          "correct": "A",
+          "hint": "Achte auf Therapiedauer, Vorbehandlung und Studiendesign.",
+          "explanation": "Die 2025 publizierte MCL-Kohorte der einarmigen Phase-I/II-Studie NP30179 umfasste 61 eingeschlossene und 60 auswertbare Patienten nach median zwei Vortherapien. Nach Obinutuzumab-Vorbehandlung und Step-up-Dosierung wurde Glofitamab maximal 12 Zyklen gegeben; CR-Rate und ORR lagen bei 78,3 % und 85,0 %. Bei 31 BTKi-vorbehandelten Patienten lag die CR-Rate bei 71,0 %. Kleine Kohorte, Dosisheterogenität und fehlender Kontrollarm erlauben keinen direkten Vergleich mit CAR-T oder BTKi.",
+          "sources": [
+            {
+              "title": "Phillips et al. · Journal of Clinical Oncology 2025 · Glofitamab bei MCL",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/39365960/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "CAR-T · Allogene Zelltherapie",
+          "question": "Welche Interpretation passt zu den 2026 publizierten CTX110-Daten bei rezidiviertem/refraktärem B-NHL?",
+          "options": [
+            {
+              "value": "A",
+              "label": "CTX110 war autologer CAR-T-Therapie randomisiert überlegen.",
+              "feedback": "Die Studie hatte keinen autologen Kontrollarm."
+            },
+            {
+              "value": "B",
+              "label": "Die Phase-I/II-Studie zeigt Aktivität eines allogenen CD19-CAR-T-Produkts, aber noch keinen vergleichenden Wirksamkeitsnachweis.",
+              "feedback": "Das entspricht Design und Reichweite der Daten."
+            },
+            {
+              "value": "C",
+              "label": "Es trat bei keinem Patienten CRS oder ICANS auf.",
+              "feedback": "CRS und ICANS wurden beobachtet, wenn auch schwere Ereignisse selten waren."
+            },
+            {
+              "value": "D",
+              "label": "Alle kompletten Remissionen waren zum Datenschnitt dauerhaft.",
+              "feedback": "Nur ein Teil der kompletten Remissionen bestand zum Datenschnitt fort."
+            }
+          ],
+          "correct": "B",
+          "hint": "Welche Schlussfolgerung erlaubt eine einarmige Dosisfindungs- und Expansionsstudie?",
+          "explanation": "Die multizentrische, einarmige Phase-I/II-Studie von 2026 behandelte 63 stark vorbehandelte B-NHL-Patienten mit dem allogenen CD19-CAR-T-Produkt CTX110. Unter 57 Patienten nach erster Infusion auf Dosislevel ≥3 betrugen ORR 65 % und CR 39 %; fünf von 22 kompletten Remissionen waren zum Datenschnitt nach längerer Nachbeobachtung noch anhaltend. CRS trat bei 54 %, ICANS bei 13 % auf, Grad ≥3 jeweils bei zwei Patienten. Dosisheterogenität, erneute Infusionen und fehlender Vergleichsarm verhindern Aussagen zur Überlegenheit gegenüber autologen Produkten.",
+          "sources": [
+            {
+              "title": "Frigault et al. · Blood Advances 2026 · CTX110",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/42085626/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        },
+        {
+          "topic": "CAR-T · Impfungen",
+          "question": "Wann sollen bei einem Erwachsenen in Remission nach CAR-T reguläre inaktivierte Impfungen typischerweise wieder begonnen werden?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Am Tag der CAR-T-Infusion, unabhängig von IVIG.",
+              "feedback": "In der frühen Phase ist die Immunantwort voraussichtlich unzureichend."
+            },
+            {
+              "value": "B",
+              "label": "Nach vier Wochen, auch unter laufender immunsuppressiver Therapie.",
+              "feedback": "Das ist für reguläre inaktivierte Impfserien zu früh."
+            },
+            {
+              "value": "C",
+              "label": "Ab etwa sechs Monaten nach CAR-T und mindestens zwei Monate nach der letzten IVIG-Gabe, sofern klinisch geeignet.",
+              "feedback": "Dies entspricht der ASTCT-orientierten Empfehlung für reguläre inaktivierte Impfungen."
+            },
+            {
+              "value": "D",
+              "label": "Erst nach fünf Jahren und vollständiger B-Zell-Normalisierung.",
+              "feedback": "Ein derart langer genereller Aufschub wird nicht empfohlen."
+            }
+          ],
+          "correct": "C",
+          "hint": "Saisonimpfungen und reguläre Wiederholungsserien haben unterschiedliche Zeitfenster.",
+          "explanation": "ASTCT-orientierte Empfehlungen von 2024 sehen reguläre inaktivierte Impfungen bei klinisch geeigneten Erwachsenen in Remission typischerweise ab ≥6 Monaten nach CAR-T und ≥2 Monaten nach der letzten IVIG-Gabe vor. Influenza- und COVID-19-Impfungen können bereits ab etwa drei Monaten erfolgen. Die Evidenz ist überwiegend konsens- und immunogenitätsbasiert, Antworten variieren bei B-Zell-Aplasie und Hypogammaglobulinämie; individuelle Immunsuppression bleibt zu berücksichtigen.",
+          "sources": [
+            {
+              "title": "ASTCT · Transplantation and Cellular Therapy 2024 · Impfschema nach CAR-T",
+              "url": "https://www.astctjournal.org/article/S2666-6367(24)00549-9/fulltext"
+            },
+            {
+              "title": "Bishop et al. · Hematology ASH Education Program 2024 · Langzeitbetreuung nach CAR-T",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11665735/"
+            }
+          ],
+          "reviewed_at": "2026-11-19"
+        }
+      ]
+    }
+  ]
+}
