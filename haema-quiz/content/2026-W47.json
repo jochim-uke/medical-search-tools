@@ -278,7 +278,7 @@
             {
               "value": "B",
               "label": "Sie zeigt gleichwertige CR-Raten beider Strategien.",
-              "feedback": "Die beobachteten CR-Raten unterschieden sich deutlich."
+              "feedback": "Die CR-Rate war unter CAR-T höher: 65,2 % gegenüber 14,7 % unter platinbasierter Salvage."
             },
             {
               "value": "C",
@@ -287,17 +287,21 @@
             },
             {
               "value": "D",
-              "label": "Sie beobachtete längeres PFS unter der ASCT-Strategie, beweist aber wegen Retrospektivität und kleiner CAR-T-Gruppe keine Kausalität.",
-              "feedback": "Das ist die angemessene Interpretation der Daten."
+              "label": "Sie beobachtete längeres PFS unter CAR-T gegenüber platinbasierter Salvage mit geplanter ASCT; das retrospektive Design beweist jedoch keine Kausalität.",
+              "feedback": "ORR, CR-Rate und PFS waren unter CAR-T höher; ein signifikanter OS-Unterschied fehlte. Verglichen wurden Therapiestrategien, nicht ausschließlich tatsächlich transplantierte Patienten."
             }
           ],
           "correct": "D",
           "hint": "Trenne den beobachteten Effekt von der kausalen Aussage des Designs.",
-          "explanation": "Die 2026 publizierte retrospektive Analyse aus 14 US-Zentren umfasste 252 PMBCL-Patienten aus den Jahren 2001–2025; 157 erhielten eine platinbasierte Strategie mit geplanter HDT/ASCT, 26 CAR-T in Zweitlinie. ORR, CR und PFS waren in der ASCT-Gruppe höher; das mediane PFS war nicht erreicht versus 3,5 Monate (HR 0,28), ein signifikanter OS-Unterschied fehlte. Zeitliche, biologische und selektionsbedingte Unterschiede sowie der kleine CAR-T-Arm schließen einen kausalen Rangvergleich aus.",
+          "explanation": "Die 2026 publizierte retrospektive Analyse aus 14 US-Zentren erfasste 252 PMBCL-Patienten mit Zweitlinientherapie 2001–2025. Verglichen wurden CAR-T (n=26) und platinbasierte Salvage mit geplanter HDT/ASCT (n=157). Zugunsten von CAR-T lagen ORR bei 91,3 % versus 44,2 % und CR-Rate bei 65,2 % versus 14,7 % (Response-auswertbar: 23 versus 156). Das mediane PFS war unter CAR-T nicht erreicht versus 3,5 Monate; HR 0,28 (95-%-KI 0,15–0,54). Ein signifikanter OS-Unterschied fehlte. Die selektierte Untergruppe, die tatsächlich HDT/ASCT erreichte, hatte mit CAR-T vergleichbare Ergebnisse; daraus folgt keine Äquivalenz. Retrospektivität, Epochenunterschiede und kleine CAR-T-Kohorte begrenzen kausale Schlüsse. Korrektur vom 19.11.2026: Die ursprüngliche Quizfassung hatte die Effektrichtung fälschlich der ASCT-Strategie zugeordnet.",
           "sources": [
             {
-              "title": "Multizentrische PMBCL-Analyse · Blood Advances 2026",
+              "title": "Yang et al. · Blood Advances 2026 · PMBCL-Zweitlinie",
               "url": "https://pubmed.ncbi.nlm.nih.gov/42623675/"
+            },
+            {
+              "title": "Yang et al. · Volltext einschließlich tatsächlich transplantierter Untergruppe",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13755856/"
             }
           ],
           "reviewed_at": "2026-11-19"
