@@ -12,8 +12,28 @@ async function api(action,body={}){
   if(!response.ok){if(response.status===401&&action!=='login'){forget();render();}const error=new Error(result.error||'Die Anfrage ist fehlgeschlagen.');error.status=response.status;throw error;}return result;
 }
 function message(node,text,ok=false){node.textContent=text;node.classList.toggle('saved',ok);}
-async function busy(button,work,status=$('#status')){button.disabled=true;try{await work();}catch(error){message(status,error.message);}finally{button.disabled=false;}}
+async function busy(button,work,status=$('#status')){button.disabled=true;try{await work();}catch(error){message(status.isConnected?status:$('#status'),error.message);}finally{button.disabled=false;}}
 function button(label,handler,className='secondary'){const b=el('button',className,label);b.type='button';b.addEventListener('click',()=>handler(b));return b;}
+function deleteEntryButton(entry,status){
+  return button('Meldung löschen',b=>{
+    if(!isAdmin||!window.confirm(`„${entry.title}“ endgültig löschen?\n\nDie Meldung, ihre Notiz und alle Kommentare werden gelöscht. Der vollständige Wochenbericht bleibt lesbar.`))return;
+    busy(b,async()=>{
+      const result=await api('entry-delete',{id:entry.id,version:entry.version});
+      if(result.ok!==true)throw new Error('Das Löschen konnte nicht bestätigt werden. Bitte das Archiv aktualisieren.');
+      data.entries=data.entries.filter(e=>e.id!==entry.id);
+      data.comments=data.comments.filter(c=>c.entry_id!==entry.id);
+      data.links=data.links.filter(l=>l.entry_id!==entry.id);
+      if(activeId===entry.id){
+        notesDirty=false;
+        activeId='';
+        $('#detail').close();
+        $('#detail-content').replaceChildren();
+      }
+      render();
+      message($('#status'),`„${entry.title}“ wurde aus dem Archiv entfernt.`,true);
+    },status);
+  },'text-button delete-entry');
+}
 function zoteroButton(entry){
   const b=button('Zu Zotero hinzufügen',()=>openZotero(entry),'secondary zotero-button');
   b.disabled=!sourceOptions(entry).length;
@@ -50,7 +70,7 @@ function rich(value){const container=el('div','rich-text');const re=/\[([^\]]+)\
 function entries(){return data.entries.map(e=>({...e,comments:data.comments.filter(c=>c.entry_id===e.id)}));}
 function syncAccount(){ $('#admin-login').hidden=isAdmin;$('#import-open').hidden=!isAdmin;$('#logout').hidden=!isAdmin; }
 async function load(){const next=await api('list');data=next;isAdmin=next.is_admin===true;if(!isAdmin&&token)forget();syncAccount();render();}
-function forget(){token='';isAdmin=false;sessionStorage.removeItem('update-archive-token');localStorage.removeItem('update-archive-token');syncAccount();if(!$('#detail').open)$('#detail-content').replaceChildren();else{const author=$('#detail input[name="author"]');if(author?.readOnly){author.readOnly=false;author.value='';}$('#detail').querySelectorAll('.priority-control button,.comment-actions button').forEach(b=>b.disabled=true);}}
+function forget(){token='';isAdmin=false;sessionStorage.removeItem('update-archive-token');localStorage.removeItem('update-archive-token');syncAccount();if(!$('#detail').open)$('#detail-content').replaceChildren();else{const author=$('#detail input[name="author"]');if(author?.readOnly){author.readOnly=false;author.value='';}$('#detail .delete-entry')?.remove();$('#detail').querySelectorAll('.priority-control button,.comment-actions button').forEach(b=>b.disabled=true);}}
 $('#admin-login').onclick=()=>{message($('#login-status'),'');$('#login').showModal();$('#password').focus();};
 $('#login-form').addEventListener('submit',event=>{event.preventDefault();busy(event.submitter,async()=>{message($('#login-status'),'Anmeldung wird geprüft …');const result=await api('login',{password:$('#password').value,remember:$('#remember').checked});token=result.token;sessionStorage.removeItem('update-archive-token');localStorage.removeItem('update-archive-token');($('#remember').checked?localStorage:sessionStorage).setItem('update-archive-token',token);$('#password').value='';await load();if(!isAdmin)throw new Error('Die Admin-Sitzung konnte nicht bestätigt werden. Bitte erneut anmelden.');$('#login').close();message($('#login-status'),'');message($('#status'),'Als Admin angemeldet.',true);},$('#login-status'));});
 $('#show-password').onclick=()=>{const visible=$('#password').type==='password';$('#password').type=visible?'text':'password';$('#show-password').textContent=visible?'Ausblenden':'Anzeigen';$('#show-password').setAttribute('aria-pressed',String(visible));};
@@ -80,17 +100,24 @@ function render(){
     const terms=normalize(f.query).split(/\s+/).filter(Boolean),noteHit=[entry.notes,...entry.comments.map(c=>`${c.author||''}: ${c.body}`)].find(t=>terms.length&&terms.some(q=>normalize(t).includes(q)));
     if(noteHit)main.append(el('p','search-match','Notiz / Kommentar: '+noteHit.slice(0,300)));
     const bottom=el('div','entry-bottom');bottom.append(button('Lesen & kommentieren →',()=>openEntry(entry.id),'text-button'),zoteroButton(entry),el('span','',`${entry.comments.length} Kommentare`),el('span','',`${entry.clicks} Aufruftage`));if(entry.notes.trim())bottom.append(el('span','','Notiz vorhanden'));main.append(bottom);
+    if(isAdmin){
+      const deleteStatus=el('p');
+      deleteStatus.setAttribute('role','status');
+      bottom.append(deleteEntryButton(entry,deleteStatus));
+      main.append(deleteStatus);
+    }
     const side=el('div');side.append(el('p','priority-caption','Admin-Priorität'),priorityControl(entry));card.append(main,side);$('#results').append(card);
   }
 }
 async function openEntry(id){
   activeId=id;notesDirty=false;drawDetail();$('#detail').showModal();
-  try{const result=await api('visit',{id});const entry=data.entries.find(e=>e.id===id);if(entry)entry.clicks=result.clicks;render();}catch(error){message($('#detail-status'),error.message);}
+  try{const result=await api('visit',{id});const entry=data.entries.find(e=>e.id===id);if(entry){entry.clicks=result.clicks;render();}}catch(error){if(activeId===id&&$('#detail').open)message($('#detail-status'),error.message);}
 }
 function drawDetail(){
   const entry=data.entries.find(e=>e.id===activeId);if(!entry)return;const root=$('#detail-content');root.replaceChildren();const status=el('p');status.id='detail-status';status.setAttribute('role','status');
   const meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',`Bericht vom ${formatDate(entry.report_date)}`));root.append(meta,el('h2','detail-title',entry.title));
   const tools=el('div','detail-tools');tools.append(priorityControl(entry,status),zoteroButton(entry));if(entry.source_url)tools.append(link('Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
+  if(isAdmin)tools.append(deleteEntryButton(entry,status));
   const reportSection=el('section','detail-section');reportSection.append(el('h3','','In diesen Wochenberichten'));for(const rel of data.links.filter(l=>l.entry_id===entry.id)){const report=data.reports.find(r=>r.id===rel.report_id);if(report){const details=el('details','report-item');details.append(el('summary','',`${formatDate(report.report_date)} · ${report.title}`),rich(report.body));reportSection.append(details);}}root.append(reportSection);
   if(isAdmin){const notes=el('section','detail-section'),label=el('label','','Admin-Notiz'),textarea=el('textarea');textarea.rows=5;textarea.maxLength=40000;textarea.value=entry.notes;textarea.placeholder='Was möchte ich zu dieser Meldung festhalten?';label.append(textarea);textarea.oninput=()=>notesDirty=textarea.value!==entry.notes;
     notes.append(label,el('p','hint','Diese Notiz ist öffentlich sichtbar.'),button('Notiz speichern',b=>busy(b,async()=>{const result=await api('update',{id:entry.id,version:entry.version,notes:textarea.value});Object.assign(entry,result.entry);notesDirty=false;render();message(status,'Notiz gespeichert.',true);},status)));root.append(notes);

@@ -70,6 +70,14 @@ async function action(req,body){
   // Every other operation requires the server-verified admin session.
   if(!isAdmin)throw new APIError('Bitte als Admin anmelden. Nur der Admin darf diese Änderung vornehmen.',401);
   if(body.action==='logout'){await db(`ua_sessions?token_hash=eq.${tokenHash}`,'DELETE');return {ok:true};}
+  if(body.action==='entry-delete'){
+    if(typeof body.id!=='string'||!body.id.trim())throw new APIError('Ungültige Meldungs-ID.');
+    if(!Number.isInteger(body.version)||body.version<0||body.version>2147483647)throw new APIError('Ungültiger Versionsstand.');
+    const result=await db('rpc/ua_delete_entry','POST',{p_id:body.id,p_version:body.version});
+    if(result==='conflict')throw new APIError('Die Meldung wurde inzwischen geändert. Bitte das Archiv aktualisieren und die Meldung erneut prüfen.',409);
+    if(result!=='deleted'&&result!=='missing')throw new APIError('Das Löschen konnte nicht bestätigt werden. Bitte das Archiv aktualisieren.',502);
+    return {ok:true};
+  }
   if(body.action==='update'){
     const id=text(body.id,200);if(!Number.isInteger(body.version)||body.version<0)throw new APIError('Ungültiger Versionsstand.');
     const patch={version:body.version+1};
