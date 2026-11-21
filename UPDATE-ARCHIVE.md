@@ -53,4 +53,16 @@ Noch offene Linkzuordnungen wurden nicht importiert: #1051 (QI-019A), #1056 (TmC
 
 Prüfung: `supabase/ash2026-collections.test.sql` testet innerhalb einer zurückgerollten Transaktion das Ein-/Ausschalten, Versionskonflikte, unerlaubte Slugs und das Anlegen mit Sammlungszuordnung. Fehlende/ungültige Sitzungen sowie direkte Gast-Schreibzugriffe wurden separat geprüft. Es verbleiben keine Testbeiträge oder Testsitzungen.
 
+## Zotero-Bibliothek
 
+Der Filter „Zotero-Bibliothek“ ist mit `updates/#zotero` direkt aufrufbar. Die neuen Einträge teilen sich Suche, Prioritäten, Kommentare und Adminfunktionen mit den Wochenmeldungen. Das Filterdatum ist der Tag der Aufnahme in Zotero. Ein Eintrag enthält die bibliografische Angabe, die deutsche KI-Zusammenfassung und vorzugsweise den DOI-Link. Ein bereits behandeltes Paper kann in beiden redaktionellen Kontexten erscheinen. Innerhalb der Zotero-Kategorie wird ein normalisierter DOI nur einmal veröffentlicht.
+
+Die persönliche Webbibliothek wird serverseitig lesend abgerufen. Im Supabase Vault des Archivprojekts liegt der dedizierte Leseschlüssel unter `zotero_read_key`. Die GitHub-Seite verwendet ausschließlich die bestehende öffentliche Archiv-API. Der Datenbankbesitzer richtet das private Schema und den Abruf mit `supabase/update-archive-zotero.sql` und anschließend `supabase/update-archive-zotero-sync.sql` ein. SQL-Regressionstests in `supabase/update-archive-zotero.test.sql` arbeiten mit temporären Tabellen.
+
+Der vierzehntägliche ChatGPT-Auftrag verwendet diese Schritte auch zur Wiederaufnahme:
+
+1. `select zotero_archive.discover();` merkt neue Schlüssel vor und speichert die Zotero-Bibliotheksversion atomar. `status = 200` bestätigt den Abruf. Bei einer Sperrfrist das zurückgegebene `retry_at` beachten.
+2. `select zotero_archive.load_batch();` lädt bis zu 25 Datensätze. Fortsetzen, bis keine neuen Schlüssel vorliegen. Originalabstracts, bibliografische Arbeitsfelder und unverifizierte URLs sind ausschließlich im privaten Schema verfügbar.
+3. `select item_key, metadata from zotero_archive.items where state='ready' order by item_key limit 10;` liefert das nächste Arbeitspaket. Quellentyp und Quelle prüfen, quantitative Ergebnisse und Einschränkungen individuell auf Deutsch zusammenfassen. Einen verifizierten Beitrag ohne zugängliches Abstract als bibliografischen Eintrag mit begrenzter Quellenlage kennzeichnen. Private Dokumente oder eindeutig fachfremde Nichtpublikationen mit kurzer Begründung auf `skipped` setzen. Veröffentlichte Arbeiten aus anderen Fachgebieten bleiben eingeschlossen.
+4. Pro Publikation `select zotero_archive.publish(p_key, p_summary, p_doi, p_source, p_tags);` ausführen. NULL verwendet die DOI aus Zotero, ein expliziter leerer DOI erlaubt bei fehlerhafter DOI den Rückgriff auf PMID oder geprüften Quellenlink. Nur kanonische, öffentliche Publikationslinks übernehmen. Tags beschreiben den öffentlichen Inhalt. Erledigte Einträge behalten ihren Bearbeitungsstatus, auch wenn eine Meldung später aus dem Archiv entfernt wird.
+5. `select state,count(*) from zotero_archive.items group by state;` zeigt den Fortschritt. Die Zahl öffentlicher Publikationen steht in `public.ua_entries` mit `category='Zotero-Bibliothek'`. Sie kann aufgrund von Dubletten kleiner als die Zahl verarbeiteter Schlüssel sein.

@@ -5,7 +5,9 @@ const KEY='sb_publishable_ZYbal6vsT-gcmAHu-eugKw_h7Fif-1x';
 const $=s=>document.querySelector(s), el=(tag,className,text)=>{const n=document.createElement(tag);if(className)n.className=className;if(text!==undefined)n.textContent=text;return n;};
 let token=sessionStorage.getItem('update-archive-token')||localStorage.getItem('update-archive-token')||'';
 let isAdmin=false;
-let data={entries:[],reports:[],comments:[],links:[]},category='',activeId='',drafts=[],importReport=null,notesDirty=false;
+const zoteroCategory='Zotero-Bibliothek';
+let visibleEntries=60, lastFilter='';
+let data={entries:[],reports:[],comments:[],links:[]},category=location.hash==='#zotero'?zoteroCategory:'',activeId='',drafts=[],importReport=null,notesDirty=false;
 async function api(action,body={}){
   let response;try{response=await fetch(API,{method:'POST',cache:'no-store',headers:{'Content-Type':'application/json',apikey:KEY,...(token?{'x-archive-token':token}:{})},body:JSON.stringify({action,...body})});}catch{throw new Error('Keine Verbindung. Bitte erneut versuchen; dein Eingabetext bleibt erhalten.');}
   const result=await response.json().catch(()=>({error:'Ungültige Serverantwort.'}));
@@ -56,9 +58,25 @@ $('#login-form').addEventListener('submit',event=>{event.preventDefault();busy(e
 $('#show-password').onclick=()=>{const visible=$('#password').type==='password';$('#password').type=visible?'text':'password';$('#show-password').textContent=visible?'Ausblenden':'Anzeigen';$('#show-password').setAttribute('aria-pressed',String(visible));};
 $('#logout').onclick=()=>busy($('#logout'),async()=>{try{await api('logout');}catch(error){if(error.status!==401)throw error;}forget();render();message($('#status'),'Admin abgemeldet. Du kannst das Archiv weiter lesen und kommentieren.',true);});
 $('#refresh').onclick=()=>busy($('#refresh'),async()=>{await load();message($('#status'),'Archiv aktualisiert.',true);});
+function setCategory(value){
+  category=value;
+  if(value===zoteroCategory || location.hash==='#zotero'){
+    const url=new URL(location.href);
+    url.hash=value===zoteroCategory?'zotero':'';
+    history.replaceState(null,'',url);
+  }
+}
+window.addEventListener('hashchange',()=>{category=location.hash==='#zotero'?zoteroCategory:'';render();});
+function entryDate(entry){
+  const label=entry.category===zoteroCategory?'In Zotero seit':'Bericht vom';
+  return label+' '+formatDate(entry.report_date);
+}
+function doiLink(entry){
+  return entry.category===zoteroCategory && entry.source_url.startsWith('https://doi.org/');
+}
 function filters(){return {query:$('#search').value,category,tag:$('#tag-filter').value,sort:$('#sort').value,from:$('#from').value,to:$('#to').value,priority:$('#priority-filter').value,noted:$('#only-noted').checked};}
 for(const id of ['search','tag-filter','sort','from','to','priority-filter','only-noted'])$('#'+id).addEventListener(id==='search'?'input':'change',render);
-$('#reset').onclick=()=>{category='';$('#search').value='';$('#tag-filter').value='';$('#from').value='';$('#to').value='';$('#priority-filter').value='all';$('#only-noted').checked=false;$('#sort').value='newest';render();};
+$('#reset').onclick=()=>{setCategory('');$('#search').value='';$('#tag-filter').value='';$('#from').value='';$('#to').value='';$('#priority-filter').value='all';$('#only-noted').checked=false;$('#sort').value='newest';render();};
 function priorityControl(entry,status=$('#status')){
   if(!isAdmin){const value=el('span','priority-readonly',entry.priority?'+'.repeat(entry.priority):'Nicht priorisiert');value.setAttribute('aria-label','Admin-Priorität: '+(entry.priority||'keine'));return value;}
   const group=el('div','priority-control');group.setAttribute('role','group');group.setAttribute('aria-label','Priorität');
@@ -71,17 +89,20 @@ function render(){
   $('#tag-filter').value=tags.includes(selectedTag)?selectedTag:'';
   const f=filters(),shown=selectEntries(all,f);$('#entry-count').textContent=all.length;$('#report-count').textContent=data.reports.length;$('#noted-count').textContent=all.filter(e=>e.notes.trim()||e.comments.length).length;
   $('#interest-help').hidden=f.sort!=='interest';$('#result-count').textContent=`${shown.length} von ${all.length} Meldungen`;
-  $('#categories').replaceChildren();for(const cat of ['',...categories]){const count=cat?all.filter(e=>e.category===cat).length:all.length;const b=button(`${cat||'Alle'} · ${count}`,()=>{category=cat;render();},'chip'+(category===cat?' active':''));b.setAttribute('aria-pressed',String(category===cat));$('#categories').append(b);}
-  $('#results').replaceChildren();if(!shown.length){$('#results').append(el('div','empty',all.length?'Keine passenden Meldungen. Ändere den Suchtext oder die Filter.':'Noch keine Meldungen. Füge deinen ersten Wochenbericht hinzu.'));return;}
-  for(const entry of shown){
-    const card=el('article','entry');card.dataset.priority=entry.priority;const main=el('div'),meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',`Bericht vom ${formatDate(entry.report_date)}`));
+  $('#categories').replaceChildren();for(const cat of ['',...categories,zoteroCategory]){const count=cat?all.filter(e=>e.category===cat).length:all.length;const b=button(`${cat||'Alle'} · ${count}`,()=>{setCategory(cat);render();},'chip'+(category===cat?' active':''));b.setAttribute('aria-pressed',String(category===cat));$('#categories').append(b);}
+  $('#results').replaceChildren();if(!shown.length){$('#results').append(el('div','empty',category===zoteroCategory&&!all.some(e=>e.category===zoteroCategory)?'Die Zotero-Bibliothek enthält noch keine archivierten Publikationen.':all.length?'Keine passenden Meldungen. Ändere den Suchtext oder die Filter.':'Noch keine Meldungen. Füge deinen ersten Wochenbericht hinzu.'));return;}
+  const filterKey=JSON.stringify(f);
+  if(lastFilter!==filterKey){visibleEntries=60;lastFilter=filterKey;}
+  for(const entry of shown.slice(0,visibleEntries)){
+    const card=el('article','entry');card.dataset.priority=entry.priority;const main=el('div'),meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',entryDate(entry)));
     const h=el('h3');h.append(button(entry.title,()=>openEntry(entry.id),'open-entry'));main.append(meta,h,el('p','excerpt',plain(entry.body).slice(0,260)+(plain(entry.body).length>260?' …':'')));
     const tags=el('div','tags');entry.tags.forEach(t=>tags.append(el('span','tag',t)));main.append(tags);
     const terms=normalize(f.query).split(/\s+/).filter(Boolean),noteHit=[entry.notes,...entry.comments.map(c=>`${c.author||''}: ${c.body}`)].find(t=>terms.length&&terms.some(q=>normalize(t).includes(q)));
     if(noteHit)main.append(el('p','search-match','Notiz / Kommentar: '+noteHit.slice(0,300)));
-    const bottom=el('div','entry-bottom');bottom.append(button('Lesen & kommentieren →',()=>openEntry(entry.id),'text-button'),zoteroButton(entry),el('span','',`${entry.comments.length} Kommentare`),el('span','',`${entry.clicks} Aufruftage`));if(entry.notes.trim())bottom.append(el('span','','Notiz vorhanden'));main.append(bottom);
+    const bottom=el('div','entry-bottom');bottom.append(button('Lesen & kommentieren →',()=>openEntry(entry.id),'text-button'),zoteroButton(entry),el('span','',`${entry.comments.length} Kommentare`),el('span','',`${entry.clicks} Aufruftage`));if(entry.notes.trim())bottom.append(el('span','','Notiz vorhanden'));if(doiLink(entry))bottom.append(link('DOI öffnen ↗',entry.source_url));main.append(bottom);
     const side=el('div');side.append(el('p','priority-caption','Admin-Priorität'),priorityControl(entry));card.append(main,side);$('#results').append(card);
   }
+  if(shown.length>visibleEntries)$('#results').append(button('Weitere Meldungen anzeigen',()=>{visibleEntries+=60;render();},'secondary'));
 }
 async function openEntry(id){
   activeId=id;notesDirty=false;drawDetail();$('#detail').showModal();
@@ -89,9 +110,9 @@ async function openEntry(id){
 }
 function drawDetail(){
   const entry=data.entries.find(e=>e.id===activeId);if(!entry)return;const root=$('#detail-content');root.replaceChildren();const status=el('p');status.id='detail-status';status.setAttribute('role','status');
-  const meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',`Bericht vom ${formatDate(entry.report_date)}`));root.append(meta,el('h2','detail-title',entry.title));
-  const tools=el('div','detail-tools');tools.append(priorityControl(entry,status),zoteroButton(entry));if(entry.source_url)tools.append(link('Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
-  const reportSection=el('section','detail-section');reportSection.append(el('h3','','In diesen Wochenberichten'));for(const rel of data.links.filter(l=>l.entry_id===entry.id)){const report=data.reports.find(r=>r.id===rel.report_id);if(report){const details=el('details','report-item');details.append(el('summary','',`${formatDate(report.report_date)} · ${report.title}`),rich(report.body));reportSection.append(details);}}root.append(reportSection);
+  const meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',entryDate(entry)));root.append(meta,el('h2','detail-title',entry.title));
+  const tools=el('div','detail-tools');tools.append(priorityControl(entry,status),zoteroButton(entry));if(entry.source_url)tools.append(link(doiLink(entry)?'DOI öffnen ↗':'Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
+  const reportSection=el('section','detail-section');reportSection.append(el('h3','','In diesen Wochenberichten'));for(const rel of data.links.filter(l=>l.entry_id===entry.id)){const report=data.reports.find(r=>r.id===rel.report_id);if(report){const details=el('details','report-item');details.append(el('summary','',`${formatDate(report.report_date)} · ${report.title}`),rich(report.body));reportSection.append(details);}}if(reportSection.children.length>1)root.append(reportSection);
   if(isAdmin){const notes=el('section','detail-section'),label=el('label','','Admin-Notiz'),textarea=el('textarea');textarea.rows=5;textarea.maxLength=40000;textarea.value=entry.notes;textarea.placeholder='Was möchte ich zu dieser Meldung festhalten?';label.append(textarea);textarea.oninput=()=>notesDirty=textarea.value!==entry.notes;
     notes.append(label,el('p','hint','Diese Notiz ist öffentlich sichtbar.'),button('Notiz speichern',b=>busy(b,async()=>{const result=await api('update',{id:entry.id,version:entry.version,notes:textarea.value});Object.assign(entry,result.entry);notesDirty=false;render();message(status,'Notiz gespeichert.',true);},status)));root.append(notes);
   }else if(entry.notes.trim()){const notes=el('section','detail-section');notes.append(el('h3','','Admin-Notiz'),rich(entry.notes));root.append(notes);}
