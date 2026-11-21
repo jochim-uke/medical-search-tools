@@ -20,6 +20,8 @@ Priorität (0–3) hat bei der Interessensortierung Vorrang. Innerhalb einer Stu
 
 ## Betrieb und Tests
 
+Als Admin kannst du eine einzelne Meldung auf ihrer Karte oder in der Detailansicht mit „Meldung löschen“ entfernen. Die Bestätigung zeigt den Titel. Die Edge Function prüft die angezeigte Version unter einer Zeilensperre und löscht die Meldung mit Notiz, Kommentaren, Aufruftagen und Berichtsverknüpfungen in einer Transaktion. Die vollständigen Wochenberichte bleiben lesbar. Ein erneuter manueller Berichtsimport kann eine Wochenmeldung wieder anlegen. GitHub enthält den Anwendungscode, die Archivmeldungen liegen in Supabase. Die Funktion nutzt für diese Transaktion die serverseitige `SUPABASE_DB_URL` und führt die Abfragen als `service_role` aus.
+
 Schema: `supabase/update-archive-schema.sql`, angewandte Migration `create_update_archive`. Erweiterung: `supabase/update-archive-public.sql` (`open_update_archive_with_authors`). Function: `supabase/functions/update-archive-api/index.js`. Bestehende Dienstplan-Daten und -Funktionen werden nicht verändert. Der Service Worker speichert nur gleich-originige öffentliche Dateien, keine externen APIs oder privaten Inhalte.
 
 Tests: `node --test updates/core.test.mjs supabase/functions/update-archive-api/auth.test.mjs`. Keine Produktionspasswörter oder Daten in Testdateien. Passwortwechsel: neuen Salt/Hash in `ua_settings` setzen und Archiv-Sitzungen löschen.
