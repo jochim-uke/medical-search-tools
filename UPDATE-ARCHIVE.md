@@ -20,7 +20,7 @@ Priorität (0–3) hat bei der Interessensortierung Vorrang. Innerhalb einer Stu
 
 ## Betrieb und Tests
 
-Als Admin kannst du eine einzelne Meldung auf ihrer Karte oder in der Detailansicht mit „Meldung löschen“ entfernen. Die Bestätigung zeigt den Titel. Der RPC `ua_delete_entry` prüft die angezeigte Version und löscht die Meldung mit Notiz, Kommentaren, Aufruftagen und Berichtsverknüpfungen in einer Transaktion. Die vollständigen Wochenberichte bleiben lesbar. Ein späterer Import kann dieselbe Meldung erneut anlegen. GitHub enthält den Anwendungscode, die Archivmeldungen liegen in Supabase. Schemaergänzung für bestehende Installationen: `supabase/update-archive-delete-entry.sql`.
+Als Admin kannst du eine einzelne Meldung auf ihrer Karte oder in der Detailansicht mit „Meldung löschen“ entfernen. Die Bestätigung zeigt den Titel. Die Edge Function prüft die angezeigte Version unter einer Zeilensperre und löscht die Meldung mit Notiz, Kommentaren, Aufruftagen und Berichtsverknüpfungen in einer Transaktion. Die vollständigen Wochenberichte bleiben lesbar. Ein späterer Import kann dieselbe Meldung erneut anlegen. GitHub enthält den Anwendungscode, die Archivmeldungen liegen in Supabase. Die Funktion nutzt für diese Transaktion die serverseitige `SUPABASE_DB_URL` und führt die Abfragen als `service_role` aus.
 
 Schema: `supabase/update-archive-schema.sql`, angewandte Migration `create_update_archive`. Erweiterung: `supabase/update-archive-public.sql` (`open_update_archive_with_authors`). Function: `supabase/functions/update-archive-api/index.js`. Bestehende Dienstplan-Daten und -Funktionen werden nicht verändert. Der Service Worker speichert nur gleich-originige öffentliche Dateien, keine externen APIs oder privaten Inhalte.
 

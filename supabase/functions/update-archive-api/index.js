@@ -23,6 +23,24 @@ async function adminSession(req){
   const sessions=await db(`ua_sessions?token_hash=eq.${tokenHash}&expires_at=gt.${eq(new Date().toISOString())}&select=token_hash`);
   return sessions.length?tokenHash:null;
 }
+let archiveDb;
+async function deleteEntry(id,version){
+  if(!archiveDb){
+    const {default:postgres}=await import('npm:postgres@3.4.8');
+    archiveDb ??= postgres(Deno.env.get('SUPABASE_DB_URL'),{prepare:false,max:1,idle_timeout:20,connect_timeout:8});
+  }
+  return archiveDb.begin(async tx=>{
+    await tx`set local role service_role`;
+    const [entry]=await tx`select version from public.ua_entries where id = ${id} for update`;
+    if(!entry)return 'missing';
+    if(entry.version!==version)return 'conflict';
+    await tx`delete from public.ua_comments where entry_id = ${id}`;
+    await tx`delete from public.ua_visits where entry_id = ${id}`;
+    await tx`delete from public.ua_report_entries where entry_id = ${id}`;
+    await tx`delete from public.ua_entries where id = ${id}`;
+    return 'deleted';
+  });
+}
 async function action(req,body){
   if(body.action==='login'){
     const password=text(body.password,256);
@@ -73,7 +91,7 @@ async function action(req,body){
   if(body.action==='entry-delete'){
     if(typeof body.id!=='string'||!body.id.trim())throw new APIError('Ungültige Meldungs-ID.');
     if(!Number.isInteger(body.version)||body.version<0||body.version>2147483647)throw new APIError('Ungültiger Versionsstand.');
-    const result=await db('rpc/ua_delete_entry','POST',{p_id:body.id,p_version:body.version});
+    const result=await deleteEntry(body.id,body.version);
     if(result==='conflict')throw new APIError('Die Meldung wurde inzwischen geändert. Bitte das Archiv aktualisieren und die Meldung erneut prüfen.',409);
     if(result!=='deleted'&&result!=='missing')throw new APIError('Das Löschen konnte nicht bestätigt werden. Bitte das Archiv aktualisieren.',502);
     return {ok:true};

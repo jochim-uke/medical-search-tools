@@ -7,6 +7,17 @@ const code=await readFile(new URL('./index.js',import.meta.url),'utf8');
 function server(){
  let handler;const calls=[],sessions=[],comments=[];const limits=new Map();
  const entryVersions=new Map([['doi:10.1234/example(1)',2]]);
+ const sqlCalls=[];
+ const mockArchiveDb={begin:async work=>work(async(strings,...values)=>{
+   const query=strings.join('?');
+   sqlCalls.push({query,values});
+   if(query.startsWith('select version')){
+     const version=entryVersions.get(values[0]);
+     return version===undefined?[]:[{version}];
+   }
+   if(query==='delete from public.ua_entries where id = ?')entryVersions.delete(values[0]);
+   return [];
+ })};
  const salt='test-only-salt',password='test-only-password';
  const settings={salt,password_hash:pbkdf2Sync(password,salt,100000,32,'sha256').toString('hex')};
  const fetch=async(url,init)=>{
@@ -16,27 +27,22 @@ function server(){
    else if(path==='ua_sessions'&&init.method==='POST'){sessions.push(body);result=[body];}
    else if(path.startsWith('ua_sessions?')){const tokenHash=new URL(url).searchParams.get('token_hash').slice(3);result=sessions.filter(s=>s.token_hash===tokenHash&&Date.parse(s.expires_at)>Date.now());if(init.method==='DELETE')sessions.splice(0,sessions.length,...sessions.filter(s=>s.token_hash!==tokenHash));}
    else if(path==='rpc/ua_visit')result=1;
-   else if(path==='rpc/ua_delete_entry'){
-     const version=entryVersions.get(body.p_id);
-     if(version===undefined)result='missing';
-     else if(version!==body.p_version)result='conflict';
-     else{entryVersions.delete(body.p_id);result='deleted';}
-   }
    else if(path.startsWith('ua_entries?')&&init.method==='PATCH')result=[{id:'entry-a',...body}];
    else if(path.startsWith('ua_comments?on_conflict=')&&init.method==='POST'){if(!comments.some(c=>c.id===body.id))comments.push(body);result=[body];}
    else if(path.startsWith('ua_comments?')&&init.method==='GET')result=comments;
    else if(path==='rpc/ua_import')result=1;
    return new Response(JSON.stringify(result),{headers:{'Content-Type':'application/json'}});
  };
- vm.runInNewContext(code,{Deno:{env:{get:k=>k==='SUPABASE_URL'?'https://db.invalid':'server-only-key'},serve:h=>handler=h},fetch,crypto:webcrypto,TextEncoder,Uint8Array,Response,URL,Date,console});
+ vm.runInNewContext(code+'\narchiveDb=mockArchiveDb;',{mockArchiveDb,Deno:{env:{get:k=>k==='SUPABASE_URL'?'https://db.invalid':'server-only-key'},serve:h=>handler=h},fetch,crypto:webcrypto,TextEncoder,Uint8Array,Response,URL,Date,console});
  const request=(body,token)=>handler(new Request('https://api.invalid',{method:'POST',headers:{'Content-Type':'application/json',...(token?{'x-archive-token':token}:{})},body:JSON.stringify(body)}));
- return {request,calls,sessions,comments,password};
+ return {request,calls,sqlCalls,sessions,comments,password};
 }
 test('admin mutations reject missing and forged sessions before any mutation',async()=>{
  const s=server();for(const action of ['update','entry-delete','comment-update','comment-delete','import','logout']){
    for(const token of [undefined,'x','f'.repeat(64)]){const r=await s.request({action},token);assert.equal(r.status,401);}
  }
  assert(s.calls.every(c=>c.path.startsWith('ua_sessions?')));
+ assert.equal(s.sqlCalls.length,0);
 });
 test('entry deletion requires an active admin, the exact entry ID and its displayed version',async()=>{
  const s=server(),{token}=await (await s.request({action:'login',password:s.password})).json();
@@ -46,7 +52,7 @@ test('entry deletion requires an active admin, the exact entry ID and its displa
  }
  s.sessions[0].expires_at='2020-01-01';
  assert.equal((await s.request(body,token)).status,401);
- assert(!s.calls.some(c=>c.path==='rpc/ua_delete_entry'));
+ assert.equal(s.sqlCalls.length,0);
  s.sessions[0].expires_at='2099-01-01';
  assert.equal((await s.request({...body,version:1},token)).status,409);
  for(let attempt=0;attempt<2;attempt++){
@@ -54,7 +60,13 @@ test('entry deletion requires an active admin, the exact entry ID and its displa
    assert.equal(response.status,200);
    assert.deepEqual(await response.json(),{ok:true});
  }
- assert.deepEqual(s.calls.at(-1),{path:'rpc/ua_delete_entry',method:'POST',body:{p_id:body.id,p_version:2}});
+ assert.deepEqual(s.sqlCalls.filter(c=>c.query.startsWith('delete')),[
+   {query:'delete from public.ua_comments where entry_id = ?',values:[body.id]},
+   {query:'delete from public.ua_visits where entry_id = ?',values:[body.id]},
+   {query:'delete from public.ua_report_entries where entry_id = ?',values:[body.id]},
+   {query:'delete from public.ua_entries where id = ?',values:[body.id]},
+ ]);
+ assert.equal(s.sqlCalls.filter(c=>c.query==='set local role service_role').length,3);
 });
 test('wrong password cannot create a session; brute force is limited',async()=>{
  const s=server();for(let i=0;i<20;i++)assert.equal((await s.request({action:'login',password:'wrong'})).status,401);
