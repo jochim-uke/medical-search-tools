@@ -6,6 +6,15 @@ const $=s=>document.querySelector(s), el=(tag,className,text)=>{const n=document
 let token=sessionStorage.getItem('update-archive-token')||localStorage.getItem('update-archive-token')||'';
 let isAdmin=false;
 const zoteroCategory='Zotero-Bibliothek';
+const clinicalCategory='Klinische Fragen';
+let clinicalQuestions=[];
+async function loadClinicalQuestions(){
+  try{
+    const response=await fetch('./questions/data.json',{cache:'no-store',signal:AbortSignal.timeout(15000)});
+    if(!response.ok)return;
+    clinicalQuestions=await response.json();
+  }catch{ /* The main archive remains usable if the question index is unavailable. */ }
+}
 let visibleEntries=60, lastFilter='';
 let data={entries:[],reports:[],comments:[],links:[]},category=location.hash==='#zotero'?zoteroCategory:'',activeId='',drafts=[],importReport=null,notesDirty=false;
 async function api(action,body={}){
@@ -18,7 +27,7 @@ async function busy(button,work,status=$('#status')){button.disabled=true;try{aw
 function button(label,handler,className='secondary'){const b=el('button',className,label);b.type='button';b.addEventListener('click',()=>handler(b));return b;}
 function deleteEntryButton(entry,status){
   return button('Meldung löschen',b=>{
-    const scope=entry.category===zoteroCategory?'Die Publikation bleibt in deiner Zotero-Bibliothek.':'Der vollständige Wochenbericht bleibt lesbar.';
+    const scope=entry.category===clinicalCategory?'Die kuratierte Themenseite bleibt über „Klinische Fragen“ erreichbar.':entry.category===zoteroCategory?'Die Publikation bleibt in deiner Zotero-Bibliothek.':'Der vollständige Wochenbericht bleibt lesbar.';
     if(!isAdmin||!window.confirm(`„${entry.title}“ endgültig löschen?\n\nDie Meldung, ihre Notiz und alle Kommentare werden gelöscht. ${scope}`))return;
     busy(b,async()=>{
       const result=await api('entry-delete',{id:entry.id,version:entry.version});
@@ -38,6 +47,11 @@ function deleteEntryButton(entry,status){
   },'text-button delete-entry');
 }
 function zoteroButton(entry){
+  if(entry.category===clinicalCategory){
+    const a=link('Themenseite öffnen',entry.source_url);
+    a.removeAttribute('target');
+    return a;
+  }
   const b=button('Zu Zotero hinzufügen',()=>openZotero(entry),'secondary zotero-button');
   b.disabled=!sourceOptions(entry).length;
   b.title=b.disabled?'Für diese Meldung fehlt ein Quellenlink.':'Originalquelle auswählen und in Zotero speichern';
@@ -89,7 +103,7 @@ function setCategory(value){
 }
 window.addEventListener('hashchange',()=>{category=location.hash==='#zotero'?zoteroCategory:'';render();});
 function entryDate(entry){
-  const label=entry.category===zoteroCategory?'In Zotero seit':'Bericht vom';
+  const label=entry.category===clinicalCategory?'Kuratiert am':entry.category===zoteroCategory?'In Zotero seit':'Bericht vom';
   return label+' '+formatDate(entry.report_date);
 }
 function doiLink(entry){
@@ -110,7 +124,7 @@ function render(){
   $('#tag-filter').value=tags.includes(selectedTag)?selectedTag:'';
   const f=filters(),shown=selectEntries(all,f);$('#entry-count').textContent=all.length;$('#report-count').textContent=data.reports.length;$('#noted-count').textContent=all.filter(e=>e.notes.trim()||e.comments.length).length;
   $('#interest-help').hidden=f.sort!=='interest';$('#result-count').textContent=`${shown.length} von ${all.length} Meldungen`;
-  $('#categories').replaceChildren();for(const cat of ['',...categories,zoteroCategory]){const count=cat?all.filter(e=>e.category===cat).length:all.length;const b=button(`${cat||'Alle'} · ${count}`,()=>{setCategory(cat);render();},'chip'+(category===cat?' active':''));b.setAttribute('aria-pressed',String(category===cat));$('#categories').append(b);}
+  $('#categories').replaceChildren();for(const cat of ['',clinicalCategory,...categories,zoteroCategory]){const count=cat?all.filter(e=>e.category===cat).length:all.length;const b=button(`${cat||'Alle'} · ${count}`,()=>{setCategory(cat);render();},'chip'+(category===cat?' active':''));b.setAttribute('aria-pressed',String(category===cat));$('#categories').append(b);}
   $('#results').replaceChildren();if(!shown.length){$('#results').append(el('div','empty',category===zoteroCategory&&!all.some(e=>e.category===zoteroCategory)?'Die Zotero-Bibliothek enthält noch keine archivierten Publikationen.':all.length?'Keine passenden Meldungen. Ändere den Suchtext oder die Filter.':'Noch keine Meldungen. Füge deinen ersten Wochenbericht hinzu.'));return;}
   const filterKey=JSON.stringify(f);
   if(lastFilter!==filterKey){visibleEntries=60;lastFilter=filterKey;}
@@ -132,13 +146,26 @@ function render(){
   if(shown.length>visibleEntries)$('#results').append(button('Weitere Meldungen anzeigen',()=>{visibleEntries+=60;render();},'secondary'));
 }
 async function openEntry(id){
+  if(!data.entries.some(entry=>entry.id===id)){
+    message($('#status'),'Dieser Eintrag ist nicht mehr im Archiv verfügbar. Du kannst nach dem Titel oder der DOI suchen.');
+    return;
+  }
+  const url=new URL(location.href);url.searchParams.set('entry',id);history.replaceState(null,'',url);
   activeId=id;notesDirty=false;drawDetail();$('#detail').showModal();
   try{const result=await api('visit',{id});const entry=data.entries.find(e=>e.id===id);if(entry){entry.clicks=result.clicks;render();}}catch(error){if(activeId===id&&$('#detail').open)message($('#detail-status'),error.message);}
 }
 function drawDetail(){
   const entry=data.entries.find(e=>e.id===activeId);if(!entry)return;const root=$('#detail-content');root.replaceChildren();const status=el('p');status.id='detail-status';status.setAttribute('role','status');
   const meta=el('div','meta');meta.append(el('span','badge',entry.category),el('span','',entryDate(entry)));root.append(meta,el('h2','detail-title',entry.title));
-  const tools=el('div','detail-tools');tools.append(priorityControl(entry,status),zoteroButton(entry));if(entry.source_url)tools.append(link(doiLink(entry)?'DOI öffnen ↗':'Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
+  const tools=el('div','detail-tools');tools.append(priorityControl(entry,status),zoteroButton(entry));if(entry.source_url&&entry.category!==clinicalCategory)tools.append(link(doiLink(entry)?'DOI öffnen ↗':'Originalquelle öffnen ↗',entry.source_url));root.append(tools,rich(entry.body),status);
+  const related=clinicalQuestions.filter(question=>question.entryId!==entry.id&&question.studies.some(study=>study.archiveEntries.some(source=>source.id===entry.id)));
+  if(related.length){
+    const section=el('section','detail-section');section.append(el('h3','','Klinische Einordnung'));
+    for(const question of related){
+      const a=el('a','',question.title);a.href='questions/?frage='+encodeURIComponent(question.slug);section.append(a);
+    }
+    root.append(section);
+  }
   if(isAdmin)tools.append(deleteEntryButton(entry,status));
   const reportSection=el('section','detail-section');reportSection.append(el('h3','','In diesen Wochenberichten'));for(const rel of data.links.filter(l=>l.entry_id===entry.id)){const report=data.reports.find(r=>r.id===rel.report_id);if(report){const details=el('details','report-item');details.append(el('summary','',`${formatDate(report.report_date)} · ${report.title}`),rich(report.body));reportSection.append(details);}}if(reportSection.children.length>1)root.append(reportSection);
   if(isAdmin){const notes=el('section','detail-section'),label=el('label','','Admin-Notiz'),textarea=el('textarea');textarea.rows=5;textarea.maxLength=40000;textarea.value=entry.notes;textarea.placeholder='Was möchte ich zu dieser Meldung festhalten?';label.append(textarea);textarea.oninput=()=>notesDirty=textarea.value!==entry.notes;
@@ -156,6 +183,7 @@ function drawDetail(){
 function closeDialog(dialog){if(dialog.id==='detail'&&notesDirty&&!confirm('Die Notiz wurde noch nicht gespeichert. Trotzdem schließen?'))return;dialog.close();if(dialog.id==='detail')notesDirty=false;}
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>closeDialog(document.getElementById(b.dataset.close)));
 $('#detail').addEventListener('cancel',event=>{event.preventDefault();closeDialog($('#detail'));});
+$('#detail').addEventListener('close',()=>{const url=new URL(location.href);url.searchParams.delete('entry');history.replaceState(null,'',url);});
 window.addEventListener('beforeunload',event=>{if(notesDirty){event.preventDefault();event.returnValue='';}});
 $('#reports-open').onclick=()=>{const root=$('#reports-list');root.replaceChildren();for(const r of [...data.reports].sort((a,b)=>b.report_date.localeCompare(a.report_date))){const details=el('details','report-item');details.append(el('summary','',`${formatDate(r.report_date)} · ${r.title}`),rich(r.body));root.append(details);}$('#reports-dialog').showModal();};
 $('#import-open').onclick=()=>{$('#import-dialog').showModal();if(!$('#import-date').value)$('#import-date').value=new Date().toLocaleDateString('sv-SE');};
@@ -166,5 +194,9 @@ function renderDrafts(){const root=$('#import-drafts');root.replaceChildren();dr
 $('#add-draft').onclick=()=>{drafts.push(makeDraft());renderDrafts();};
 $('#save-import').onclick=()=>busy($('#save-import'),async()=>{if(!importReport)throw new Error('Bitte zuerst den Bericht vorbereiten.');if(importReport.body!==$('#import-body').value||importReport.title!==$('#import-title').value||importReport.report_date!==$('#import-date').value)throw new Error('Der Bericht wurde geändert. Bitte die Meldungen erneut vorbereiten.');const selected=drafts.filter(d=>d.selected);if(!selected.length)throw new Error('Bitte mindestens eine Meldung auswählen.');const result=await api('import',{report:importReport,entries:selected});await load();message($('#import-status'),`Gespeichert: ${result.added} neue Meldungen. Bereits vorhandene Einträge wurden mit dem Bericht verknüpft.`,true);$('#import-review').hidden=true;$('#import-form').reset();drafts=[];importReport=null;},$('#import-status'));
 $('#login-form button[type="submit"]').disabled=false;
-load().then(()=>message($('#status'),'')).catch(error=>message($('#status'),error.message));
+Promise.all([load(),loadClinicalQuestions()]).then(()=>{
+  message($('#status'),'');
+  const id=new URLSearchParams(location.search).get('entry');
+  if(id)openEntry(id);
+}).catch(error=>message($('#status'),error.message));
 if('serviceWorker' in navigator)navigator.serviceWorker.register('../service-worker.js',{updateViaCache:'none'}).catch(()=>{});

@@ -1,4 +1,4 @@
-const CACHE = "medical-search-tools-v17";
+const CACHE = "medical-search-tools-v18";
 const SCOPE = new URL("./", self.location.href);
 const CORE = ["./", "./index.html", "./styles.css", "./app.js?v=20261106", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
 self.addEventListener("install", event => {
