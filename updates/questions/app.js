@@ -125,9 +125,17 @@ function renderQuestion(question) {
 
   const evidence = section('Studienvergleich');
   evidence.id = 'vergleich';
-  evidence.append(element('p', 'Die HR-Richtung ist bei jedem Ergebnis angegeben. Prozentwerte folgen der jeweils bezeichneten Reihenfolge. DESCAR-T erscheint mit zwei Fassungen derselben Studienfamilie.', 'question-meta'));
-  evidence.append(studyTable(question, question.studies.filter(study => study.directSecondLine), 'Direkte Zweitlinienkohorten · Kongressdaten'));
-  evidence.append(studyTable(question, question.studies.filter(study => !study.directSecondLine), 'Ergänzende Vollpublikationen · gemischte oder spätere Linien'));
+  const evidenceNote = question.evidenceNote ?? 'Die HR-Richtung ist bei jedem Ergebnis angegeben. Prozentwerte folgen der jeweils bezeichneten Reihenfolge. DESCAR-T erscheint mit zwei Fassungen derselben Studienfamilie.';
+  if (evidenceNote) evidence.append(element('p', evidenceNote, 'question-meta'));
+  if (Array.isArray(question.evidenceGroups) && question.evidenceGroups.length) {
+    for (const group of question.evidenceGroups) {
+      const studies = group.studyIds.map(id => question.studies.find(study => study.id === id)).filter(Boolean);
+      if (studies.length) evidence.append(studyTable(question, studies, group.title));
+    }
+  } else {
+    evidence.append(studyTable(question, question.studies.filter(study => study.directSecondLine), 'Direkte Zweitlinienkohorten · Kongressdaten'));
+    evidence.append(studyTable(question, question.studies.filter(study => !study.directSecondLine), 'Ergänzende Vollpublikationen · gemischte oder spätere Linien'));
+  }
   content.append(evidence);
 
   const interpretation = section('Wie die Ergebnisse zu lesen sind');
@@ -168,3 +176,4 @@ async function load() {
 load().catch(error => {
   status.textContent = error.name === 'TimeoutError' ? 'Das Laden dauert zu lange. Bitte erneut laden.' : error.message;
 });
+
