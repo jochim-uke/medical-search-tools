@@ -4,85 +4,229 @@
     "entryId": "clinical:axi-cel-vs-liso-cel-zweitlinie",
     "title": "Axi-cel oder Liso-cel beim LBCL in der Zweitlinie?",
     "updated": "2026-11-22",
-    "tags": ["LBCL", "CAR-T", "Axi-cel", "Liso-cel", "Zweitlinie"],
+    "tags": [
+      "LBCL",
+      "CAR-T",
+      "Axi-cel",
+      "Liso-cel",
+      "Zweitlinie"
+    ],
     "scope": "Produktwahl bei primär refraktärem LBCL oder frühem Rezidiv. Kuratierte Auswahl direkter Real-World-Vergleiche mit Schwerpunkt Zweitlinie. Recherche und KI-Einordnung vom 22.11.2026.",
     "answer": "Die ausgewählten direkten Zweitliniendaten belegen bisher keine generelle Überlegenheit eines Produkts bei PFS oder OS. Ein nicht signifikanter Unterschied lässt Gleichwertigkeit offen. Für Axi-cel gibt es interessante Wirksamkeitssignale aus anderen Populationen und sekundären Analysen. Ihre Übertragbarkeit auf die Zweitlinie ist begrenzt. Bei der konkreten Wahl sind die erreichbare Infusionszeit und das individuelle Toxizitätsrisiko entscheidende zusätzliche Kriterien.",
-    "answerSources": ["descar-slides", "denlinger", "multicenter", "looka", "zuber"],
+    "answerSources": [
+      "descar-slides",
+      "denlinger",
+      "multicenter",
+      "looka",
+      "zuber"
+    ],
     "takeaways": [
-      {"title": "Welches Wirksamkeitsargument trägt für Axi-cel?", "text": "Looka liefert ein adjustiertes PFS-Signal, Zuber ein spätes OS-Signal. Beide sind als Argument für eine mögliche Differenz diskutierbar. Für eine generelle Zweitlinienpräferenz bleibt die Beweiskraft begrenzt. Bei raschem Progress würde ich vor allem die tatsächlich verfügbare Produktions- und Infusionszeit des Zentrums berücksichtigen.", "sources": ["looka", "zuber", "multicenter"]},
-      {"title": "Welche Arbeit passt am besten zur Zweitlinienfrage?", "text": "DESCAR-T ist besonders relevant, weil die Auswertung bereits ab Leukapherese beginnt und Ausfälle vor Infusion berücksichtigt. Die Kongressfassungen unterscheiden sich deutlich. Für quantitative Aussagen muss die verwendete Fassung genannt werden.", "sources": ["descar-abstract", "descar-slides"]},
-      {"title": "Wie viel Gewicht bekommt die Toxizität?", "text": "Mehrere Vergleiche zeigen unter Liso-cel weniger CRS oder ICANS. Das kann bei vulnerablen Patienten die Produktwahl beeinflussen. Ausgeprägte Unterschiede beim schweren ICANS sind kohortenabhängig und lassen sich nicht als feste individuelle Risikodifferenz übertragen.", "sources": ["denlinger", "portuguese", "zuber"]}
+      {
+        "title": "Welches Wirksamkeitsargument trägt für Axi-cel?",
+        "text": "Looka liefert ein adjustiertes PFS-Signal, Zuber ein spätes OS-Signal. Beide sind als Argument für eine mögliche Differenz diskutierbar. Für eine generelle Zweitlinienpräferenz bleibt die Beweiskraft begrenzt. Bei raschem Progress würde ich vor allem die tatsächlich verfügbare Produktions- und Infusionszeit des Zentrums berücksichtigen.",
+        "sources": [
+          "looka",
+          "zuber",
+          "multicenter"
+        ]
+      },
+      {
+        "title": "Welche Arbeit passt am besten zur Zweitlinienfrage?",
+        "text": "DESCAR-T ist besonders relevant, weil die Auswertung bereits ab Leukapherese beginnt und Ausfälle vor Infusion berücksichtigt. Die Kongressfassungen unterscheiden sich deutlich. Für quantitative Aussagen muss die verwendete Fassung genannt werden.",
+        "sources": [
+          "descar-abstract",
+          "descar-slides"
+        ]
+      },
+      {
+        "title": "Wie viel Gewicht bekommt die Toxizität?",
+        "text": "Mehrere Vergleiche zeigen unter Liso-cel weniger CRS oder ICANS. Das kann bei vulnerablen Patienten die Produktwahl beeinflussen. Ausgeprägte Unterschiede beim schweren ICANS sind kohortenabhängig und lassen sich nicht als feste individuelle Risikodifferenz übertragen.",
+        "sources": [
+          "denlinger",
+          "portuguese",
+          "zuber"
+        ]
+      }
     ],
     "studies": [
       {
-        "id": "descar-slides", "family": "descar", "title": "Brisou · DESCAR-T · Vortragsfassung", "publication": "ASH 2025 · Präsentation vom 06.12.2025", "peerReviewed": false, "directSecondLine": true,
+        "id": "descar-slides",
+        "family": "descar",
+        "title": "Brisou · DESCAR-T · Vortragsfassung",
+        "publication": "ASH 2025 · Präsentation vom 06.12.2025",
+        "peerReviewed": false,
+        "directSecondLine": true,
         "population": "555 apheresiert (447 Axi / 108 Liso), 503 infundiert (410 / 93). Zweitlinie, PMBCL ausgeschlossen. sIPTW mit multipler Imputation. Analysen ab Leukapherese und ab Infusion.",
         "followUp": "Ab Leukapherese 14,0 / 13,5 Monate (Axi / Liso).",
         "efficacy": "Gewichtetes 12-Monats-PFS ab Infusion 49,3 % / 51,1 %. In den Folien kein signifikanter PFS- oder OS-Unterschied. 52 Patienten erhielten keine Infusion.",
         "toxicity": "Die präsentierte Analyse zeigt weniger Neurotoxizität unter Liso-cel.",
         "limitation": "Kongressdaten, kleine Liso-Gruppe und begrenztes Follow-up. Geänderte Einschlusskriterien gegenüber dem Abstract mit n=805. Beide Fassungen gehören zur selben Studienfamilie.",
-        "links": [{"label": "Originalfolien", "url": "https://www.cart-academy.at/index.php?eID=dumpFile&f=2072&t=f&token=8926bb13de922d6073efff23829f71d944764ed3"}],
-        "archiveEntries": [{"id": "zotero:doi:2c31c3a6748bd2a40f85a2714133fa87", "label": "Zugehöriges Abstract im Archiv"}]
+        "links": [
+          {
+            "label": "Originalfolien",
+            "url": "https://www.cart-academy.at/index.php?eID=dumpFile&f=2072&t=f&token=8926bb13de922d6073efff23829f71d944764ed3"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:2c31c3a6748bd2a40f85a2714133fa87",
+            "label": "Zugehöriges Abstract im Archiv"
+          }
+        ]
       },
       {
-        "id": "descar-abstract", "family": "descar", "title": "Brisou · DESCAR-T · Abstractfassung", "publication": "Blood 2025 · ASH-Abstract 127", "peerReviewed": false, "directSecondLine": true,
+        "id": "descar-abstract",
+        "family": "descar",
+        "title": "Brisou · DESCAR-T · Abstractfassung",
+        "publication": "Blood 2025 · ASH-Abstract 127",
+        "peerReviewed": false,
+        "directSecondLine": true,
         "population": "805 Patienten (663 Axi / 142 Liso), einschließlich 38 PMBCL. Zweitlinie, sIPTW. Gewichtete Pseudopopulationen sind von tatsächlichen Patientenzahlen zu unterscheiden.",
         "followUp": "Ab Leukapherese 12,9 / 7,7 Monate (Axi / Liso).",
         "efficacy": "Kein signifikanter OS- oder PFS-Unterschied ab Leukapherese oder Infusion. Gewichtete beste CR 62,6 % / 65,8 % (Axi / Liso).",
         "toxicity": "Gewichtetes ICANS Grad ≥3 im Abstract 17,6 % / 0,2 %. Die Vortragsfassung verwendet eine andere Kohorte und andere Werte.",
         "limitation": "Liso-Patienten älter, längere Wartezeit und kürzeres Follow-up. Ein möglicher Vorteil bei rasch progredienter Erkrankung bleibt eine Hypothese. Die spätere Präsentation wird oben gesondert ausgewiesen.",
-        "links": [{"label": "DOI / Abstract", "url": "https://doi.org/10.1182/blood-2025-127"}],
-        "archiveEntries": [{"id": "zotero:doi:2c31c3a6748bd2a40f85a2714133fa87", "label": "Abstract im Archiv"}]
+        "links": [
+          {
+            "label": "DOI / Abstract",
+            "url": "https://doi.org/10.1182/blood-2025-127"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:2c31c3a6748bd2a40f85a2714133fa87",
+            "label": "Abstract im Archiv"
+          }
+        ]
       },
       {
-        "id": "denlinger", "family": "flatiron", "title": "Denlinger · Flatiron", "publication": "Tandem 2026 · Kongressabstract", "peerReviewed": false, "directSecondLine": true,
+        "id": "denlinger",
+        "family": "flatiron",
+        "title": "Denlinger · Flatiron",
+        "publication": "Tandem 2026 · Kongressabstract",
+        "peerReviewed": false,
+        "directSecondLine": true,
         "population": "473 infundierte Patienten in Zweitlinie (275 Axi / 198 Liso). Medianes Alter 63 / 72 Jahre. Im publizierten Abstract deskriptiver Vergleich, weitere Adjustierung angekündigt.",
         "followUp": "12 / 8 Monate (Axi / Liso).",
         "efficacy": "6-Monats-PFS 71 % / 69 %, OS jeweils 89 % (Axi / Liso). Keine signifikanten frühen Überlebensunterschiede.",
         "toxicity": "ICANS Grad ≥3 18 % / 3 % (Axi / Liso).",
         "limitation": "Kurzes, ungleiches Follow-up. Alter, Krankheitsmerkmale und Versorgung unterscheiden sich. Erfasst Infundierte. Eine belastbare Langzeitbewertung erfordert aktualisierte, adjustierte Ergebnisse.",
-        "links": [{"label": "DOI / Abstract", "url": "https://doi.org/10.1016/j.jtct.2025.12.078"}],
-        "archiveEntries": [{"id": "zotero:doi:45412f3021d94130a9b9e86d9230852f", "label": "Abstract im Archiv"}]
+        "links": [
+          {
+            "label": "DOI / Abstract",
+            "url": "https://doi.org/10.1016/j.jtct.2025.12.078"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:45412f3021d94130a9b9e86d9230852f",
+            "label": "Abstract im Archiv"
+          }
+        ]
       },
       {
-        "id": "multicenter", "family": "deschenes", "title": "Deschênes-Simard · Multizentrische Kohorte", "publication": "Blood Advances 2025 · Vollpublikation", "peerReviewed": true, "directSecondLine": false,
+        "id": "multicenter",
+        "family": "deschenes",
+        "title": "Deschênes-Simard · Multizentrische Kohorte",
+        "publication": "Blood Advances 2025 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
         "population": "624 infundierte Patienten (344 Axi / 138 Liso / 142 Tisa). Gemischte Linien mit separater Zweitlinienanalyse. Multivariable und Propensity-Score-Analysen.",
         "followUp": "Gesamt 20,9 Monate.",
         "efficacy": "Gesamtkohorte Axi / Liso mit 2-Jahres-PFS 46 % / 45 % und OS 63 % / 58 %. Kein signifikanter Überlebensunterschied. Die Zweitlinienuntergruppe zeigte eine ähnliche Richtung, mit zu wenigen OS-Ereignissen für eine multivariable OS-Analyse.",
         "toxicity": "Mehr CRS, ICANS und Hämatotoxizität unter Axi. Vein-to-vein-Zeit 35 / 41 Tage (Axi / Liso).",
         "limitation": "Gesamtwerte sind kein reines Zweitlinienergebnis. Retrospektive Produktselektion, unterschiedliche Behandlungszeiträume und begrenzte Ereigniszahlen in Untergruppen.",
-        "links": [{"label": "DOI / Vollpublikation", "url": "https://doi.org/10.1182/bloodadvances.2025016778"}],
-        "archiveEntries": [{"id": "zotero:doi:04b2648de31f61f0da12ec3b6a8b0d69", "label": "Publikation im Archiv"}]
+        "links": [
+          {
+            "label": "DOI / Vollpublikation",
+            "url": "https://doi.org/10.1182/bloodadvances.2025016778"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:04b2648de31f61f0da12ec3b6a8b0d69",
+            "label": "Publikation im Archiv"
+          }
+        ]
       },
       {
-        "id": "zuber", "family": "trinetx", "title": "Zuber · Target-Trial-Emulation", "publication": "Transplantation and Cellular Therapy 2026 · Vollpublikation", "peerReviewed": true, "directSecondLine": false,
+        "id": "zuber",
+        "family": "trinetx",
+        "title": "Zuber · Target-Trial-Emulation",
+        "publication": "Transplantation and Cellular Therapy 2026 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
         "population": "1.070 infundierte Patienten (709 Axi / 361 Liso), TriNetX, IPTW. Keine reine Zweitlinienkohorte. Zeitnull ist die Infusion.",
         "followUp": "Ungewichtet 20,8 / 10,5 Monate, gewichtet 17,7 / 13,2 Monate (Axi / Liso).",
         "efficacy": "Primär Liso vs. Axi mit OS-HR 1,20 (95%-KI 0,87–1,66) und EFS-HR 1,22 (0,89–1,67). Sekundär zeitabhängige Mortalitäts-HR nach 24 Monaten 1,76 (1,01–3,06), zugunsten Axi.",
         "toxicity": "Schweres ICANS 10,9 % / 5,8 % (Axi / Liso).",
         "limitation": "Das späte OS-Signal ist explorativ. Unterschiedliche Nachbeobachtung und ungemessene Confounder begrenzen die Interpretation. Der frühere ASCO-Bericht und diese Vollpublikation bilden eine Studienfamilie. Zwei Archiveinträge verweisen auf dieselbe Vollpublikation.",
-        "links": [{"label": "DOI / Vollpublikation", "url": "https://doi.org/10.1016/j.jtct.2026.09.046"}],
-        "archiveEntries": [{"id": "pubmed:42800585", "label": "Wochenupdate im Archiv"}, {"id": "zotero:doi:f7f64923191691171f0d82a2ff8698e8", "label": "Zotero-Eintrag im Archiv"}]
+        "links": [
+          {
+            "label": "DOI / Vollpublikation",
+            "url": "https://doi.org/10.1016/j.jtct.2026.09.046"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "pubmed:42800585",
+            "label": "Wochenupdate im Archiv"
+          },
+          {
+            "id": "zotero:doi:f7f64923191691171f0d82a2ff8698e8",
+            "label": "Zotero-Eintrag im Archiv"
+          }
+        ]
       },
       {
-        "id": "portuguese", "family": "fred-hutch", "title": "Portuguese · Fred Hutchinson", "publication": "Haematologica 2025 · Vollpublikation", "peerReviewed": true, "directSecondLine": false,
+        "id": "portuguese",
+        "family": "fred-hutch",
+        "title": "Portuguese · Fred Hutchinson",
+        "publication": "Haematologica 2025 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
         "population": "160 infundierte Patienten (102 Axi / 58 Liso). IPTW plus multivariable Modelle. Nur rund 10 % der gewichteten Kohorte in Zweitlinie.",
         "followUp": "Gesamt 35,3 Monate, Axi 53,8 / Liso 29,8 Monate.",
         "efficacy": "Adjustiert Axi vs. Liso mit PFS-HR 0,97 (95%-KI 0,60–1,56) und OS-HR 1,34 (0,73–2,47). Kein statistisch gesicherter Unterschied.",
         "toxicity": "Mehr CRS und Hämatotoxizität unter Axi. Für ICANS Grad ≥3 zeigte sich hier kein signifikanter Unterschied.",
         "limitation": "Überwiegend spätere Linien, ein Zentrum, Äraeffekte und unterschiedlich langes Follow-up. Ein wichtiger Gegenbefund zu einer pauschalen Wirksamkeitsüberlegenheit von Axi.",
-        "links": [{"label": "DOI / Vollpublikation", "url": "https://doi.org/10.3324/haematol.2024.287010"}],
-        "archiveEntries": [{"id": "zotero:doi:2c4cad0723d6fb9d8dd5f143e1dcbf18", "label": "Publikation im Archiv"}]
+        "links": [
+          {
+            "label": "DOI / Vollpublikation",
+            "url": "https://doi.org/10.3324/haematol.2024.287010"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:2c4cad0723d6fb9d8dd5f143e1dcbf18",
+            "label": "Publikation im Archiv"
+          }
+        ]
       },
       {
-        "id": "looka", "family": "dana-farber", "title": "Looka · Dana-Farber", "publication": "Blood Advances 2025 · Vollpublikation", "peerReviewed": true, "directSecondLine": false,
+        "id": "looka",
+        "family": "dana-farber",
+        "title": "Looka · Dana-Farber",
+        "publication": "Blood Advances 2025 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
         "population": "87 infundierte Patienten ab Drittlinie (50 Axi / 37 Liso). Retrospektiver Einzelzentrumsvergleich mit Propensity-Score-Analyse.",
         "followUp": "Gesamt 11 Monate.",
         "efficacy": "12-Monats-PFS 59 % / 44 % (Axi / Liso), unadjustiert nicht signifikant. Nach Propensity-Score-Analyse PFS-HR Liso vs. Axi 2,95 (95%-KI 1,14–7,60).",
         "toxicity": "Mehr CRS, ICANS und prolongierte Neutropenie unter Axi.",
         "limitation": "Kleine Stichprobe, breites Konfidenzintervall und Produktselektion bei unterschiedlichen Wartezeiten. Das positive adjustierte Signal ist für die Zweitlinie indirekt.",
-        "links": [{"label": "DOI / Vollpublikation", "url": "https://doi.org/10.1182/bloodadvances.2024012992"}],
-        "archiveEntries": [{"id": "zotero:doi:36c58385edd13c2d051375b30ca54eff", "label": "Publikation im Archiv"}]
+        "links": [
+          {
+            "label": "DOI / Vollpublikation",
+            "url": "https://doi.org/10.1182/bloodadvances.2024012992"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:36c58385edd13c2d051375b30ca54eff",
+            "label": "Publikation im Archiv"
+          }
+        ]
       }
     ],
     "interpretation": [
@@ -92,11 +236,554 @@
       "Die Kurzantwort ist eine KI-generierte klinische Einordnung der verlinkten Quellen. Unterschiedliche Populationen, Nachbeobachtung und residuale Konfundierung begrenzen kausale Produktaussagen."
     ],
     "openQuestions": [
-      {"question": "Bleibt ein Produktunterschied bei längerem Follow-up in einer reinen Zweitlinienkohorte bestehen?", "trigger": "Neue DESCAR-T-Vollpublikation oder aktualisierte Zweitlinienanalyse mit PFS/OS, Konfidenzintervallen und Zahlen unter Risiko.", "sources": ["descar-slides", "denlinger"]},
-      {"question": "Profitieren Patienten mit rascher Progression, hoher Tumorlast oder schlechtem Bridging-Ansprechen besonders von Axi-cel?", "trigger": "Präspezifizierte Interaktionsanalyse mit ausreichender Fallzahl und Berücksichtigung der Zeit bis zur Infusion.", "sources": ["descar-abstract", "looka"]},
-      {"question": "Wie stabil ist das späte OS-Signal aus der Target-Trial-Emulation?", "trigger": "Unabhängige Bestätigung, vergleichbare Nachbeobachtung und Sensitivitätsanalysen zum zeitabhängigen Effekt.", "sources": ["zuber"]},
-      {"question": "Wie beeinflussen Zugang und Herstellung das Gesamtergebnis ab Therapieentscheidung?", "trigger": "Zeitgleiche Kohorten mit Apherese-zu-Infusion-Zeit, Nichtinfusionsrate, Gründen und Überleben ab Entscheidung oder Apherese.", "sources": ["descar-slides", "multicenter"]}
+      {
+        "question": "Bleibt ein Produktunterschied bei längerem Follow-up in einer reinen Zweitlinienkohorte bestehen?",
+        "trigger": "Neue DESCAR-T-Vollpublikation oder aktualisierte Zweitlinienanalyse mit PFS/OS, Konfidenzintervallen und Zahlen unter Risiko.",
+        "sources": [
+          "descar-slides",
+          "denlinger"
+        ]
+      },
+      {
+        "question": "Profitieren Patienten mit rascher Progression, hoher Tumorlast oder schlechtem Bridging-Ansprechen besonders von Axi-cel?",
+        "trigger": "Präspezifizierte Interaktionsanalyse mit ausreichender Fallzahl und Berücksichtigung der Zeit bis zur Infusion.",
+        "sources": [
+          "descar-abstract",
+          "looka"
+        ]
+      },
+      {
+        "question": "Wie stabil ist das späte OS-Signal aus der Target-Trial-Emulation?",
+        "trigger": "Unabhängige Bestätigung, vergleichbare Nachbeobachtung und Sensitivitätsanalysen zum zeitabhängigen Effekt.",
+        "sources": [
+          "zuber"
+        ]
+      },
+      {
+        "question": "Wie beeinflussen Zugang und Herstellung das Gesamtergebnis ab Therapieentscheidung?",
+        "trigger": "Zeitgleiche Kohorten mit Apherese-zu-Infusion-Zeit, Nichtinfusionsrate, Gründen und Überleben ab Entscheidung oder Apherese.",
+        "sources": [
+          "descar-slides",
+          "multicenter"
+        ]
+      }
     ],
-    "changes": [{"date": "2026-11-22", "text": "Erste Kuratierung aus sechs Studienfamilien. DESCAR-T-Abstract und Vortragsfassung getrennt dokumentiert. Die beiden Archiveinträge der Zuber-Vollpublikation gemeinsam verknüpft. Offene Fragen für künftige Aktualisierungen festgehalten."}]
+    "changes": [
+      {
+        "date": "2026-11-22",
+        "text": "Erste Kuratierung aus sechs Studienfamilien. DESCAR-T-Abstract und Vortragsfassung getrennt dokumentiert. Die beiden Archiveinträge der Zuber-Vollpublikation gemeinsam verknüpft. Offene Fragen für künftige Aktualisierungen festgehalten."
+      }
+    ]
+  },
+  {
+    "slug": "cd20-cd3-bispezifika-bridging-vor-car-t-lbcl",
+    "entryId": "clinical:cd20-cd3-bispezifika-bridging-vor-car-t-lbcl",
+    "title": "CD20×CD3-Bispezifika als Bridging vor CAR-T beim LBCL: Glofitamab mono oder mit GemOx – und welche Nachteile?",
+    "updated": "2026-11-25",
+    "tags": [
+      "LBCL",
+      "CAR-T",
+      "Bridging",
+      "Glofitamab",
+      "GemOx",
+      "Bispezifika",
+      "T-Zell-Funktion",
+      "ICANS"
+    ],
+    "scope": "Erwachsene mit r/r LBCL und geplanter CD19-CAR-T-Therapie. Fokus auf Glofitamab ohne Chemotherapie versus Glofitamab–GemOx sowie mögliche Nachteile von CD20×CD3-Bispezifika. Holding vor Apherese, Bridging nach Apherese und frühere Therapielinien werden getrennt bewertet. Öffentliche Literatur und Archivstand geprüft am 25.11.2026; keine patientenbezogenen Inhalte.",
+    "answer": "CD20×CD3-Bispezifika können vor CAR-T wirksame Krankheitskontrolle ermöglichen. Ein belastbarer Beleg, dass Glofitamab–GemOx als Bridging Glofitamab mono überlegen ist, fehlt jedoch. Neuere Kohorten enthalten die Kombination, erlauben aber keine kausale Regimewahl. Eine dauerhafte Beeinträchtigung der CAR-T-Wirksamkeit durch kurzes Bridging ist bislang nicht belegt und ebenso wenig sicher ausgeschlossen. In den Sequenzkohorten werden CRS/Neurotoxizität, Infektionen und Zytopenien beobachtet; der zusätzliche Risikoanteil des Bispezifikums ist meist nicht trennbar. Auch das Timing kann problematisch sein. Entscheidend ist, ob die Strategie die geplante Infusion in gutem Zustand ermöglicht.",
+    "answerSources": [
+      "biscar-eha2026",
+      "piazzola2026",
+      "zhang2026",
+      "trinetx2026",
+      "us-gemox2025"
+    ],
+    "takeaways": [
+      {
+        "title": "Was spricht für mono, was für GemOx?",
+        "text": "Eigene klinische Einordnung: Eine Monotherapie ist besonders erwägenswert, wenn weitere Chemotherapie voraussichtlich wenig Nutzen oder viel zusätzliche Belastung bringt. GemOx kann bei dringendem Debulking und erwartbarer Chemosensitivität plausibel sein, verlangt aber ausreichende hämatologische und neurologische Reserve. Diese Abwägung ist keine durch einen direkten Bridging-Vergleich belegte Entscheidungsregel. STARGLO prüft den Zusatz von Glofitamab zu GemOx, nicht den Zusatz von GemOx zu Glofitamab.",
+        "sources": [
+          "biscar-eha2026",
+          "us-gemox2025",
+          "starglo"
+        ]
+      },
+      {
+        "title": "Wird die T-Zell-Funktion geschädigt?",
+        "text": "Kontinuierliche T-Zell-Stimulation kann experimentell Funktionsverlust hervorrufen. Das ist nicht gleichbedeutend mit klinisch relevanter Erschöpfung nach wenigen Glofitamab-Gaben. Die deutschen Kongressfassungen untersuchen unterschiedliche Aktivierungs- und Erschöpfungsmarker; weder deren Zunahme noch ihr Ausbleiben ersetzt einen funktionellen Nachweis. Bislang liefern die klinischen Sequenzdaten keinen gesicherten Wirksamkeitsnachteil.",
+        "sources": [
+          "philipp2022",
+          "german-early",
+          "biscar-eha2026",
+          "crochet2024"
+        ]
+      },
+      {
+        "title": "Neurotoxizität verdient eine eigene Bewertung",
+        "text": "Einzelne kleine Serien berichten beträchtliches schweres ICANS nach CAR-T; die größere gematchte Analyse schließt eine relevante Risikoerhöhung statistisch nicht aus. Die Unterschiede können auch durch CAR-T-Produkt, Tumorlast, ZNS-Beteiligung und Infektionen entstehen. Deshalb ist die Aussage „kein nachgewiesener Mehrschaden“ angemessener als eine allgemeine Unbedenklichkeitserklärung.",
+        "sources": [
+          "zhang2026",
+          "piazzola2026",
+          "trinetx2026"
+        ]
+      },
+      {
+        "title": "Apherese und Infusion früh festlegen",
+        "text": "Eigene praktische Einordnung: Wenn ohne gefährlichen Aufschub möglich, die Zellgewinnung vor Beginn des T-Zell-aktivierenden Bridgings planen. Herstellungsprobleme nach vorangegangener Bispezifikatherapie sind beschrieben, aber nicht kausal zugeordnet. Es gibt aus diesen Daten keine validierte universelle Washout-Dauer. Aufdosierung, Toxizitätsabklingen, Blutbild und Infektionsstatus müssen zum vorgesehenen Lymphodepletions- und Infusionstermin passen.",
+        "sources": [
+          "manufacturing2026",
+          "crochet2024",
+          "planned-liso"
+        ]
+      },
+      {
+        "title": "Infektionen und Chemotherapiebelastung mitdenken",
+        "text": "Zum Bispezifikum kommen gegebenenfalls GemOx, Steroide und später Lymphodepletion hinzu. Eine zusätzliche Infektions- oder Zytopenielast ist deshalb klinisch relevant, auch wenn ihr Anteil am gesamten Risiko oft nicht trennbar ist. Zahlen aus mehrmonatiger Bispezifikatherapie dürfen nicht als Risiko eines kurzen Bridgings übernommen werden.",
+        "sources": [
+          "piazzola2026",
+          "infection2026",
+          "starglo"
+        ]
+      },
+      {
+        "title": "Bridging-Erfolg am gesamten Behandlungspfad messen",
+        "text": "Ansprechen unter Bridging allein beantwortet die Frage nicht. Benötigt werden zusätzlich Infusionsquote mit Ausfallgründen, Zeit bis CAR-T, postinfusionelle Wirksamkeit und Toxizität. Eine frühe CR ist ein günstiges Signal; sie belegt weder einen Ersatz für die geplante CAR-T-Therapie noch den Nutzen weiterer Verzögerung durch zusätzliche Bispezifikazyklen.",
+        "sources": [
+          "zhang2026",
+          "piazzola2026",
+          "planned-liso"
+        ]
+      }
+    ],
+    "evidenceNote": "Die folgenden Tabellen trennen direkte Bridging-Kohorten von früherer Bispezifika-Exposition und indirekter Evidenz. GLO = Glofitamab; ORR = CR + PR. HR/RR beziehen sich auf die ausdrücklich genannte Reihenfolge. Fehlende Nenner, Konfidenzintervalle oder Follow-up-Angaben werden nicht aus gerundeten Prozentwerten rekonstruiert. Studienfamilien und mögliche Überschneidungen werden nicht addiert.",
+    "evidenceGroups": [
+      {
+        "title": "Direkte Holding-/Bridging-Daten · Vollpublikationen und Kongressdaten gekennzeichnet",
+        "studyIds": [
+          "biscar-eha2026",
+          "german-early",
+          "piazzola2026",
+          "zhang2026",
+          "us-gemox2025",
+          "europe-gemox2026"
+        ]
+      },
+      {
+        "title": "Vorherige Bispezifika-Exposition und Herstellung · keine reinen Bridging-Vergleiche",
+        "studyIds": [
+          "crochet2024",
+          "trinetx2026",
+          "ebmt2026",
+          "manufacturing2026"
+        ]
+      },
+      {
+        "title": "Indirekte Evidenz und laufende prospektive Prüfung",
+        "studyIds": [
+          "starglo",
+          "infection2026",
+          "philipp2022",
+          "planned-liso"
+        ]
+      }
+    ],
+    "studies": [
+      {
+        "id": "biscar-eha2026",
+        "family": "german-biscar",
+        "title": "Neumann/Zieger/Flümann · BisCAR",
+        "publication": "EHA 2026 · S241/EHA-3962 · Kongressabstract und reproduzierte Originalfolien",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "112 LBCL, neun deutsche Zentren: BisCAR 67 versus konventionelles/kein Bridging 45; median zwei Vorlinien. Folien: 52% GLO mono, 36% GLO–GemOx, 12% Epcoritamab; keine randomisierte Zuordnung.",
+        "followUp": "Im zugänglichen Abstract kein medianes FU und keine numerischen PFS-/OS-HR mit KI.",
+        "efficacy": "Bridging-ORR 70,1% versus 61,1%; Monat-1-ORR nach CAR-T 80,6% versus 72,1%, jeweils nicht signifikant. Tatsächliche Response-Nenner nicht vollständig ausgewiesen; kein verifizierter isolierter GLO-mono/GLO–GemOx-Vergleich.",
+        "toxicity": "Schwere Bridging-Zytopenie 2/67 versus 8/45 insgesamt bzw. 8/36 tatsächlich gebridgter Kontrollen. CAR-T-Produkte ungleich: Liso 41/67 versus 16/45. Nach CAR-T ähnliche CRS-/ICANS-Gesamtraten; CD25-Aktivierung erhöht, PD1+TIGIT+-Frequenz vergleichbar.",
+        "limitation": "Retrospektiv, unterschiedliche Produkte und Populationen, neun ungebridgte Kontrollen. Nichtsignifikanz belegt keine Gleichwertigkeit. Mögliche Überschneidung mit früheren deutschen Kohorten. Die Behauptung einer Überlegenheit geht über die berichteten Vergleichsdaten hinaus. Ursprünglicher Intention-Nenner und Nichtinfusionen nicht ausgewiesen; keine verlässliche Infusionsquote ableitbar.",
+        "links": [
+          {
+            "label": "EHA-Originalabstract (im Suchindex geprüft)",
+            "url": "https://library.ehaweb.org/eha/2026/eha-2026/4206795/ruth.fluemann.comprehensive.analysis.of.bridging.to.car.t-cell.therapy.in.html?f=listing%3D0%2Abrowseby%3D8%2Asortby%3D2%2Asearch%3Dcar-t"
+          },
+          {
+            "label": "Originalfolien in KML-Bericht, S. 42–47",
+            "url": "https://lymphome.de/fileadmin/Media/EHA2026/Chapuy/06_Vorlage_Chapuy-EHA2026_3-Kapitel.pptx__Schreibgeschuetzt_.pdf#page=42"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:366d1c11a2ad07be239aa1bf838b381e",
+            "label": "Frühere Kongressfassung im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "german-early",
+        "family": "german-biscar",
+        "title": "Schleifenbaum · frühere deutsche Fassungen",
+        "publication": "ICML 2025 Abstract 449 und ASH 2025 Abstract 3734 · Kongressdaten",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "ICML: GLO 14 versus Kontrolle 23, davon elf GLO mono/drei GLO+Radiatio. ASH: GLO 27 versus historische Kontrolle 41, davon 23 mono/vier +Radiatio. Kein GLO–GemOx-Arm.",
+        "followUp": "ASH berichtet 90-Tage-Ergebnisse; medianes FU fehlt. Historische Kontrollen 2021–2023 versus GLO 2023–2025.",
+        "efficacy": "ASH: Bridging-Ansprechen 18/26 versus 20/39 Auswertbare; ein Progressionstod vor CAR-T in der GLO-Gruppe. Post-CAR-T-CR-Kontrollwert mit Nenner 42 trotz n=41 und fehlerhafte Prozentangaben bei Zytopenie/Fieber werden nicht quantitativ übernommen.",
+        "toxicity": "ASH: GLO-bedingtes CRS Grad 1–2 bei 7/27, ein Grad-2-ICANS; kein Grad-3–4-CRS/ICANS während Bridging. TIGIT/TIM3 in bestimmten CAR-T-Untergruppen erhöht; kein eigenständiger funktioneller Schadensnachweis.",
+        "limitation": "Fassungen derselben sich entwickelnden Studienfamilie, keine unabhängigen Bestätigungen. Interne Nennerfehler, Äraeffekt und unterschiedliche Tumorlast begrenzen Schlussfolgerungen; nicht mit EHA 2026 zusammenzählen.",
+        "links": [
+          {
+            "label": "ICML 449",
+            "url": "https://doi.org/10.1002/hon.70094_449"
+          },
+          {
+            "label": "ASH 3734",
+            "url": "https://doi.org/10.1182/blood-2025-3734"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:366d1c11a2ad07be239aa1bf838b381e",
+            "label": "ICML-Fassung im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "piazzola2026",
+        "family": "piazzola-france",
+        "title": "Piazzola · französische Zwei-Zentren-Serie",
+        "publication": "Blood Immunology & Cellular Therapy · online 21.09.2026 · Vollpublikation; frühere ASH-2025-Fassung 2770",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "23 geplante LBCL-Patienten, GLO 15/Epcoritamab acht, median zwei Vorlinien; 18 nach Versagen eines ersten Chemo-Bridgings. 20/23 infundiert, je zehn Axi/Liso.",
+        "followUp": "Median 12,2 Monate ab Infusion; medianes PFS/OS nicht erreicht. Zeitgebundene Schätzer und KI aus dem Supplement nicht verifiziert.",
+        "efficacy": "Vor CAR-T ORR 19/23, davon CR 7/23 und PR 12/23. Nach CAR-T CR 17/20; bezogen auf alle Geplanten 17/23 (73,9%, selbst berechnet).",
+        "toxicity": "Bispezifikum: CRS 15/23, nur Grad 1–2. Nach CAR-T schweres ICANS 3/20, alle Axi; Infektionen Grad 2–3 bei 6/20. Schwere Hypogammaglobulinämie 8/14 Gemessene. Median Apherese→Infusion 2,9 Monate.",
+        "limitation": "Keine Kontrolle. Lange Wartezeit nicht kausal dem Bispezifikum zuordenbar. Gründe aller drei Nichtinfusionen nicht verifiziert. Frühere n=17/15-Fassung mit zwei Progressionstodesfällen nicht addieren oder auf sämtliche späteren Ausfälle übertragen.",
+        "links": [
+          {
+            "label": "Vollpublikation",
+            "url": "https://doi.org/10.1016/j.bict.2026.100090"
+          },
+          {
+            "label": "Früheres ASH-Abstract",
+            "url": "https://doi.org/10.1182/blood-2025-2770"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:aea66d8f50062305278ae32b1baad37e",
+            "label": "Frühe Fassung im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "zhang2026",
+        "family": "moffitt-bridging",
+        "title": "Zhang · Moffitt · Bispezifika-Monotherapie",
+        "publication": "Blood Immunology & Cellular Therapy 2026 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "16 Holding-/Bridging-Intentionen, 15 LBCL/ein MCL; GLO zwölf/Epcoritamab vier, jeweils Monotherapie, median zwei Vorlinien. 13 apheresiert, 11 infundiert (acht Axi/zwei Liso/ein Brexu).",
+        "followUp": "Median neun Monate nach CAR-T; PFS ab CAR-T median 4,2 Monate (95%-KI 1,5–nicht schätzbar).",
+        "efficacy": "Vor CAR-T ORR 8/16, CR 3/16; danach ORR 9/11, CR 7/11. Fünf Nichtinfusionen: drei Progressionstodesfälle, eine Ablehnung nach CR, ein logistisches Hindernis.",
+        "toxicity": "Unter Bispezifikum je ein schweres CRS und ICANS. Nach CAR-T schweres ICANS 5/11, ein Grad-4-Ereignis mit H.-influenzae-Meningitis. Alle ICANS bis Tag 14 reversibel, keine therapiebedingten Todesfälle. Keine Herstellungsfehler unter 13 Apheresierten (neun zuvor BsAb-exponiert), keine BsAb-bedingte Infusionsverzögerung; median Apherese→Infusion 28 Tage.",
+        "limitation": "Kleine unkontrollierte Serie mit hohem Axi-Anteil und gemischten Histologien. Auffällige Neurotoxizität ernst nehmen, aber weder der Sequenz kausal zuschreiben noch als stabile Risikoquote verwenden.",
+        "links": [
+          {
+            "label": "Vollpublikation",
+            "url": "https://doi.org/10.1016/j.bict.2026.100041"
+          }
+        ],
+        "archiveEntries": []
+      },
+      {
+        "id": "us-gemox2025",
+        "family": "us-glo-gemox",
+        "title": "US-Multizenterkohorte · GLO–GemOx",
+        "publication": "ASH 2025 · Abstract 1956 · Kongressdaten",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "31 aggressive B-Zell-Lymphome aus acht Zentren, median eine Vorlinie; sieben mit CAR-T-Bridging-Intention, 24 mit anderer Therapiezielsetzung.",
+        "followUp": "Im Abstract kein medianes FU oder reife Bridging-PFS-/OS-Auswertung.",
+        "efficacy": "Bridging-Ansprechen 6/7. Bei Datenschnitt vier infundiert, zwei wartend, ein Progress mit Strategiewechsel. Nach CAR-T erst drei auswertbar: ORR 3/3, CR 2/3.",
+        "toxicity": "Gesamtkohorte: CRS 18/31, Grad ≥3 bei 4/31; zwei möglicherweise therapiebedingte Todesfälle mit konkurrierenden infektiösen Ursachen. Nicht als Toxizitätsrate der sieben Bridging-Patienten interpretieren.",
+        "limitation": "Sehr kleine noch unreife Untergruppe ohne Mono-Kontrolle. Hohe ORR unter den Auswertbaren belegt weder bessere Infusionsquote noch längeres Überleben.",
+        "links": [
+          {
+            "label": "Originalabstract",
+            "url": "https://doi.org/10.1182/blood-2025-1956"
+          }
+        ],
+        "archiveEntries": []
+      },
+      {
+        "id": "europe-gemox2026",
+        "family": "europe-glo-gemox",
+        "title": "Bozzotto/Wurm-Kuczera · europäische GLO–GemOx-Kohorte",
+        "publication": "EHA 2026 · Originalposter in KML-Bericht reproduziert · Kongressdaten",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "162 LBCL aus 26 Zentren, median zwei Vorlinien; 35,8% mit CAR-T-Bridging-Intention.",
+        "followUp": "Bridging-spezifisches FU nicht ausgewiesen.",
+        "efficacy": "Poster: Bridging-Untergruppe ORR 60,4%, CR 19,0%. Response-Nenner und tatsächliche CAR-T-Infusionsquote fehlen in der zugänglichen Abbildung.",
+        "toxicity": "Keine verifizierbaren spezifischen Sicherheitswerte für die Bridging-Untergruppe in der Abbildung.",
+        "limitation": "Gesamt-mPFS von 13 Monaten ist kein post-CAR-T- oder Bridging-spezifischer Schätzer. Keine Mono-Kontrolle; Überlappung mit anderen deutschen Kohorten möglich.",
+        "links": [
+          {
+            "label": "Originalposter, S. 49–50",
+            "url": "https://lymphome.de/fileadmin/Media/EHA2026/Chapuy/06_Vorlage_Chapuy-EHA2026_3-Kapitel.pptx__Schreibgeschuetzt_.pdf#page=49"
+          }
+        ],
+        "archiveEntries": []
+      },
+      {
+        "id": "crochet2024",
+        "family": "crochet-descar",
+        "title": "Crochet · CAR-T nach früherer Bispezifikatherapie",
+        "publication": "Blood 2024 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "47 bereits infundierte LBCL, median drei Vorlinien; 43 CD20×CD3/vier CD22×CD3. Alle vor Apherese exponiert. Gematchter Vergleich 42 versus 42 BsAb-naive Kontrollen.",
+        "followUp": "Median 10,5 Monate. Letzte Bispezifikadosis→Apherese median 51 Tage (13–512).",
+        "efficacy": "Exponierte: ORR 85%, CR 43%; Einjahres-PFS 42% (95%-KI 25,9–57,7), OS 55% (37,5–70,6). Nach Matching kein signifikanter Unterschied bei CR/PFS/OS; keine belastbare Äquivalenzprüfung.",
+        "toxicity": "Nach CAR-T CRS ≥3 bei 6%, ICANS ≥3 bei 2%; fünf Infektionstodesfälle im Verlauf ohne Nachweis einer Bispezifika-Kausalität.",
+        "limitation": "Vorexposition überwiegend als frühere Behandlung, nicht reines postapheretisches Bridging. Nichtinfundierte/Herstellungsausfälle fehlen; sechs von 13 Matchingvariablen weiterhin unausgewogen. Der 50-Tage-Analysecutoff ist keine Washout-Empfehlung.",
+        "links": [
+          {
+            "label": "Vollpublikation",
+            "url": "https://doi.org/10.1182/blood.2024024526"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:330179dd88cb42cedf2e8a185c4bd2ac",
+            "label": "Publikation im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "trinetx2026",
+        "family": "trinetx-bsab",
+        "title": "Siva · TriNetX · vorherige CD20×CD3-Exposition",
+        "publication": "ASH 2026 · Abstract 3680 öffentlich verfügbar; Präsentation für 13.12.2026 vorgesehen",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "2.147 infundierte DLBCL, davon 93 vorher Bispezifika; nach Matching 81 versus 81. Exposition zu irgendeinem Zeitpunkt, keine definierte Bridging-Kohorte; Therapielinien nicht hinreichend differenziert.",
+        "followUp": "Einjahres-Auswertung; medianes FU nicht genannt.",
+        "efficacy": "Vorher exponiert versus nicht exponiert: OS-HR 1,07 (95%-KI 0,59–1,93). Kein Ansprechen oder PFS auswertbar.",
+        "toxicity": "CRS-RR 1,28 (0,91–1,81); ICANS 24,7% versus 14,8%, RR 1,67 (0,87–3,18); Infektions-RR 0,88 (0,66–1,15).",
+        "limitation": "Breite KI lassen klinisch relevante Nachteile zu. Elektronische Routinedaten, fehlendes Timing zur Apherese, residuale Konfundierung; keine Gleichwertigkeits- oder Sicherheitsgarantie.",
+        "links": [
+          {
+            "label": "Offizielles Abstract 3680",
+            "url": "https://onlineprogram.hematology.org/paper-details.aspx?pid=691232"
+          },
+          {
+            "label": "ASH-Archiv (Abstract 3680)",
+            "url": "https://jochim-uke.github.io/medical-search-tools/ash-2026/"
+          }
+        ],
+        "archiveEntries": []
+      },
+      {
+        "id": "ebmt2026",
+        "family": "ebmt-prior-immunotherapy",
+        "title": "Schroeder · EBMT-Register",
+        "publication": "Bone Marrow Transplantation 2026 · Vollpublikation",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "1.158 infundierte LBCL, Axi/Tisa 2018–2023. Vorher B-Zell-gerichtete Immuntherapie 381 versus 777 ohne; unter Exponierten 306 Pola-Regime, nur 24 Bispezifika.",
+        "followUp": "Median 36 Monate.",
+        "efficacy": "Gesamtexposition versus keine: adjustierte OS-HR 1,21 (95%-KI 1,00–1,46). Der Gesamtschätzer ist kein Bispezifika-spezifischer Effekt.",
+        "toxicity": "Ähnliche CRS-/ICANS- und schwere Infektionsraten im Gesamtvergleich; geringe BsAb-Zahl begrenzt Sicherheitsbewertung.",
+        "limitation": "Überwiegend Polatuzumab-Exposition; keine belastbare direkte Aussage GLO mono versus GemOx oder zu seltenen BsAb-Schäden. Register können mit anderen europäischen Kohorten überlappen.",
+        "links": [
+          {
+            "label": "Vollpublikation",
+            "url": "https://doi.org/10.1038/s41409-026-02979-x"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "doi:10.1038/s41409-026-02979-x",
+            "label": "Einordnung im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "manufacturing2026",
+        "family": "surapaneni-manufacturing",
+        "title": "Surapaneni · Herstellung nach BsAb vor Apherese",
+        "publication": "Tandem 2026 · Abstract 521 · Kongressdaten",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "16 Patienten: acht FL, sieben DLBCL, ein CLL/Richter; BsAb innerhalb 100 Tagen vor Apherese, median zwei Vorlinien. Keine Vergleichsgruppe.",
+        "followUp": "Keine belastbare Langzeit-Wirksamkeitsanalyse; letzte BsAb-Dosis→Apherese median 29 Tage (5–96).",
+        "efficacy": "Zwei initiale Herstellungsfehler, beide nach erneuter Apherese erfolgreich; 15/16 infundiert, ein Progressionstod davor.",
+        "toxicity": "Herstellungsfehler betrafen FL mit leukämischer Erkrankung und CLL/Richter, keinen der sieben DLBCL-Fälle.",
+        "limitation": "Zirkulierende Erkrankung und andere Einflüsse nicht getrennt. Kein Beweis, dass BsAb den Fehler verursachte, und keine validierte Mindestpause. Vorapheretische Exposition nicht mit bereits abgeschlossenem Zellgewinn gleichsetzen.",
+        "links": [
+          {
+            "label": "Originalabstract",
+            "url": "https://doi.org/10.1016/j.jtct.2025.12.545"
+          }
+        ],
+        "archiveEntries": []
+      },
+      {
+        "id": "starglo",
+        "family": "starglo",
+        "title": "STARGLO · wirksame Kombination, andere Fragestellung",
+        "publication": "Lancet 2024 und Blood Advances 2026 · Vollpublikationen derselben randomisierten Studie",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "274 ASCT-ungeeignete r/r DLBCL ab Zweitlinie: GLO–GemOx 183 versus R–GemOx 91. Primärer Endpunkt OS; keine geplante Bridging-Strategiestudie.",
+        "followUp": "Aktualisierung: medianes OS-FU 35,1 Monate, Datenschnitt 01.05.2025.",
+        "efficacy": "GLO–GemOx versus R–GemOx: medianes OS 25,5 versus 12,5 Monate; HR 0,60 (95%-KI 0,4–0,8). Medianes PFS 14,4 versus 3,3 Monate; HR 0,41 (0,3–0,6).",
+        "toxicity": "Zusätzliche Bispezifika- und Chemotherapiebelastung; langfristige Sicherheit der Gesamtbehandlung ist nicht die Sicherheit eines kurzen Bridgings.",
+        "limitation": "Kein GLO-Mono-Arm. Ein Vorteil gegenüber R–GemOx beweist weder den Nutzen von GemOx zusätzlich zu GLO noch bessere Ergebnisse einer anschließenden CAR-T-Therapie.",
+        "links": [
+          {
+            "label": "Erstpublikation",
+            "url": "https://doi.org/10.1016/S0140-6736(24)01774-4"
+          },
+          {
+            "label": "Dreijahres-Update",
+            "url": "https://doi.org/10.1182/bloodadvances.2026019764"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "zotero:doi:40c3c57bfd5d7bbf3767c00e8d868fd8",
+            "label": "STARGLO-Erstpublikation im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "infection2026",
+        "family": "shahid-infections",
+        "title": "Shahid · Infektionen unter CD20×CD3-Bispezifika",
+        "publication": "HemaSphere 2026 · Vollpublikation · indirekte Sicherheitsdaten",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "285 NHL aus vier Zentren, median drei Vorlinien und fünf Monate Bispezifikatherapie; kein kurzes Bridging-Kollektiv.",
+        "followUp": "Therapiebezogene Beobachtung bis zur nächsten Behandlungslinie; Expositionsdauer deutlich länger als typisches Bridging.",
+        "efficacy": "Keine Wirksamkeitsbewertung der Bridging-Regime.",
+        "toxicity": "Infektionen 121/285; Grad ≥3 bei 65/285, acht tödliche Infektionen. Heterogene Regime und Vortherapien.",
+        "limitation": "Diese Häufigkeiten nicht auf ein bis zwei Bridging-Zyklen übertragen. Unterstützt die Aufmerksamkeit für IgG, Infektionsvorgeschichte und kumulative Immunsuppression, keine kausale Regime-Rangfolge.",
+        "links": [
+          {
+            "label": "Vollpublikation",
+            "url": "https://doi.org/10.1002/hem3.70514"
+          }
+        ],
+        "archiveEntries": [
+          {
+            "id": "pubmed:42968842",
+            "label": "Infektionskohorte im Archiv"
+          }
+        ]
+      },
+      {
+        "id": "philipp2022",
+        "family": "philipp-exhaustion",
+        "title": "Philipp · Mechanismus kontinuierlicher T-Zell-Stimulation",
+        "publication": "Blood 2022 · experimentelle Vollpublikation · indirekte Evidenz",
+        "peerReviewed": true,
+        "directSecondLine": false,
+        "population": "Experimentelle CD19×CD3-Modelle und Blinatumomab-bezogenes Material; keine klinische Glofitamab-Bridging-Kohorte.",
+        "followUp": "Experimentelle kontinuierliche Exposition über bis zu 28 Tage.",
+        "efficacy": "Funktionsverlust bei anhaltender Stimulation; Erholung während Therapiepausen. Kein klinischer CAR-T-Vergleich.",
+        "toxicity": "Begründet eine biologische Sorge, quantifiziert aber kein Neurotoxizitäts-, Infektions- oder CAR-T-Versagensrisiko beim LBCL.",
+        "limitation": "Antikörper, Target, Expositionsmuster und Versuchssystem unterscheiden sich. Keine Ableitung einer universellen Pausenlänge oder eines nachgewiesenen Schadens kurzer CD20×CD3-Bridges.",
+        "links": [
+          {
+            "label": "Originalpublikation",
+            "url": "https://doi.org/10.1182/blood.2022015956"
+          }
+        ],
+        "archiveEntries": []
+      },
+      {
+        "id": "planned-liso",
+        "family": "prospective-glogemox-liso",
+        "title": "Prospektive Phase II · GLO–GemOx vor Liso-cel",
+        "publication": "Studienregister NCT07711483 · laufende Prüfung, keine Ergebnisstudie",
+        "peerReviewed": false,
+        "directSecondLine": false,
+        "population": "Geplante Zweitlinien-Liso-cel-Therapie beim r/r LBCL; GLO–GemOx nach Leukapherese, ein bis zwei Zyklen im Studienablauf.",
+        "followUp": "Keine publizierten Ergebnisdaten in der geprüften Registerquelle.",
+        "efficacy": "Untersucht Wirksamkeit nach Bridging und Erreichen der CAR-T-Infusion.",
+        "toxicity": "Behandlungsbedingte Ereignisse sind Studienendpunkte; kein bereits etablierter Sicherheitsnachweis.",
+        "limitation": "Einarmige Phase II; wird die direkte Mono-versus-GemOx-Frage allein nicht endgültig beantworten. Studienablauf ist keine allgemeine Dosierungsanweisung.",
+        "links": [
+          {
+            "label": "NCI-Studienbeschreibung",
+            "url": "https://www.cancer.gov/research/participate/clinical-trials-search/v?id=NCI-2026-07369"
+          },
+          {
+            "label": "ClinicalTrials.gov",
+            "url": "https://clinicaltrials.gov/study/NCT07711483"
+          }
+        ],
+        "archiveEntries": []
+      }
+    ],
+    "interpretation": [
+      "Zeitnull und Nenner entscheiden über die Aussage. Ein Ergebnis unter Infundierten lässt Progression, Tod, Ablehnung oder Logistikprobleme davor unberücksichtigt. Response-Raten der Auswertbaren sind nicht automatisch Raten aller Patienten mit ursprünglicher CAR-T-Intention.",
+      "Die deutsche EHA-Kohorte liefert einen relevanten Gesamtvergleich, jedoch keine belastbare isolierte Entscheidung GLO mono versus GLO–GemOx. Ein sekundär berichteter Subgruppenvergleich „Bispezifika-Monotherapie“ wurde mangels verifizierbarer Primärnenner und unklarer Beimischung von Epcoritamab nicht als quantitative Entscheidungsgrundlage übernommen.",
+      "Das Ansprechen auf Bridging kann sowohl einen Behandlungseffekt als auch günstigere Erkrankungsbiologie anzeigen. Seine Assoziation mit späterer Remission beweist weder bessere CAR-T-Fitness noch einen kausalen Vorteil des gewählten Bridgings.",
+      "Neurotoxizität muss vor dem Hintergrund von Axi/Liso-Verteilung, Tumorlast, ZNS-Befall und konkurrierenden Infektionen bewertet werden. Auch ein nicht signifikanter Vergleich mit breitem Konfidenzintervall kann einen relevanten Nachteil nicht ausschließen.",
+      "Mono bezeichnet hier ein Glofitamab-Regime ohne zusätzliche zytotoxische Chemotherapie; die übliche Obinutuzumab-Vorbehandlung wird dadurch nicht verneint. GLO plus Radiatio, GLO–GemOx und gemischte Bispezifika-Kohorten bleiben getrennt kenntlich.",
+      "Versionsabgleich: ICML 449 und ASH 3734 werden als frühere deutsche Studienfamilie zusammengeführt; Überlappung mit EHA S241 wird angenommen, aber nicht patientengenau behauptet. Piazzola ASH 2770 und die spätere Vollpublikation bilden eine Familie. STARGLO-Erstbericht und Dreijahres-Update sind dieselbe randomisierte Studie. Europäische Multizenter-/Registerkohorten können weitere Überschneidungen enthalten.",
+      "Zugriffsgrenzen: Das EHA-Originalabstract war vollständig im Suchindex lesbar, der Direktabruf nicht zuverlässig; die verlinkten reproduzierten Originalfolien dienen als zusätzliche Quelle. Das europäische GLO–GemOx-Poster enthält keine vollständigen Bridging-Nenner. Französische Supplement-Schätzer und alle finalen Nichtinfusionsgründe waren nicht verifizierbar. Fehlende Werte bleiben offen; Kongressdaten werden nicht wie reife Vollpublikationen behandelt.",
+      "Die Auswahl und klinischen Abwägungen sind KI-generierte fachliche Einordnung. Es handelt sich nicht um eine Metaanalyse oder einen validierten Entscheidungsalgorithmus. Für die Regimewahl sind Tumorbiologie, Chemosensitivität, Organ- und Knochenmarkreserve sowie die konkret erreichbare CAR-T-Timeline gemeinsam relevant."
+    ],
+    "openQuestions": [
+      {
+        "question": "Verbessert GemOx zusätzlich zu Glofitamab den gesamten CAR-T-Behandlungspfad?",
+        "trigger": "Prospektiver oder gut adjustierter direkter Vergleich mit exakt getrennten Regimen, Ausgangstumorlast, tatsächlichen Response-Nennern, Nichtinfusionsgründen, Zeit bis CAR-T und post-CAR-T-PFS/OS.",
+        "sources": [
+          "biscar-eha2026",
+          "europe-gemox2026",
+          "planned-liso"
+        ]
+      },
+      {
+        "question": "Erhöht die Sequenz das Risiko schweren ICANS oder später Infektionen?",
+        "trigger": "Größere zeitgleiche Vergleichskohorten mit produktbezogenen Auswertungen, ZNS-Befall, Expositionsdauer, Steroidlast und ausreichend engen Konfidenzintervallen; längere Nachbeobachtung.",
+        "sources": [
+          "zhang2026",
+          "trinetx2026",
+          "piazzola2026",
+          "infection2026"
+        ]
+      },
+      {
+        "question": "Welche Zeitabstände schützen Herstellung und T-Zell-Funktion ohne gefährliche Verzögerung?",
+        "trigger": "Analysen ab Therapieentscheidung/Apherese mit allen Herstellungsversuchen, funktionellen T-Zell-Tests, Expansion/Persistenz und präzisen Zeitpunkten der letzten Bispezifikadosis.",
+        "sources": [
+          "manufacturing2026",
+          "crochet2024",
+          "philipp2022"
+        ]
+      },
+      {
+        "question": "Wie ändern reifere Originaldaten die derzeitige Einordnung?",
+        "trigger": "Vollpublikation von EHA S241 mit Supplement, Korrektur der früheren Abstract-Nenner, ausgereifte GLO–GemOx-Bridging-Daten und prospektive Ergebnisse zu NCT07711483.",
+        "sources": [
+          "biscar-eha2026",
+          "german-early",
+          "us-gemox2025",
+          "planned-liso"
+        ]
+      }
+    ],
+    "changes": [
+      {
+        "date": "2026-11-25",
+        "text": "Erste Kuratierung der bestätigten und um Nachteile erweiterten Fragestellung. Mono-/GemOx-Daten, vor- versus nachapheretische Exposition und Toxizität getrennt bewertet. Frühere Studienfassungen zusammengeführt, relevante bestehende Archivbeiträge verknüpft und nicht verifizierbare Nenner/Schätzer ausdrücklich offengelassen."
+      }
+    ]
   }
 ]
