@@ -1,0 +1,561 @@
+{
+  "id": "2026-W48",
+  "title": "KW 48 · November 2026",
+  "sets": [
+    {
+      "title": "Spenderwahl, Bridging & Langzeitevidenz",
+      "questions": [
+        {
+          "topic": "Allo · DDX41-Spenderwahl",
+          "question": "Bei AML mit gesicherter pathogener DDX41-Keimbahnvariante kommt ein gesunder HLA-identischer Bruder als Spender infrage. Welche Prüfung ist vor seiner Auswahl besonders relevant?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Ein unauffälliges Blutbild genügt zur genetischen Entwarnung.",
+              "feedback": "Eine Prädisposition kann lange ohne Blutbildveränderungen bestehen."
+            },
+            {
+              "value": "B",
+              "label": "Gezielte Untersuchung auf die familiäre DDX41-Variante.",
+              "feedback": "Gesunde Angehörige können die Prädisposition tragen; die Spenderwahl muss dies berücksichtigen."
+            },
+            {
+              "value": "C",
+              "label": "Die HLA-Identität schließt das familiäre Risiko aus.",
+              "feedback": "HLA-Passung beantwortet die DDX41-Frage nicht."
+            },
+            {
+              "value": "D",
+              "label": "Die Abklärung kann bis nach der Spende warten.",
+              "feedback": "Eine erst nachträgliche Untersuchung verhindert die Übertragung nicht."
+            }
+          ],
+          "correct": "B",
+          "hint": "Eine erbliche Prädisposition kann klinisch lange stumm bleiben.",
+          "explanation": "Loschi et al. untersuchten 2025 retrospektiv 83 DDX41-mutierte MDS/AML-Patienten nach HSCT und identifizierten sieben Fälle von Donorzellleukämie nach verwandter Spende. Dies stützt eine gezielte genetische Abklärung potenzieller verwandter Spender vor Auswahl. Die Serie liefert keine randomisierte Screening-Evidenz und erlaubt keine pauschale Risikoschätzung für alle Varianten.",
+          "sources": [
+            {
+              "title": "Loschi et al. · Blood Advances 2025 · DDX41-HSCT",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40924929/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Allo · MDS-Evidenz",
+          "question": "Was beschreibt BMT CTN 1102 bei 50–75-Jährigen mit höherem Risiko eines de-novo-MDS korrekt?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Randomisierung zwischen zwei Konditionierungen.",
+              "feedback": "Zwei Konditionierungen waren nicht der zentrale Vergleich."
+            },
+            {
+              "value": "B",
+              "label": "Randomisierung zwischen Azacitidin und Decitabin.",
+              "feedback": "Der Vergleich betraf HCT versus nichttransplantative Strategie."
+            },
+            {
+              "value": "C",
+              "label": "Retrospektiver Vergleich ausschließlich transplantierter Patienten.",
+              "feedback": "Die Studie erfasste prospektiv auch den No-Donor-Arm."
+            },
+            {
+              "value": "D",
+              "label": "Biologische Zuteilung nach Verfügbarkeit eines gematchten Spenders.",
+              "feedback": "Die Zuteilung erfolgte anhand eines innerhalb von 90 Tagen gefundenen Spenders."
+            }
+          ],
+          "correct": "D",
+          "hint": "Prüfe, wodurch die Gruppenzugehörigkeit bei Studienbeginn festgelegt wurde.",
+          "explanation": "Die prospektive multizentrische Studie (JCO 2021, n=384) verglich eine RIC-HCT-Strategie mit HMA oder Supportivtherapie anhand der Spenderverfügbarkeit. Das adjustierte 3-Jahres-OS betrug im Donor-Arm 47,9 %, im No-Donor-Arm 26,6 %. Biologische Zuteilung ist keine konventionelle Randomisierung; die Aussage betrifft transplantationsgeeignete ältere Patienten mit höherem MDS-Risiko.",
+          "sources": [
+            {
+              "title": "Nakamura et al. · JCO 2021 · BMT CTN 1102",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/34106753/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "CAR-T · Bridging",
+          "question": "Die EBMT/GoCART-Analyse 2026 fand bei 1.134 LBCL-Patienten schlechteres Überleben mit als ohne Bridging. Welche Folgerung ist angemessen?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Unterschiedliche Ausgangsrisiken begrenzen die kausale Interpretation.",
+              "feedback": "Bridging-Empfänger hatten häufiger ungünstige Krankheitsmerkmale."
+            },
+            {
+              "value": "B",
+              "label": "Bridging sollte bei jeder Progression vermieden werden.",
+              "feedback": "Eine behandlungsbedürftige Progression kann Bridging notwendig machen."
+            },
+            {
+              "value": "C",
+              "label": "Die Analyse beweist eine direkte Schädigung durch Bridging.",
+              "feedback": "Beobachtungsdaten beweisen diesen kausalen Mechanismus nicht."
+            },
+            {
+              "value": "D",
+              "label": "Ohne Bridging war jeder Patient bereits in kompletter Remission.",
+              "feedback": "Keine Bridging-Therapie bedeutet nicht automatisch komplette Remission."
+            }
+          ],
+          "correct": "A",
+          "hint": "Warum benötigen manche Patienten überhaupt eine Überbrückung?",
+          "explanation": "Die Registeranalyse vom 13.11.2026 untersuchte Axi-cel/Tisa-cel bei R/R-LBCL. Das 3-Jahres-PFS betrug 34,3 % mit und 44,7 % ohne Bridging. Confounding by indication bleibt trotz Adjustierung möglich. Die große, klinisch relevante Kohorte begründet ihre Aufnahme; sie randomisierte keine Bridging-Strategien.",
+          "sources": [
+            {
+              "title": "EBMT/GoCART · Bone Marrow Transplantation 2026 · Bridging",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/43026256/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Lymphom · RELEVANCE",
+          "question": "Welche Aussage trifft die 2026 publizierte Zehnjahresanalyse von RELEVANCE bei unbehandeltem fortgeschrittenem FL?",
+          "options": [
+            {
+              "value": "A",
+              "label": "R² verdoppelte das Zehnjahres-PFS gegenüber R-Chemo.",
+              "feedback": "Die PFS-Raten lagen dicht beieinander."
+            },
+            {
+              "value": "B",
+              "label": "R-Chemo zeigte einen gesicherten OS-Vorteil.",
+              "feedback": "Ein solcher OS-Vorteil wurde nicht gezeigt."
+            },
+            {
+              "value": "C",
+              "label": "R² und R-Chemo zeigten nahezu gleiche Zehnjahres-PFS-Raten.",
+              "feedback": "Das Zehnjahres-PFS lag bei 46,4 % unter R² und 46,6 % unter R-Chemo."
+            },
+            {
+              "value": "D",
+              "label": "Beide Arme waren nach zehn Jahren weitgehend progressionsfrei.",
+              "feedback": "Rund die Hälfte hatte bis dahin ein PFS-Ereignis."
+            }
+          ],
+          "correct": "C",
+          "hint": "Vergleiche die Langzeit-PFS-Raten, nicht nur die mediane Zeit.",
+          "explanation": "RELEVANCE randomisierte 1.030 zuvor unbehandelte FL-Patienten zu R² oder R-Chemo. Im finalen Follow-up nach 120 Monaten lag das Zehnjahres-PFS bei 46,4 % versus 46,6 %, das OS bei 82,4 % versus 81,1 %. Dies stützt R² als chemotherapiefreie Alternative; ähnliche Schätzwerte beweisen weder Heilung noch universelle Gleichwertigkeit für jede Untergruppe.",
+          "sources": [
+            {
+              "title": "Gower et al. · Blood 2026 · RELEVANCE, zehn Jahre",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/41915772/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Evidenz · Nichtunterlegenheit",
+          "question": "ASAP verwendete für den primären Nichtunterlegenheitstest ein einseitiges α von 0,025. Der ITT-p-Wert war 0,036. Was folgt formal?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Nichtunterlegenheit ist wegen p <0,05 nachgewiesen.",
+              "feedback": "Das maßgebliche Niveau war 0,025, nicht 0,05."
+            },
+            {
+              "value": "B",
+              "label": "Nichtunterlegenheit wurde im primären Test nicht nachgewiesen.",
+              "feedback": "0,036 überschreitet das präspezifizierte Signifikanzniveau 0,025."
+            },
+            {
+              "value": "C",
+              "label": "Überlegenheit der Salvage wurde dadurch nachgewiesen.",
+              "feedback": "Ein fehlgeschlagener Nichtunterlegenheitstest beweist nicht die Überlegenheit der Kontrolle."
+            },
+            {
+              "value": "D",
+              "label": "Die Therapien sind damit als äquivalent bewiesen.",
+              "feedback": "Äquivalenz erfordert eine eigene Prüfstrategie."
+            }
+          ],
+          "correct": "B",
+          "hint": "Vergleiche den p-Wert mit dem vorab festgelegten Niveau.",
+          "explanation": "ASAP (2024) randomisierte 281 Erwachsene mit schlecht ansprechender oder erstmals rezidivierter AML zu unmittelbarer HCT-Strategie oder intensiver Salvage. Der primäre Erfolg war CR an Tag 56 nach HCT. Trotz numerisch 83 % versus 79 % wurde Nichtunterlegenheit bei α=0,025 nicht gezeigt. Das betrifft diesen Test, nicht automatisch alle klinischen Endpunkte.",
+          "sources": [
+            {
+              "title": "ASAP · Lancet Haematology 2024 · Primäranalyse",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38583455/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "title": "Aktive AML, Lunge & Therapiesequenzen",
+      "questions": [
+        {
+          "topic": "Allo · ASAP-Langzeitdaten",
+          "question": "Was zeigte das 2025 publizierte ASAP-Langzeit-Follow-up zur intensiven Salvage vor HCT bei schlecht ansprechender oder erstmals rezidivierter AML?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Einen gesicherten OS-Vorteil der Salvage-Strategie.",
+              "feedback": "Das Fünfjahres-OS unterschied sich nicht signifikant."
+            },
+            {
+              "value": "B",
+              "label": "Einen gesicherten OS-Vorteil unmittelbarer HCT.",
+              "feedback": "Nichtsignifikanz begründet auch keine Überlegenheit unmittelbarer HCT."
+            },
+            {
+              "value": "C",
+              "label": "Keinen OS-Vorteil der Salvage gegenüber unmittelbarer HCT-Strategie.",
+              "feedback": "Das OS betrug 46,1 % bei Disease Control versus 47,5 % bei Salvage."
+            },
+            {
+              "value": "D",
+              "label": "Eine Kontraindikation für HCT bei aktiver AML.",
+              "feedback": "Aktive AML wurde ausdrücklich in dieser HCT-Studie untersucht."
+            }
+          ],
+          "correct": "C",
+          "hint": "Der Endpunkt beginnt bei Randomisierung, nicht erst bei erfolgreicher Transplantation.",
+          "explanation": "Im randomisierten ASAP-Langzeitvergleich (n=281; Blood 2025) lag das 5-Jahres-OS ab Randomisierung bei 46,1 % für Disease Control/unmittelbare HCT und 47,5 % für intensive Remissionsinduktion (p=0,82). Die Studie stützt keinen allgemeinen Zwang zu konventioneller Salvage vor HCT. Sie betrifft ausgewählte fitte Patienten mit verfügbarem Spender und intensiver/sequenzieller Konditionierung; nicht jede AML-Situation ist abgedeckt.",
+          "sources": [
+            {
+              "title": "ASAP · Blood 2025 · Langzeitdaten",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40737595/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Allo · Pulmonale Komplikationen",
+          "question": "Welche BAL-Konstellation stützt nach EBMT Handbook eine diffuse alveoläre Hämorrhagie nach HCT am stärksten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Progressiv blutigere BAL-Aliquots aus mehreren Segmenten.",
+              "feedback": "Progressiv blutigere Aliquots sind ein zentrales DAH-Kriterium."
+            },
+            {
+              "value": "B",
+              "label": "Zunehmend klare Aliquots nach initial blutiger Probe.",
+              "feedback": "Das passt eher zu einer proximalen beziehungsweise traumatischen Blutbeimengung."
+            },
+            {
+              "value": "C",
+              "label": "Isolierte neutrophile Alveolitis ohne Blutbeimengung.",
+              "feedback": "Dieser Befund ist unspezifisch."
+            },
+            {
+              "value": "D",
+              "label": "Einmalige Blutspur bei ansonsten unauffälliger BAL.",
+              "feedback": "Eine einzelne Blutspur reicht nicht zur Syndromdiagnose."
+            }
+          ],
+          "correct": "A",
+          "hint": "Eine alveoläre Blutungsquelle verhält sich bei serieller Lavage anders als ein Zugangstrauma.",
+          "explanation": "Das EBMT Handbook 2024 nennt progressiv blutigere BAL-Aliquots in mindestens drei Segmentbronchien als diagnostischen Hinweis. Fehlende Hämoptysen oder initial fehlende Hämosiderinmakrophagen schließen DAH nicht aus. Der Befund ersetzt weder Erregersuche noch die Abklärung anderer Ursachen und beweist keine nichtinfektiöse Genese.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Noninfectious Pulmonary Complications",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608330/table/ch52.Tabe/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "CAR-T · Sequenz nach Bispezifika",
+          "question": "Welche Aussage ist durch die retrospektive Blood-Arbeit 2024 zur CAR-T-Therapie nach Bispezifika bei LBCL gedeckt?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Eine Bispezifikum-Vortherapie macht CAR-T grundsätzlich unwirksam.",
+              "feedback": "Die Arbeit dokumentierte erhaltene CAR-T-Aktivität."
+            },
+            {
+              "value": "B",
+              "label": "Die optimale Reihenfolge wurde randomisiert bestimmt.",
+              "feedback": "Es handelte sich um eine retrospektive Untersuchung."
+            },
+            {
+              "value": "C",
+              "label": "Ein Auswaschintervall von exakt vier Wochen wurde validiert.",
+              "feedback": "Ein solches universelles Intervall wurde nicht validiert."
+            },
+            {
+              "value": "D",
+              "label": "CAR-T kann nach Bispezifika wirksam sein; eine optimale Sequenz ist nicht bewiesen.",
+              "feedback": "Beobachtete Aktivität ist keine randomisierte Sequenzentscheidung."
+            }
+          ],
+          "correct": "D",
+          "hint": "Unterscheide Machbarkeit und Aktivität von einem direkten Sequenzvergleich.",
+          "explanation": "Die Blood-Publikation vom 18.07.2024 beschreibt erhaltene CAR-T-Wirksamkeit bei R/R-LBCL nach vorausgegangener Bispezifikum-Exposition. Retrospektive Selektion und heterogene Vorbehandlungen begrenzen die Aussage. Weder eine bevorzugte Reihenfolge noch ein allgemein gültiger Washout sind dadurch nachgewiesen.",
+          "sources": [
+            {
+              "title": "Blood 2024 · CAR-T nach Bispezifika",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/38657242/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Lymphom · SHINE",
+          "question": "Welches Nutzenprofil zeigte die SHINE-Primärpublikation 2022 für Ibrutinib zusätzlich zu BR bei älteren unbehandelten MCL-Patienten?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Längeres PFS ohne belegten OS-Vorteil.",
+              "feedback": "Der signifikante Vorteil betraf PFS; das OS war ähnlich."
+            },
+            {
+              "value": "B",
+              "label": "Längeres OS bei unverändertem PFS.",
+              "feedback": "Ein OS-Vorteil wurde nicht nachgewiesen."
+            },
+            {
+              "value": "C",
+              "label": "Weniger Grad-3/4-Toxizität bei gleichem PFS.",
+              "feedback": "Grad-3/4-Ereignisse waren numerisch häufiger unter Ibrutinib."
+            },
+            {
+              "value": "D",
+              "label": "Höhere CR-Rate mit gesicherter statistischer Signifikanz.",
+              "feedback": "Der CR-Vergleich erreichte mit p=0,06 keine konventionelle Signifikanz."
+            }
+          ],
+          "correct": "A",
+          "hint": "Trenne den primären Zeit-bis-Ereignis-Endpunkt von OS und Response.",
+          "explanation": "SHINE war eine randomisierte placebokontrollierte Phase-III-Studie bei zuvor unbehandeltem MCL ab 65 Jahren, mit BR und Rituximab-Erhaltung. Die NEJM-Primärpublikation 2022 zeigte verlängertes PFS durch Ibrutinib, aber keinen OS-Vorteil. Grad-3/4-Ereignisse traten bei 81,5 % versus 77,3 % auf. Das Ergebnis ist kein direkter Vergleich mit anderen BTKi oder CAR-T.",
+          "sources": [
+            {
+              "title": "Wang et al. · NEJM 2022 · SHINE",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/35657079/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Evidenz · Biopsieselektion",
+          "question": "In einer US-Serie 2025 hatten 15 von 17 Patienten mit gepaarten Biopsien nach CD20-Bispezifika einen CD20-Verlust. Was darf daraus geschlossen werden?",
+          "options": [
+            {
+              "value": "A",
+              "label": "88,2 % aller behandelten Patienten verlieren CD20.",
+              "feedback": "Der Nenner umfasst nur die ausgewählte Biopsiegruppe."
+            },
+            {
+              "value": "B",
+              "label": "CD20-Verlust erklärt nachweislich jede Progression.",
+              "feedback": "Andere Resistenzmechanismen bleiben möglich."
+            },
+            {
+              "value": "C",
+              "label": "In der selektierten Biopsiegruppe war CD20-Verlust häufig.",
+              "feedback": "15/17 beschreibt diese selektierte Teilgruppe."
+            },
+            {
+              "value": "D",
+              "label": "Die Zahl ist eine unverzerrte prospektive Inzidenz.",
+              "feedback": "Biopsieindikation und Verfügbarkeit erzeugen Selektion."
+            }
+          ],
+          "correct": "C",
+          "hint": "Wer gelangte tatsächlich in den Nenner 17?",
+          "explanation": "Die retrospektive US-Multicenter-Serie zu kommerziellem Epcoritamab/Glofitamab bei R/R-DLBCL (Blood 2025) fand CD20-Verlust bei 15 von 17 gepaart biopsierten Personen. Dies ist ein Resistenzsignal, keine Inzidenzschätzung für alle Behandelten. Erneute Gewebecharakterisierung kann die nächste Zielstrukturentscheidung unterstützen.",
+          "sources": [
+            {
+              "title": "Blood 2025 · Epcoritamab/Glofitamab in der Versorgung",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40663785/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "title": "Transplantationspraxis & Zielstrukturen",
+      "questions": [
+        {
+          "topic": "Allo · Zellzahl",
+          "question": "Welche CD34-Dosis nennt Tabelle 41.2 des EBMT Handbook 2024 als optimalen Bereich für allogene periphere Stammzellen bei RIC?",
+          "options": [
+            {
+              "value": "A",
+              "label": "0,4–0,8 × 10⁶/kg Empfängergewicht.",
+              "feedback": "Das liegt deutlich unter dem empfohlenen Bereich."
+            },
+            {
+              "value": "B",
+              "label": "1–2 × 10⁶/kg Empfängergewicht.",
+              "feedback": "Das liegt unter dem angegebenen Optimum."
+            },
+            {
+              "value": "C",
+              "label": "40–80 × 10⁶/kg Empfängergewicht.",
+              "feedback": "Das ist um eine Größenordnung zu hoch."
+            },
+            {
+              "value": "D",
+              "label": "4–8 × 10⁶/kg Empfängergewicht.",
+              "feedback": "Dieser Bereich wird für allogene PB-Progenitoren bei RIC genannt."
+            }
+          ],
+          "correct": "D",
+          "hint": "Unterscheide Minimaldosis, optimale Dosis und TNC-Zahl.",
+          "explanation": "Die EBMT-Tabelle 41.2 von 2024 nennt für allogene PB-Progenitoren bei RIC >2 × 10⁶ CD34/kg als Minimum und 4–8 × 10⁶/kg als Optimum. Dies ist ein Orientierungsbereich, kein universeller Garant für Engraftment; Graftmanipulation und jeweilige Plattform können andere Ziele verlangen.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Tabelle 41.2",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608339/table/ch41.Tab2/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Allo · Ernährung",
+          "question": "Nach Allo-HCT bleibt die orale Zufuhr trotz Unterstützung unzureichend. Der Darm funktioniert, eine Sonde wird toleriert. Welcher nächste Weg wird im EBMT Handbook bevorzugt?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Sofort ausschließlich parenterale Ernährung.",
+              "feedback": "Parenterale Ernährung ist bei funktionsfähigem Darm nicht die bevorzugte erste Eskalation."
+            },
+            {
+              "value": "B",
+              "label": "Enterale Ernährung unter Verträglichkeitskontrolle.",
+              "feedback": "Bei funktionierendem GI-Trakt wird enterale Unterstützung bevorzugt."
+            },
+            {
+              "value": "C",
+              "label": "Weitere Nahrungskarenz bis zum Engraftment.",
+              "feedback": "Nahrungskarenz behandelt den bestehenden Bedarf nicht."
+            },
+            {
+              "value": "D",
+              "label": "Nur Glukoseinfusionen bis zur Gewichtsstabilisierung.",
+              "feedback": "Glukose allein deckt den Nährstoffbedarf nicht."
+            }
+          ],
+          "correct": "B",
+          "hint": "Die Funktionsfähigkeit des GI-Trakts entscheidet über den Zugangsweg.",
+          "explanation": "Das EBMT Handbook 2024 bevorzugt bei HCT und funktionierendem GI-Trakt enterale vor parenteraler Unterstützung, wenn orale Maßnahmen nicht reichen. Parenterale Ernährung bleibt bei GI-Versagen oder fehlender enteraler Verträglichkeit notwendig. Die vergleichende Evidenz ist begrenzt und überwiegend nicht randomisiert.",
+          "sources": [
+            {
+              "title": "EBMT Handbook 2024 · Nutritional Support",
+              "url": "https://www.ncbi.nlm.nih.gov/books/NBK608249/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Lymphom · CD20-Reevaluation",
+          "question": "Ein DLBCL progrediert nach CD20×CD3-Bispezifikum; eine neue Biopsie ist sicher möglich. Welche Untersuchung ist für eine weitere CD20-gerichtete Strategie besonders informativ?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Erneute CD20-Bestimmung am aktuellen Tumorgewebe.",
+              "feedback": "Die aktuelle Zielantigenexpression kann sich unter Selektionsdruck verändern."
+            },
+            {
+              "value": "B",
+              "label": "Alleinige Übernahme des CD20-Befunds der Erstdiagnose.",
+              "feedback": "Der historische Befund kann erworbenen Antigenverlust übersehen."
+            },
+            {
+              "value": "C",
+              "label": "Alleinige CD19-PCR im peripheren Blut.",
+              "feedback": "Dies ersetzt keine Bestimmung von CD20 am Tumor."
+            },
+            {
+              "value": "D",
+              "label": "Alleinige Bestimmung der Serum-Immunglobuline.",
+              "feedback": "Immunglobuline erfassen nicht die Zielantigenexpression."
+            }
+          ],
+          "correct": "A",
+          "hint": "Die neue Therapie benötigt ihre Zielstruktur am aktuell vorliegenden Tumor.",
+          "explanation": "Die Blood-Serie 2025 zu R/R-DLBCL unter Epcoritamab/Glofitamab dokumentierte häufigen CD20-Verlust in ausgewählten gepaarten Biopsien. Das stützt eine Reevaluation der Zielstruktur bei Progression. Eine Biopsie garantiert keine erfolgreiche Folgetherapie, und wegen Selektion kann die Verlustrate nicht auf alle Patienten übertragen werden.",
+          "sources": [
+            {
+              "title": "Blood 2025 · Epcoritamab/Glofitamab in der Versorgung",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/40663785/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Lymphom · HD17",
+          "question": "Unter welchen Bedingungen stützt HD17 das Weglassen konsolidierender Radiotherapie beim frühen ungünstigen Hodgkin-Lymphom?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Nach negativem PET2 unter zwei Zyklen ABVD allein.",
+              "feedback": "HD17 prüfte eine andere Sequenz und einen späteren Entscheidungspunkt."
+            },
+            {
+              "value": "B",
+              "label": "Bei jedem Restbefund unabhängig vom metabolischen Status.",
+              "feedback": "PET-positive Befunde führten im experimentellen Arm zur Bestrahlung."
+            },
+            {
+              "value": "C",
+              "label": "Nach negativem PET4 nach zwei eBEACOPP- plus zwei ABVD-Zyklen.",
+              "feedback": "Die PET4-gesteuerte Strategie nach 2+2 wurde auf Nichtunterlegenheit geprüft."
+            },
+            {
+              "value": "D",
+              "label": "Nach negativem Ausgangs-PET vor Beginn der Chemotherapie.",
+              "feedback": "Der Entscheidungspunkt lag nach der Chemotherapie."
+            }
+          ],
+          "correct": "C",
+          "hint": "Welche Chemotherapie ging dem entscheidenden PET voraus?",
+          "explanation": "HD17 (Lancet Oncology 2021) randomisierte 1.100 Patienten von 18–60 Jahren mit frühem ungünstigem Hodgkin-Lymphom zu 2+2 plus RT oder PET4-gesteuerter RT. Das 5-Jahres-PFS betrug 97,3 % versus 95,1 %; die Differenz blieb innerhalb der vorgegebenen 8-%-Nichtunterlegenheitsgrenze. Dies ist kein Beleg für RT-Verzicht nach beliebiger Chemotherapie.",
+          "sources": [
+            {
+              "title": "Borchmann et al. · Lancet Oncology 2021 · HD17",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33539742/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        },
+        {
+          "topic": "Evidenz · Infusionskohorte",
+          "question": "Eine CAR-T-Bridging-Analyse schließt nur tatsächlich Infundierte ein und misst OS ab Infusion. Welche Frage beantwortet sie nicht vollständig?",
+          "options": [
+            {
+              "value": "A",
+              "label": "Das Überleben der eingeschlossenen Infundierten.",
+              "feedback": "Dieses Überleben kann sie grundsätzlich beschreiben."
+            },
+            {
+              "value": "B",
+              "label": "Die Erfolgswahrscheinlichkeit der gesamten Strategie ab Apherese.",
+              "feedback": "Präinfusionelle Ausfälle fehlen; für die Gesamtstrategie braucht man die Apherese-Population."
+            },
+            {
+              "value": "C",
+              "label": "Die Assoziation präinfusioneller Merkmale mit späterem OS.",
+              "feedback": "Solche Assoziationen kann sie untersuchen."
+            },
+            {
+              "value": "D",
+              "label": "Das PFS der eingeschlossenen Patienten ab Infusion.",
+              "feedback": "Dieses PFS kann sie grundsätzlich erfassen."
+            }
+          ],
+          "correct": "B",
+          "hint": "Denke an Patienten, die nach Apherese die Infusion nie erreichen.",
+          "explanation": "Die EBMT/GoCART-Analyse 2026 verwendet Überleben ab CAR-T-Infusion. Die methodische Schlussfolgerung daraus ist: Eine infusionsbasierte Kohorte bildet Tod, Progression oder Herstellungsprobleme vor Infusion nicht vollständig ab. Für eine Intention-to-treat-Bewertung ab Apherese müssen diese Patienten einbezogen werden. Das ist eine Designgrenze, kein Beleg für einen bestimmten Ausfallanteil.",
+          "sources": [
+            {
+              "title": "EBMT/GoCART · Bone Marrow Transplantation 2026 · Bridging",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/43026256/"
+            }
+          ],
+          "reviewed_at": "2026-11-26"
+        }
+      ]
+    }
+  ]
+}
